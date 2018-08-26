@@ -9,26 +9,43 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/Hardware"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" eType="#//canopusPerformanceMonitoring/SUT"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Hardware">
-      <eLiterals name="HARDWARE 1"/>
-      <eLiterals name="HARDWARE 2" value="1"/>
+      <eLiterals name=" Physical Machine (PM)"/>
+      <eLiterals name="Virtual Machine (VM)" value="1"/>
+      <eLiterals name="Cloud Service (CS)" value="2"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LoadGenerator">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="monitor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/Hardware"
-          defaultValueLiteral="HARDWARE 2"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" eType="#//canopusPerformanceMonitoring/SUT"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/Hardware"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Monitor">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" eType="#//canopusPerformanceMonitoring/SUT"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/Hardware"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MetricModel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/MetricModel"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceMetric" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMetric"
-        nsPrefix="canopusPerformanceMetric"/>
+        nsPrefix="canopusPerformanceMetric">
+      <eClassifiers xsi:type="ecore:EClass" name="Memory">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Disk">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MetricModel">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="memory" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="disk" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk"/>
+      </eClassifiers>
+    </eSubpackages>
   </eSubpackages>
   <eSubpackages name="canopusPerformanceScenario" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScenario"
       nsPrefix="canopusPerformanceScenario">
