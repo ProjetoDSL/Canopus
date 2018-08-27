@@ -1,0 +1,4 @@
+Duvidas e features de interesse:
+
+Como inserir serviços e chamados para dinamicamente alterar conteudo na sirius utilizando JAVA? 
+  Link: https://wiki.eclipse.org/Sirius/Tutorials/AdvancedTutorial#Java_Services.
