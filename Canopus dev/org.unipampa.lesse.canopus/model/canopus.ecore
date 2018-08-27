@@ -2,6 +2,21 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="canopusModel" nsURI="http://www.unipampa.lesse.org/canopusModel"
     nsPrefix="canopusModel">
+  <eClassifiers xsi:type="ecore:EClass" name="Monitoring" eSuperTypes="#//Diagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="suts" eType="#//canopusPerformanceMonitoring/SUT"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loadGenerators" eType="#//canopusPerformanceMonitoring/LoadGenerator"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="monitors" eType="#//canopusPerformanceMonitoring/Monitor"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metrics" eType="#//canopusPerformanceMonitoring/MetricModel"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario" eSuperTypes="#//Diagram"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scripting" eSuperTypes="#//Diagram"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eSubpackages name="canopusPerformanceMonitoring" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMonitoring"
       nsPrefix="canopusPerformanceMonitoring">
     <eClassifiers xsi:type="ecore:EClass" name="SUT">
@@ -31,19 +46,16 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/Hardware"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MetricModel">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/MetricModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" upperBound="-1"
+          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"
+          containment="true"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceMetric" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMetric"
         nsPrefix="canopusPerformanceMetric">
-      <eClassifiers xsi:type="ecore:EClass" name="Memory">
+      <eClassifiers xsi:type="ecore:EClass" name="Memory" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Metric">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Disk">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="MetricModel">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="memory" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="disk" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk"/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>

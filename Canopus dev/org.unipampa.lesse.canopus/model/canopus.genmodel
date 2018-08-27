@@ -10,6 +10,17 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Canopus" basePackage="org.unipampa.lesse" disposableProviderFactory="true"
       ecorePackage="canopus.ecore#/">
+    <genClasses ecoreClass="canopus.ecore#//Monitoring">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/suts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/loadGenerators"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/monitors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/metrics"/>
+    </genClasses>
+    <genClasses ecoreClass="canopus.ecore#//Scenario"/>
+    <genClasses ecoreClass="canopus.ecore#//Scripting"/>
+    <genClasses ecoreClass="canopus.ecore#//Diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/name"/>
+    </genClasses>
     <nestedGenPackages prefix="CanopusPerformanceMonitoring" disposableProviderFactory="true"
         ecorePackage="canopus.ecore#//canopusPerformanceMonitoring">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//canopusPerformanceMonitoring/Hardware">
@@ -44,22 +55,14 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/Monitor/hardware"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/MetricModel">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/metricmodel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/metricmodel"/>
       </genClasses>
       <nestedGenPackages prefix="CanopusPerformanceMetric" disposableProviderFactory="true"
           ecorePackage="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric">
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory/name"/>
-        </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk/name"/>
-        </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/MetricModel">
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/MetricModel/memory"/>
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/MetricModel/disk"/>
+        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory"/>
+        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk"/>
+        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric/name"/>
         </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>
