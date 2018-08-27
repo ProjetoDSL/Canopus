@@ -1,4 +1,22 @@
-#Duvidas e features de interesse:
+#Dúvidas e features de interesse:
 
-Como inserir serviços e chamados para dinamicamente alterar conteudo na sirius utilizando JAVA? 
+Como inserir serviços e chamados para dinamicamente alterar conteudo na sirius utilizando JAVA: 
   Link: https://wiki.eclipse.org/Sirius/Tutorials/AdvancedTutorial#Java_Services.
+
+Ligar modelos xtext com modelos EMF:
+https://typefox.io/linking-xtext-models-with-other-emf-models
+
+
+Links Sirius:
+https://wiki.eclipse.org/Sirius/Tutorials/
+https://www.eclipse.org/sirius/gallery.html
+
+Links Acceleo:
+https://www.eclipse.org/acceleo/documentation/
+
+Links Xtext:
+https://www.eclipse.org/Xtext/
+https://www.eclipse.org/Xtext/documentation/308_emf_integration.html
+
+Links XTend:
+https://www.eclipse.org/xtend/
