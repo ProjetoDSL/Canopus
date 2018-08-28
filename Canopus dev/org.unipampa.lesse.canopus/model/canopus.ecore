@@ -25,6 +25,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/Hardware"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" eType="#//canopusPerformanceMonitoring/SUT"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//canopusPerformanceMonitoring/SUTType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Hardware">
       <eLiterals name=" Physical Machine (PM)"/>
@@ -47,8 +48,14 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MetricModel">
       <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"
+          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/MetricCollection"
           containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="SUTType">
+      <eLiterals name="DesktopApp"/>
+      <eLiterals name=" Database" value="1"/>
+      <eLiterals name="WebApp" value="2"/>
+      <eLiterals name="WebService" value="3"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceMetric" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMetric"
         nsPrefix="canopusPerformanceMetric">
@@ -56,6 +63,11 @@
       <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"/>
       <eClassifiers xsi:type="ecore:EClass" name="Metric">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MetricCollection">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="metric" lowerBound="1"
+            upperBound="-1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"
+            containment="true"/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
