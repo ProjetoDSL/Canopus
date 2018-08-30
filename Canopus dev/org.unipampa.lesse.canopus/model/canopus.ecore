@@ -12,8 +12,30 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="metrics" eType="#//canopusPerformanceMonitoring/MetricModel"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Scenario" eSuperTypes="#//Diagram"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Scripting" eSuperTypes="#//Diagram"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario" eSuperTypes="#//Diagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="users" eType="#//canopusPerformanceScenario/UserProfile"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scriptsScenario" eType="#//canopusPerformanceScenario/ScriptScenario"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workloads" eType="#//canopusPerformanceScenario/Workload"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scripting" eSuperTypes="#//Diagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initial" lowerBound="1"
+        eType="#//canopusPerformanceScripting/Initial" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="final" lowerBound="1" eType="#//canopusPerformanceScripting/Final"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+        eType="#//canopusPerformanceScripting/Activity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="saveparameters" upperBound="-1"
+        eType="#//canopusPerformanceScripting/SaveParameters" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datatable" upperBound="-1"
+        eType="#//canopusPerformanceScripting/DataTable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" eType="#//canopusPerformanceScripting/Columns"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scriptingmodel" upperBound="-1"
+        eType="#//canopusPerformanceScripting/ScriptingModel"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -28,9 +50,9 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//canopusPerformanceMonitoring/SUTType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Hardware">
-      <eLiterals name=" Physical Machine (PM)"/>
-      <eLiterals name="Virtual Machine (VM)" value="1"/>
-      <eLiterals name="Cloud Service (CS)" value="2"/>
+      <eLiterals name="PHYSICALMACHINE"/>
+      <eLiterals name="VIRTUALMACHINE" value="1"/>
+      <eLiterals name="CLOUDSERVICE" value="2"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LoadGenerator">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -52,10 +74,10 @@
           containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="SUTType">
-      <eLiterals name="DesktopApp"/>
-      <eLiterals name=" Database" value="1"/>
-      <eLiterals name="WebApp" value="2"/>
-      <eLiterals name="WebService" value="3"/>
+      <eLiterals name="DESKTOPAPP"/>
+      <eLiterals name="DATABASE" value="1"/>
+      <eLiterals name="WEBAPP" value="2"/>
+      <eLiterals name="WEBSERVICE" value="3"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceMetric" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMetric"
         nsPrefix="canopusPerformanceMetric">
@@ -69,16 +91,153 @@
             upperBound="-1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"
             containment="true"/>
       </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AssociationCounterCriteriaThreshold">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationCriteria"
+            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/ASSOCIATIONCRITERIA"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="ASSOCIATIONCRITERIA">
+        <eLiterals name="BETWEEN"/>
+        <eLiterals name="GREATERTHANOREQUALTO" value="1"/>
+        <eLiterals name="LESSTHAN" value="2"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="AssociationMetricCounter"/>
     </eSubpackages>
   </eSubpackages>
   <eSubpackages name="canopusPerformanceScenario" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScenario"
       nsPrefix="canopusPerformanceScenario">
+    <eClassifiers xsi:type="ecore:EClass" name="UserProfile">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="script" upperBound="-1"
+          eType="#//canopusPerformanceScenario/Script"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ScriptScenario">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Workload">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="workload" lowerBound="1"
+          upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Script">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scriptingmodel" eType="#//canopusPerformanceScripting/ScriptingModel"/>
+    </eClassifiers>
     <eSubpackages name="canopusPerformanceWorkload" nsURI="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
-        nsPrefix="canopusPerformanceWorkload"/>
+        nsPrefix="canopusPerformanceWorkload">
+      <eClassifiers xsi:type="ecore:EClass" name="VirtualUsers">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TestDuration">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RampUpUsers">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RampDownUsers">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RampUpTimer">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RampDownTime">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="WorkloadGroup">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="testduration" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/TestDuration"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="rampdownusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownUsers"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="rampdowntime" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTime"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="rampuptimer" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTimer"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="rampupusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="virtualusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/VirtualUsers"
+            containment="true"/>
+      </eClassifiers>
+    </eSubpackages>
   </eSubpackages>
   <eSubpackages name="canopusPerformanceScripting" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScripting"
       nsPrefix="canopusPerformanceScripting">
+    <eClassifiers xsi:type="ecore:EClass" name="Initial"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Final"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Activity">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//canopusPerformanceScripting/TypeAction"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="loopInstances" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterhiddenobject"
+          eType="#//canopusPerformanceScripting/ParameterHiddenObject" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ThinkTime">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SaveParameters">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterhiddenobject"
+          eType="#//canopusPerformanceScripting/ParameterHiddenObject" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataTable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="delimeter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterhiddenobject"
+          eType="#//canopusPerformanceScripting/ParameterHiddenObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attachedfile" eType="#//canopusPerformanceScripting/canopusPerformanceExternalFile/ExternalFile"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterHiddenObject">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//canopusPerformanceScripting/TypeAction"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="staticValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dynamicvalues" eType="#//canopusPerformanceScripting/Columns"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ColumnsHiddenObject"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="TypeAction">
+      <eLiterals name="BODY"/>
+      <eLiterals name="BUTTON" value="1"/>
+      <eLiterals name="CHECKBOX" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Columns">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="referendedParameter"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectnextrow" eType="#//canopusPerformanceScripting/SELECTNEXTROW"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="updatedvalueon" eType="#//canopusPerformanceScripting/UPDATEDVALUEON"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="UPDATEDVALUEON">
+      <eLiterals name="EACHINTERACTION"/>
+      <eLiterals name="EACHOCCURENCE" value="1"/>
+      <eLiterals name="ONCE" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="SELECTNEXTROW">
+      <eLiterals name="SEQUENTIAL"/>
+      <eLiterals name="RANDOM" value="1"/>
+      <eLiterals name="UNIQUE" value="2"/>
+      <eLiterals name="SAMEASOTHERPARAM" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ScriptingModel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" upperBound="-1"
+          eType="#//canopusPerformanceScripting/Activity" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="saveparameters" upperBound="-1"
+          eType="#//canopusPerformanceScripting/SaveParameters" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="datatable" upperBound="-1"
+          eType="#//canopusPerformanceScripting/DataTable" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="final" upperBound="-1"
+          eType="#//canopusPerformanceScripting/Final" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="initial" upperBound="-1"
+          eType="#//canopusPerformanceScripting/Initial" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="thinktime" upperBound="-1"
+          eType="#//canopusPerformanceScripting/ThinkTime" containment="true"/>
+    </eClassifiers>
     <eSubpackages name="canopusPerformanceExternalFile" nsURI="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
-        nsPrefix="canopusPerformanceExternalFile"/>
+        nsPrefix="canopusPerformanceExternalFile">
+      <eClassifiers xsi:type="ecore:EClass" name="ExternalFile">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+    </eSubpackages>
   </eSubpackages>
 </ecore:EPackage>
