@@ -259,7 +259,23 @@
   </diagram:DSemanticDiagram>
   <diagram:DSemanticDiagram xmi:id="_aXeq0KfLEei1CdyawExWsg" name="canopusPerformanceMonitoring class diagram" uid="_aWBSQKfLEei1CdyawExWsg">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_aXeq0afLEei1CdyawExWsg" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_aXeq0qfLEei1CdyawExWsg"/>
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_aXeq0qfLEei1CdyawExWsg">
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_iTCfAarzEeif645w4raZKw" labelExpression="service:renderAsNode" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelFormat>bold</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_iTGJYKrzEeif645w4raZKw" sourceArrow="FillDiamond" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_iTGJYarzEeif645w4raZKw" showIcon="false" labelExpression="service:render">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </centerLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_iTGJYqrzEeif645w4raZKw" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
+        </computedStyleDescriptions>
+      </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_aXf48KfLEei1CdyawExWsg" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_aXf48afLEei1CdyawExWsg" type="Sirius" element="_aXeq0KfLEei1CdyawExWsg" measurementUnit="Pixel">
@@ -358,10 +374,6 @@
         <children xmi:type="notation:Node" xmi:id="_6lWcIKoeEei1CdyawExWsg" type="2003" element="_6lBE8KoeEei1CdyawExWsg">
           <children xmi:type="notation:Node" xmi:id="_6lXDMKoeEei1CdyawExWsg" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_6lXqQKoeEei1CdyawExWsg" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_5la9QKorEei1CdyawExWsg" type="3010" element="_5lIpYKorEei1CdyawExWsg">
-              <styles xmi:type="notation:FontStyle" xmi:id="_5la9QaorEei1CdyawExWsg" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_5la9QqorEei1CdyawExWsg"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_6lXqQaoeEei1CdyawExWsg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_6lXqQqoeEei1CdyawExWsg"/>
           </children>
@@ -684,14 +696,6 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_5lIpYKorEei1CdyawExWsg" name=" metricmodel : MetricCollection" tooltipText="">
-        <target xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceMonitoring/MetricModel/metricmodel"/>
-        <semanticElements xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceMonitoring/MetricModel/metricmodel"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_5lJQcKorEei1CdyawExWsg" labelAlignment="LEFT" color="114,159,207">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
-      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_RsJ_oKofEei1CdyawExWsg" name="[0..1] metricmodel" sourceNode="_bqsmMKfLEei1CdyawExWsg" targetNode="_6lBE8KoeEei1CdyawExWsg">
       <target xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceMonitoring/SUT/metricmodel"/>
