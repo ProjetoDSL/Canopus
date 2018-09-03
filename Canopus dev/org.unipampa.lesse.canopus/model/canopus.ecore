@@ -89,9 +89,12 @@
     <eSubpackages name="canopusPerformanceMetric" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMetric"
         nsPrefix="canopusPerformanceMetric">
       <eClassifiers xsi:type="ecore:EClass" name="Memory" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="disk_io_counter" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk_IO_Counter"/>
+      </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Metric" abstract="true">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="MetricCollection">
         <eStructuralFeatures xsi:type="ecore:EReference" name="metric" lowerBound="1"
@@ -109,11 +112,55 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="AssociationMetricCounter"/>
       <eClassifiers xsi:type="ecore:EClass" name="Counter" abstract="true">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="enum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"
-            transient="true"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="DiskCounter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Disk_IO_Counter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterDisk" upperBound="6"
+            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Criteria">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Threshold">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="COUNTER_DISK">
+        <eLiterals name="AVG_DISK_SECS_TRANSFER_COUNTER"/>
+        <eLiterals name="%_IDLE_TIME_COUNTER" value="1"/>
+        <eLiterals name="DISK_TRANSFERS_SEC_COUNTER" value="2"/>
+        <eLiterals name="AVG_DISK_QUEUE_LENGTH_COUNTER" value="3"/>
+        <eLiterals name="SPLIT_IO_SEC_COUNTER" value="4"/>
+        <eLiterals name="FREE_MEGABYTES_COUNTER" value="5"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MemoryCounter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterMemory" upperBound="8"
+            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_MEMORY"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="memory" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="COUNTER_MEMORY">
+        <eLiterals name="AVALIABLE_MBYTES_COUNTER"/>
+        <eLiterals name="PAGES_SEC_COUNTER" value="1"/>
+        <eLiterals name="PAGE_READS_SEC_COUNTER" value="2"/>
+        <eLiterals name="WORKING_SET_COUNTER" value="3"/>
+        <eLiterals name="POOL_NONPAGE_BYTES_COUNTER" value="4"/>
+        <eLiterals name="PAGED_POOL_BYTES_COUNTER" value="5"/>
+        <eLiterals name="PAGED_POOL_FAILURES_COUNTER" value="6"/>
+        <eLiterals name="CACHE_BYTES_COUNTER" value="7"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Transaction" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TransactionCounter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterTransaction"
+            upperBound="3" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_TRANSACTION"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Transaction"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="COUNTER_TRANSACTION">
+        <eLiterals name="TRANSACTION_RESPONSE_TIME"/>
+        <eLiterals name="TRANSACTION_PER_SECOND_TPS" value="1"/>
+        <eLiterals name="TRANSACTION_SUCCESS_RATE" value="2"/>
+      </eClassifiers>
     </eSubpackages>
   </eSubpackages>
   <eSubpackages name="canopusPerformanceScenario" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScenario"
