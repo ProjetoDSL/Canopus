@@ -95,7 +95,7 @@
         </genEnums>
         <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK">
           <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/AVG_DISK_SECS_TRANSFER_COUNTER"/>
-          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/%25_IDLE_TIME_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/PERCENAGE_IDLE_TIME_COUNTER"/>
           <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/DISK_TRANSFERS_SEC_COUNTER"/>
           <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/AVG_DISK_QUEUE_LENGTH_COUNTER"/>
           <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/SPLIT_IO_SEC_COUNTER"/>

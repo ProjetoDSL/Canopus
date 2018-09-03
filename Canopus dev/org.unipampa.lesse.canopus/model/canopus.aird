@@ -1456,7 +1456,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_tYzd4K-mEeif645w4raZKw" type="4001" element="_tXku0K-mEeif645w4raZKw" source="_Gyxl0KogEei1CdyawExWsg" target="_fQZPMK-aEeif645w4raZKw">
           <children xmi:type="notation:Node" xmi:id="_tY0E8K-mEeif645w4raZKw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tY0E8a-mEeif645w4raZKw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tY0E8a-mEeif645w4raZKw" x="-61" y="8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_tY0E8q-mEeif645w4raZKw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tY0E86-mEeif645w4raZKw" y="10"/>
@@ -1488,7 +1488,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_xzBmcK-mEeif645w4raZKw" type="4001" element="_xyFLQK-mEeif645w4raZKw" source="_oErugK1ZEeif645w4raZKw" target="_WNQawK-aEeif645w4raZKw">
           <children xmi:type="notation:Node" xmi:id="_xzBmdK-mEeif645w4raZKw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xzBmda-mEeif645w4raZKw" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xzBmda-mEeif645w4raZKw" x="2" y="42"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_xzBmdq-mEeif645w4raZKw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xzBmd6-mEeif645w4raZKw" y="10"/>
@@ -1756,9 +1756,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_byViAK-cEeif645w4raZKw" name="%_IDLE_TIME_COUNTER" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/%25_IDLE_TIME_COUNTER"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/%25_IDLE_TIME_COUNTER"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_byViAK-cEeif645w4raZKw" name="PERCENAGE_IDLE_TIME_COUNTER" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/PERCENAGE_IDLE_TIME_COUNTER"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK/PERCENAGE_IDLE_TIME_COUNTER"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_byViAa-cEeif645w4raZKw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
@@ -5076,7 +5076,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_VXd36a1NEeif645w4raZKw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_VXd35K1NEeif645w4raZKw" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VXd35a1NEeif645w4raZKw" x="260" y="339"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VXd35a1NEeif645w4raZKw" x="360" y="339"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_VXd36q1NEeif645w4raZKw" type="3009" element="_VW7FUK1NEeif645w4raZKw">
               <children xmi:type="notation:Node" xmi:id="_VXee8K1NEeif645w4raZKw" type="5004"/>

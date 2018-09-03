@@ -129,7 +129,7 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="COUNTER_DISK">
         <eLiterals name="AVG_DISK_SECS_TRANSFER_COUNTER"/>
-        <eLiterals name="%_IDLE_TIME_COUNTER" value="1"/>
+        <eLiterals name="PERCENAGE_IDLE_TIME_COUNTER" value="1"/>
         <eLiterals name="DISK_TRANSFERS_SEC_COUNTER" value="2"/>
         <eLiterals name="AVG_DISK_QUEUE_LENGTH_COUNTER" value="3"/>
         <eLiterals name="SPLIT_IO_SEC_COUNTER" value="4"/>
