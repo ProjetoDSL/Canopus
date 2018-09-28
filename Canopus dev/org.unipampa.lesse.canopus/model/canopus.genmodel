@@ -140,17 +140,13 @@
         <genClasses image="false" ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter/name"/>
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter/threshold"/>
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter/criteria"/>
+              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter/associationcountercriteriathreshold"/>
         </genClasses>
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk_IO_Counter">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk_IO_Counter/counterDisk"/>
         </genClasses>
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria/value"/>
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria/threshold"/>
         </genClasses>
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold/value"/>

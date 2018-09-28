@@ -63,8 +63,7 @@ public class CounterItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addThresholdPropertyDescriptor(object);
-			addCriteriaPropertyDescriptor(object);
+			addAssociationcountercriteriathresholdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,41 +91,19 @@ public class CounterItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Threshold feature.
+	 * This adds a property descriptor for the Associationcountercriteriathreshold feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addThresholdPropertyDescriptor(Object object) {
+	protected void addAssociationcountercriteriathresholdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Counter_threshold_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Counter_threshold_feature", "_UI_Counter_type"),
-				 CanopusPerformanceMetricPackage.Literals.COUNTER__THRESHOLD,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Criteria feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCriteriaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Counter_criteria_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Counter_criteria_feature", "_UI_Counter_type"),
-				 CanopusPerformanceMetricPackage.Literals.COUNTER__CRITERIA,
+				 getString("_UI_Counter_associationcountercriteriathreshold_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Counter_associationcountercriteriathreshold_feature", "_UI_Counter_type"),
+				 CanopusPerformanceMetricPackage.Literals.COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD,
 				 true,
 				 false,
 				 true,

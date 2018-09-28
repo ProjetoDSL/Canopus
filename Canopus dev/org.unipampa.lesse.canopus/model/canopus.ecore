@@ -137,8 +137,8 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Counter" abstract="true">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="associationcountercriteriathreshold"
+            upperBound="-1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/AssociationCounterCriteriaThreshold"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Disk_IO_Counter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterDisk" upperBound="-1"
@@ -146,7 +146,6 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Criteria">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Threshold">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

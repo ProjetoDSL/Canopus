@@ -63,7 +63,6 @@ public class CriteriaItemProvider
 			super.getPropertyDescriptors(object);
 
 			addValuePropertyDescriptor(object);
-			addThresholdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,28 +85,6 @@ public class CriteriaItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Threshold feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addThresholdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Criteria_threshold_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Criteria_threshold_feature", "_UI_Criteria_type"),
-				 CanopusPerformanceMetricPackage.Literals.CRITERIA__THRESHOLD,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
