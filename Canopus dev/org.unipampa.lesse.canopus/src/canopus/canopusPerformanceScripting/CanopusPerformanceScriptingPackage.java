@@ -68,13 +68,31 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int INITIAL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INITIAL__ACTIVITY = 1;
+
+	/**
 	 * The number of structural features of the '<em>Initial</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_FEATURE_COUNT = 0;
+	int INITIAL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Initial</em>' class.
@@ -96,13 +114,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int FINAL = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINAL__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Final</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINAL_FEATURE_COUNT = 0;
+	int FINAL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Final</em>' class.
@@ -205,13 +232,31 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int ACTIVITY__SCRIPTINGMODEL = 8;
 
 	/**
+	 * The feature id for the '<em><b>Final</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__FINAL = 9;
+
+	/**
+	 * The feature id for the '<em><b>Thinktime</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__THINKTIME = 10;
+
+	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 9;
+	int ACTIVITY_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -251,13 +296,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int THINK_TIME__TIME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THINK_TIME__ACTIVITY = 2;
+
+	/**
 	 * The number of structural features of the '<em>Think Time</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int THINK_TIME_FEATURE_COUNT = 2;
+	int THINK_TIME_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Think Time</em>' class.
@@ -589,61 +643,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int SCRIPTING_MODEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.impl.TransitionImpl <em>Transition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScripting.impl.TransitionImpl
-	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getTransition()
-	 * @generated
-	 */
-	int TRANSITION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Porcentage</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__PORCENTAGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__ACTIVITY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Thinktime</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__THINKTIME = 2;
-
-	/**
-	 * The number of structural features of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Transition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -651,7 +650,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getTYPEACTION()
 	 * @generated
 	 */
-	int TYPEACTION = 10;
+	int TYPEACTION = 9;
 
 	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.UPDATED_VALUE_ON <em>UPDATED VALUE ON</em>}' enum.
@@ -661,7 +660,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getUPDATED_VALUE_ON()
 	 * @generated
 	 */
-	int UPDATED_VALUE_ON = 11;
+	int UPDATED_VALUE_ON = 10;
 
 	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.SELECT_NEXT_ROW <em>SELECT NEXT ROW</em>}' enum.
@@ -671,7 +670,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getSELECT_NEXT_ROW()
 	 * @generated
 	 */
-	int SELECT_NEXT_ROW = 12;
+	int SELECT_NEXT_ROW = 11;
 
 
 	/**
@@ -685,6 +684,28 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EClass getInitial();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScripting.Initial#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceScripting.Initial#getName()
+	 * @see #getInitial()
+	 * @generated
+	 */
+	EAttribute getInitial_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScripting.Initial#getActivity <em>Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @see canopus.canopusPerformanceScripting.Initial#getActivity()
+	 * @see #getInitial()
+	 * @generated
+	 */
+	EReference getInitial_Activity();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScripting.Final <em>Final</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -693,6 +714,17 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFinal();
+
+	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScripting.Final#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceScripting.Final#getName()
+	 * @see #getFinal()
+	 * @generated
+	 */
+	EAttribute getFinal_Name();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScripting.Activity <em>Activity</em>}'.
@@ -804,6 +836,28 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EReference getActivity_Scriptingmodel();
 
 	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScripting.Activity#getFinal <em>Final</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Final</em>'.
+	 * @see canopus.canopusPerformanceScripting.Activity#getFinal()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Final();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScripting.Activity#getThinktime <em>Thinktime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Thinktime</em>'.
+	 * @see canopus.canopusPerformanceScripting.Activity#getThinktime()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Thinktime();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScripting.ThinkTime <em>Think Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -834,6 +888,17 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getThinkTime_Time();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScripting.ThinkTime#getActivity <em>Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @see canopus.canopusPerformanceScripting.ThinkTime#getActivity()
+	 * @see #getThinkTime()
+	 * @generated
+	 */
+	EReference getThinkTime_Activity();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScripting.SaveParameters <em>Save Parameters</em>}'.
@@ -1106,49 +1171,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EReference getScriptingModel_Thinktime();
 
 	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScripting.Transition <em>Transition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transition</em>'.
-	 * @see canopus.canopusPerformanceScripting.Transition
-	 * @generated
-	 */
-	EClass getTransition();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScripting.Transition#getPorcentage <em>Porcentage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Porcentage</em>'.
-	 * @see canopus.canopusPerformanceScripting.Transition#getPorcentage()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EAttribute getTransition_Porcentage();
-
-	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScripting.Transition#getActivity <em>Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activity</em>'.
-	 * @see canopus.canopusPerformanceScripting.Transition#getActivity()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Activity();
-
-	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScripting.Transition#getThinktime <em>Thinktime</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Thinktime</em>'.
-	 * @see canopus.canopusPerformanceScripting.Transition#getThinktime()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Thinktime();
-
-	/**
 	 * Returns the meta object for enum '{@link canopus.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1212,6 +1234,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EClass INITIAL = eINSTANCE.getInitial();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INITIAL__NAME = eINSTANCE.getInitial_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL__ACTIVITY = eINSTANCE.getInitial_Activity();
+
+		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.impl.FinalImpl <em>Final</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1220,6 +1258,14 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FINAL = eINSTANCE.getFinal();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FINAL__NAME = eINSTANCE.getFinal_Name();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.impl.ActivityImpl <em>Activity</em>}' class.
@@ -1304,6 +1350,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EReference ACTIVITY__SCRIPTINGMODEL = eINSTANCE.getActivity_Scriptingmodel();
 
 		/**
+		 * The meta object literal for the '<em><b>Final</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__FINAL = eINSTANCE.getActivity_Final();
+
+		/**
+		 * The meta object literal for the '<em><b>Thinktime</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__THINKTIME = eINSTANCE.getActivity_Thinktime();
+
+		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.impl.ThinkTimeImpl <em>Think Time</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1328,6 +1390,14 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute THINK_TIME__TIME = eINSTANCE.getThinkTime_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference THINK_TIME__ACTIVITY = eINSTANCE.getThinkTime_Activity();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.impl.SaveParametersImpl <em>Save Parameters</em>}' class.
@@ -1538,40 +1608,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCRIPTING_MODEL__THINKTIME = eINSTANCE.getScriptingModel_Thinktime();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.impl.TransitionImpl <em>Transition</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScripting.impl.TransitionImpl
-		 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getTransition()
-		 * @generated
-		 */
-		EClass TRANSITION = eINSTANCE.getTransition();
-
-		/**
-		 * The meta object literal for the '<em><b>Porcentage</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TRANSITION__PORCENTAGE = eINSTANCE.getTransition_Porcentage();
-
-		/**
-		 * The meta object literal for the '<em><b>Activity</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__ACTIVITY = eINSTANCE.getTransition_Activity();
-
-		/**
-		 * The meta object literal for the '<em><b>Thinktime</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__THINKTIME = eINSTANCE.getTransition_Thinktime();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}' enum.

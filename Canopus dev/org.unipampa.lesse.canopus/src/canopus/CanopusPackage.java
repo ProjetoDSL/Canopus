@@ -412,16 +412,16 @@ public interface CanopusPackage extends EPackage {
 	int SCRIPTING__DATATABLES = DIAGRAM_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Scripts</b></em>' reference list.
+	 * The feature id for the '<em><b>Think Time</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING__SCRIPTS = DIAGRAM_FEATURE_COUNT + 5;
+	int SCRIPTING__THINK_TIME = DIAGRAM_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Scripting</b></em>' reference list.
+	 * The feature id for the '<em><b>Scripting</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -430,22 +430,13 @@ public interface CanopusPackage extends EPackage {
 	int SCRIPTING__SCRIPTING = DIAGRAM_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Scriptinge Opposite</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__SCRIPTINGE_OPPOSITE = DIAGRAM_FEATURE_COUNT + 7;
-
-	/**
 	 * The number of structural features of the '<em>Scripting</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 8;
+	int SCRIPTING_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Scripting</em>' class.
@@ -631,37 +622,26 @@ public interface CanopusPackage extends EPackage {
 	EReference getScripting_Datatables();
 
 	/**
-	 * Returns the meta object for the reference list '{@link canopus.Scripting#getScripts <em>Scripts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getThinkTime <em>Think Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Scripts</em>'.
-	 * @see canopus.Scripting#getScripts()
+	 * @return the meta object for the containment reference list '<em>Think Time</em>'.
+	 * @see canopus.Scripting#getThinkTime()
 	 * @see #getScripting()
 	 * @generated
 	 */
-	EReference getScripting_Scripts();
+	EReference getScripting_ThinkTime();
 
 	/**
-	 * Returns the meta object for the reference list '{@link canopus.Scripting#getScripting <em>Scripting</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getScripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Scripting</em>'.
+	 * @return the meta object for the containment reference list '<em>Scripting</em>'.
 	 * @see canopus.Scripting#getScripting()
 	 * @see #getScripting()
 	 * @generated
 	 */
 	EReference getScripting_Scripting();
-
-	/**
-	 * Returns the meta object for the reference list '{@link canopus.Scripting#getScriptingeOpposite <em>Scriptinge Opposite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Scriptinge Opposite</em>'.
-	 * @see canopus.Scripting#getScriptingeOpposite()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_ScriptingeOpposite();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.Diagram <em>Diagram</em>}'.
@@ -875,28 +855,20 @@ public interface CanopusPackage extends EPackage {
 		EReference SCRIPTING__DATATABLES = eINSTANCE.getScripting_Datatables();
 
 		/**
-		 * The meta object literal for the '<em><b>Scripts</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Think Time</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCRIPTING__SCRIPTS = eINSTANCE.getScripting_Scripts();
+		EReference SCRIPTING__THINK_TIME = eINSTANCE.getScripting_ThinkTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Scripting</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Scripting</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference SCRIPTING__SCRIPTING = eINSTANCE.getScripting_Scripting();
-
-		/**
-		 * The meta object literal for the '<em><b>Scriptinge Opposite</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__SCRIPTINGE_OPPOSITE = eINSTANCE.getScripting_ScriptingeOpposite();
 
 		/**
 		 * The meta object literal for the '{@link canopus.impl.DiagramImpl <em>Diagram</em>}' class.

@@ -104,10 +104,6 @@ public class CanopusPerformanceScriptingAdapterFactory extends AdapterFactoryImp
 				return createScriptingModelAdapter();
 			}
 			@Override
-			public Adapter caseTransition(Transition object) {
-				return createTransitionAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -250,20 +246,6 @@ public class CanopusPerformanceScriptingAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createScriptingModelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScripting.Transition <em>Transition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScripting.Transition
-	 * @generated
-	 */
-	public Adapter createTransitionAdapter() {
 		return null;
 	}
 

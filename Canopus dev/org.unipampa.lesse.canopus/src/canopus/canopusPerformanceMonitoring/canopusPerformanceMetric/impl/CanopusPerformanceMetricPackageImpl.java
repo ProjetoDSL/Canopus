@@ -188,7 +188,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link CanopusPerformanceMetricPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -202,17 +202,24 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 		if (isInited) return (CanopusPerformanceMetricPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceMetricPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CanopusPerformanceMetricPackageImpl theCanopusPerformanceMetricPackage = (CanopusPerformanceMetricPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CanopusPerformanceMetricPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CanopusPerformanceMetricPackageImpl());
+		Object registeredCanopusPerformanceMetricPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CanopusPerformanceMetricPackageImpl theCanopusPerformanceMetricPackage = registeredCanopusPerformanceMetricPackage instanceof CanopusPerformanceMetricPackageImpl ? (CanopusPerformanceMetricPackageImpl)registeredCanopusPerformanceMetricPackage : new CanopusPerformanceMetricPackageImpl();
 
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		CanopusPackageImpl theCanopusPackage = (CanopusPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CanopusPackage.eNS_URI) instanceof CanopusPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CanopusPackage.eNS_URI) : CanopusPackage.eINSTANCE);
-		CanopusPerformanceMonitoringPackageImpl theCanopusPerformanceMonitoringPackage = (CanopusPerformanceMonitoringPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceMonitoringPackage.eNS_URI) instanceof CanopusPerformanceMonitoringPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceMonitoringPackage.eNS_URI) : CanopusPerformanceMonitoringPackage.eINSTANCE);
-		CanopusPerformanceScenarioPackageImpl theCanopusPerformanceScenarioPackage = (CanopusPerformanceScenarioPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScenarioPackage.eNS_URI) instanceof CanopusPerformanceScenarioPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScenarioPackage.eNS_URI) : CanopusPerformanceScenarioPackage.eINSTANCE);
-		CanopusPerformanceWorkloadPackageImpl theCanopusPerformanceWorkloadPackage = (CanopusPerformanceWorkloadPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceWorkloadPackage.eNS_URI) instanceof CanopusPerformanceWorkloadPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceWorkloadPackage.eNS_URI) : CanopusPerformanceWorkloadPackage.eINSTANCE);
-		CanopusPerformanceScriptingPackageImpl theCanopusPerformanceScriptingPackage = (CanopusPerformanceScriptingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScriptingPackage.eNS_URI) instanceof CanopusPerformanceScriptingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScriptingPackage.eNS_URI) : CanopusPerformanceScriptingPackage.eINSTANCE);
-		CanopusPerformanceExternalFilePackageImpl theCanopusPerformanceExternalFilePackage = (CanopusPerformanceExternalFilePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceExternalFilePackage.eNS_URI) instanceof CanopusPerformanceExternalFilePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceExternalFilePackage.eNS_URI) : CanopusPerformanceExternalFilePackage.eINSTANCE);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CanopusPackage.eNS_URI);
+		CanopusPackageImpl theCanopusPackage = (CanopusPackageImpl)(registeredPackage instanceof CanopusPackageImpl ? registeredPackage : CanopusPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceMonitoringPackage.eNS_URI);
+		CanopusPerformanceMonitoringPackageImpl theCanopusPerformanceMonitoringPackage = (CanopusPerformanceMonitoringPackageImpl)(registeredPackage instanceof CanopusPerformanceMonitoringPackageImpl ? registeredPackage : CanopusPerformanceMonitoringPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScenarioPackage.eNS_URI);
+		CanopusPerformanceScenarioPackageImpl theCanopusPerformanceScenarioPackage = (CanopusPerformanceScenarioPackageImpl)(registeredPackage instanceof CanopusPerformanceScenarioPackageImpl ? registeredPackage : CanopusPerformanceScenarioPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceWorkloadPackage.eNS_URI);
+		CanopusPerformanceWorkloadPackageImpl theCanopusPerformanceWorkloadPackage = (CanopusPerformanceWorkloadPackageImpl)(registeredPackage instanceof CanopusPerformanceWorkloadPackageImpl ? registeredPackage : CanopusPerformanceWorkloadPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScriptingPackage.eNS_URI);
+		CanopusPerformanceScriptingPackageImpl theCanopusPerformanceScriptingPackage = (CanopusPerformanceScriptingPackageImpl)(registeredPackage instanceof CanopusPerformanceScriptingPackageImpl ? registeredPackage : CanopusPerformanceScriptingPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceExternalFilePackage.eNS_URI);
+		CanopusPerformanceExternalFilePackageImpl theCanopusPerformanceExternalFilePackage = (CanopusPerformanceExternalFilePackageImpl)(registeredPackage instanceof CanopusPerformanceExternalFilePackageImpl ? registeredPackage : CanopusPerformanceExternalFilePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCanopusPerformanceMetricPackage.createPackageContents();
@@ -235,7 +242,6 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 		// Mark meta-data to indicate it can't be changed
 		theCanopusPerformanceMetricPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CanopusPerformanceMetricPackage.eNS_URI, theCanopusPerformanceMetricPackage);
 		return theCanopusPerformanceMetricPackage;

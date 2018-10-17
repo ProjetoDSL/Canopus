@@ -64,6 +64,7 @@ public class ThinkTimeItemProvider
 
 			addNamePropertyDescriptor(object);
 			addTimePropertyDescriptor(object);
+			addActivityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,6 +109,28 @@ public class ThinkTimeItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Activity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActivityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ThinkTime_activity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ThinkTime_activity_feature", "_UI_ThinkTime_type"),
+				 CanopusPerformanceScriptingPackage.Literals.THINK_TIME__ACTIVITY,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

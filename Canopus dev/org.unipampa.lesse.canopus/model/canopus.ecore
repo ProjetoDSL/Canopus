@@ -32,12 +32,10 @@
         eType="#//canopusPerformanceScripting/SaveParameters" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datatables" upperBound="-1"
         eType="#//canopusPerformanceScripting/DataTable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="scripts" upperBound="-1"
-        eType="#//canopusPerformanceScripting/ScriptingModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thinkTime" upperBound="-1"
+        eType="#//canopusPerformanceScripting/ThinkTime" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
-        eType="#//Scripting" eOpposite="#//Scripting/scriptingeOpposite"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="scriptingeOpposite" upperBound="-1"
-        eType="#//Scripting" eOpposite="#//Scripting/scripting"/>
+        eType="#//Scripting" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -251,8 +249,14 @@
   </eSubpackages>
   <eSubpackages name="canopusPerformanceScripting" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScripting"
       nsPrefix="canopusPerformanceScripting">
-    <eClassifiers xsi:type="ecore:EClass" name="Initial"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Final"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Initial">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+          eType="#//canopusPerformanceScripting/Activity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Final">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Activity">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -266,10 +270,13 @@
           eType="#//canopusPerformanceScripting/Activity"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scriptingmodel" eType="#//canopusPerformanceScripting/ScriptingModel"
           containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="final" eType="#//canopusPerformanceScripting/Final"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="thinktime" eType="#//canopusPerformanceScripting/ThinkTime"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ThinkTime">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" eType="#//canopusPerformanceScripting/Activity"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SaveParameters">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -327,13 +334,6 @@
           eType="#//canopusPerformanceScripting/Initial" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="thinktime" upperBound="-1"
           eType="#//canopusPerformanceScripting/ThinkTime" containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Transition">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="porcentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-          upperBound="-1" eType="#//canopusPerformanceScripting/Activity"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="thinktime" upperBound="-1"
-          eType="#//canopusPerformanceScripting/ThinkTime"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceExternalFile" nsURI="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
         nsPrefix="canopusPerformanceExternalFile">

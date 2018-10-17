@@ -165,6 +165,7 @@ public class CanopusPerformanceScriptingActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("canopusperformancescripting-settings"));
 		toolBarManager.add(new Separator("canopusperformancescripting-additions"));
 	}

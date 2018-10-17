@@ -165,6 +165,7 @@ public class CanopusPerformanceWorkloadActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("canopusperformanceworkload-settings"));
 		toolBarManager.add(new Separator("canopusperformanceworkload-additions"));
 	}

@@ -24,6 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#isTransaction <em>Transaction</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#getActivity <em>Activity</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#getScriptingmodel <em>Scriptingmodel</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScripting.Activity#getFinal <em>Final</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScripting.Activity#getThinktime <em>Thinktime</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity()
@@ -257,5 +259,57 @@ public interface Activity extends EObject {
 	 * @generated
 	 */
 	void setScriptingmodel(ScriptingModel value);
+
+	/**
+	 * Returns the value of the '<em><b>Final</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Final</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Final</em>' reference.
+	 * @see #setFinal(Final)
+	 * @see canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity_Final()
+	 * @model
+	 * @generated
+	 */
+	Final getFinal();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceScripting.Activity#getFinal <em>Final</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Final</em>' reference.
+	 * @see #getFinal()
+	 * @generated
+	 */
+	void setFinal(Final value);
+
+	/**
+	 * Returns the value of the '<em><b>Thinktime</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Thinktime</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Thinktime</em>' reference.
+	 * @see #setThinktime(ThinkTime)
+	 * @see canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity_Thinktime()
+	 * @model
+	 * @generated
+	 */
+	ThinkTime getThinktime();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceScripting.Activity#getThinktime <em>Thinktime</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Thinktime</em>' reference.
+	 * @see #getThinktime()
+	 * @generated
+	 */
+	void setThinktime(ThinkTime value);
 
 } // Activity

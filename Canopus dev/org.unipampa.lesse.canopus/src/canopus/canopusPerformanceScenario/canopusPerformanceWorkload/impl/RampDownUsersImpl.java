@@ -153,7 +153,7 @@ public class RampDownUsersImpl extends MinimalEObjectImpl.Container implements R
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (virtualUsers: ");
 		result.append(virtualUsers);
 		result.append(')');

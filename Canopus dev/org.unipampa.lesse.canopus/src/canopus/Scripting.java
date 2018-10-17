@@ -7,7 +7,7 @@ import canopus.canopusPerformanceScripting.DataTable;
 import canopus.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScripting.Initial;
 import canopus.canopusPerformanceScripting.SaveParameters;
-import canopus.canopusPerformanceScripting.ScriptingModel;
+import canopus.canopusPerformanceScripting.ThinkTime;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -25,9 +25,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link canopus.Scripting#getActivities <em>Activities</em>}</li>
  *   <li>{@link canopus.Scripting#getSaveparameters <em>Saveparameters</em>}</li>
  *   <li>{@link canopus.Scripting#getDatatables <em>Datatables</em>}</li>
- *   <li>{@link canopus.Scripting#getScripts <em>Scripts</em>}</li>
+ *   <li>{@link canopus.Scripting#getThinkTime <em>Think Time</em>}</li>
  *   <li>{@link canopus.Scripting#getScripting <em>Scripting</em>}</li>
- *   <li>{@link canopus.Scripting#getScriptingeOpposite <em>Scriptinge Opposite</em>}</li>
  * </ul>
  *
  * @see canopus.CanopusPackage#getScripting()
@@ -136,55 +135,35 @@ public interface Scripting extends Diagram {
 	EList<DataTable> getDatatables();
 
 	/**
-	 * Returns the value of the '<em><b>Scripts</b></em>' reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScripting.ScriptingModel}.
+	 * Returns the value of the '<em><b>Think Time</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScripting.ThinkTime}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scripts</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Think Time</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripts</em>' reference list.
-	 * @see canopus.CanopusPackage#getScripting_Scripts()
-	 * @model
+	 * @return the value of the '<em>Think Time</em>' containment reference list.
+	 * @see canopus.CanopusPackage#getScripting_ThinkTime()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ScriptingModel> getScripts();
+	EList<ThinkTime> getThinkTime();
 
 	/**
-	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
+	 * Returns the value of the '<em><b>Scripting</b></em>' containment reference list.
 	 * The list contents are of type {@link canopus.Scripting}.
-	 * It is bidirectional and its opposite is '{@link canopus.Scripting#getScriptingeOpposite <em>Scriptinge Opposite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scripting</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripting</em>' reference list.
+	 * @return the value of the '<em>Scripting</em>' containment reference list.
 	 * @see canopus.CanopusPackage#getScripting_Scripting()
-	 * @see canopus.Scripting#getScriptingeOpposite
-	 * @model opposite="scriptingeOpposite"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Scripting> getScripting();
-
-	/**
-	 * Returns the value of the '<em><b>Scriptinge Opposite</b></em>' reference list.
-	 * The list contents are of type {@link canopus.Scripting}.
-	 * It is bidirectional and its opposite is '{@link canopus.Scripting#getScripting <em>Scripting</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scriptinge Opposite</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scriptinge Opposite</em>' reference list.
-	 * @see canopus.CanopusPackage#getScripting_ScriptingeOpposite()
-	 * @see canopus.Scripting#getScripting
-	 * @model opposite="scripting"
-	 * @generated
-	 */
-	EList<Scripting> getScriptingeOpposite();
 
 } // Scripting

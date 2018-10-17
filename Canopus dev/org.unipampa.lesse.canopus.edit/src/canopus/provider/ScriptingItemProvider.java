@@ -3,6 +3,7 @@
 package canopus.provider;
 
 
+import canopus.CanopusFactory;
 import canopus.CanopusPackage;
 import canopus.Scripting;
 
@@ -48,27 +49,26 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addScriptsPropertyDescriptor(object);
+			addThinkTimePropertyDescriptor(object);
 			addScriptingPropertyDescriptor(object);
-			addScriptingeOppositePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Scripts feature.
+	 * This adds a property descriptor for the Think Time feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addScriptsPropertyDescriptor(Object object) {
+	protected void addThinkTimePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Scripting_scripts_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_scripts_feature", "_UI_Scripting_type"),
-				 CanopusPackage.Literals.SCRIPTING__SCRIPTS,
+				 getString("_UI_Scripting_thinkTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_thinkTime_feature", "_UI_Scripting_type"),
+				 CanopusPackage.Literals.SCRIPTING__THINK_TIME,
 				 true,
 				 false,
 				 true,
@@ -100,28 +100,6 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Scriptinge Opposite feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addScriptingeOppositePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scripting_scriptingeOpposite_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_scriptingeOpposite_feature", "_UI_Scripting_type"),
-				 CanopusPackage.Literals.SCRIPTING__SCRIPTINGE_OPPOSITE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -138,6 +116,8 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__ACTIVITIES);
 			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__SAVEPARAMETERS);
 			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__DATATABLES);
+			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__THINK_TIME);
+			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__SCRIPTING);
 		}
 		return childrenFeatures;
 	}
@@ -198,6 +178,8 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 			case CanopusPackage.SCRIPTING__ACTIVITIES:
 			case CanopusPackage.SCRIPTING__SAVEPARAMETERS:
 			case CanopusPackage.SCRIPTING__DATATABLES:
+			case CanopusPackage.SCRIPTING__THINK_TIME:
+			case CanopusPackage.SCRIPTING__SCRIPTING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -239,6 +221,16 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 			(createChildParameter
 				(CanopusPackage.Literals.SCRIPTING__DATATABLES,
 				 CanopusPerformanceScriptingFactory.eINSTANCE.createDataTable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPackage.Literals.SCRIPTING__THINK_TIME,
+				 CanopusPerformanceScriptingFactory.eINSTANCE.createThinkTime()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPackage.Literals.SCRIPTING__SCRIPTING,
+				 CanopusFactory.eINSTANCE.createScripting()));
 	}
 
 }

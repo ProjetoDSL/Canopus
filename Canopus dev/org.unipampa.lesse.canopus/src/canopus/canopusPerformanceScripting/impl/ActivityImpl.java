@@ -4,10 +4,11 @@ package canopus.canopusPerformanceScripting.impl;
 
 import canopus.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
+import canopus.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScripting.ScriptingModel;
 import canopus.canopusPerformanceScripting.TYPEACTION;
-
+import canopus.canopusPerformanceScripting.ThinkTime;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -40,6 +41,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#isTransaction <em>Transaction</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getActivity <em>Activity</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getScriptingmodel <em>Scriptingmodel</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getFinal <em>Final</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getThinktime <em>Thinktime</em>}</li>
  * </ul>
  *
  * @generated
@@ -194,6 +197,26 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected ScriptingModel scriptingmodel;
+
+	/**
+	 * The cached value of the '{@link #getFinal() <em>Final</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFinal()
+	 * @generated
+	 * @ordered
+	 */
+	protected Final final_;
+
+	/**
+	 * The cached value of the '{@link #getThinktime() <em>Thinktime</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getThinktime()
+	 * @generated
+	 * @ordered
+	 */
+	protected ThinkTime thinktime;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -443,6 +466,82 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Final getFinal() {
+		if (final_ != null && final_.eIsProxy()) {
+			InternalEObject oldFinal = (InternalEObject)final_;
+			final_ = (Final)eResolveProxy(oldFinal);
+			if (final_ != oldFinal) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.ACTIVITY__FINAL, oldFinal, final_));
+			}
+		}
+		return final_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Final basicGetFinal() {
+		return final_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFinal(Final newFinal) {
+		Final oldFinal = final_;
+		final_ = newFinal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__FINAL, oldFinal, final_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ThinkTime getThinktime() {
+		if (thinktime != null && thinktime.eIsProxy()) {
+			InternalEObject oldThinktime = (InternalEObject)thinktime;
+			thinktime = (ThinkTime)eResolveProxy(oldThinktime);
+			if (thinktime != oldThinktime) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME, oldThinktime, thinktime));
+			}
+		}
+		return thinktime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ThinkTime basicGetThinktime() {
+		return thinktime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setThinktime(ThinkTime newThinktime) {
+		ThinkTime oldThinktime = thinktime;
+		thinktime = newThinktime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME, oldThinktime, thinktime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -480,6 +579,12 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return getActivity();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
 				return getScriptingmodel();
+			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
+				if (resolve) return getFinal();
+				return basicGetFinal();
+			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
+				if (resolve) return getThinktime();
+				return basicGetThinktime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -521,6 +626,12 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
 				setScriptingmodel((ScriptingModel)newValue);
 				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
+				setFinal((Final)newValue);
+				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
+				setThinktime((ThinkTime)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -560,6 +671,12 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
 				setScriptingmodel((ScriptingModel)null);
 				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
+				setFinal((Final)null);
+				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
+				setThinktime((ThinkTime)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -590,6 +707,10 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return activity != null && !activity.isEmpty();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
 				return scriptingmodel != null;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
+				return final_ != null;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
+				return thinktime != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -603,7 +724,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", action: ");

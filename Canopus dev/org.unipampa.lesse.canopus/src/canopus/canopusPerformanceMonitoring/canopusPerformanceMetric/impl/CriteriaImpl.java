@@ -4,9 +4,11 @@ package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl;
 
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Criteria;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -151,7 +153,7 @@ public class CriteriaImpl extends MinimalEObjectImpl.Container implements Criter
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

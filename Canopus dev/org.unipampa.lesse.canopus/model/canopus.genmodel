@@ -24,9 +24,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/activities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/saveparameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/datatables"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/scripts"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/scripting"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/scriptingeOpposite"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/thinkTime"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/scripting"/>
     </genClasses>
     <genClasses image="false" ecoreClass="canopus.ecore#//Diagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/name"/>
@@ -238,8 +237,14 @@
         <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceScripting/SELECT_NEXT_ROW/UNIQUE"/>
         <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//canopusPerformanceScripting/SELECT_NEXT_ROW/SAME_AS_OTHER_PARAM"/>
       </genEnums>
-      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/Initial"/>
-      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/Final"/>
+      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/Initial">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/Initial/name"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Initial/activity"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/Final">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/Final/name"/>
+      </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/Activity">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/Activity/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/Activity/action"/>
@@ -251,10 +256,16 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/activity"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/scriptingmodel"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/final"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/thinktime"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/ThinkTime">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/ThinkTime/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/ThinkTime/time"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ThinkTime/activity"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/SaveParameters">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/SaveParameters/name"/>
@@ -287,13 +298,6 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/final"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/initial"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/thinktime"/>
-      </genClasses>
-      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/Transition">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/Transition/porcentage"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Transition/activity"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Transition/thinktime"/>
       </genClasses>
       <nestedGenPackages prefix="CanopusPerformanceExternalFile" basePackage="canopus.canopusPerformanceScripting"
           disposableProviderFactory="true" ecorePackage="canopus.ecore#//canopusPerformanceScripting/canopusPerformanceExternalFile">

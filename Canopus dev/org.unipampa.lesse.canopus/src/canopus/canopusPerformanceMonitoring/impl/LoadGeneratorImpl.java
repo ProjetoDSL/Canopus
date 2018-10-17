@@ -475,7 +475,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (hostname: ");
 		result.append(hostname);
 		result.append(", ip: ");

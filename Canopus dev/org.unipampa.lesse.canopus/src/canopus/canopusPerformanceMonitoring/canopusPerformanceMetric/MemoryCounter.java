@@ -4,7 +4,6 @@ package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Memory Counter</b></em>'.
@@ -28,7 +27,7 @@ public interface MemoryCounter extends Counter {
 	 * The literals are from the enumeration {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.COUNTER_MEMORY}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Counter Memory</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Counter Memory</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

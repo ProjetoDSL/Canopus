@@ -2,6 +2,7 @@
  */
 package canopus.canopusPerformanceScripting.impl;
 
+import canopus.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScripting.ThinkTime;
 
@@ -9,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ThinkTimeImpl#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ThinkTimeImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScripting.impl.ThinkTimeImpl#getActivity <em>Activity</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +69,16 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * @ordered
 	 */
 	protected String time = TIME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivity()
+	 * @generated
+	 * @ordered
+	 */
+	protected Activity activity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +146,44 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Activity getActivity() {
+		if (activity != null && activity.eIsProxy()) {
+			InternalEObject oldActivity = (InternalEObject)activity;
+			activity = (Activity)eResolveProxy(oldActivity);
+			if (activity != oldActivity) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.THINK_TIME__ACTIVITY, oldActivity, activity));
+			}
+		}
+		return activity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Activity basicGetActivity() {
+		return activity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActivity(Activity newActivity) {
+		Activity oldActivity = activity;
+		activity = newActivity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.THINK_TIME__ACTIVITY, oldActivity, activity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -140,6 +191,9 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 				return getName();
 			case CanopusPerformanceScriptingPackage.THINK_TIME__TIME:
 				return getTime();
+			case CanopusPerformanceScriptingPackage.THINK_TIME__ACTIVITY:
+				if (resolve) return getActivity();
+				return basicGetActivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +211,9 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 				return;
 			case CanopusPerformanceScriptingPackage.THINK_TIME__TIME:
 				setTime((String)newValue);
+				return;
+			case CanopusPerformanceScriptingPackage.THINK_TIME__ACTIVITY:
+				setActivity((Activity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,6 +233,9 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 			case CanopusPerformanceScriptingPackage.THINK_TIME__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
+			case CanopusPerformanceScriptingPackage.THINK_TIME__ACTIVITY:
+				setActivity((Activity)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,6 +252,8 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CanopusPerformanceScriptingPackage.THINK_TIME__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+			case CanopusPerformanceScriptingPackage.THINK_TIME__ACTIVITY:
+				return activity != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -205,7 +267,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", time: ");

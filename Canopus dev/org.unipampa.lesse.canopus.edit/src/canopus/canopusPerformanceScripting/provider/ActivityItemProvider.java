@@ -72,6 +72,8 @@ public class ActivityItemProvider
 			addLoopInstancesPropertyDescriptor(object);
 			addTransactionPropertyDescriptor(object);
 			addActivityPropertyDescriptor(object);
+			addFinalPropertyDescriptor(object);
+			addThinktimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -222,6 +224,50 @@ public class ActivityItemProvider
 				 getString("_UI_Activity_activity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_activity_feature", "_UI_Activity_type"),
 				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__ACTIVITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Final feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFinalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_final_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_final_feature", "_UI_Activity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__FINAL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Thinktime feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addThinktimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_thinktime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_thinktime_feature", "_UI_Activity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__THINKTIME,
 				 true,
 				 false,
 				 true,

@@ -7,8 +7,11 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerf
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -135,7 +138,7 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (counterMemory: ");
 		result.append(counterMemory);
 		result.append(')');

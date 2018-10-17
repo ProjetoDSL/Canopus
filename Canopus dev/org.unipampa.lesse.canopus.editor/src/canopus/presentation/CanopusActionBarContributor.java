@@ -163,6 +163,7 @@ public class CanopusActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("canopus-settings"));
 		toolBarManager.add(new Separator("canopus-additions"));
 	}

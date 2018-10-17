@@ -276,7 +276,7 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (percentage: ");
 		result.append(percentage);
 		result.append(')');

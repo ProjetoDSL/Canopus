@@ -165,6 +165,7 @@ public class CanopusPerformanceExternalFileActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("canopusperformanceexternalfile-settings"));
 		toolBarManager.add(new Separator("canopusperformanceexternalfile-additions"));
 	}

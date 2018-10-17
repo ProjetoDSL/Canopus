@@ -165,6 +165,7 @@ public class CanopusPerformanceMonitoringActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("canopusperformancemonitoring-settings"));
 		toolBarManager.add(new Separator("canopusperformancemonitoring-additions"));
 	}

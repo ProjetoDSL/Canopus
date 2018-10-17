@@ -10,7 +10,7 @@ import canopus.canopusPerformanceScripting.DataTable;
 import canopus.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScripting.Initial;
 import canopus.canopusPerformanceScripting.SaveParameters;
-import canopus.canopusPerformanceScripting.ScriptingModel;
+import canopus.canopusPerformanceScripting.ThinkTime;
 
 import java.util.Collection;
 
@@ -25,8 +25,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -42,9 +40,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.impl.ScriptingImpl#getActivities <em>Activities</em>}</li>
  *   <li>{@link canopus.impl.ScriptingImpl#getSaveparameters <em>Saveparameters</em>}</li>
  *   <li>{@link canopus.impl.ScriptingImpl#getDatatables <em>Datatables</em>}</li>
- *   <li>{@link canopus.impl.ScriptingImpl#getScripts <em>Scripts</em>}</li>
+ *   <li>{@link canopus.impl.ScriptingImpl#getThinkTime <em>Think Time</em>}</li>
  *   <li>{@link canopus.impl.ScriptingImpl#getScripting <em>Scripting</em>}</li>
- *   <li>{@link canopus.impl.ScriptingImpl#getScriptingeOpposite <em>Scriptinge Opposite</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,17 +98,17 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 	protected EList<DataTable> datatables;
 
 	/**
-	 * The cached value of the '{@link #getScripts() <em>Scripts</em>}' reference list.
+	 * The cached value of the '{@link #getThinkTime() <em>Think Time</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScripts()
+	 * @see #getThinkTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ScriptingModel> scripts;
+	protected EList<ThinkTime> thinkTime;
 
 	/**
-	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference list.
+	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getScripting()
@@ -119,16 +116,6 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 	 * @ordered
 	 */
 	protected EList<Scripting> scripting;
-
-	/**
-	 * The cached value of the '{@link #getScriptingeOpposite() <em>Scriptinge Opposite</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptingeOpposite()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Scripting> scriptingeOpposite;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -276,11 +263,11 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ScriptingModel> getScripts() {
-		if (scripts == null) {
-			scripts = new EObjectResolvingEList<ScriptingModel>(ScriptingModel.class, this, CanopusPackage.SCRIPTING__SCRIPTS);
+	public EList<ThinkTime> getThinkTime() {
+		if (thinkTime == null) {
+			thinkTime = new EObjectContainmentEList<ThinkTime>(ThinkTime.class, this, CanopusPackage.SCRIPTING__THINK_TIME);
 		}
-		return scripts;
+		return thinkTime;
 	}
 
 	/**
@@ -290,38 +277,9 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 	 */
 	public EList<Scripting> getScripting() {
 		if (scripting == null) {
-			scripting = new EObjectWithInverseResolvingEList.ManyInverse<Scripting>(Scripting.class, this, CanopusPackage.SCRIPTING__SCRIPTING, CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE);
+			scripting = new EObjectContainmentEList<Scripting>(Scripting.class, this, CanopusPackage.SCRIPTING__SCRIPTING);
 		}
 		return scripting;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Scripting> getScriptingeOpposite() {
-		if (scriptingeOpposite == null) {
-			scriptingeOpposite = new EObjectWithInverseResolvingEList.ManyInverse<Scripting>(Scripting.class, this, CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE, CanopusPackage.SCRIPTING__SCRIPTING);
-		}
-		return scriptingeOpposite;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CanopusPackage.SCRIPTING__SCRIPTING:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScripting()).basicAdd(otherEnd, msgs);
-			case CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScriptingeOpposite()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -342,10 +300,10 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				return ((InternalEList<?>)getSaveparameters()).basicRemove(otherEnd, msgs);
 			case CanopusPackage.SCRIPTING__DATATABLES:
 				return ((InternalEList<?>)getDatatables()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCRIPTING__THINK_TIME:
+				return ((InternalEList<?>)getThinkTime()).basicRemove(otherEnd, msgs);
 			case CanopusPackage.SCRIPTING__SCRIPTING:
 				return ((InternalEList<?>)getScripting()).basicRemove(otherEnd, msgs);
-			case CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE:
-				return ((InternalEList<?>)getScriptingeOpposite()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -368,12 +326,10 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				return getSaveparameters();
 			case CanopusPackage.SCRIPTING__DATATABLES:
 				return getDatatables();
-			case CanopusPackage.SCRIPTING__SCRIPTS:
-				return getScripts();
+			case CanopusPackage.SCRIPTING__THINK_TIME:
+				return getThinkTime();
 			case CanopusPackage.SCRIPTING__SCRIPTING:
 				return getScripting();
-			case CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE:
-				return getScriptingeOpposite();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -405,17 +361,13 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				getDatatables().clear();
 				getDatatables().addAll((Collection<? extends DataTable>)newValue);
 				return;
-			case CanopusPackage.SCRIPTING__SCRIPTS:
-				getScripts().clear();
-				getScripts().addAll((Collection<? extends ScriptingModel>)newValue);
+			case CanopusPackage.SCRIPTING__THINK_TIME:
+				getThinkTime().clear();
+				getThinkTime().addAll((Collection<? extends ThinkTime>)newValue);
 				return;
 			case CanopusPackage.SCRIPTING__SCRIPTING:
 				getScripting().clear();
 				getScripting().addAll((Collection<? extends Scripting>)newValue);
-				return;
-			case CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE:
-				getScriptingeOpposite().clear();
-				getScriptingeOpposite().addAll((Collection<? extends Scripting>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -444,14 +396,11 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 			case CanopusPackage.SCRIPTING__DATATABLES:
 				getDatatables().clear();
 				return;
-			case CanopusPackage.SCRIPTING__SCRIPTS:
-				getScripts().clear();
+			case CanopusPackage.SCRIPTING__THINK_TIME:
+				getThinkTime().clear();
 				return;
 			case CanopusPackage.SCRIPTING__SCRIPTING:
 				getScripting().clear();
-				return;
-			case CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE:
-				getScriptingeOpposite().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -475,12 +424,10 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				return saveparameters != null && !saveparameters.isEmpty();
 			case CanopusPackage.SCRIPTING__DATATABLES:
 				return datatables != null && !datatables.isEmpty();
-			case CanopusPackage.SCRIPTING__SCRIPTS:
-				return scripts != null && !scripts.isEmpty();
+			case CanopusPackage.SCRIPTING__THINK_TIME:
+				return thinkTime != null && !thinkTime.isEmpty();
 			case CanopusPackage.SCRIPTING__SCRIPTING:
 				return scripting != null && !scripting.isEmpty();
-			case CanopusPackage.SCRIPTING__SCRIPTINGE_OPPOSITE:
-				return scriptingeOpposite != null && !scriptingeOpposite.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -165,6 +165,7 @@ public class CanopusPerformanceScenarioActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("canopusperformancescenario-settings"));
 		toolBarManager.add(new Separator("canopusperformancescenario-additions"));
 	}

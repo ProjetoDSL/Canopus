@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScripting.ThinkTime#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.ThinkTime#getTime <em>Time</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScripting.ThinkTime#getActivity <em>Activity</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getThinkTime()
@@ -73,5 +74,31 @@ public interface ThinkTime extends EObject {
 	 * @generated
 	 */
 	void setTime(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activity</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activity</em>' reference.
+	 * @see #setActivity(Activity)
+	 * @see canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getThinkTime_Activity()
+	 * @model
+	 * @generated
+	 */
+	Activity getActivity();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceScripting.ThinkTime#getActivity <em>Activity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Activity</em>' reference.
+	 * @see #getActivity()
+	 * @generated
+	 */
+	void setActivity(Activity value);
 
 } // ThinkTime

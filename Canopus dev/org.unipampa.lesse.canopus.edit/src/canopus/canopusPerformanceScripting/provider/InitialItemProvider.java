@@ -3,6 +3,8 @@
 package canopus.canopusPerformanceScripting.provider;
 
 
+import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
+import canopus.canopusPerformanceScripting.Initial;
 import canopus.provider.CanopusEditPlugin;
 
 import java.util.Collection;
@@ -13,13 +15,16 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link canopus.canopusPerformanceScripting.Initial} object.
@@ -56,8 +61,54 @@ public class InitialItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addActivityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Initial_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Initial_name_feature", "_UI_Initial_type"),
+				 CanopusPerformanceScriptingPackage.Literals.INITIAL__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Activity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActivityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Initial_activity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Initial_activity_feature", "_UI_Initial_type"),
+				 CanopusPerformanceScriptingPackage.Literals.INITIAL__ACTIVITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -79,7 +130,10 @@ public class InitialItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Initial_type");
+		String label = ((Initial)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Initial_type") :
+			getString("_UI_Initial_type") + " " + label;
 	}
 	
 
@@ -93,6 +147,12 @@ public class InitialItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Initial.class)) {
+			case CanopusPerformanceScriptingPackage.INITIAL__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
