@@ -94,7 +94,7 @@ public class TransactionItemProvider extends MetricItemProvider {
 			getString("_UI_Transaction_type") :
 			getString("_UI_Transaction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

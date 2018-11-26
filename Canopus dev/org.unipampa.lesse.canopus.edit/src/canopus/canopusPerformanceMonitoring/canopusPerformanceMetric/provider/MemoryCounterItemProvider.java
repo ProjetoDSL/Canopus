@@ -96,7 +96,7 @@ public class MemoryCounterItemProvider extends CounterItemProvider {
 			getString("_UI_MemoryCounter_type") :
 			getString("_UI_MemoryCounter_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

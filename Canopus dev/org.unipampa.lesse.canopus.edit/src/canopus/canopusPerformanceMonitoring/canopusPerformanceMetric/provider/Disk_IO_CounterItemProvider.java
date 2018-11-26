@@ -96,7 +96,7 @@ public class Disk_IO_CounterItemProvider extends CounterItemProvider {
 			getString("_UI_Disk_IO_Counter_type") :
 			getString("_UI_Disk_IO_Counter_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

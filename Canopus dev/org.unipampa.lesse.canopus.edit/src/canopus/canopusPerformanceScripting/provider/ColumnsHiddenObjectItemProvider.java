@@ -182,7 +182,7 @@ public class ColumnsHiddenObjectItemProvider
 			getString("_UI_ColumnsHiddenObject_type") :
 			getString("_UI_ColumnsHiddenObject_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

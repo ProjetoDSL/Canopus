@@ -159,7 +159,7 @@ public class ThinkTimeItemProvider
 			getString("_UI_ThinkTime_type") :
 			getString("_UI_ThinkTime_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

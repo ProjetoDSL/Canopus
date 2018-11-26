@@ -111,7 +111,7 @@ public class CriteriaItemProvider
 		Criteria criteria = (Criteria)object;
 		return getString("_UI_Criteria_type") + " " + criteria.getValue();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

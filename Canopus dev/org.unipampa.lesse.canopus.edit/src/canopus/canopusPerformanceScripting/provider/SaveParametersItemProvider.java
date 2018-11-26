@@ -146,7 +146,7 @@ public class SaveParametersItemProvider
 			getString("_UI_SaveParameters_type") :
 			getString("_UI_SaveParameters_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -111,7 +111,7 @@ public class RampUpTimerItemProvider
 		RampUpTimer rampUpTimer = (RampUpTimer)object;
 		return getString("_UI_RampUpTimer_type") + " " + rampUpTimer.getTime();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

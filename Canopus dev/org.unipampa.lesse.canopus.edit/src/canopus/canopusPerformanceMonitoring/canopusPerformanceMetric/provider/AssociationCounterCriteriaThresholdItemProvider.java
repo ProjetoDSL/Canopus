@@ -161,7 +161,7 @@ public class AssociationCounterCriteriaThresholdItemProvider
 			getString("_UI_AssociationCounterCriteriaThreshold_type") :
 			getString("_UI_AssociationCounterCriteriaThreshold_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

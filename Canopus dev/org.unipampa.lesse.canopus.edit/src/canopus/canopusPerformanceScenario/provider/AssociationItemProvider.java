@@ -157,7 +157,7 @@ public class AssociationItemProvider
 		Association association = (Association)object;
 		return getString("_UI_Association_type") + " " + association.getPercentage();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

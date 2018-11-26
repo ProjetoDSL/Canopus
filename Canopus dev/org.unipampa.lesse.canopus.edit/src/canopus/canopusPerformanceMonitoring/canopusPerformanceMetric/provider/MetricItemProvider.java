@@ -102,7 +102,7 @@ public class MetricItemProvider
 			getString("_UI_Metric_type") :
 			getString("_UI_Metric_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -111,7 +111,7 @@ public class RampDownTimeItemProvider
 		RampDownTime rampDownTime = (RampDownTime)object;
 		return getString("_UI_RampDownTime_type") + " " + rampDownTime.getTime();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

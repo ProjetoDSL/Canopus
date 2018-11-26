@@ -151,7 +151,7 @@ public class WorkloadModelItemProvider
 			getString("_UI_WorkloadModel_type") :
 			getString("_UI_WorkloadModel_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

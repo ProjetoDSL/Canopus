@@ -81,7 +81,7 @@ public class WorkloadGroupItemProvider
 	public String getText(Object object) {
 		return getString("_UI_WorkloadGroup_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

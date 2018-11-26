@@ -9,6 +9,7 @@ import canopus.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScripting.ScriptingModel;
 import canopus.canopusPerformanceScripting.TYPEACTION;
 import canopus.canopusPerformanceScripting.ThinkTime;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

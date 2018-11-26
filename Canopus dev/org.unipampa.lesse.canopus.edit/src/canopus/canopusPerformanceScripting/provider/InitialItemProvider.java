@@ -5,6 +5,7 @@ package canopus.canopusPerformanceScripting.provider;
 
 import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScripting.Initial;
+
 import canopus.provider.CanopusEditPlugin;
 
 import java.util.Collection;
@@ -135,7 +136,7 @@ public class InitialItemProvider
 			getString("_UI_Initial_type") :
 			getString("_UI_Initial_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

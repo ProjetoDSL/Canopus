@@ -94,7 +94,7 @@ public class MemoryItemProvider extends MetricItemProvider {
 			getString("_UI_Memory_type") :
 			getString("_UI_Memory_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

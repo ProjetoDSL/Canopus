@@ -5,6 +5,7 @@ package canopus.canopusPerformanceScripting.provider;
 
 import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScripting.Final;
+
 import canopus.provider.CanopusEditPlugin;
 
 import java.util.Collection;
@@ -112,7 +113,7 @@ public class FinalItemProvider
 			getString("_UI_Final_type") :
 			getString("_UI_Final_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

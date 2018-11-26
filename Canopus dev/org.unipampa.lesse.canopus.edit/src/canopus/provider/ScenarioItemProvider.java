@@ -108,7 +108,7 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 			getString("_UI_Scenario_type") :
 			getString("_UI_Scenario_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

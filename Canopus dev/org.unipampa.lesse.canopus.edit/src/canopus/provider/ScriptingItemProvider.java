@@ -159,7 +159,7 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 			getString("_UI_Scripting_type") :
 			getString("_UI_Scripting_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

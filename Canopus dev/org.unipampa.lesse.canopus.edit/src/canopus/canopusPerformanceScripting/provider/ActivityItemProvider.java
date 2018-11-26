@@ -331,7 +331,7 @@ public class ActivityItemProvider
 			getString("_UI_Activity_type") :
 			getString("_UI_Activity_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

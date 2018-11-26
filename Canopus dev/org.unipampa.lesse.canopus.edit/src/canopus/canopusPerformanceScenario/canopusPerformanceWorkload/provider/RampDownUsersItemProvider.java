@@ -111,7 +111,7 @@ public class RampDownUsersItemProvider
 		RampDownUsers rampDownUsers = (RampDownUsers)object;
 		return getString("_UI_RampDownUsers_type") + " " + rampDownUsers.getVirtualUsers();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

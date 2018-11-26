@@ -192,7 +192,7 @@ public class ParameterHiddenObjectItemProvider
 			getString("_UI_ParameterHiddenObject_type") :
 			getString("_UI_ParameterHiddenObject_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

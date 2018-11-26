@@ -251,7 +251,7 @@ public class LoadGeneratorItemProvider
 			getString("_UI_LoadGenerator_type") :
 			getString("_UI_LoadGenerator_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

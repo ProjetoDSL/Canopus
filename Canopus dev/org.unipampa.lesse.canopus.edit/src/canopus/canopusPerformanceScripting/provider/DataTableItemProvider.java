@@ -193,7 +193,7 @@ public class DataTableItemProvider
 			getString("_UI_DataTable_type") :
 			getString("_UI_DataTable_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

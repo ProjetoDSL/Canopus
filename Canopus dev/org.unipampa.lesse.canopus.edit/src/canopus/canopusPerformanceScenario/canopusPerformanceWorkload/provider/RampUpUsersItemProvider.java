@@ -111,7 +111,7 @@ public class RampUpUsersItemProvider
 		RampUpUsers rampUpUsers = (RampUpUsers)object;
 		return getString("_UI_RampUpUsers_type") + " " + rampUpUsers.getVirtualUsers();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

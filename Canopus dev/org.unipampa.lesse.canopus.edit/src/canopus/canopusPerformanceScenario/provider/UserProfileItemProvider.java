@@ -182,7 +182,7 @@ public class UserProfileItemProvider
 			getString("_UI_UserProfile_type") :
 			getString("_UI_UserProfile_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

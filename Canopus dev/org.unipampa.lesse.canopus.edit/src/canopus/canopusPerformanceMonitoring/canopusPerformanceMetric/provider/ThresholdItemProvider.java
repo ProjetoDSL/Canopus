@@ -111,7 +111,7 @@ public class ThresholdItemProvider
 		Threshold threshold = (Threshold)object;
 		return getString("_UI_Threshold_type") + " " + threshold.getValue();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

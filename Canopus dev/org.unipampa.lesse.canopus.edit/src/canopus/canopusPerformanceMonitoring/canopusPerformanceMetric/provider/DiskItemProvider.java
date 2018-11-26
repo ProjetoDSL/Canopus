@@ -94,7 +94,7 @@ public class DiskItemProvider extends MetricItemProvider {
 			getString("_UI_Disk_type") :
 			getString("_UI_Disk_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -111,7 +111,7 @@ public class VirtualUsersItemProvider
 		VirtualUsers virtualUsers = (VirtualUsers)object;
 		return getString("_UI_VirtualUsers_type") + " " + virtualUsers.getVirtualUsers();
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

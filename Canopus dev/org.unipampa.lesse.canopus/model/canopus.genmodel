@@ -216,7 +216,6 @@
           <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/virtualusers"/>
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/name"/>
         </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup"/>
       </nestedGenPackages>
     </nestedGenPackages>
     <nestedGenPackages prefix="CanopusPerformanceScripting" basePackage="canopus"

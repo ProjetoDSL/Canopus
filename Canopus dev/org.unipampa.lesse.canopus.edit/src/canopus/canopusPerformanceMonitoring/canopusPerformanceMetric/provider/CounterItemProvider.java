@@ -125,7 +125,7 @@ public class CounterItemProvider
 			getString("_UI_Counter_type") :
 			getString("_UI_Counter_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

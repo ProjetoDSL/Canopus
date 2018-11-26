@@ -113,7 +113,7 @@ public class TestDurationItemProvider
 			getString("_UI_TestDuration_type") :
 			getString("_UI_TestDuration_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
