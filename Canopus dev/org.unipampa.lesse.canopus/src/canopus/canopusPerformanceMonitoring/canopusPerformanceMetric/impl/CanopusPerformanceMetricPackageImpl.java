@@ -627,7 +627,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 		initEClass(associationCounterCriteriaThresholdEClass, AssociationCounterCriteriaThreshold.class, "AssociationCounterCriteriaThreshold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAssociationCounterCriteriaThreshold_AssociationCriteria(), this.getASSOCIATION_CRITERIA(), "associationCriteria", null, 0, 1, AssociationCounterCriteriaThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationCounterCriteriaThreshold_Threshold(), this.getThreshold(), null, "threshold", null, 0, 1, AssociationCounterCriteriaThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociationCounterCriteriaThreshold_Criteria(), this.getCriteria(), null, "criteria", null, 0, 1, AssociationCounterCriteriaThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationCounterCriteriaThreshold_Criteria(), this.getCriteria(), null, "criteria", null, 0, -1, AssociationCounterCriteriaThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(counterEClass, Counter.class, "Counter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCounter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

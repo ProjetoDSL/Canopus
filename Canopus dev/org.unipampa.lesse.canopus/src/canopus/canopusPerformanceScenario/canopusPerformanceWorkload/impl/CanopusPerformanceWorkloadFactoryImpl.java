@@ -63,7 +63,6 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_TIMER: return createRampUpTimer();
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME: return createRampDownTime();
 			case CanopusPerformanceWorkloadPackage.WORKLOAD_MODEL: return createWorkloadModel();
-			case CanopusPerformanceWorkloadPackage.WORKLOAD_GROUP: return createWorkloadGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -137,16 +136,6 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	public WorkloadModel createWorkloadModel() {
 		WorkloadModelImpl workloadModel = new WorkloadModelImpl();
 		return workloadModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public WorkloadGroup createWorkloadGroup() {
-		WorkloadGroupImpl workloadGroup = new WorkloadGroupImpl();
-		return workloadGroup;
 	}
 
 	/**

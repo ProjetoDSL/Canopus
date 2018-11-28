@@ -22,7 +22,6 @@ import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTimer
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadModel;
 
 import canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl;
@@ -99,13 +98,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	private EClass workloadModelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass workloadGroupEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -379,15 +371,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWorkloadGroup() {
-		return workloadGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CanopusPerformanceWorkloadFactory getCanopusPerformanceWorkloadFactory() {
 		return (CanopusPerformanceWorkloadFactory)getEFactoryInstance();
 	}
@@ -437,8 +420,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		createEReference(workloadModelEClass, WORKLOAD_MODEL__RAMPUPUSERS);
 		createEReference(workloadModelEClass, WORKLOAD_MODEL__VIRTUALUSERS);
 		createEAttribute(workloadModelEClass, WORKLOAD_MODEL__NAME);
-
-		workloadGroupEClass = createEClass(WORKLOAD_GROUP);
 	}
 
 	/**
@@ -497,8 +478,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		initEReference(getWorkloadModel_Rampupusers(), this.getRampUpUsers(), null, "rampupusers", null, 0, 1, WorkloadModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkloadModel_Virtualusers(), this.getVirtualUsers(), null, "virtualusers", null, 0, 1, WorkloadModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkloadModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, WorkloadModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(workloadGroupEClass, WorkloadGroup.class, "WorkloadGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //CanopusPerformanceWorkloadPackageImpl

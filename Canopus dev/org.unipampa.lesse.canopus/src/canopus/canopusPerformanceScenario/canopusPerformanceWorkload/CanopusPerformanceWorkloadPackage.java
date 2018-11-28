@@ -370,35 +370,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	int WORKLOAD_MODEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl <em>Workload Group</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getWorkloadGroup()
-	 * @generated
-	 */
-	int WORKLOAD_GROUP = 7;
-
-	/**
-	 * The number of structural features of the '<em>Workload Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Workload Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP_OPERATION_COUNT = 0;
-
-
-	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers <em>Virtual Users</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -612,16 +583,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	EAttribute getWorkloadModel_Name();
 
 	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup <em>Workload Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Workload Group</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup
-	 * @generated
-	 */
-	EClass getWorkloadGroup();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -817,16 +778,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WORKLOAD_MODEL__NAME = eINSTANCE.getWorkloadModel_Name();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl <em>Workload Group</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getWorkloadGroup()
-		 * @generated
-		 */
-		EClass WORKLOAD_GROUP = eINSTANCE.getWorkloadGroup();
 
 	}
 

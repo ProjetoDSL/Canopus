@@ -2,6 +2,7 @@
  */
 package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -79,29 +80,19 @@ public interface AssociationCounterCriteriaThreshold extends EObject {
 	void setThreshold(Threshold value);
 
 	/**
-	 * Returns the value of the '<em><b>Criteria</b></em>' reference.
+	 * Returns the value of the '<em><b>Criteria</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Criteria}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Criteria</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Criteria</em>' reference.
-	 * @see #setCriteria(Criteria)
+	 * @return the value of the '<em>Criteria</em>' reference list.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage#getAssociationCounterCriteriaThreshold_Criteria()
 	 * @model
 	 * @generated
 	 */
-	Criteria getCriteria();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.AssociationCounterCriteriaThreshold#getCriteria <em>Criteria</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Criteria</em>' reference.
-	 * @see #getCriteria()
-	 * @generated
-	 */
-	void setCriteria(Criteria value);
+	EList<Criteria> getCriteria();
 
 } // AssociationCounterCriteriaThreshold

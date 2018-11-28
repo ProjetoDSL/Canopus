@@ -126,7 +126,8 @@
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationCriteria"
             eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/ASSOCIATION_CRITERIA"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" upperBound="-1"
+            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="ASSOCIATION_CRITERIA">
         <eLiterals name="BETWEEN"/>

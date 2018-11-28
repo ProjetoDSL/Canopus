@@ -8,13 +8,16 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerf
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Criteria;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Threshold;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,14 +66,14 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	protected Threshold threshold;
 
 	/**
-	 * The cached value of the '{@link #getCriteria() <em>Criteria</em>}' reference.
+	 * The cached value of the '{@link #getCriteria() <em>Criteria</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCriteria()
 	 * @generated
 	 * @ordered
 	 */
-	protected Criteria criteria;
+	protected EList<Criteria> criteria;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,37 +158,11 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Criteria getCriteria() {
-		if (criteria != null && criteria.eIsProxy()) {
-			InternalEObject oldCriteria = (InternalEObject)criteria;
-			criteria = (Criteria)eResolveProxy(oldCriteria);
-			if (criteria != oldCriteria) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA, oldCriteria, criteria));
-			}
+	public EList<Criteria> getCriteria() {
+		if (criteria == null) {
+			criteria = new EObjectResolvingEList<Criteria>(Criteria.class, this, CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA);
 		}
 		return criteria;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Criteria basicGetCriteria() {
-		return criteria;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCriteria(Criteria newCriteria) {
-		Criteria oldCriteria = criteria;
-		criteria = newCriteria;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA, oldCriteria, criteria));
 	}
 
 	/**
@@ -202,8 +179,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 				if (resolve) return getThreshold();
 				return basicGetThreshold();
 			case CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA:
-				if (resolve) return getCriteria();
-				return basicGetCriteria();
+				return getCriteria();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,6 +189,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -223,7 +200,8 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 				setThreshold((Threshold)newValue);
 				return;
 			case CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA:
-				setCriteria((Criteria)newValue);
+				getCriteria().clear();
+				getCriteria().addAll((Collection<? extends Criteria>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -244,7 +222,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 				setThreshold((Threshold)null);
 				return;
 			case CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA:
-				setCriteria((Criteria)null);
+				getCriteria().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -263,7 +241,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 			case CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__THRESHOLD:
 				return threshold != null;
 			case CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA:
-				return criteria != null;
+				return criteria != null && !criteria.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

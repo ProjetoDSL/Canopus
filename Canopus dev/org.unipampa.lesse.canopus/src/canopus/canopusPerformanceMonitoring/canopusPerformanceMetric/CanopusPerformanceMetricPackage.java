@@ -215,7 +215,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__THRESHOLD = 1;
 
 	/**
-	 * The feature id for the '<em><b>Criteria</b></em>' reference.
+	 * The feature id for the '<em><b>Criteria</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -709,10 +709,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EReference getAssociationCounterCriteriaThreshold_Threshold();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.AssociationCounterCriteriaThreshold#getCriteria <em>Criteria</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.AssociationCounterCriteriaThreshold#getCriteria <em>Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Criteria</em>'.
+	 * @return the meta object for the reference list '<em>Criteria</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.AssociationCounterCriteriaThreshold#getCriteria()
 	 * @see #getAssociationCounterCriteriaThreshold()
 	 * @generated
@@ -1021,7 +1021,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EReference ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__THRESHOLD = eINSTANCE.getAssociationCounterCriteriaThreshold_Threshold();
 
 		/**
-		 * The meta object literal for the '<em><b>Criteria</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Criteria</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

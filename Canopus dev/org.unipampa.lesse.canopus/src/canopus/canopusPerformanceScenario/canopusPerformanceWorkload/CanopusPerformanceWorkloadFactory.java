@@ -85,15 +85,6 @@ public interface CanopusPerformanceWorkloadFactory extends EFactory {
 	WorkloadModel createWorkloadModel();
 
 	/**
-	 * Returns a new object of class '<em>Workload Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Workload Group</em>'.
-	 * @generated
-	 */
-	WorkloadGroup createWorkloadGroup();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
