@@ -65,7 +65,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getMetric()
 	 * @generated
 	 */
-	int METRIC = 2;
+	int METRIC = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -194,7 +194,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getAssociationCounterCriteriaThreshold()
 	 * @generated
 	 */
-	int ASSOCIATION_COUNTER_CRITERIA_THRESHOLD = 3;
+	int ASSOCIATION_COUNTER_CRITERIA_THRESHOLD = 2;
 
 	/**
 	 * The feature id for the '<em><b>Association Criteria</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getCounter()
 	 * @generated
 	 */
-	int COUNTER = 4;
+	int COUNTER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -295,7 +295,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getDisk_IO_Counter()
 	 * @generated
 	 */
-	int DISK_IO_COUNTER = 5;
+	int DISK_IO_COUNTER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -350,7 +350,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getCriteria()
 	 * @generated
 	 */
-	int CRITERIA = 6;
+	int CRITERIA = 5;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -387,7 +387,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getThreshold()
 	 * @generated
 	 */
-	int THRESHOLD = 7;
+	int THRESHOLD = 6;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -424,7 +424,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getMemoryCounter()
 	 * @generated
 	 */
-	int MEMORY_COUNTER = 8;
+	int MEMORY_COUNTER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -479,7 +479,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getTransaction()
 	 * @generated
 	 */
-	int TRANSACTION = 9;
+	int TRANSACTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -525,7 +525,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getTransactionCounter()
 	 * @generated
 	 */
-	int TRANSACTION_COUNTER = 10;
+	int TRANSACTION_COUNTER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -654,27 +654,6 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDisk_Disk_io_counter();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric <em>Metric</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Metric</em>'.
-	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric
-	 * @generated
-	 */
-	EClass getMetric();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric#getName()
-	 * @see #getMetric()
-	 * @generated
-	 */
-	EAttribute getMetric_Name();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.AssociationCounterCriteriaThreshold <em>Association Counter Criteria Threshold</em>}'.
@@ -878,6 +857,27 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EAttribute getTransactionCounter_CounterTransaction();
 
 	/**
+	 * Returns the meta object for class '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric <em>Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Metric</em>'.
+	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric
+	 * @generated
+	 */
+	EClass getMetric();
+
+	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric#getName()
+	 * @see #getMetric()
+	 * @generated
+	 */
+	EAttribute getMetric_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.ASSOCIATION_CRITERIA <em>ASSOCIATION CRITERIA</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -975,24 +975,6 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DISK__DISK_IO_COUNTER = eINSTANCE.getDisk_Disk_io_counter();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.MetricImpl <em>Metric</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.MetricImpl
-		 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getMetric()
-		 * @generated
-		 */
-		EClass METRIC = eINSTANCE.getMetric();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METRIC__NAME = eINSTANCE.getMetric_Name();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.AssociationCounterCriteriaThresholdImpl <em>Association Counter Criteria Threshold</em>}' class.
@@ -1161,6 +1143,24 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TRANSACTION_COUNTER__COUNTER_TRANSACTION = eINSTANCE.getTransactionCounter_CounterTransaction();
+
+		/**
+		 * The meta object literal for the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.MetricImpl <em>Metric</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.MetricImpl
+		 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.CanopusPerformanceMetricPackageImpl#getMetric()
+		 * @generated
+		 */
+		EClass METRIC = eINSTANCE.getMetric();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute METRIC__NAME = eINSTANCE.getMetric_Name();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.ASSOCIATION_CRITERIA <em>ASSOCIATION CRITERIA</em>}' enum.

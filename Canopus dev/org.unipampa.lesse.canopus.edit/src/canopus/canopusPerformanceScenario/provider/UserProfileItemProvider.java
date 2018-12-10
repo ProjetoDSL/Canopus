@@ -65,7 +65,8 @@ public class UserProfileItemProvider
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addPercentagePropertyDescriptor(object);
-			addScriptPropertyDescriptor(object);
+			addScriptmodelPropertyDescriptor(object);
+			addScriptingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -137,19 +138,41 @@ public class UserProfileItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Script feature.
+	 * This adds a property descriptor for the Scriptmodel feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addScriptPropertyDescriptor(Object object) {
+	protected void addScriptmodelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UserProfile_script_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_script_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__SCRIPT,
+				 getString("_UI_UserProfile_scriptmodel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_scriptmodel_feature", "_UI_UserProfile_type"),
+				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__SCRIPTMODEL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Scripting feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addScriptingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UserProfile_scripting_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_scripting_feature", "_UI_UserProfile_type"),
+				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__SCRIPTING,
 				 true,
 				 false,
 				 true,

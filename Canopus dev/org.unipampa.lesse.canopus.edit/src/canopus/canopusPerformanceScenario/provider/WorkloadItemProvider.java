@@ -80,7 +80,12 @@ public class WorkloadItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__WORKLOAD);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__VIRTUAL_USERS);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TIMER);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_USERS);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_USERS);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST_DURATION);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TIMER);
 		}
 		return childrenFeatures;
 	}
@@ -133,7 +138,12 @@ public class WorkloadItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Workload.class)) {
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_USERS:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,8 +163,33 @@ public class WorkloadItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__WORKLOAD,
-				 CanopusPerformanceWorkloadFactory.eINSTANCE.createWorkloadModel()));
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__VIRTUAL_USERS,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createVirtualUsers()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TIMER,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampUpTimer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_USERS,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownUsers()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_USERS,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampUpUsers()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST_DURATION,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createTestDuration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TIMER,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTime()));
 	}
 
 	/**

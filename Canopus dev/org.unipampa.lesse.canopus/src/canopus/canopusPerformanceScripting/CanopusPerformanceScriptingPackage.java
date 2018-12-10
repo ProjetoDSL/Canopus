@@ -223,22 +223,13 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int ACTIVITY__ACTIVITY = 7;
 
 	/**
-	 * The feature id for the '<em><b>Scriptingmodel</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__SCRIPTINGMODEL = 8;
-
-	/**
 	 * The feature id for the '<em><b>Final</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__FINAL = 9;
+	int ACTIVITY__FINAL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Thinktime</b></em>' reference.
@@ -247,7 +238,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__THINKTIME = 10;
+	int ACTIVITY__THINKTIME = 9;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -256,7 +247,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 11;
+	int ACTIVITY_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -561,88 +552,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int COLUMNS_HIDDEN_OBJECT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.impl.ScriptingModelImpl <em>Scripting Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScripting.impl.ScriptingModelImpl
-	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getScriptingModel()
-	 * @generated
-	 */
-	int SCRIPTING_MODEL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Activity</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL__ACTIVITY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Saveparameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL__SAVEPARAMETERS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Datatable</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL__DATATABLE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Final</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL__FINAL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Initial</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL__INITIAL = 4;
-
-	/**
-	 * The feature id for the '<em><b>Thinktime</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL__THINKTIME = 5;
-
-	/**
-	 * The number of structural features of the '<em>Scripting Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>Scripting Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_MODEL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -650,7 +559,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getTYPEACTION()
 	 * @generated
 	 */
-	int TYPEACTION = 9;
+	int TYPEACTION = 8;
 
 	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.UPDATED_VALUE_ON <em>UPDATED VALUE ON</em>}' enum.
@@ -660,7 +569,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getUPDATED_VALUE_ON()
 	 * @generated
 	 */
-	int UPDATED_VALUE_ON = 10;
+	int UPDATED_VALUE_ON = 9;
 
 	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScripting.SELECT_NEXT_ROW <em>SELECT NEXT ROW</em>}' enum.
@@ -670,7 +579,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getSELECT_NEXT_ROW()
 	 * @generated
 	 */
-	int SELECT_NEXT_ROW = 11;
+	int SELECT_NEXT_ROW = 10;
 
 
 	/**
@@ -823,17 +732,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivity_Activity();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScripting.Activity#getScriptingmodel <em>Scriptingmodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Scriptingmodel</em>'.
-	 * @see canopus.canopusPerformanceScripting.Activity#getScriptingmodel()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EReference getActivity_Scriptingmodel();
 
 	/**
 	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScripting.Activity#getFinal <em>Final</em>}'.
@@ -1095,82 +993,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EAttribute getColumnsHiddenObject_ParameterName();
 
 	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScripting.ScriptingModel <em>Scripting Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Scripting Model</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel
-	 * @generated
-	 */
-	EClass getScriptingModel();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScripting.ScriptingModel#getActivity <em>Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activity</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel#getActivity()
-	 * @see #getScriptingModel()
-	 * @generated
-	 */
-	EReference getScriptingModel_Activity();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScripting.ScriptingModel#getSaveparameters <em>Saveparameters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Saveparameters</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel#getSaveparameters()
-	 * @see #getScriptingModel()
-	 * @generated
-	 */
-	EReference getScriptingModel_Saveparameters();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScripting.ScriptingModel#getDatatable <em>Datatable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Datatable</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel#getDatatable()
-	 * @see #getScriptingModel()
-	 * @generated
-	 */
-	EReference getScriptingModel_Datatable();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScripting.ScriptingModel#getFinal <em>Final</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Final</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel#getFinal()
-	 * @see #getScriptingModel()
-	 * @generated
-	 */
-	EReference getScriptingModel_Final();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScripting.ScriptingModel#getInitial <em>Initial</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel#getInitial()
-	 * @see #getScriptingModel()
-	 * @generated
-	 */
-	EReference getScriptingModel_Initial();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScripting.ScriptingModel#getThinktime <em>Thinktime</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Thinktime</em>'.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel#getThinktime()
-	 * @see #getScriptingModel()
-	 * @generated
-	 */
-	EReference getScriptingModel_Thinktime();
-
-	/**
 	 * Returns the meta object for enum '{@link canopus.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1340,14 +1162,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__ACTIVITY = eINSTANCE.getActivity_Activity();
-
-		/**
-		 * The meta object literal for the '<em><b>Scriptingmodel</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITY__SCRIPTINGMODEL = eINSTANCE.getActivity_Scriptingmodel();
 
 		/**
 		 * The meta object literal for the '<em><b>Final</b></em>' reference feature.
@@ -1550,64 +1364,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLUMNS_HIDDEN_OBJECT__PARAMETER_NAME = eINSTANCE.getColumnsHiddenObject_ParameterName();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.impl.ScriptingModelImpl <em>Scripting Model</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScripting.impl.ScriptingModelImpl
-		 * @see canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getScriptingModel()
-		 * @generated
-		 */
-		EClass SCRIPTING_MODEL = eINSTANCE.getScriptingModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Activity</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING_MODEL__ACTIVITY = eINSTANCE.getScriptingModel_Activity();
-
-		/**
-		 * The meta object literal for the '<em><b>Saveparameters</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING_MODEL__SAVEPARAMETERS = eINSTANCE.getScriptingModel_Saveparameters();
-
-		/**
-		 * The meta object literal for the '<em><b>Datatable</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING_MODEL__DATATABLE = eINSTANCE.getScriptingModel_Datatable();
-
-		/**
-		 * The meta object literal for the '<em><b>Final</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING_MODEL__FINAL = eINSTANCE.getScriptingModel_Final();
-
-		/**
-		 * The meta object literal for the '<em><b>Initial</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING_MODEL__INITIAL = eINSTANCE.getScriptingModel_Initial();
-
-		/**
-		 * The meta object literal for the '<em><b>Thinktime</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING_MODEL__THINKTIME = eINSTANCE.getScriptingModel_Thinktime();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}' enum.

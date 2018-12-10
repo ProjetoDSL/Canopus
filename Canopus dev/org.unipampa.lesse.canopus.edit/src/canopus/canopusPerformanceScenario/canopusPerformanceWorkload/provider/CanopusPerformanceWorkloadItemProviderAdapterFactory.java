@@ -210,29 +210,6 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected WorkloadModelItemProvider workloadModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createWorkloadModelAdapter() {
-		if (workloadModelItemProvider == null) {
-			workloadModelItemProvider = new WorkloadModelItemProvider(this);
-		}
-
-		return workloadModelItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -337,7 +314,6 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 		if (rampDownUsersItemProvider != null) rampDownUsersItemProvider.dispose();
 		if (rampUpTimerItemProvider != null) rampUpTimerItemProvider.dispose();
 		if (rampDownTimeItemProvider != null) rampDownTimeItemProvider.dispose();
-		if (workloadModelItemProvider != null) workloadModelItemProvider.dispose();
 	}
 
 }

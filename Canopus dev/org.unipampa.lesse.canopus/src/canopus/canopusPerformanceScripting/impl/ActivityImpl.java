@@ -6,7 +6,6 @@ import canopus.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScripting.ParameterHiddenObject;
-import canopus.canopusPerformanceScripting.ScriptingModel;
 import canopus.canopusPerformanceScripting.TYPEACTION;
 import canopus.canopusPerformanceScripting.ThinkTime;
 
@@ -41,7 +40,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getParameterhiddenobject <em>Parameterhiddenobject</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#isTransaction <em>Transaction</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getActivity <em>Activity</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getScriptingmodel <em>Scriptingmodel</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getFinal <em>Final</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.impl.ActivityImpl#getThinktime <em>Thinktime</em>}</li>
  * </ul>
@@ -188,16 +186,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected EList<Activity> activity;
-
-	/**
-	 * The cached value of the '{@link #getScriptingmodel() <em>Scriptingmodel</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptingmodel()
-	 * @generated
-	 * @ordered
-	 */
-	protected ScriptingModel scriptingmodel;
 
 	/**
 	 * The cached value of the '{@link #getFinal() <em>Final</em>}' reference.
@@ -424,49 +412,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ScriptingModel getScriptingmodel() {
-		return scriptingmodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetScriptingmodel(ScriptingModel newScriptingmodel, NotificationChain msgs) {
-		ScriptingModel oldScriptingmodel = scriptingmodel;
-		scriptingmodel = newScriptingmodel;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL, oldScriptingmodel, newScriptingmodel);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setScriptingmodel(ScriptingModel newScriptingmodel) {
-		if (newScriptingmodel != scriptingmodel) {
-			NotificationChain msgs = null;
-			if (scriptingmodel != null)
-				msgs = ((InternalEObject)scriptingmodel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL, null, msgs);
-			if (newScriptingmodel != null)
-				msgs = ((InternalEObject)newScriptingmodel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL, null, msgs);
-			msgs = basicSetScriptingmodel(newScriptingmodel, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL, newScriptingmodel, newScriptingmodel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Final getFinal() {
 		if (final_ != null && final_.eIsProxy()) {
 			InternalEObject oldFinal = (InternalEObject)final_;
@@ -548,8 +493,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 		switch (featureID) {
 			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
 				return basicSetParameterhiddenobject(null, msgs);
-			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
-				return basicSetScriptingmodel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -578,8 +521,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return isTransaction();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
 				return getActivity();
-			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
-				return getScriptingmodel();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				if (resolve) return getFinal();
 				return basicGetFinal();
@@ -624,9 +565,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				getActivity().clear();
 				getActivity().addAll((Collection<? extends Activity>)newValue);
 				return;
-			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
-				setScriptingmodel((ScriptingModel)newValue);
-				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				setFinal((Final)newValue);
 				return;
@@ -669,9 +607,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
 				getActivity().clear();
 				return;
-			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
-				setScriptingmodel((ScriptingModel)null);
-				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				setFinal((Final)null);
 				return;
@@ -706,8 +641,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return transaction != TRANSACTION_EDEFAULT;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
 				return activity != null && !activity.isEmpty();
-			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
-				return scriptingmodel != null;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				return final_ != null;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:

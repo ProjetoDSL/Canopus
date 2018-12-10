@@ -65,7 +65,6 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 			case CanopusPerformanceScriptingPackage.DATA_TABLE: return createDataTable();
 			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT: return createParameterHiddenObject();
 			case CanopusPerformanceScriptingPackage.COLUMNS_HIDDEN_OBJECT: return createColumnsHiddenObject();
-			case CanopusPerformanceScriptingPackage.SCRIPTING_MODEL: return createScriptingModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -187,16 +186,6 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	public ColumnsHiddenObject createColumnsHiddenObject() {
 		ColumnsHiddenObjectImpl columnsHiddenObject = new ColumnsHiddenObjectImpl();
 		return columnsHiddenObject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScriptingModel createScriptingModel() {
-		ScriptingModelImpl scriptingModel = new ScriptingModelImpl();
-		return scriptingModel;
 	}
 
 	/**

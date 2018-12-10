@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.Association#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Association#getUserprofile <em>Userprofile</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Association#getScript <em>Script</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Association#getUserProfile <em>User Profile</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Association#getScriptmodel <em>Scriptmodel</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getAssociation()
@@ -50,55 +50,55 @@ public interface Association extends EObject {
 	void setPercentage(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Userprofile</b></em>' reference.
+	 * Returns the value of the '<em><b>User Profile</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Userprofile</em>' reference isn't clear,
+	 * If the meaning of the '<em>User Profile</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Userprofile</em>' reference.
-	 * @see #setUserprofile(UserProfile)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getAssociation_Userprofile()
-	 * @model
+	 * @return the value of the '<em>User Profile</em>' reference.
+	 * @see #setUserProfile(UserProfile)
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getAssociation_UserProfile()
+	 * @model required="true"
 	 * @generated
 	 */
-	UserProfile getUserprofile();
+	UserProfile getUserProfile();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Association#getUserprofile <em>Userprofile</em>}' reference.
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Association#getUserProfile <em>User Profile</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Userprofile</em>' reference.
-	 * @see #getUserprofile()
+	 * @param value the new value of the '<em>User Profile</em>' reference.
+	 * @see #getUserProfile()
 	 * @generated
 	 */
-	void setUserprofile(UserProfile value);
+	void setUserProfile(UserProfile value);
 
 	/**
-	 * Returns the value of the '<em><b>Script</b></em>' reference.
+	 * Returns the value of the '<em><b>Scriptmodel</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Script</em>' reference isn't clear,
+	 * If the meaning of the '<em>Scriptmodel</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Script</em>' reference.
-	 * @see #setScript(Script)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getAssociation_Script()
-	 * @model
+	 * @return the value of the '<em>Scriptmodel</em>' reference.
+	 * @see #setScriptmodel(ScriptModel)
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getAssociation_Scriptmodel()
+	 * @model required="true"
 	 * @generated
 	 */
-	Script getScript();
+	ScriptModel getScriptmodel();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Association#getScript <em>Script</em>}' reference.
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Association#getScriptmodel <em>Scriptmodel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Script</em>' reference.
-	 * @see #getScript()
+	 * @param value the new value of the '<em>Scriptmodel</em>' reference.
+	 * @see #getScriptmodel()
 	 * @generated
 	 */
-	void setScript(Script value);
+	void setScriptmodel(ScriptModel value);
 
 } // Association

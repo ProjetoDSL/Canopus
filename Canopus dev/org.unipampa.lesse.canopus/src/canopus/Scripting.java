@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link canopus.Scripting#getSaveparameters <em>Saveparameters</em>}</li>
  *   <li>{@link canopus.Scripting#getDatatables <em>Datatables</em>}</li>
  *   <li>{@link canopus.Scripting#getThinkTime <em>Think Time</em>}</li>
- *   <li>{@link canopus.Scripting#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.Scripting#getScripts <em>Scripts</em>}</li>
  * </ul>
  *
  * @see canopus.CanopusPackage#getScripting()
@@ -151,19 +151,19 @@ public interface Scripting extends Diagram {
 	EList<ThinkTime> getThinkTime();
 
 	/**
-	 * Returns the value of the '<em><b>Scripting</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Scripts</b></em>' containment reference list.
 	 * The list contents are of type {@link canopus.Scripting}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scripting</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Scripts</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripting</em>' containment reference list.
-	 * @see canopus.CanopusPackage#getScripting_Scripting()
+	 * @return the value of the '<em>Scripts</em>' containment reference list.
+	 * @see canopus.CanopusPackage#getScripting_Scripts()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Scripting> getScripting();
+	EList<Scripting> getScripts();
 
 } // Scripting

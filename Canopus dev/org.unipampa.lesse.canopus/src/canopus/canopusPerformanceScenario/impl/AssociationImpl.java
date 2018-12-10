@@ -4,7 +4,7 @@ package canopus.canopusPerformanceScenario.impl;
 
 import canopus.canopusPerformanceScenario.Association;
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
-import canopus.canopusPerformanceScenario.Script;
+import canopus.canopusPerformanceScenario.ScriptModel;
 import canopus.canopusPerformanceScenario.UserProfile;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.AssociationImpl#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.AssociationImpl#getUserprofile <em>Userprofile</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.AssociationImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.AssociationImpl#getUserProfile <em>User Profile</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.AssociationImpl#getScriptmodel <em>Scriptmodel</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,24 +52,24 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	protected int percentage = PERCENTAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUserprofile() <em>Userprofile</em>}' reference.
+	 * The cached value of the '{@link #getUserProfile() <em>User Profile</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUserprofile()
+	 * @see #getUserProfile()
 	 * @generated
 	 * @ordered
 	 */
-	protected UserProfile userprofile;
+	protected UserProfile userProfile;
 
 	/**
-	 * The cached value of the '{@link #getScript() <em>Script</em>}' reference.
+	 * The cached value of the '{@link #getScriptmodel() <em>Scriptmodel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScript()
+	 * @see #getScriptmodel()
 	 * @generated
 	 * @ordered
 	 */
-	protected Script script;
+	protected ScriptModel scriptmodel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,16 +116,16 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserProfile getUserprofile() {
-		if (userprofile != null && userprofile.eIsProxy()) {
-			InternalEObject oldUserprofile = (InternalEObject)userprofile;
-			userprofile = (UserProfile)eResolveProxy(oldUserprofile);
-			if (userprofile != oldUserprofile) {
+	public UserProfile getUserProfile() {
+		if (userProfile != null && userProfile.eIsProxy()) {
+			InternalEObject oldUserProfile = (InternalEObject)userProfile;
+			userProfile = (UserProfile)eResolveProxy(oldUserProfile);
+			if (userProfile != oldUserProfile) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.ASSOCIATION__USERPROFILE, oldUserprofile, userprofile));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.ASSOCIATION__USER_PROFILE, oldUserProfile, userProfile));
 			}
 		}
-		return userprofile;
+		return userProfile;
 	}
 
 	/**
@@ -133,8 +133,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserProfile basicGetUserprofile() {
-		return userprofile;
+	public UserProfile basicGetUserProfile() {
+		return userProfile;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUserprofile(UserProfile newUserprofile) {
-		UserProfile oldUserprofile = userprofile;
-		userprofile = newUserprofile;
+	public void setUserProfile(UserProfile newUserProfile) {
+		UserProfile oldUserProfile = userProfile;
+		userProfile = newUserProfile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.ASSOCIATION__USERPROFILE, oldUserprofile, userprofile));
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.ASSOCIATION__USER_PROFILE, oldUserProfile, userProfile));
 	}
 
 	/**
@@ -154,16 +154,16 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Script getScript() {
-		if (script != null && script.eIsProxy()) {
-			InternalEObject oldScript = (InternalEObject)script;
-			script = (Script)eResolveProxy(oldScript);
-			if (script != oldScript) {
+	public ScriptModel getScriptmodel() {
+		if (scriptmodel != null && scriptmodel.eIsProxy()) {
+			InternalEObject oldScriptmodel = (InternalEObject)scriptmodel;
+			scriptmodel = (ScriptModel)eResolveProxy(oldScriptmodel);
+			if (scriptmodel != oldScriptmodel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPT, oldScript, script));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPTMODEL, oldScriptmodel, scriptmodel));
 			}
 		}
-		return script;
+		return scriptmodel;
 	}
 
 	/**
@@ -171,8 +171,8 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Script basicGetScript() {
-		return script;
+	public ScriptModel basicGetScriptmodel() {
+		return scriptmodel;
 	}
 
 	/**
@@ -180,11 +180,11 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScript(Script newScript) {
-		Script oldScript = script;
-		script = newScript;
+	public void setScriptmodel(ScriptModel newScriptmodel) {
+		ScriptModel oldScriptmodel = scriptmodel;
+		scriptmodel = newScriptmodel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPT, oldScript, script));
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPTMODEL, oldScriptmodel, scriptmodel));
 	}
 
 	/**
@@ -197,12 +197,12 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 		switch (featureID) {
 			case CanopusPerformanceScenarioPackage.ASSOCIATION__PERCENTAGE:
 				return getPercentage();
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__USERPROFILE:
-				if (resolve) return getUserprofile();
-				return basicGetUserprofile();
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPT:
-				if (resolve) return getScript();
-				return basicGetScript();
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__USER_PROFILE:
+				if (resolve) return getUserProfile();
+				return basicGetUserProfile();
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPTMODEL:
+				if (resolve) return getScriptmodel();
+				return basicGetScriptmodel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -218,11 +218,11 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 			case CanopusPerformanceScenarioPackage.ASSOCIATION__PERCENTAGE:
 				setPercentage((Integer)newValue);
 				return;
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__USERPROFILE:
-				setUserprofile((UserProfile)newValue);
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__USER_PROFILE:
+				setUserProfile((UserProfile)newValue);
 				return;
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPT:
-				setScript((Script)newValue);
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPTMODEL:
+				setScriptmodel((ScriptModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -239,11 +239,11 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 			case CanopusPerformanceScenarioPackage.ASSOCIATION__PERCENTAGE:
 				setPercentage(PERCENTAGE_EDEFAULT);
 				return;
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__USERPROFILE:
-				setUserprofile((UserProfile)null);
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__USER_PROFILE:
+				setUserProfile((UserProfile)null);
 				return;
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPT:
-				setScript((Script)null);
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPTMODEL:
+				setScriptmodel((ScriptModel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -259,10 +259,10 @@ public class AssociationImpl extends MinimalEObjectImpl.Container implements Ass
 		switch (featureID) {
 			case CanopusPerformanceScenarioPackage.ASSOCIATION__PERCENTAGE:
 				return percentage != PERCENTAGE_EDEFAULT;
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__USERPROFILE:
-				return userprofile != null;
-			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPT:
-				return script != null;
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__USER_PROFILE:
+				return userProfile != null;
+			case CanopusPerformanceScenarioPackage.ASSOCIATION__SCRIPTMODEL:
+				return scriptmodel != null;
 		}
 		return super.eIsSet(featureID);
 	}

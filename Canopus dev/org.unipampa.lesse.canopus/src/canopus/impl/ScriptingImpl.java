@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.impl.ScriptingImpl#getSaveparameters <em>Saveparameters</em>}</li>
  *   <li>{@link canopus.impl.ScriptingImpl#getDatatables <em>Datatables</em>}</li>
  *   <li>{@link canopus.impl.ScriptingImpl#getThinkTime <em>Think Time</em>}</li>
- *   <li>{@link canopus.impl.ScriptingImpl#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.impl.ScriptingImpl#getScripts <em>Scripts</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,14 +108,14 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 	protected EList<ThinkTime> thinkTime;
 
 	/**
-	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' containment reference list.
+	 * The cached value of the '{@link #getScripts() <em>Scripts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScripting()
+	 * @see #getScripts()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Scripting> scripting;
+	protected EList<Scripting> scripts;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -275,11 +275,11 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Scripting> getScripting() {
-		if (scripting == null) {
-			scripting = new EObjectContainmentEList<Scripting>(Scripting.class, this, CanopusPackage.SCRIPTING__SCRIPTING);
+	public EList<Scripting> getScripts() {
+		if (scripts == null) {
+			scripts = new EObjectContainmentEList<Scripting>(Scripting.class, this, CanopusPackage.SCRIPTING__SCRIPTS);
 		}
-		return scripting;
+		return scripts;
 	}
 
 	/**
@@ -302,8 +302,8 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				return ((InternalEList<?>)getDatatables()).basicRemove(otherEnd, msgs);
 			case CanopusPackage.SCRIPTING__THINK_TIME:
 				return ((InternalEList<?>)getThinkTime()).basicRemove(otherEnd, msgs);
-			case CanopusPackage.SCRIPTING__SCRIPTING:
-				return ((InternalEList<?>)getScripting()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCRIPTING__SCRIPTS:
+				return ((InternalEList<?>)getScripts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -328,8 +328,8 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				return getDatatables();
 			case CanopusPackage.SCRIPTING__THINK_TIME:
 				return getThinkTime();
-			case CanopusPackage.SCRIPTING__SCRIPTING:
-				return getScripting();
+			case CanopusPackage.SCRIPTING__SCRIPTS:
+				return getScripts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -365,9 +365,9 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				getThinkTime().clear();
 				getThinkTime().addAll((Collection<? extends ThinkTime>)newValue);
 				return;
-			case CanopusPackage.SCRIPTING__SCRIPTING:
-				getScripting().clear();
-				getScripting().addAll((Collection<? extends Scripting>)newValue);
+			case CanopusPackage.SCRIPTING__SCRIPTS:
+				getScripts().clear();
+				getScripts().addAll((Collection<? extends Scripting>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -399,8 +399,8 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 			case CanopusPackage.SCRIPTING__THINK_TIME:
 				getThinkTime().clear();
 				return;
-			case CanopusPackage.SCRIPTING__SCRIPTING:
-				getScripting().clear();
+			case CanopusPackage.SCRIPTING__SCRIPTS:
+				getScripts().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -426,8 +426,8 @@ public class ScriptingImpl extends DiagramImpl implements Scripting {
 				return datatables != null && !datatables.isEmpty();
 			case CanopusPackage.SCRIPTING__THINK_TIME:
 				return thinkTime != null && !thinkTime.isEmpty();
-			case CanopusPackage.SCRIPTING__SCRIPTING:
-				return scripting != null && !scripting.isEmpty();
+			case CanopusPackage.SCRIPTING__SCRIPTS:
+				return scripts != null && !scripts.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

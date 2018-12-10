@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#getParameterhiddenobject <em>Parameterhiddenobject</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#isTransaction <em>Transaction</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#getActivity <em>Activity</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScripting.Activity#getScriptingmodel <em>Scriptingmodel</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#getFinal <em>Final</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScripting.Activity#getThinktime <em>Thinktime</em>}</li>
  * </ul>
@@ -233,32 +232,6 @@ public interface Activity extends EObject {
 	 * @generated
 	 */
 	EList<Activity> getActivity();
-
-	/**
-	 * Returns the value of the '<em><b>Scriptingmodel</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scriptingmodel</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scriptingmodel</em>' containment reference.
-	 * @see #setScriptingmodel(ScriptingModel)
-	 * @see canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity_Scriptingmodel()
-	 * @model containment="true"
-	 * @generated
-	 */
-	ScriptingModel getScriptingmodel();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScripting.Activity#getScriptingmodel <em>Scriptingmodel</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scriptingmodel</em>' containment reference.
-	 * @see #getScriptingmodel()
-	 * @generated
-	 */
-	void setScriptingmodel(ScriptingModel value);
 
 	/**
 	 * Returns the value of the '<em><b>Final</b></em>' reference.

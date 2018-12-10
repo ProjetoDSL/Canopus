@@ -386,22 +386,31 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int METRIC_MODEL__MEMORY_COUNTER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Metric</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METRIC_MODEL__METRIC = 9;
-
-	/**
 	 * The feature id for the '<em><b>Counter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__COUNTER = 10;
+	int METRIC_MODEL__COUNTER = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_MODEL__NAME = 10;
+
+	/**
+	 * The feature id for the '<em><b>Metric</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_MODEL__METRIC = 11;
 
 	/**
 	 * The number of structural features of the '<em>Metric Model</em>' class.
@@ -410,7 +419,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL_FEATURE_COUNT = 11;
+	int METRIC_MODEL_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Metric Model</em>' class.
@@ -769,17 +778,6 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getMetricModel_MemoryCounter();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Metric</em>'.
-	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getMetric()
-	 * @see #getMetricModel()
-	 * @generated
-	 */
-	EReference getMetricModel_Metric();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getCounter <em>Counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -789,6 +787,28 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMetricModel_Counter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getName()
+	 * @see #getMetricModel()
+	 * @generated
+	 */
+	EAttribute getMetricModel_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Metric</em>'.
+	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getMetric()
+	 * @see #getMetricModel()
+	 * @generated
+	 */
+	EReference getMetricModel_Metric();
 
 	/**
 	 * Returns the meta object for enum '{@link canopus.canopusPerformanceMonitoring.SUT_TYPE <em>SUT TYPE</em>}'.
@@ -1082,20 +1102,28 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference METRIC_MODEL__MEMORY_COUNTER = eINSTANCE.getMetricModel_MemoryCounter();
 
 		/**
-		 * The meta object literal for the '<em><b>Metric</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METRIC_MODEL__METRIC = eINSTANCE.getMetricModel_Metric();
-
-		/**
 		 * The meta object literal for the '<em><b>Counter</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference METRIC_MODEL__COUNTER = eINSTANCE.getMetricModel_Counter();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute METRIC_MODEL__NAME = eINSTANCE.getMetricModel_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Metric</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METRIC_MODEL__METRIC = eINSTANCE.getMetricModel_Metric();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceMonitoring.SUT_TYPE <em>SUT TYPE</em>}' enum.

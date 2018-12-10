@@ -3,7 +3,7 @@
 package canopus;
 
 import canopus.canopusPerformanceScenario.Association;
-import canopus.canopusPerformanceScenario.Script;
+import canopus.canopusPerformanceScenario.ScriptModel;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.Workload;
 
@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link canopus.Scenario#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.Scenario#getWorkloads <em>Workloads</em>}</li>
  *   <li>{@link canopus.Scenario#getAssociations <em>Associations</em>}</li>
- *   <li>{@link canopus.Scenario#getScripts <em>Scripts</em>}</li>
+ *   <li>{@link canopus.Scenario#getScriptmodel <em>Scriptmodel</em>}</li>
  * </ul>
  *
  * @see canopus.CanopusPackage#getScenario()
@@ -78,19 +78,19 @@ public interface Scenario extends Diagram {
 	EList<Association> getAssociations();
 
 	/**
-	 * Returns the value of the '<em><b>Scripts</b></em>' containment reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Script}.
+	 * Returns the value of the '<em><b>Scriptmodel</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.ScriptModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scripts</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Scriptmodel</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripts</em>' containment reference list.
-	 * @see canopus.CanopusPackage#getScenario_Scripts()
+	 * @return the value of the '<em>Scriptmodel</em>' containment reference list.
+	 * @see canopus.CanopusPackage#getScenario_Scriptmodel()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Script> getScripts();
+	EList<ScriptModel> getScriptmodel();
 
 } // Scenario

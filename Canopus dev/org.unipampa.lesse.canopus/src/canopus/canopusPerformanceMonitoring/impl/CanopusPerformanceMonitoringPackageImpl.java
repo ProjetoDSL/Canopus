@@ -451,7 +451,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Metric() {
+	public EReference getMetricModel_Counter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -460,8 +460,17 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Counter() {
-		return (EReference)metricModelEClass.getEStructuralFeatures().get(10);
+	public EAttribute getMetricModel_Name() {
+		return (EAttribute)metricModelEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMetricModel_Metric() {
+		return (EReference)metricModelEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -543,8 +552,9 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		createEReference(metricModelEClass, METRIC_MODEL__DISK_COUNTER);
 		createEReference(metricModelEClass, METRIC_MODEL__TRANSACTION_COUNTER);
 		createEReference(metricModelEClass, METRIC_MODEL__MEMORY_COUNTER);
-		createEReference(metricModelEClass, METRIC_MODEL__METRIC);
 		createEReference(metricModelEClass, METRIC_MODEL__COUNTER);
+		createEAttribute(metricModelEClass, METRIC_MODEL__NAME);
+		createEReference(metricModelEClass, METRIC_MODEL__METRIC);
 
 		// Create enums
 		suT_TYPEEEnum = createEEnum(SUT_TYPE);
@@ -620,8 +630,9 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		initEReference(getMetricModel_DiskCounter(), theCanopusPerformanceMetricPackage.getDisk_IO_Counter(), null, "diskCounter", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_TransactionCounter(), theCanopusPerformanceMetricPackage.getTransactionCounter(), null, "transactionCounter", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_MemoryCounter(), theCanopusPerformanceMetricPackage.getMemoryCounter(), null, "memoryCounter", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMetricModel_Metric(), theCanopusPerformanceMetricPackage.getMetric(), null, "metric", null, 0, -1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_Counter(), theCanopusPerformanceMetricPackage.getCounter(), null, "counter", null, 0, -1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMetricModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMetricModel_Metric(), theCanopusPerformanceMetricPackage.getMetric(), null, "metric", null, 0, -1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(suT_TYPEEEnum, canopus.canopusPerformanceMonitoring.SUT_TYPE.class, "SUT_TYPE");

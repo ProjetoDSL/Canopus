@@ -10,49 +10,56 @@
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopus"
-            class="canopus.CanopusPackage"/>
+            class="canopus.CanopusPackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerformanceMonitoring"
-            class="canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage"/>
+            class="canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerformanceMetric"
-            class="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage"/>
+            class="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerformanceScenario"
-            class="canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage"/>
+            class="canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage"/>
+            class="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerformanceScripting"
-            class="canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage"/>
+            class="canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
-            class="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage"/>
+            class="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage"
+            genModel="model/canopus.genmodel"/>
    </extension>
 
 </plugin>

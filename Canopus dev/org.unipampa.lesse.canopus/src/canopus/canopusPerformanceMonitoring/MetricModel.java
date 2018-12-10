@@ -36,8 +36,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getDiskCounter <em>Disk Counter</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getTransactionCounter <em>Transaction Counter</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemoryCounter <em>Memory Counter</em>}</li>
- *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getCounter <em>Counter</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel()
@@ -250,22 +251,6 @@ public interface MetricModel extends EObject {
 	void setMemoryCounter(MemoryCounter value);
 
 	/**
-	 * Returns the value of the '<em><b>Metric</b></em>' containment reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Metric</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Metric</em>' containment reference list.
-	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_Metric()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Metric> getMetric();
-
-	/**
 	 * Returns the value of the '<em><b>Counter</b></em>' containment reference list.
 	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Counter}.
 	 * <!-- begin-user-doc -->
@@ -280,5 +265,47 @@ public interface MetricModel extends EObject {
 	 * @generated
 	 */
 	EList<Counter> getCounter();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Metric</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Metric</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Metric</em>' reference list.
+	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_Metric()
+	 * @model
+	 * @generated
+	 */
+	EList<Metric> getMetric();
 
 } // MetricModel

@@ -3,6 +3,7 @@
 package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -84,7 +85,7 @@ public interface AssociationCounterCriteriaThreshold extends EObject {
 	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Criteria}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Criteria</em>' reference isn't clear,
+	 * If the meaning of the '<em>Criteria</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

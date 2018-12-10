@@ -16,7 +16,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/users"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/workloads"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/associations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/scripts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/scriptmodel"/>
     </genClasses>
     <genClasses ecoreClass="canopus.ecore#//Scripting">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/initial"/>
@@ -24,8 +24,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/activities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/saveparameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/datatables"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/thinkTime"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/scripting"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/thinkTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scripting/scripts"/>
     </genClasses>
     <genClasses image="false" ecoreClass="canopus.ecore#//Diagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/name"/>
@@ -85,8 +85,10 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/diskCounter"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/transactionCounter"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/memoryCounter"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/metric"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/counter"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/MetricModel/name"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/MetricModel/metric"/>
       </genClasses>
       <nestedGenPackages prefix="CanopusPerformanceMetric" basePackage="canopus.canopusPerformanceMonitoring"
           disposableProviderFactory="true" ecorePackage="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric">
@@ -126,9 +128,6 @@
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk/disk_io_counter"/>
         </genClasses>
-        <genClasses image="false" ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric/name"/>
-        </genClasses>
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/AssociationCounterCriteriaThreshold">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/AssociationCounterCriteriaThreshold/associationCriteria"/>
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -160,6 +159,9 @@
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/TransactionCounter">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/TransactionCounter/counterTransaction"/>
         </genClasses>
+        <genClasses image="false" ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric/name"/>
+        </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>
     <nestedGenPackages prefix="CanopusPerformanceScenario" basePackage="canopus" disposableProviderFactory="true"
@@ -169,23 +171,33 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/description"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/percentage"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/UserProfile/script"/>
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/UserProfile/scriptmodel"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/UserProfile/scripting"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Workload">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/workload"/>
-      </genClasses>
-      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Script">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Script/scriptingmodel"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Script/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Script/description"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/virtualUsers"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpTimer"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampDownUsers"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpUsers"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/testDuration"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampDownTimer"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Association">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Association/percentage"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Association/userprofile"/>
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Association/userProfile"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Association/script"/>
+            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Association/scriptmodel"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/ScriptModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/ScriptModel/activities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/ScriptModel/initial"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/ScriptModel/final"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/ScriptModel/thinkTime"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/ScriptModel/saveParameters"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/ScriptModel/dataTables"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/ScriptModel/name"/>
       </genClasses>
       <nestedGenPackages prefix="CanopusPerformanceWorkload" basePackage="canopus.canopusPerformanceScenario"
           disposableProviderFactory="true" ecorePackage="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload">
@@ -206,15 +218,6 @@
         </genClasses>
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTime">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTime/time"/>
-        </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel">
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/testduration"/>
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/rampdownusers"/>
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/rampdowntime"/>
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/rampuptimer"/>
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/rampupusers"/>
-          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/virtualusers"/>
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadModel/name"/>
         </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>
@@ -254,7 +257,6 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/Activity/transaction"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/activity"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/scriptingmodel"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/Activity/final"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -289,14 +291,6 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/ColumnsHiddenObject/selectnextrow"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/ColumnsHiddenObject/updatedvalueon"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScripting/ColumnsHiddenObject/parameterName"/>
-      </genClasses>
-      <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScripting/ScriptingModel">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/activity"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/saveparameters"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/datatable"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/final"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/initial"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScripting/ScriptingModel/thinktime"/>
       </genClasses>
       <nestedGenPackages prefix="CanopusPerformanceExternalFile" basePackage="canopus.canopusPerformanceScripting"
           disposableProviderFactory="true" ecorePackage="canopus.ecore#//canopusPerformanceScripting/canopusPerformanceExternalFile">

@@ -94,15 +94,6 @@ public interface CanopusPerformanceScriptingFactory extends EFactory {
 	ColumnsHiddenObject createColumnsHiddenObject();
 
 	/**
-	 * Returns a new object of class '<em>Scripting Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scripting Model</em>'.
-	 * @generated
-	 */
-	ScriptingModel createScriptingModel();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

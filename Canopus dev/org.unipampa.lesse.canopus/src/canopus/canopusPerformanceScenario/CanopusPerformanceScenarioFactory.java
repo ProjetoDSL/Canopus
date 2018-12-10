@@ -40,15 +40,6 @@ public interface CanopusPerformanceScenarioFactory extends EFactory {
 	Workload createWorkload();
 
 	/**
-	 * Returns a new object of class '<em>Script</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Script</em>'.
-	 * @generated
-	 */
-	Script createScript();
-
-	/**
 	 * Returns a new object of class '<em>Association</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,6 +47,15 @@ public interface CanopusPerformanceScenarioFactory extends EFactory {
 	 * @generated
 	 */
 	Association createAssociation();
+
+	/**
+	 * Returns a new object of class '<em>Script Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Script Model</em>'.
+	 * @generated
+	 */
+	ScriptModel createScriptModel();
 
 	/**
 	 * Returns the package supported by this factory.

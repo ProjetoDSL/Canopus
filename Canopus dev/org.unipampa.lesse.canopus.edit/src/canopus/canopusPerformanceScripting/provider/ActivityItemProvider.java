@@ -289,7 +289,6 @@ public class ActivityItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CanopusPerformanceScriptingPackage.Literals.ACTIVITY__PARAMETERHIDDENOBJECT);
-			childrenFeatures.add(CanopusPerformanceScriptingPackage.Literals.ACTIVITY__SCRIPTINGMODEL);
 		}
 		return childrenFeatures;
 	}
@@ -354,7 +353,6 @@ public class ActivityItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
-			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTINGMODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -376,11 +374,6 @@ public class ActivityItemProvider
 			(createChildParameter
 				(CanopusPerformanceScriptingPackage.Literals.ACTIVITY__PARAMETERHIDDENOBJECT,
 				 CanopusPerformanceScriptingFactory.eINSTANCE.createParameterHiddenObject()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPerformanceScriptingPackage.Literals.ACTIVITY__SCRIPTINGMODEL,
-				 CanopusPerformanceScriptingFactory.eINSTANCE.createScriptingModel()));
 	}
 
 	/**

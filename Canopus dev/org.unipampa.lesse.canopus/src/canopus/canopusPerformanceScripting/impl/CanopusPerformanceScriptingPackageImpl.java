@@ -29,7 +29,6 @@ import canopus.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScripting.Initial;
 import canopus.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScripting.SaveParameters;
-import canopus.canopusPerformanceScripting.ScriptingModel;
 import canopus.canopusPerformanceScripting.ThinkTime;
 
 import canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage;
@@ -108,13 +107,6 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	private EClass columnsHiddenObjectEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass scriptingModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -355,7 +347,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivity_Scriptingmodel() {
+	public EReference getActivity_Final() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -364,17 +356,8 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivity_Final() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getActivity_Thinktime() {
-		return (EReference)activityEClass.getEStructuralFeatures().get(10);
+		return (EReference)activityEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -580,69 +563,6 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getScriptingModel() {
-		return scriptingModelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScriptingModel_Activity() {
-		return (EReference)scriptingModelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScriptingModel_Saveparameters() {
-		return (EReference)scriptingModelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScriptingModel_Datatable() {
-		return (EReference)scriptingModelEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScriptingModel_Final() {
-		return (EReference)scriptingModelEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScriptingModel_Initial() {
-		return (EReference)scriptingModelEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScriptingModel_Thinktime() {
-		return (EReference)scriptingModelEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getTYPEACTION() {
 		return typeactionEEnum;
 	}
@@ -709,7 +629,6 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		createEReference(activityEClass, ACTIVITY__PARAMETERHIDDENOBJECT);
 		createEAttribute(activityEClass, ACTIVITY__TRANSACTION);
 		createEReference(activityEClass, ACTIVITY__ACTIVITY);
-		createEReference(activityEClass, ACTIVITY__SCRIPTINGMODEL);
 		createEReference(activityEClass, ACTIVITY__FINAL);
 		createEReference(activityEClass, ACTIVITY__THINKTIME);
 
@@ -739,14 +658,6 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__SELECTNEXTROW);
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__UPDATEDVALUEON);
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__PARAMETER_NAME);
-
-		scriptingModelEClass = createEClass(SCRIPTING_MODEL);
-		createEReference(scriptingModelEClass, SCRIPTING_MODEL__ACTIVITY);
-		createEReference(scriptingModelEClass, SCRIPTING_MODEL__SAVEPARAMETERS);
-		createEReference(scriptingModelEClass, SCRIPTING_MODEL__DATATABLE);
-		createEReference(scriptingModelEClass, SCRIPTING_MODEL__FINAL);
-		createEReference(scriptingModelEClass, SCRIPTING_MODEL__INITIAL);
-		createEReference(scriptingModelEClass, SCRIPTING_MODEL__THINKTIME);
 
 		// Create enums
 		typeactionEEnum = createEEnum(TYPEACTION);
@@ -806,7 +717,6 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEReference(getActivity_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Transaction(), ecorePackage.getEBoolean(), "transaction", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Activity(), this.getActivity(), null, "activity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivity_Scriptingmodel(), this.getScriptingModel(), null, "scriptingmodel", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Final(), this.getFinal(), null, "final", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Thinktime(), this.getThinkTime(), null, "thinktime", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -836,14 +746,6 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEAttribute(getColumnsHiddenObject_Selectnextrow(), this.getSELECT_NEXT_ROW(), "selectnextrow", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getColumnsHiddenObject_Updatedvalueon(), this.getUPDATED_VALUE_ON(), "updatedvalueon", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getColumnsHiddenObject_ParameterName(), ecorePackage.getEString(), "parameterName", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(scriptingModelEClass, ScriptingModel.class, "ScriptingModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScriptingModel_Activity(), this.getActivity(), null, "activity", null, 1, -1, ScriptingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScriptingModel_Saveparameters(), this.getSaveParameters(), null, "saveparameters", null, 0, -1, ScriptingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScriptingModel_Datatable(), this.getDataTable(), null, "datatable", null, 0, -1, ScriptingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScriptingModel_Final(), this.getFinal(), null, "final", null, 1, 1, ScriptingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScriptingModel_Initial(), this.getInitial(), null, "initial", null, 1, 1, ScriptingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScriptingModel_Thinktime(), this.getThinkTime(), null, "thinktime", null, 0, -1, ScriptingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(typeactionEEnum, canopus.canopusPerformanceScripting.TYPEACTION.class, "TYPEACTION");

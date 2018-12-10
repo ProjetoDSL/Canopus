@@ -15,7 +15,7 @@ import canopus.canopusPerformanceMonitoring.impl.CanopusPerformanceMonitoringPac
 import canopus.canopusPerformanceScenario.Association;
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioFactory;
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
-import canopus.canopusPerformanceScenario.Script;
+import canopus.canopusPerformanceScenario.ScriptModel;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.Workload;
 
@@ -66,14 +66,14 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass scriptEClass = null;
+	private EClass associationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass associationEClass = null;
+	private EClass scriptModelEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -203,8 +203,17 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUserProfile_Script() {
+	public EReference getUserProfile_Scriptmodel() {
 		return (EReference)userProfileEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUserProfile_Scripting() {
+		return (EReference)userProfileEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -221,7 +230,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorkload_Workload() {
+	public EReference getWorkload_VirtualUsers() {
 		return (EReference)workloadEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -230,8 +239,8 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getScript() {
-		return scriptEClass;
+	public EReference getWorkload_RampUpTimer() {
+		return (EReference)workloadEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -239,8 +248,8 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScript_Scriptingmodel() {
-		return (EReference)scriptEClass.getEStructuralFeatures().get(0);
+	public EReference getWorkload_RampDownUsers() {
+		return (EReference)workloadEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -248,8 +257,8 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getScript_Name() {
-		return (EAttribute)scriptEClass.getEStructuralFeatures().get(1);
+	public EReference getWorkload_RampUpUsers() {
+		return (EReference)workloadEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -257,8 +266,17 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getScript_Description() {
-		return (EAttribute)scriptEClass.getEStructuralFeatures().get(2);
+	public EReference getWorkload_TestDuration() {
+		return (EReference)workloadEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkload_RampDownTimer() {
+		return (EReference)workloadEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -284,7 +302,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAssociation_Userprofile() {
+	public EReference getAssociation_UserProfile() {
 		return (EReference)associationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -293,8 +311,80 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAssociation_Script() {
+	public EReference getAssociation_Scriptmodel() {
 		return (EReference)associationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScriptModel() {
+		return scriptModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptModel_Activities() {
+		return (EReference)scriptModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptModel_Initial() {
+		return (EReference)scriptModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptModel_Final() {
+		return (EReference)scriptModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptModel_ThinkTime() {
+		return (EReference)scriptModelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptModel_SaveParameters() {
+		return (EReference)scriptModelEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScriptModel_DataTables() {
+		return (EReference)scriptModelEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScriptModel_Name() {
+		return (EAttribute)scriptModelEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -329,20 +419,30 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		createEAttribute(userProfileEClass, USER_PROFILE__NAME);
 		createEAttribute(userProfileEClass, USER_PROFILE__DESCRIPTION);
 		createEAttribute(userProfileEClass, USER_PROFILE__PERCENTAGE);
-		createEReference(userProfileEClass, USER_PROFILE__SCRIPT);
+		createEReference(userProfileEClass, USER_PROFILE__SCRIPTMODEL);
+		createEReference(userProfileEClass, USER_PROFILE__SCRIPTING);
 
 		workloadEClass = createEClass(WORKLOAD);
-		createEReference(workloadEClass, WORKLOAD__WORKLOAD);
-
-		scriptEClass = createEClass(SCRIPT);
-		createEReference(scriptEClass, SCRIPT__SCRIPTINGMODEL);
-		createEAttribute(scriptEClass, SCRIPT__NAME);
-		createEAttribute(scriptEClass, SCRIPT__DESCRIPTION);
+		createEReference(workloadEClass, WORKLOAD__VIRTUAL_USERS);
+		createEReference(workloadEClass, WORKLOAD__RAMP_UP_TIMER);
+		createEReference(workloadEClass, WORKLOAD__RAMP_DOWN_USERS);
+		createEReference(workloadEClass, WORKLOAD__RAMP_UP_USERS);
+		createEReference(workloadEClass, WORKLOAD__TEST_DURATION);
+		createEReference(workloadEClass, WORKLOAD__RAMP_DOWN_TIMER);
 
 		associationEClass = createEClass(ASSOCIATION);
 		createEAttribute(associationEClass, ASSOCIATION__PERCENTAGE);
-		createEReference(associationEClass, ASSOCIATION__USERPROFILE);
-		createEReference(associationEClass, ASSOCIATION__SCRIPT);
+		createEReference(associationEClass, ASSOCIATION__USER_PROFILE);
+		createEReference(associationEClass, ASSOCIATION__SCRIPTMODEL);
+
+		scriptModelEClass = createEClass(SCRIPT_MODEL);
+		createEReference(scriptModelEClass, SCRIPT_MODEL__ACTIVITIES);
+		createEReference(scriptModelEClass, SCRIPT_MODEL__INITIAL);
+		createEReference(scriptModelEClass, SCRIPT_MODEL__FINAL);
+		createEReference(scriptModelEClass, SCRIPT_MODEL__THINK_TIME);
+		createEReference(scriptModelEClass, SCRIPT_MODEL__SAVE_PARAMETERS);
+		createEReference(scriptModelEClass, SCRIPT_MODEL__DATA_TABLES);
+		createEAttribute(scriptModelEClass, SCRIPT_MODEL__NAME);
 	}
 
 	/**
@@ -370,6 +470,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 
 		// Obtain other dependent packages
 		CanopusPerformanceWorkloadPackage theCanopusPerformanceWorkloadPackage = (CanopusPerformanceWorkloadPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceWorkloadPackage.eNS_URI);
+		CanopusPackage theCanopusPackage = (CanopusPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPackage.eNS_URI);
 		CanopusPerformanceScriptingPackage theCanopusPerformanceScriptingPackage = (CanopusPerformanceScriptingPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScriptingPackage.eNS_URI);
 
 		// Add subpackages
@@ -386,20 +487,30 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEAttribute(getUserProfile_Name(), ecorePackage.getEString(), "name", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserProfile_Description(), ecorePackage.getEString(), "description", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserProfile_Percentage(), ecorePackage.getEInt(), "percentage", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUserProfile_Script(), this.getScript(), null, "script", null, 0, -1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserProfile_Scriptmodel(), this.getScriptModel(), null, "scriptmodel", null, 0, -1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserProfile_Scripting(), theCanopusPackage.getScripting(), null, "scripting", null, 0, -1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(workloadEClass, Workload.class, "Workload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorkload_Workload(), theCanopusPerformanceWorkloadPackage.getWorkloadModel(), null, "workload", null, 1, -1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(scriptEClass, Script.class, "Script", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScript_Scriptingmodel(), theCanopusPerformanceScriptingPackage.getScriptingModel(), null, "scriptingmodel", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getScript_Name(), ecorePackage.getEString(), "name", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getScript_Description(), ecorePackage.getEString(), "description", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkload_VirtualUsers(), theCanopusPerformanceWorkloadPackage.getVirtualUsers(), null, "virtualUsers", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkload_RampUpTimer(), theCanopusPerformanceWorkloadPackage.getRampUpTimer(), null, "rampUpTimer", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkload_RampDownUsers(), theCanopusPerformanceWorkloadPackage.getRampDownUsers(), null, "rampDownUsers", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkload_RampUpUsers(), theCanopusPerformanceWorkloadPackage.getRampUpUsers(), null, "rampUpUsers", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkload_TestDuration(), theCanopusPerformanceWorkloadPackage.getTestDuration(), null, "testDuration", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkload_RampDownTimer(), theCanopusPerformanceWorkloadPackage.getRampDownTime(), null, "rampDownTimer", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAssociation_Percentage(), ecorePackage.getEInt(), "percentage", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociation_Userprofile(), this.getUserProfile(), null, "userprofile", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociation_Script(), this.getScript(), null, "script", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociation_UserProfile(), this.getUserProfile(), null, "userProfile", null, 1, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociation_Scriptmodel(), this.getScriptModel(), null, "scriptmodel", null, 1, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(scriptModelEClass, ScriptModel.class, "ScriptModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getScriptModel_Activities(), theCanopusPerformanceScriptingPackage.getActivity(), null, "activities", null, 1, -1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScriptModel_Initial(), theCanopusPerformanceScriptingPackage.getInitial(), null, "initial", null, 1, 1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScriptModel_Final(), theCanopusPerformanceScriptingPackage.getFinal(), null, "final", null, 1, 1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScriptModel_ThinkTime(), theCanopusPerformanceScriptingPackage.getThinkTime(), null, "thinkTime", null, 0, -1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScriptModel_SaveParameters(), theCanopusPerformanceScriptingPackage.getActivity(), null, "saveParameters", null, 0, -1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScriptModel_DataTables(), theCanopusPerformanceScriptingPackage.getDataTable(), null, "dataTables", null, 0, -1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScriptModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, ScriptModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //CanopusPerformanceScenarioPackageImpl

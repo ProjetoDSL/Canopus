@@ -114,12 +114,6 @@ public class CanopusPerformanceScriptingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CanopusPerformanceScriptingPackage.SCRIPTING_MODEL: {
-				ScriptingModel scriptingModel = (ScriptingModel)theEObject;
-				T result = caseScriptingModel(scriptingModel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -241,21 +235,6 @@ public class CanopusPerformanceScriptingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseColumnsHiddenObject(ColumnsHiddenObject object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Scripting Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Scripting Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseScriptingModel(ScriptingModel object) {
 		return null;
 	}
 

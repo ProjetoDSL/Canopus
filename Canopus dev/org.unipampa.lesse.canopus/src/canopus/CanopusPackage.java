@@ -294,13 +294,13 @@ public interface CanopusPackage extends EPackage {
 	int SCENARIO__ASSOCIATIONS = DIAGRAM_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Scripts</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Scriptmodel</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO__SCRIPTS = DIAGRAM_FEATURE_COUNT + 3;
+	int SCENARIO__SCRIPTMODEL = DIAGRAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
@@ -421,13 +421,13 @@ public interface CanopusPackage extends EPackage {
 	int SCRIPTING__THINK_TIME = DIAGRAM_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Scripting</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Scripts</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING__SCRIPTING = DIAGRAM_FEATURE_COUNT + 6;
+	int SCRIPTING__SCRIPTS = DIAGRAM_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Scripting</em>' class.
@@ -546,15 +546,15 @@ public interface CanopusPackage extends EPackage {
 	EReference getScenario_Associations();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getScripts <em>Scripts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getScriptmodel <em>Scriptmodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Scripts</em>'.
-	 * @see canopus.Scenario#getScripts()
+	 * @return the meta object for the containment reference list '<em>Scriptmodel</em>'.
+	 * @see canopus.Scenario#getScriptmodel()
 	 * @see #getScenario()
 	 * @generated
 	 */
-	EReference getScenario_Scripts();
+	EReference getScenario_Scriptmodel();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.Scripting <em>Scripting</em>}'.
@@ -633,15 +633,15 @@ public interface CanopusPackage extends EPackage {
 	EReference getScripting_ThinkTime();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getScripting <em>Scripting</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getScripts <em>Scripts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Scripting</em>'.
-	 * @see canopus.Scripting#getScripting()
+	 * @return the meta object for the containment reference list '<em>Scripts</em>'.
+	 * @see canopus.Scripting#getScripts()
 	 * @see #getScripting()
 	 * @generated
 	 */
-	EReference getScripting_Scripting();
+	EReference getScripting_Scripts();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.Diagram <em>Diagram</em>}'.
@@ -797,12 +797,12 @@ public interface CanopusPackage extends EPackage {
 		EReference SCENARIO__ASSOCIATIONS = eINSTANCE.getScenario_Associations();
 
 		/**
-		 * The meta object literal for the '<em><b>Scripts</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Scriptmodel</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCENARIO__SCRIPTS = eINSTANCE.getScenario_Scripts();
+		EReference SCENARIO__SCRIPTMODEL = eINSTANCE.getScenario_Scriptmodel();
 
 		/**
 		 * The meta object literal for the '{@link canopus.impl.ScriptingImpl <em>Scripting</em>}' class.
@@ -863,12 +863,12 @@ public interface CanopusPackage extends EPackage {
 		EReference SCRIPTING__THINK_TIME = eINSTANCE.getScripting_ThinkTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Scripting</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Scripts</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCRIPTING__SCRIPTING = eINSTANCE.getScripting_Scripting();
+		EReference SCRIPTING__SCRIPTS = eINSTANCE.getScripting_Scripts();
 
 		/**
 		 * The meta object literal for the '{@link canopus.impl.DiagramImpl <em>Diagram</em>}' class.

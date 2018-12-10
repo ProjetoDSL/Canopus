@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -50,8 +51,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getDiskCounter <em>Disk Counter</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getTransactionCounter <em>Transaction Counter</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getMemoryCounter <em>Memory Counter</em>}</li>
- *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getMetric <em>Metric</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getCounter <em>Counter</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl#getMetric <em>Metric</em>}</li>
  * </ul>
  *
  * @generated
@@ -148,16 +150,6 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	protected MemoryCounter memoryCounter;
 
 	/**
-	 * The cached value of the '{@link #getMetric() <em>Metric</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMetric()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Metric> metric;
-
-	/**
 	 * The cached value of the '{@link #getCounter() <em>Counter</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -166,6 +158,36 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * @ordered
 	 */
 	protected EList<Counter> counter;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getMetric() <em>Metric</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMetric()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Metric> metric;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -485,11 +507,11 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Metric> getMetric() {
-		if (metric == null) {
-			metric = new EObjectContainmentEList<Metric>(Metric.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC);
+	public EList<Counter> getCounter() {
+		if (counter == null) {
+			counter = new EObjectContainmentEList<Counter>(Counter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER);
 		}
-		return metric;
+		return counter;
 	}
 
 	/**
@@ -497,11 +519,32 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Counter> getCounter() {
-		if (counter == null) {
-			counter = new EObjectContainmentEList<Counter>(Counter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER);
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Metric> getMetric() {
+		if (metric == null) {
+			metric = new EObjectResolvingEList<Metric>(Metric.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC);
 		}
-		return counter;
+		return metric;
 	}
 
 	/**
@@ -530,8 +573,6 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 				return basicSetTransactionCounter(null, msgs);
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
 				return basicSetMemoryCounter(null, msgs);
-			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
-				return ((InternalEList<?>)getMetric()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				return ((InternalEList<?>)getCounter()).basicRemove(otherEnd, msgs);
 		}
@@ -564,10 +605,12 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 				return getTransactionCounter();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
 				return getMemoryCounter();
-			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
-				return getMetric();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				return getCounter();
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__NAME:
+				return getName();
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
+				return getMetric();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -611,13 +654,16 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
 				setMemoryCounter((MemoryCounter)newValue);
 				return;
-			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
-				getMetric().clear();
-				getMetric().addAll((Collection<? extends Metric>)newValue);
-				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				getCounter().clear();
 				getCounter().addAll((Collection<? extends Counter>)newValue);
+				return;
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__NAME:
+				setName((String)newValue);
+				return;
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
+				getMetric().clear();
+				getMetric().addAll((Collection<? extends Metric>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -658,11 +704,14 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
 				setMemoryCounter((MemoryCounter)null);
 				return;
-			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
-				getMetric().clear();
-				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				getCounter().clear();
+				return;
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
+				getMetric().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -694,12 +743,30 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 				return transactionCounter != null;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
 				return memoryCounter != null;
-			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
-				return metric != null && !metric.isEmpty();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				return counter != null && !counter.isEmpty();
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
+				return metric != null && !metric.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MetricModelImpl

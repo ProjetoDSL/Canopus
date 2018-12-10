@@ -256,29 +256,6 @@ public class CanopusPerformanceScriptingItemProviderAdapterFactory extends Canop
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScripting.ScriptingModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScriptingModelItemProvider scriptingModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScripting.ScriptingModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScriptingModelAdapter() {
-		if (scriptingModelItemProvider == null) {
-			scriptingModelItemProvider = new ScriptingModelItemProvider(this);
-		}
-
-		return scriptingModelItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,7 +362,6 @@ public class CanopusPerformanceScriptingItemProviderAdapterFactory extends Canop
 		if (dataTableItemProvider != null) dataTableItemProvider.dispose();
 		if (parameterHiddenObjectItemProvider != null) parameterHiddenObjectItemProvider.dispose();
 		if (columnsHiddenObjectItemProvider != null) columnsHiddenObjectItemProvider.dispose();
-		if (scriptingModelItemProvider != null) scriptingModelItemProvider.dispose();
 	}
 
 }

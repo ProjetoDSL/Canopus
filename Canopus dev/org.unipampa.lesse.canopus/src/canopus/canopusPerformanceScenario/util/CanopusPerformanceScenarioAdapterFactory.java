@@ -76,12 +76,12 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 				return createWorkloadAdapter();
 			}
 			@Override
-			public Adapter caseScript(Script object) {
-				return createScriptAdapter();
-			}
-			@Override
 			public Adapter caseAssociation(Association object) {
 				return createAssociationAdapter();
+			}
+			@Override
+			public Adapter caseScriptModel(ScriptModel object) {
+				return createScriptModelAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -132,20 +132,6 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Script <em>Script</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.Script
-	 * @generated
-	 */
-	public Adapter createScriptAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Association <em>Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -156,6 +142,20 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.ScriptModel <em>Script Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see canopus.canopusPerformanceScenario.ScriptModel
+	 * @generated
+	 */
+	public Adapter createScriptModelAdapter() {
 		return null;
 	}
 

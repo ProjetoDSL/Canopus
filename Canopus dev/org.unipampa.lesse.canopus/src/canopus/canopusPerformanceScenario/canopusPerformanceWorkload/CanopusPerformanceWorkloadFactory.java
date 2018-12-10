@@ -76,15 +76,6 @@ public interface CanopusPerformanceWorkloadFactory extends EFactory {
 	RampDownTime createRampDownTime();
 
 	/**
-	 * Returns a new object of class '<em>Workload Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Workload Model</em>'.
-	 * @generated
-	 */
-	WorkloadModel createWorkloadModel();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

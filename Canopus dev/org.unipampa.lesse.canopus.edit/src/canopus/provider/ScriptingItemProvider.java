@@ -17,7 +17,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -49,54 +48,8 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addThinkTimePropertyDescriptor(object);
-			addScriptingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Think Time feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addThinkTimePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scripting_thinkTime_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_thinkTime_feature", "_UI_Scripting_type"),
-				 CanopusPackage.Literals.SCRIPTING__THINK_TIME,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Scripting feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addScriptingPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scripting_scripting_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_scripting_feature", "_UI_Scripting_type"),
-				 CanopusPackage.Literals.SCRIPTING__SCRIPTING,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -117,7 +70,7 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__SAVEPARAMETERS);
 			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__DATATABLES);
 			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__THINK_TIME);
-			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__SCRIPTING);
+			childrenFeatures.add(CanopusPackage.Literals.SCRIPTING__SCRIPTS);
 		}
 		return childrenFeatures;
 	}
@@ -179,7 +132,7 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 			case CanopusPackage.SCRIPTING__SAVEPARAMETERS:
 			case CanopusPackage.SCRIPTING__DATATABLES:
 			case CanopusPackage.SCRIPTING__THINK_TIME:
-			case CanopusPackage.SCRIPTING__SCRIPTING:
+			case CanopusPackage.SCRIPTING__SCRIPTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -229,7 +182,7 @@ public class ScriptingItemProvider extends DiagramItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CanopusPackage.Literals.SCRIPTING__SCRIPTING,
+				(CanopusPackage.Literals.SCRIPTING__SCRIPTS,
 				 CanopusFactory.eINSTANCE.createScripting()));
 	}
 

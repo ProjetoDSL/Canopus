@@ -74,13 +74,6 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass metricEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass associationCounterCriteriaThresholdEClass = null;
 
 	/**
@@ -131,6 +124,13 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass transactionCounterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass metricEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -281,24 +281,6 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 */
 	public EReference getDisk_Disk_io_counter() {
 		return (EReference)diskEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMetric() {
-		return metricEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMetric_Name() {
-		return (EAttribute)metricEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -477,6 +459,24 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMetric() {
+		return metricEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMetric_Name() {
+		return (EAttribute)metricEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getASSOCIATION_CRITERIA() {
 		return associatioN_CRITERIAEEnum;
 	}
@@ -542,9 +542,6 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 		diskEClass = createEClass(DISK);
 		createEReference(diskEClass, DISK__DISK_IO_COUNTER);
 
-		metricEClass = createEClass(METRIC);
-		createEAttribute(metricEClass, METRIC__NAME);
-
 		associationCounterCriteriaThresholdEClass = createEClass(ASSOCIATION_COUNTER_CRITERIA_THRESHOLD);
 		createEAttribute(associationCounterCriteriaThresholdEClass, ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__ASSOCIATION_CRITERIA);
 		createEReference(associationCounterCriteriaThresholdEClass, ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__THRESHOLD);
@@ -571,6 +568,9 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 
 		transactionCounterEClass = createEClass(TRANSACTION_COUNTER);
 		createEAttribute(transactionCounterEClass, TRANSACTION_COUNTER__COUNTER_TRANSACTION);
+
+		metricEClass = createEClass(METRIC);
+		createEAttribute(metricEClass, METRIC__NAME);
 
 		// Create enums
 		associatioN_CRITERIAEEnum = createEEnum(ASSOCIATION_CRITERIA);
@@ -621,9 +621,6 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 		initEClass(diskEClass, Disk.class, "Disk", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDisk_Disk_io_counter(), this.getDisk_IO_Counter(), null, "disk_io_counter", null, 0, 1, Disk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(metricEClass, Metric.class, "Metric", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMetric_Name(), ecorePackage.getEString(), "name", null, 0, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(associationCounterCriteriaThresholdEClass, AssociationCounterCriteriaThreshold.class, "AssociationCounterCriteriaThreshold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAssociationCounterCriteriaThreshold_AssociationCriteria(), this.getASSOCIATION_CRITERIA(), "associationCriteria", null, 0, 1, AssociationCounterCriteriaThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssociationCounterCriteriaThreshold_Threshold(), this.getThreshold(), null, "threshold", null, 0, 1, AssociationCounterCriteriaThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -650,6 +647,9 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 
 		initEClass(transactionCounterEClass, TransactionCounter.class, "TransactionCounter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransactionCounter_CounterTransaction(), this.getCOUNTER_TRANSACTION(), "counterTransaction", null, 0, -1, TransactionCounter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(metricEClass, Metric.class, "Metric", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMetric_Name(), ecorePackage.getEString(), "name", null, 0, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(associatioN_CRITERIAEEnum, canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.ASSOCIATION_CRITERIA.class, "ASSOCIATION_CRITERIA");

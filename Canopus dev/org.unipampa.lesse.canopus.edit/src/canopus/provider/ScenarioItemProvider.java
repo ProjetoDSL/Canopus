@@ -66,7 +66,7 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__USERS);
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__WORKLOADS);
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__ASSOCIATIONS);
-			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__SCRIPTS);
+			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__SCRIPTMODEL);
 		}
 		return childrenFeatures;
 	}
@@ -125,7 +125,7 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 			case CanopusPackage.SCENARIO__USERS:
 			case CanopusPackage.SCENARIO__WORKLOADS:
 			case CanopusPackage.SCENARIO__ASSOCIATIONS:
-			case CanopusPackage.SCENARIO__SCRIPTS:
+			case CanopusPackage.SCENARIO__SCRIPTMODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -160,8 +160,8 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CanopusPackage.Literals.SCENARIO__SCRIPTS,
-				 CanopusPerformanceScenarioFactory.eINSTANCE.createScript()));
+				(CanopusPackage.Literals.SCENARIO__SCRIPTMODEL,
+				 CanopusPerformanceScenarioFactory.eINSTANCE.createScriptModel()));
 	}
 
 }

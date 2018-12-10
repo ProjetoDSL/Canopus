@@ -63,8 +63,8 @@ public class AssociationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPercentagePropertyDescriptor(object);
-			addUserprofilePropertyDescriptor(object);
-			addScriptPropertyDescriptor(object);
+			addUserProfilePropertyDescriptor(object);
+			addScriptmodelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,19 +92,19 @@ public class AssociationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Userprofile feature.
+	 * This adds a property descriptor for the User Profile feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUserprofilePropertyDescriptor(Object object) {
+	protected void addUserProfilePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Association_userprofile_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_userprofile_feature", "_UI_Association_type"),
-				 CanopusPerformanceScenarioPackage.Literals.ASSOCIATION__USERPROFILE,
+				 getString("_UI_Association_userProfile_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Association_userProfile_feature", "_UI_Association_type"),
+				 CanopusPerformanceScenarioPackage.Literals.ASSOCIATION__USER_PROFILE,
 				 true,
 				 false,
 				 true,
@@ -114,19 +114,19 @@ public class AssociationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Script feature.
+	 * This adds a property descriptor for the Scriptmodel feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addScriptPropertyDescriptor(Object object) {
+	protected void addScriptmodelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Association_script_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Association_script_feature", "_UI_Association_type"),
-				 CanopusPerformanceScenarioPackage.Literals.ASSOCIATION__SCRIPT,
+				 getString("_UI_Association_scriptmodel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Association_scriptmodel_feature", "_UI_Association_type"),
+				 CanopusPerformanceScenarioPackage.Literals.ASSOCIATION__SCRIPTMODEL,
 				 true,
 				 false,
 				 true,

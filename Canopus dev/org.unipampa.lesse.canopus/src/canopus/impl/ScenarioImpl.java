@@ -6,7 +6,7 @@ import canopus.CanopusPackage;
 import canopus.Scenario;
 
 import canopus.canopusPerformanceScenario.Association;
-import canopus.canopusPerformanceScenario.Script;
+import canopus.canopusPerformanceScenario.ScriptModel;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.Workload;
 
@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.impl.ScenarioImpl#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getWorkloads <em>Workloads</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getAssociations <em>Associations</em>}</li>
- *   <li>{@link canopus.impl.ScenarioImpl#getScripts <em>Scripts</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getScriptmodel <em>Scriptmodel</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,14 +70,14 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	protected EList<Association> associations;
 
 	/**
-	 * The cached value of the '{@link #getScripts() <em>Scripts</em>}' containment reference list.
+	 * The cached value of the '{@link #getScriptmodel() <em>Scriptmodel</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScripts()
+	 * @see #getScriptmodel()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Script> scripts;
+	protected EList<ScriptModel> scriptmodel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,11 +139,11 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Script> getScripts() {
-		if (scripts == null) {
-			scripts = new EObjectContainmentEList<Script>(Script.class, this, CanopusPackage.SCENARIO__SCRIPTS);
+	public EList<ScriptModel> getScriptmodel() {
+		if (scriptmodel == null) {
+			scriptmodel = new EObjectContainmentEList<ScriptModel>(ScriptModel.class, this, CanopusPackage.SCENARIO__SCRIPTMODEL);
 		}
-		return scripts;
+		return scriptmodel;
 	}
 
 	/**
@@ -160,8 +160,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return ((InternalEList<?>)getWorkloads()).basicRemove(otherEnd, msgs);
 			case CanopusPackage.SCENARIO__ASSOCIATIONS:
 				return ((InternalEList<?>)getAssociations()).basicRemove(otherEnd, msgs);
-			case CanopusPackage.SCENARIO__SCRIPTS:
-				return ((InternalEList<?>)getScripts()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCENARIO__SCRIPTMODEL:
+				return ((InternalEList<?>)getScriptmodel()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -180,8 +180,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return getWorkloads();
 			case CanopusPackage.SCENARIO__ASSOCIATIONS:
 				return getAssociations();
-			case CanopusPackage.SCENARIO__SCRIPTS:
-				return getScripts();
+			case CanopusPackage.SCENARIO__SCRIPTMODEL:
+				return getScriptmodel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,9 +207,9 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				getAssociations().clear();
 				getAssociations().addAll((Collection<? extends Association>)newValue);
 				return;
-			case CanopusPackage.SCENARIO__SCRIPTS:
-				getScripts().clear();
-				getScripts().addAll((Collection<? extends Script>)newValue);
+			case CanopusPackage.SCENARIO__SCRIPTMODEL:
+				getScriptmodel().clear();
+				getScriptmodel().addAll((Collection<? extends ScriptModel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -232,8 +232,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 			case CanopusPackage.SCENARIO__ASSOCIATIONS:
 				getAssociations().clear();
 				return;
-			case CanopusPackage.SCENARIO__SCRIPTS:
-				getScripts().clear();
+			case CanopusPackage.SCENARIO__SCRIPTMODEL:
+				getScriptmodel().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -253,8 +253,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return workloads != null && !workloads.isEmpty();
 			case CanopusPackage.SCENARIO__ASSOCIATIONS:
 				return associations != null && !associations.isEmpty();
-			case CanopusPackage.SCENARIO__SCRIPTS:
-				return scripts != null && !scripts.isEmpty();
+			case CanopusPackage.SCENARIO__SCRIPTMODEL:
+				return scriptmodel != null && !scriptmodel.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -100,10 +100,6 @@ public class CanopusPerformanceScriptingAdapterFactory extends AdapterFactoryImp
 				return createColumnsHiddenObjectAdapter();
 			}
 			@Override
-			public Adapter caseScriptingModel(ScriptingModel object) {
-				return createScriptingModelAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -232,20 +228,6 @@ public class CanopusPerformanceScriptingAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createColumnsHiddenObjectAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScripting.ScriptingModel <em>Scripting Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScripting.ScriptingModel
-	 * @generated
-	 */
-	public Adapter createScriptingModelAdapter() {
 		return null;
 	}
 

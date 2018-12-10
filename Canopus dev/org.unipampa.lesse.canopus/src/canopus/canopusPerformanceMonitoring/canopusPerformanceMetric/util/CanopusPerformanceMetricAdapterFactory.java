@@ -76,10 +76,6 @@ public class CanopusPerformanceMetricAdapterFactory extends AdapterFactoryImpl {
 				return createDiskAdapter();
 			}
 			@Override
-			public Adapter caseMetric(Metric object) {
-				return createMetricAdapter();
-			}
-			@Override
 			public Adapter caseAssociationCounterCriteriaThreshold(AssociationCounterCriteriaThreshold object) {
 				return createAssociationCounterCriteriaThresholdAdapter();
 			}
@@ -110,6 +106,10 @@ public class CanopusPerformanceMetricAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTransactionCounter(TransactionCounter object) {
 				return createTransactionCounterAdapter();
+			}
+			@Override
+			public Adapter caseMetric(Metric object) {
+				return createMetricAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -156,20 +156,6 @@ public class CanopusPerformanceMetricAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDiskAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric <em>Metric</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric
-	 * @generated
-	 */
-	public Adapter createMetricAdapter() {
 		return null;
 	}
 
@@ -282,6 +268,20 @@ public class CanopusPerformanceMetricAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTransactionCounterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric <em>Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric
+	 * @generated
+	 */
+	public Adapter createMetricAdapter() {
 		return null;
 	}
 
