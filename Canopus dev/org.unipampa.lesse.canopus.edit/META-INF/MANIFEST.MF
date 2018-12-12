@@ -11,10 +11,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.provider,
  canopus.canopusPerformanceMonitoring.provider,
+ canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.provider,
+ canopus.canopusPerformanceScenario.canopusPerformanceScripting.provider,
  canopus.canopusPerformanceScenario.canopusPerformanceWorkload.provider,
  canopus.canopusPerformanceScenario.provider,
- canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.provider,
- canopus.canopusPerformanceScripting.provider,
  canopus.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.unipampa.lesse.canopus;visibility:=reexport,

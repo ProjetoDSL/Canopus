@@ -118,49 +118,26 @@ public class CanopusPerformanceScenarioItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.Association} instances.
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.Scripting} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AssociationItemProvider associationItemProvider;
+	protected ScriptingItemProvider scriptingItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.Association}.
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.Scripting}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAssociationAdapter() {
-		if (associationItemProvider == null) {
-			associationItemProvider = new AssociationItemProvider(this);
+	public Adapter createScriptingAdapter() {
+		if (scriptingItemProvider == null) {
+			scriptingItemProvider = new ScriptingItemProvider(this);
 		}
 
-		return associationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.ScriptModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScriptModelItemProvider scriptModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.ScriptModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScriptModelAdapter() {
-		if (scriptModelItemProvider == null) {
-			scriptModelItemProvider = new ScriptModelItemProvider(this);
-		}
-
-		return scriptModelItemProvider;
+		return scriptingItemProvider;
 	}
 
 	/**
@@ -264,8 +241,7 @@ public class CanopusPerformanceScenarioItemProviderAdapterFactory extends Canopu
 	public void dispose() {
 		if (userProfileItemProvider != null) userProfileItemProvider.dispose();
 		if (workloadItemProvider != null) workloadItemProvider.dispose();
-		if (associationItemProvider != null) associationItemProvider.dispose();
-		if (scriptModelItemProvider != null) scriptModelItemProvider.dispose();
+		if (scriptingItemProvider != null) scriptingItemProvider.dispose();
 	}
 
 }

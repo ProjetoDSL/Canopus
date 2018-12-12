@@ -58,7 +58,6 @@ public class CanopusFactoryImpl extends EFactoryImpl implements CanopusFactory {
 		switch (eClass.getClassifierID()) {
 			case CanopusPackage.MONITORING: return createMonitoring();
 			case CanopusPackage.SCENARIO: return createScenario();
-			case CanopusPackage.SCRIPTING: return createScripting();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,16 +81,6 @@ public class CanopusFactoryImpl extends EFactoryImpl implements CanopusFactory {
 	public Scenario createScenario() {
 		ScenarioImpl scenario = new ScenarioImpl();
 		return scenario;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Scripting createScripting() {
-		ScriptingImpl scripting = new ScriptingImpl();
-		return scripting;
 	}
 
 	/**

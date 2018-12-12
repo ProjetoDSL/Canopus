@@ -5,8 +5,7 @@ package canopus.impl;
 import canopus.CanopusPackage;
 import canopus.Scenario;
 
-import canopus.canopusPerformanceScenario.Association;
-import canopus.canopusPerformanceScenario.ScriptModel;
+import canopus.canopusPerformanceScenario.Scripting;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.Workload;
 
@@ -32,8 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link canopus.impl.ScenarioImpl#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getWorkloads <em>Workloads</em>}</li>
- *   <li>{@link canopus.impl.ScenarioImpl#getAssociations <em>Associations</em>}</li>
- *   <li>{@link canopus.impl.ScenarioImpl#getScriptmodel <em>Scriptmodel</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getScripting <em>Scripting</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,24 +58,14 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	protected EList<Workload> workloads;
 
 	/**
-	 * The cached value of the '{@link #getAssociations() <em>Associations</em>}' containment reference list.
+	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAssociations()
+	 * @see #getScripting()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Association> associations;
-
-	/**
-	 * The cached value of the '{@link #getScriptmodel() <em>Scriptmodel</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptmodel()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ScriptModel> scriptmodel;
+	protected EList<Scripting> scripting;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,23 +115,11 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Association> getAssociations() {
-		if (associations == null) {
-			associations = new EObjectContainmentEList<Association>(Association.class, this, CanopusPackage.SCENARIO__ASSOCIATIONS);
+	public EList<Scripting> getScripting() {
+		if (scripting == null) {
+			scripting = new EObjectContainmentEList<Scripting>(Scripting.class, this, CanopusPackage.SCENARIO__SCRIPTING);
 		}
-		return associations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ScriptModel> getScriptmodel() {
-		if (scriptmodel == null) {
-			scriptmodel = new EObjectContainmentEList<ScriptModel>(ScriptModel.class, this, CanopusPackage.SCENARIO__SCRIPTMODEL);
-		}
-		return scriptmodel;
+		return scripting;
 	}
 
 	/**
@@ -158,10 +134,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return ((InternalEList<?>)getUsers()).basicRemove(otherEnd, msgs);
 			case CanopusPackage.SCENARIO__WORKLOADS:
 				return ((InternalEList<?>)getWorkloads()).basicRemove(otherEnd, msgs);
-			case CanopusPackage.SCENARIO__ASSOCIATIONS:
-				return ((InternalEList<?>)getAssociations()).basicRemove(otherEnd, msgs);
-			case CanopusPackage.SCENARIO__SCRIPTMODEL:
-				return ((InternalEList<?>)getScriptmodel()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCENARIO__SCRIPTING:
+				return ((InternalEList<?>)getScripting()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -178,10 +152,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return getUsers();
 			case CanopusPackage.SCENARIO__WORKLOADS:
 				return getWorkloads();
-			case CanopusPackage.SCENARIO__ASSOCIATIONS:
-				return getAssociations();
-			case CanopusPackage.SCENARIO__SCRIPTMODEL:
-				return getScriptmodel();
+			case CanopusPackage.SCENARIO__SCRIPTING:
+				return getScripting();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -203,13 +175,9 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				getWorkloads().clear();
 				getWorkloads().addAll((Collection<? extends Workload>)newValue);
 				return;
-			case CanopusPackage.SCENARIO__ASSOCIATIONS:
-				getAssociations().clear();
-				getAssociations().addAll((Collection<? extends Association>)newValue);
-				return;
-			case CanopusPackage.SCENARIO__SCRIPTMODEL:
-				getScriptmodel().clear();
-				getScriptmodel().addAll((Collection<? extends ScriptModel>)newValue);
+			case CanopusPackage.SCENARIO__SCRIPTING:
+				getScripting().clear();
+				getScripting().addAll((Collection<? extends Scripting>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,11 +197,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 			case CanopusPackage.SCENARIO__WORKLOADS:
 				getWorkloads().clear();
 				return;
-			case CanopusPackage.SCENARIO__ASSOCIATIONS:
-				getAssociations().clear();
-				return;
-			case CanopusPackage.SCENARIO__SCRIPTMODEL:
-				getScriptmodel().clear();
+			case CanopusPackage.SCENARIO__SCRIPTING:
+				getScripting().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -251,10 +216,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return users != null && !users.isEmpty();
 			case CanopusPackage.SCENARIO__WORKLOADS:
 				return workloads != null && !workloads.isEmpty();
-			case CanopusPackage.SCENARIO__ASSOCIATIONS:
-				return associations != null && !associations.isEmpty();
-			case CanopusPackage.SCENARIO__SCRIPTMODEL:
-				return scriptmodel != null && !scriptmodel.isEmpty();
+			case CanopusPackage.SCENARIO__SCRIPTING:
+				return scripting != null && !scripting.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

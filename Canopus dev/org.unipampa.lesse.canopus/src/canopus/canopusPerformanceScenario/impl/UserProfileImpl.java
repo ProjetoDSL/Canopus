@@ -2,9 +2,8 @@
  */
 package canopus.canopusPerformanceScenario.impl;
 
-import canopus.Scripting;
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
-import canopus.canopusPerformanceScenario.ScriptModel;
+import canopus.canopusPerformanceScenario.Scripting;
 import canopus.canopusPerformanceScenario.UserProfile;
 
 import java.util.Collection;
@@ -31,7 +30,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getScriptmodel <em>Scriptmodel</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getScripting <em>Scripting</em>}</li>
  * </ul>
  *
@@ -97,16 +95,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * @ordered
 	 */
 	protected int percentage = PERCENTAGE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getScriptmodel() <em>Scriptmodel</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScriptmodel()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ScriptModel> scriptmodel;
 
 	/**
 	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference list.
@@ -205,18 +193,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ScriptModel> getScriptmodel() {
-		if (scriptmodel == null) {
-			scriptmodel = new EObjectResolvingEList<ScriptModel>(ScriptModel.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTMODEL);
-		}
-		return scriptmodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Scripting> getScripting() {
 		if (scripting == null) {
 			scripting = new EObjectResolvingEList<Scripting>(Scripting.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING);
@@ -238,8 +214,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return getDescription();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
 				return getPercentage();
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTMODEL:
-				return getScriptmodel();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
 				return getScripting();
 		}
@@ -263,10 +237,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
 				setPercentage((Integer)newValue);
-				return;
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTMODEL:
-				getScriptmodel().clear();
-				getScriptmodel().addAll((Collection<? extends ScriptModel>)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
 				getScripting().clear();
@@ -293,9 +263,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
 				setPercentage(PERCENTAGE_EDEFAULT);
 				return;
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTMODEL:
-				getScriptmodel().clear();
-				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
 				getScripting().clear();
 				return;
@@ -317,8 +284,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
 				return percentage != PERCENTAGE_EDEFAULT;
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTMODEL:
-				return scriptmodel != null && !scriptmodel.isEmpty();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
 				return scripting != null && !scripting.isEmpty();
 		}

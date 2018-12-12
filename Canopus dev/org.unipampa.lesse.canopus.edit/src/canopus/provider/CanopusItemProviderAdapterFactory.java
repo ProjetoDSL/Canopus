@@ -118,29 +118,6 @@ public class CanopusItemProviderAdapterFactory extends CanopusAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.Scripting} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScriptingItemProvider scriptingItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.Scripting}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScriptingAdapter() {
-		if (scriptingItemProvider == null) {
-			scriptingItemProvider = new ScriptingItemProvider(this);
-		}
-
-		return scriptingItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,7 +218,6 @@ public class CanopusItemProviderAdapterFactory extends CanopusAdapterFactory imp
 	public void dispose() {
 		if (monitoringItemProvider != null) monitoringItemProvider.dispose();
 		if (scenarioItemProvider != null) scenarioItemProvider.dispose();
-		if (scriptingItemProvider != null) scriptingItemProvider.dispose();
 	}
 
 }

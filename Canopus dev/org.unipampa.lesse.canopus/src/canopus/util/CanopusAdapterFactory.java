@@ -76,10 +76,6 @@ public class CanopusAdapterFactory extends AdapterFactoryImpl {
 				return createScenarioAdapter();
 			}
 			@Override
-			public Adapter caseScripting(Scripting object) {
-				return createScriptingAdapter();
-			}
-			@Override
 			public Adapter caseDiagram(Diagram object) {
 				return createDiagramAdapter();
 			}
@@ -128,20 +124,6 @@ public class CanopusAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScenarioAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.Scripting <em>Scripting</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.Scripting
-	 * @generated
-	 */
-	public Adapter createScriptingAdapter() {
 		return null;
 	}
 

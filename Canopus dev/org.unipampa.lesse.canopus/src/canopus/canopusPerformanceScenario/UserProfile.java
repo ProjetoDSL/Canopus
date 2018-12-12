@@ -2,7 +2,6 @@
  */
 package canopus.canopusPerformanceScenario;
 
-import canopus.Scripting;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getDescription <em>Description</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getScriptmodel <em>Scriptmodel</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}</li>
  * </ul>
  *
@@ -107,24 +105,8 @@ public interface UserProfile extends EObject {
 	void setPercentage(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Scriptmodel</b></em>' reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.ScriptModel}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scriptmodel</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scriptmodel</em>' reference list.
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Scriptmodel()
-	 * @model
-	 * @generated
-	 */
-	EList<ScriptModel> getScriptmodel();
-
-	/**
 	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
-	 * The list contents are of type {@link canopus.Scripting}.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Scripting}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scripting</em>' reference list isn't clear,

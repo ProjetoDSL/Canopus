@@ -16,19 +16,19 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.impl.Canopu
 
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
+
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage;
+
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.impl.CanopusPerformanceExternalFilePackageImpl;
+
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl;
+
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl;
 
 import canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl;
-
-import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
-
-import canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage;
-
-import canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.impl.CanopusPerformanceExternalFilePackageImpl;
-
-import canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl;
 
 import canopus.impl.CanopusPackageImpl;
 
@@ -370,8 +370,8 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Memory() {
-		return (EReference)metricModelEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMetricModel_Name() {
+		return (EAttribute)metricModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -379,7 +379,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Transaction() {
+	public EReference getMetricModel_Memory() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -388,7 +388,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Disk() {
+	public EReference getMetricModel_Transaction() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -397,7 +397,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Criteria() {
+	public EReference getMetricModel_Disk() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -406,7 +406,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Threshold() {
+	public EReference getMetricModel_Criteria() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -415,7 +415,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Associationcountercriteriathreshold() {
+	public EReference getMetricModel_Threshold() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -424,7 +424,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_DiskCounter() {
+	public EReference getMetricModel_Associationcountercriteriathreshold() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -433,7 +433,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_TransactionCounter() {
+	public EReference getMetricModel_DiskCounter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -442,7 +442,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_MemoryCounter() {
+	public EReference getMetricModel_TransactionCounter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -451,7 +451,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMetricModel_Counter() {
+	public EReference getMetricModel_MemoryCounter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -460,8 +460,8 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMetricModel_Name() {
-		return (EAttribute)metricModelEClass.getEStructuralFeatures().get(10);
+	public EReference getMetricModel_Counter() {
+		return (EReference)metricModelEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -543,6 +543,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		createEAttribute(monitorEClass, MONITOR__HARDWARE);
 
 		metricModelEClass = createEClass(METRIC_MODEL);
+		createEAttribute(metricModelEClass, METRIC_MODEL__NAME);
 		createEReference(metricModelEClass, METRIC_MODEL__MEMORY);
 		createEReference(metricModelEClass, METRIC_MODEL__TRANSACTION);
 		createEReference(metricModelEClass, METRIC_MODEL__DISK);
@@ -553,7 +554,6 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		createEReference(metricModelEClass, METRIC_MODEL__TRANSACTION_COUNTER);
 		createEReference(metricModelEClass, METRIC_MODEL__MEMORY_COUNTER);
 		createEReference(metricModelEClass, METRIC_MODEL__COUNTER);
-		createEAttribute(metricModelEClass, METRIC_MODEL__NAME);
 		createEReference(metricModelEClass, METRIC_MODEL__METRIC);
 
 		// Create enums
@@ -621,6 +621,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		initEAttribute(getMonitor_Hardware(), this.getHARDWARE(), "hardware", null, 0, 1, Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metricModelEClass, MetricModel.class, "MetricModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMetricModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_Memory(), theCanopusPerformanceMetricPackage.getMemory(), null, "memory", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_Transaction(), theCanopusPerformanceMetricPackage.getTransaction(), null, "transaction", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_Disk(), theCanopusPerformanceMetricPackage.getDisk(), null, "disk", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -631,7 +632,6 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		initEReference(getMetricModel_TransactionCounter(), theCanopusPerformanceMetricPackage.getTransactionCounter(), null, "transactionCounter", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_MemoryCounter(), theCanopusPerformanceMetricPackage.getMemoryCounter(), null, "memoryCounter", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_Counter(), theCanopusPerformanceMetricPackage.getCounter(), null, "counter", null, 0, -1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMetricModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMetricModel_Metric(), theCanopusPerformanceMetricPackage.getMetric(), null, "metric", null, 0, -1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

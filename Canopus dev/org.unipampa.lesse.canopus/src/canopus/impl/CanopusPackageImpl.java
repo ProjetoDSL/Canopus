@@ -7,7 +7,6 @@ import canopus.CanopusPackage;
 import canopus.Diagram;
 import canopus.Monitoring;
 import canopus.Scenario;
-import canopus.Scripting;
 
 import canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage;
 
@@ -19,19 +18,19 @@ import canopus.canopusPerformanceMonitoring.impl.CanopusPerformanceMonitoringPac
 
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
+
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage;
+
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.impl.CanopusPerformanceExternalFilePackageImpl;
+
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl;
+
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl;
 
 import canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl;
-
-import canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
-
-import canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage;
-
-import canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.impl.CanopusPerformanceExternalFilePackageImpl;
-
-import canopus.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -60,13 +59,6 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * @generated
 	 */
 	private EClass scenarioEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass scriptingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -239,89 +231,8 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScenario_Associations() {
+	public EReference getScenario_Scripting() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScenario_Scriptmodel() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getScripting() {
-		return scriptingEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_Initial() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_Final() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_Activities() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_Saveparameters() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_Datatables() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_ThinkTime() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScripting_Scripts() {
-		return (EReference)scriptingEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -406,17 +317,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		scenarioEClass = createEClass(SCENARIO);
 		createEReference(scenarioEClass, SCENARIO__USERS);
 		createEReference(scenarioEClass, SCENARIO__WORKLOADS);
-		createEReference(scenarioEClass, SCENARIO__ASSOCIATIONS);
-		createEReference(scenarioEClass, SCENARIO__SCRIPTMODEL);
-
-		scriptingEClass = createEClass(SCRIPTING);
-		createEReference(scriptingEClass, SCRIPTING__INITIAL);
-		createEReference(scriptingEClass, SCRIPTING__FINAL);
-		createEReference(scriptingEClass, SCRIPTING__ACTIVITIES);
-		createEReference(scriptingEClass, SCRIPTING__SAVEPARAMETERS);
-		createEReference(scriptingEClass, SCRIPTING__DATATABLES);
-		createEReference(scriptingEClass, SCRIPTING__THINK_TIME);
-		createEReference(scriptingEClass, SCRIPTING__SCRIPTS);
+		createEReference(scenarioEClass, SCENARIO__SCRIPTING);
 
 		diagramEClass = createEClass(DIAGRAM);
 		createEAttribute(diagramEClass, DIAGRAM__NAME);
@@ -451,12 +352,10 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		// Obtain other dependent packages
 		CanopusPerformanceMonitoringPackage theCanopusPerformanceMonitoringPackage = (CanopusPerformanceMonitoringPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceMonitoringPackage.eNS_URI);
 		CanopusPerformanceScenarioPackage theCanopusPerformanceScenarioPackage = (CanopusPerformanceScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScenarioPackage.eNS_URI);
-		CanopusPerformanceScriptingPackage theCanopusPerformanceScriptingPackage = (CanopusPerformanceScriptingPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScriptingPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theCanopusPerformanceMonitoringPackage);
 		getESubpackages().add(theCanopusPerformanceScenarioPackage);
-		getESubpackages().add(theCanopusPerformanceScriptingPackage);
 
 		// Create type parameters
 
@@ -465,7 +364,6 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		// Add supertypes to classes
 		monitoringEClass.getESuperTypes().add(this.getDiagram());
 		scenarioEClass.getESuperTypes().add(this.getDiagram());
-		scriptingEClass.getESuperTypes().add(this.getDiagram());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(monitoringEClass, Monitoring.class, "Monitoring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -477,17 +375,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		initEClass(scenarioEClass, Scenario.class, "Scenario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getScenario_Users(), theCanopusPerformanceScenarioPackage.getUserProfile(), null, "users", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_Workloads(), theCanopusPerformanceScenarioPackage.getWorkload(), null, "workloads", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScenario_Associations(), theCanopusPerformanceScenarioPackage.getAssociation(), null, "associations", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScenario_Scriptmodel(), theCanopusPerformanceScenarioPackage.getScriptModel(), null, "scriptmodel", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(scriptingEClass, Scripting.class, "Scripting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScripting_Initial(), theCanopusPerformanceScriptingPackage.getInitial(), null, "initial", null, 1, 1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_Final(), theCanopusPerformanceScriptingPackage.getFinal(), null, "final", null, 1, 1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_Activities(), theCanopusPerformanceScriptingPackage.getActivity(), null, "activities", null, 1, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_Saveparameters(), theCanopusPerformanceScriptingPackage.getSaveParameters(), null, "saveparameters", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_Datatables(), theCanopusPerformanceScriptingPackage.getDataTable(), null, "datatables", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_ThinkTime(), theCanopusPerformanceScriptingPackage.getThinkTime(), null, "thinkTime", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_Scripts(), this.getScripting(), null, "scripts", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScenario_Scripting(), theCanopusPerformanceScenarioPackage.getScripting(), null, "scripting", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

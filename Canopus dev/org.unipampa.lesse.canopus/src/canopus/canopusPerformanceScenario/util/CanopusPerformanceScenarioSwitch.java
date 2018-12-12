@@ -78,15 +78,9 @@ public class CanopusPerformanceScenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CanopusPerformanceScenarioPackage.ASSOCIATION: {
-				Association association = (Association)theEObject;
-				T result = caseAssociation(association);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CanopusPerformanceScenarioPackage.SCRIPT_MODEL: {
-				ScriptModel scriptModel = (ScriptModel)theEObject;
-				T result = caseScriptModel(scriptModel);
+			case CanopusPerformanceScenarioPackage.SCRIPTING: {
+				Scripting scripting = (Scripting)theEObject;
+				T result = caseScripting(scripting);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,32 +119,17 @@ public class CanopusPerformanceScenarioSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Association</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Scripting</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Association</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Scripting</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAssociation(Association object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Script Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Script Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseScriptModel(ScriptModel object) {
+	public T caseScripting(Scripting object) {
 		return null;
 	}
 

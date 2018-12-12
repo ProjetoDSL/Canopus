@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemory <em>Memory</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getTransaction <em>Transaction</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getDisk <em>Disk</em>}</li>
@@ -37,7 +38,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getTransactionCounter <em>Transaction Counter</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemoryCounter <em>Memory Counter</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getCounter <em>Counter</em>}</li>
- *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}</li>
  * </ul>
  *
@@ -46,6 +46,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface MetricModel extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Memory</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -265,32 +291,6 @@ public interface MetricModel extends EObject {
 	 * @generated
 	 */
 	EList<Counter> getCounter();
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Metric</b></em>' reference list.

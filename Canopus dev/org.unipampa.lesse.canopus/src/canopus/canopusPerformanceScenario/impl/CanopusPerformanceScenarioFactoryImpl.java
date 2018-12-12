@@ -58,8 +58,7 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 		switch (eClass.getClassifierID()) {
 			case CanopusPerformanceScenarioPackage.USER_PROFILE: return createUserProfile();
 			case CanopusPerformanceScenarioPackage.WORKLOAD: return createWorkload();
-			case CanopusPerformanceScenarioPackage.ASSOCIATION: return createAssociation();
-			case CanopusPerformanceScenarioPackage.SCRIPT_MODEL: return createScriptModel();
+			case CanopusPerformanceScenarioPackage.SCRIPTING: return createScripting();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -90,19 +89,9 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Association createAssociation() {
-		AssociationImpl association = new AssociationImpl();
-		return association;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScriptModel createScriptModel() {
-		ScriptModelImpl scriptModel = new ScriptModelImpl();
-		return scriptModel;
+	public Scripting createScripting() {
+		ScriptingImpl scripting = new ScriptingImpl();
+		return scripting;
 	}
 
 	/**

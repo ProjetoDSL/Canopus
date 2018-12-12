@@ -305,13 +305,22 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int METRIC_MODEL = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METRIC_MODEL__NAME = 0;
+
+	/**
 	 * The feature id for the '<em><b>Memory</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__MEMORY = 0;
+	int METRIC_MODEL__MEMORY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Transaction</b></em>' containment reference.
@@ -320,7 +329,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__TRANSACTION = 1;
+	int METRIC_MODEL__TRANSACTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Disk</b></em>' containment reference.
@@ -329,7 +338,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__DISK = 2;
+	int METRIC_MODEL__DISK = 3;
 
 	/**
 	 * The feature id for the '<em><b>Criteria</b></em>' containment reference list.
@@ -338,7 +347,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__CRITERIA = 3;
+	int METRIC_MODEL__CRITERIA = 4;
 
 	/**
 	 * The feature id for the '<em><b>Threshold</b></em>' containment reference list.
@@ -347,7 +356,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__THRESHOLD = 4;
+	int METRIC_MODEL__THRESHOLD = 5;
 
 	/**
 	 * The feature id for the '<em><b>Associationcountercriteriathreshold</b></em>' containment reference list.
@@ -356,7 +365,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = 5;
+	int METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = 6;
 
 	/**
 	 * The feature id for the '<em><b>Disk Counter</b></em>' containment reference.
@@ -365,7 +374,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__DISK_COUNTER = 6;
+	int METRIC_MODEL__DISK_COUNTER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Transaction Counter</b></em>' containment reference.
@@ -374,7 +383,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__TRANSACTION_COUNTER = 7;
+	int METRIC_MODEL__TRANSACTION_COUNTER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Memory Counter</b></em>' containment reference.
@@ -383,7 +392,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__MEMORY_COUNTER = 8;
+	int METRIC_MODEL__MEMORY_COUNTER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Counter</b></em>' containment reference list.
@@ -392,16 +401,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int METRIC_MODEL__COUNTER = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METRIC_MODEL__NAME = 10;
+	int METRIC_MODEL__COUNTER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Metric</b></em>' reference list.
@@ -679,6 +679,17 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EClass getMetricModel();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getName()
+	 * @see #getMetricModel()
+	 * @generated
+	 */
+	EAttribute getMetricModel_Name();
+
+	/**
 	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemory <em>Memory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -787,17 +798,6 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMetricModel_Counter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.MetricModel#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getName()
-	 * @see #getMetricModel()
-	 * @generated
-	 */
-	EAttribute getMetricModel_Name();
 
 	/**
 	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}'.
@@ -1030,6 +1030,14 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EClass METRIC_MODEL = eINSTANCE.getMetricModel();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute METRIC_MODEL__NAME = eINSTANCE.getMetricModel_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Memory</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1108,14 +1116,6 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		 * @generated
 		 */
 		EReference METRIC_MODEL__COUNTER = eINSTANCE.getMetricModel_Counter();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METRIC_MODEL__NAME = eINSTANCE.getMetricModel_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Metric</b></em>' reference list feature.

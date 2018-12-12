@@ -64,7 +64,7 @@ public interface CanopusPackage extends EPackage {
 	 * @see canopus.impl.CanopusPackageImpl#getDiagram()
 	 * @generated
 	 */
-	int DIAGRAM = 3;
+	int DIAGRAM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -285,22 +285,13 @@ public interface CanopusPackage extends EPackage {
 	int SCENARIO__WORKLOADS = DIAGRAM_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Associations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Scripting</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO__ASSOCIATIONS = DIAGRAM_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Scriptmodel</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__SCRIPTMODEL = DIAGRAM_FEATURE_COUNT + 3;
+	int SCENARIO__SCRIPTING = DIAGRAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
@@ -309,7 +300,7 @@ public interface CanopusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 4;
+	int SCENARIO_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Scenario</em>' class.
@@ -319,133 +310,6 @@ public interface CanopusPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCENARIO_OPERATION_COUNT = DIAGRAM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link canopus.impl.ScriptingImpl <em>Scripting</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.impl.ScriptingImpl
-	 * @see canopus.impl.CanopusPackageImpl#getScripting()
-	 * @generated
-	 */
-	int SCRIPTING = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__NAME = DIAGRAM__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Project Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__PROJECT_LABEL = DIAGRAM__PROJECT_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Project Author</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__PROJECT_AUTHOR = DIAGRAM__PROJECT_AUTHOR;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__DESCRIPTION = DIAGRAM__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Initial</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__INITIAL = DIAGRAM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Final</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__FINAL = DIAGRAM_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__ACTIVITIES = DIAGRAM_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Saveparameters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__SAVEPARAMETERS = DIAGRAM_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Datatables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__DATATABLES = DIAGRAM_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Think Time</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__THINK_TIME = DIAGRAM_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Scripts</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING__SCRIPTS = DIAGRAM_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of structural features of the '<em>Scripting</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of operations of the '<em>Scripting</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCRIPTING_OPERATION_COUNT = DIAGRAM_OPERATION_COUNT + 0;
 
 
 	/**
@@ -535,113 +399,15 @@ public interface CanopusPackage extends EPackage {
 	EReference getScenario_Workloads();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getAssociations <em>Associations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getScripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Associations</em>'.
-	 * @see canopus.Scenario#getAssociations()
+	 * @return the meta object for the containment reference list '<em>Scripting</em>'.
+	 * @see canopus.Scenario#getScripting()
 	 * @see #getScenario()
 	 * @generated
 	 */
-	EReference getScenario_Associations();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getScriptmodel <em>Scriptmodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Scriptmodel</em>'.
-	 * @see canopus.Scenario#getScriptmodel()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_Scriptmodel();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.Scripting <em>Scripting</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Scripting</em>'.
-	 * @see canopus.Scripting
-	 * @generated
-	 */
-	EClass getScripting();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.Scripting#getInitial <em>Initial</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Initial</em>'.
-	 * @see canopus.Scripting#getInitial()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_Initial();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.Scripting#getFinal <em>Final</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Final</em>'.
-	 * @see canopus.Scripting#getFinal()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_Final();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getActivities <em>Activities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activities</em>'.
-	 * @see canopus.Scripting#getActivities()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_Activities();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getSaveparameters <em>Saveparameters</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Saveparameters</em>'.
-	 * @see canopus.Scripting#getSaveparameters()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_Saveparameters();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getDatatables <em>Datatables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Datatables</em>'.
-	 * @see canopus.Scripting#getDatatables()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_Datatables();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getThinkTime <em>Think Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Think Time</em>'.
-	 * @see canopus.Scripting#getThinkTime()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_ThinkTime();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scripting#getScripts <em>Scripts</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Scripts</em>'.
-	 * @see canopus.Scripting#getScripts()
-	 * @see #getScripting()
-	 * @generated
-	 */
-	EReference getScripting_Scripts();
+	EReference getScenario_Scripting();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.Diagram <em>Diagram</em>}'.
@@ -789,86 +555,12 @@ public interface CanopusPackage extends EPackage {
 		EReference SCENARIO__WORKLOADS = eINSTANCE.getScenario_Workloads();
 
 		/**
-		 * The meta object literal for the '<em><b>Associations</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Scripting</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCENARIO__ASSOCIATIONS = eINSTANCE.getScenario_Associations();
-
-		/**
-		 * The meta object literal for the '<em><b>Scriptmodel</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__SCRIPTMODEL = eINSTANCE.getScenario_Scriptmodel();
-
-		/**
-		 * The meta object literal for the '{@link canopus.impl.ScriptingImpl <em>Scripting</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.impl.ScriptingImpl
-		 * @see canopus.impl.CanopusPackageImpl#getScripting()
-		 * @generated
-		 */
-		EClass SCRIPTING = eINSTANCE.getScripting();
-
-		/**
-		 * The meta object literal for the '<em><b>Initial</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__INITIAL = eINSTANCE.getScripting_Initial();
-
-		/**
-		 * The meta object literal for the '<em><b>Final</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__FINAL = eINSTANCE.getScripting_Final();
-
-		/**
-		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__ACTIVITIES = eINSTANCE.getScripting_Activities();
-
-		/**
-		 * The meta object literal for the '<em><b>Saveparameters</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__SAVEPARAMETERS = eINSTANCE.getScripting_Saveparameters();
-
-		/**
-		 * The meta object literal for the '<em><b>Datatables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__DATATABLES = eINSTANCE.getScripting_Datatables();
-
-		/**
-		 * The meta object literal for the '<em><b>Think Time</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__THINK_TIME = eINSTANCE.getScripting_ThinkTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Scripts</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCRIPTING__SCRIPTS = eINSTANCE.getScripting_Scripts();
+		EReference SCENARIO__SCRIPTING = eINSTANCE.getScenario_Scripting();
 
 		/**
 		 * The meta object literal for the '{@link canopus.impl.DiagramImpl <em>Diagram</em>}' class.

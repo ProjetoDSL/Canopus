@@ -152,9 +152,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingModelWizardID"
+            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingModelWizardID"
             name="%_UI_CanopusPerformanceScriptingModelWizard_label"
-            class="canopus.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingModelWizard"
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/CanopusPerformanceScriptingModelFile.gif">
          <description>%_UI_CanopusPerformanceScriptingModelWizard_description</description>
@@ -165,12 +165,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated canopus -->
       <editor
-            id="canopus.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingEditorID"
+            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingEditorID"
             name="%_UI_CanopusPerformanceScriptingEditor_label"
             icon="icons/full/obj16/CanopusPerformanceScriptingModelFile.gif"
             extensions="canopusperformancescripting"
-            class="canopus.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingEditor"
-            contributorClass="canopus.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingActionBarContributor">
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingEditor"
+            contributorClass="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingActionBarContributor">
       </editor>
    </extension>
 
@@ -180,9 +180,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileModelWizardID"
+            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileModelWizardID"
             name="%_UI_CanopusPerformanceExternalFileModelWizard_label"
-            class="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileModelWizard"
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/CanopusPerformanceExternalFileModelFile.gif">
          <description>%_UI_CanopusPerformanceExternalFileModelWizard_description</description>
@@ -193,12 +193,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated canopus -->
       <editor
-            id="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileEditorID"
+            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileEditorID"
             name="%_UI_CanopusPerformanceExternalFileEditor_label"
             icon="icons/full/obj16/CanopusPerformanceExternalFileModelFile.gif"
             extensions="canopusperformanceexternalfile"
-            class="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileEditor"
-            contributorClass="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileActionBarContributor">
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileEditor"
+            contributorClass="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileActionBarContributor">
       </editor>
    </extension>
 

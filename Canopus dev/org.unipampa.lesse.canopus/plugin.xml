@@ -50,7 +50,7 @@
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerformanceScripting"
-            class="canopus.canopusPerformanceScripting.CanopusPerformanceScriptingPackage"
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage"
             genModel="model/canopus.genmodel"/>
    </extension>
 
@@ -58,7 +58,7 @@
       <!-- @generated canopus -->
       <package
             uri="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
-            class="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage"
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.CanopusPerformanceExternalFilePackage"
             genModel="model/canopus.genmodel"/>
    </extension>
 

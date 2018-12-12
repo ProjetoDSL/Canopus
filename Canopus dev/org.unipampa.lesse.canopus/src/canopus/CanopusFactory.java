@@ -40,15 +40,6 @@ public interface CanopusFactory extends EFactory {
 	Scenario createScenario();
 
 	/**
-	 * Returns a new object of class '<em>Scripting</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scripting</em>'.
-	 * @generated
-	 */
-	Scripting createScripting();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

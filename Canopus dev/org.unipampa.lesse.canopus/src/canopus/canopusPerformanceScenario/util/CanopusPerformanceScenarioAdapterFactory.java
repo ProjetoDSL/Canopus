@@ -76,12 +76,8 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 				return createWorkloadAdapter();
 			}
 			@Override
-			public Adapter caseAssociation(Association object) {
-				return createAssociationAdapter();
-			}
-			@Override
-			public Adapter caseScriptModel(ScriptModel object) {
-				return createScriptModelAdapter();
+			public Adapter caseScripting(Scripting object) {
+				return createScriptingAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -132,30 +128,16 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Association <em>Association</em>}'.
+	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Scripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.Association
+	 * @see canopus.canopusPerformanceScenario.Scripting
 	 * @generated
 	 */
-	public Adapter createAssociationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.ScriptModel <em>Script Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.ScriptModel
-	 * @generated
-	 */
-	public Adapter createScriptModelAdapter() {
+	public Adapter createScriptingAdapter() {
 		return null;
 	}
 

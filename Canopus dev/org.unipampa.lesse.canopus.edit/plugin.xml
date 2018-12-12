@@ -75,7 +75,7 @@
       <!-- @generated canopus -->
       <factory
             uri="http://www.unipampa.lesse.org/canopusPerformanceScripting"
-            class="canopus.canopusPerformanceScripting.provider.CanopusPerformanceScriptingItemProviderAdapterFactory"
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.provider.CanopusPerformanceScriptingItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -88,7 +88,7 @@
       <!-- @generated canopus -->
       <factory
             uri="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
-            class="canopus.canopusPerformanceScripting.canopusPerformanceExternalFile.provider.CanopusPerformanceExternalFileItemProviderAdapterFactory"
+            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.provider.CanopusPerformanceExternalFileItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

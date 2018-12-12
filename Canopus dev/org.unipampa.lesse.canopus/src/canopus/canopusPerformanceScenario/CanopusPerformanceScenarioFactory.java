@@ -40,22 +40,13 @@ public interface CanopusPerformanceScenarioFactory extends EFactory {
 	Workload createWorkload();
 
 	/**
-	 * Returns a new object of class '<em>Association</em>'.
+	 * Returns a new object of class '<em>Scripting</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Association</em>'.
+	 * @return a new object of class '<em>Scripting</em>'.
 	 * @generated
 	 */
-	Association createAssociation();
-
-	/**
-	 * Returns a new object of class '<em>Script Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Script Model</em>'.
-	 * @generated
-	 */
-	ScriptModel createScriptModel();
+	Scripting createScripting();
 
 	/**
 	 * Returns the package supported by this factory.
