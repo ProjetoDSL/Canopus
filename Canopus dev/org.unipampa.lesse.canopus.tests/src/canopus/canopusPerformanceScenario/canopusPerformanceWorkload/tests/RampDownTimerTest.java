@@ -3,7 +3,7 @@
 package canopus.canopusPerformanceScenario.canopusPerformanceWorkload.tests;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadFactory;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer;
 
 import junit.framework.TestCase;
 
@@ -11,19 +11,19 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Ramp Down Time</b></em>'.
+ * A test case for the model object '<em><b>Ramp Down Timer</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class RampDownTimeTest extends TestCase {
+public class RampDownTimerTest extends TestCase {
 
 	/**
-	 * The fixture for this Ramp Down Time test case.
+	 * The fixture for this Ramp Down Timer test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RampDownTime fixture = null;
+	protected RampDownTimer fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,36 +31,36 @@ public class RampDownTimeTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(RampDownTimeTest.class);
+		TestRunner.run(RampDownTimerTest.class);
 	}
 
 	/**
-	 * Constructs a new Ramp Down Time test case with the given name.
+	 * Constructs a new Ramp Down Timer test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RampDownTimeTest(String name) {
+	public RampDownTimerTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this Ramp Down Time test case.
+	 * Sets the fixture for this Ramp Down Timer test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(RampDownTime fixture) {
+	protected void setFixture(RampDownTimer fixture) {
 		this.fixture = fixture;
 	}
 
 	/**
-	 * Returns the fixture for this Ramp Down Time test case.
+	 * Returns the fixture for this Ramp Down Timer test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RampDownTime getFixture() {
+	protected RampDownTimer getFixture() {
 		return fixture;
 	}
 
@@ -72,7 +72,7 @@ public class RampDownTimeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTime());
+		setFixture(CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTimer());
 	}
 
 	/**
@@ -86,4 +86,4 @@ public class RampDownTimeTest extends TestCase {
 		setFixture(null);
 	}
 
-} //RampDownTimeTest
+} //RampDownTimerTest

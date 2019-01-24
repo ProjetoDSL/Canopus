@@ -10,6 +10,7 @@ import canopus.canopusPerformanceScenario.Scripting;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingFactory;
 
 import canopus.provider.CanopusEditPlugin;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -37,7 +38,14 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ScriptingItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ScriptingItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

@@ -80,6 +80,7 @@ public interface UserProfile extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Percentage</b></em>' attribute.
+	 * The default value is <code>"100"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Percentage</em>' attribute isn't clear,
@@ -89,7 +90,7 @@ public interface UserProfile extends EObject {
 	 * @return the value of the '<em>Percentage</em>' attribute.
 	 * @see #setPercentage(int)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Percentage()
-	 * @model
+	 * @model default="100"
 	 * @generated
 	 */
 	int getPercentage();

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.impl.ScenarioImpl#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getWorkloads <em>Workloads</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getScenario <em>Scenario</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +68,16 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * @ordered
 	 */
 	protected EList<Scripting> scripting;
+
+	/**
+	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScenario()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Scenario> scenario;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,6 +139,18 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Scenario> getScenario() {
+		if (scenario == null) {
+			scenario = new EObjectResolvingEList<Scenario>(Scenario.class, this, CanopusPackage.SCENARIO__SCENARIO);
+		}
+		return scenario;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -154,6 +178,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return getWorkloads();
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				return getScripting();
+			case CanopusPackage.SCENARIO__SCENARIO:
+				return getScenario();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,6 +205,10 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				getScripting().clear();
 				getScripting().addAll((Collection<? extends Scripting>)newValue);
 				return;
+			case CanopusPackage.SCENARIO__SCENARIO:
+				getScenario().clear();
+				getScenario().addAll((Collection<? extends Scenario>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -200,6 +230,9 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				getScripting().clear();
 				return;
+			case CanopusPackage.SCENARIO__SCENARIO:
+				getScenario().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -218,6 +251,8 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return workloads != null && !workloads.isEmpty();
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				return scripting != null && !scripting.isEmpty();
+			case CanopusPackage.SCENARIO__SCENARIO:
+				return scenario != null && !scenario.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

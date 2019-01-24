@@ -4,7 +4,7 @@ package canopus.canopusPerformanceScenario.canopusPerformanceWorkload.provider;
 
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer;
 
 import canopus.provider.CanopusEditPlugin;
 
@@ -28,12 +28,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime} object.
+ * This is the item provider adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RampDownTimeItemProvider 
+public class RampDownTimerItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -47,7 +47,7 @@ public class RampDownTimeItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RampDownTimeItemProvider(AdapterFactory adapterFactory) {
+	public RampDownTimerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -78,9 +78,9 @@ public class RampDownTimeItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RampDownTime_time_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RampDownTime_time_feature", "_UI_RampDownTime_type"),
-				 CanopusPerformanceWorkloadPackage.Literals.RAMP_DOWN_TIME__TIME,
+				 getString("_UI_RampDownTimer_time_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RampDownTimer_time_feature", "_UI_RampDownTimer_type"),
+				 CanopusPerformanceWorkloadPackage.Literals.RAMP_DOWN_TIMER__TIME,
 				 true,
 				 false,
 				 false,
@@ -90,14 +90,14 @@ public class RampDownTimeItemProvider
 	}
 
 	/**
-	 * This returns RampDownTime.gif.
+	 * This returns RampDownTimer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/RampDownTime"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/RampDownTimer"));
 	}
 
 	/**
@@ -108,8 +108,8 @@ public class RampDownTimeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		RampDownTime rampDownTime = (RampDownTime)object;
-		return getString("_UI_RampDownTime_type") + " " + rampDownTime.getTime();
+		RampDownTimer rampDownTimer = (RampDownTimer)object;
+		return getString("_UI_RampDownTimer_type") + " " + rampDownTimer.getTime();
 	}
 
 
@@ -124,8 +124,8 @@ public class RampDownTimeItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(RampDownTime.class)) {
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME__TIME:
+		switch (notification.getFeatureID(RampDownTimer.class)) {
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

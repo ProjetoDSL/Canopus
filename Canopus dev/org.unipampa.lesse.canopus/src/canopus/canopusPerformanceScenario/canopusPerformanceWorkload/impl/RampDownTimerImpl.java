@@ -3,7 +3,7 @@
 package canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ramp Down Time</b></em>'.
+ * An implementation of the model object '<em><b>Ramp Down Timer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampDownTimeImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampDownTimerImpl#getTime <em>Time</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements RampDownTime {
+public class RampDownTimerImpl extends MinimalEObjectImpl.Container implements RampDownTimer {
 	/**
 	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RampDownTimeImpl() {
+	protected RampDownTimerImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CanopusPerformanceWorkloadPackage.Literals.RAMP_DOWN_TIME;
+		return CanopusPerformanceWorkloadPackage.Literals.RAMP_DOWN_TIMER;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 		int oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER__TIME, oldTime, time));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME__TIME:
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER__TIME:
 				return getTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME__TIME:
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER__TIME:
 				setTime((Integer)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME__TIME:
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME__TIME:
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER__TIME:
 				return time != TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -160,4 +160,4 @@ public class RampDownTimeImpl extends MinimalEObjectImpl.Container implements Ra
 		return result.toString();
 	}
 
-} //RampDownTimeImpl
+} //RampDownTimerImpl

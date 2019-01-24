@@ -84,7 +84,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PERCENTAGE_EDEFAULT = 0;
+	protected static final int PERCENTAGE_EDEFAULT = 100;
 
 	/**
 	 * The cached value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.

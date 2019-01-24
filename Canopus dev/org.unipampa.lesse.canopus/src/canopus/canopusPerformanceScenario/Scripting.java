@@ -10,6 +10,7 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.SaveParame
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**

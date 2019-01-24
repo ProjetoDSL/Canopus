@@ -5,10 +5,13 @@ package canopus.canopusPerformanceScenario.impl;
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 import canopus.canopusPerformanceScenario.Workload;
 
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownUsers;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
 
@@ -35,6 +38,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpUsers <em>Ramp Up Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTestDuration <em>Test Duration</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampDownTimer <em>Ramp Down Timer</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampDownTest <em>Ramp Down Test</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpTest <em>Ramp Up Test</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTest <em>Test</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,7 +104,37 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * @generated
 	 * @ordered
 	 */
-	protected RampDownTime rampDownTimer;
+	protected RampDownTimer rampDownTimer;
+
+	/**
+	 * The cached value of the '{@link #getRampDownTest() <em>Ramp Down Test</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRampDownTest()
+	 * @generated
+	 * @ordered
+	 */
+	protected RampDownTest rampDownTest;
+
+	/**
+	 * The cached value of the '{@link #getRampUpTest() <em>Ramp Up Test</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRampUpTest()
+	 * @generated
+	 * @ordered
+	 */
+	protected RampUpTest rampUpTest;
+
+	/**
+	 * The cached value of the '{@link #getTest() <em>Test</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTest()
+	 * @generated
+	 * @ordered
+	 */
+	protected Test test;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -339,7 +375,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RampDownTime getRampDownTimer() {
+	public RampDownTimer getRampDownTimer() {
 		return rampDownTimer;
 	}
 
@@ -348,8 +384,8 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRampDownTimer(RampDownTime newRampDownTimer, NotificationChain msgs) {
-		RampDownTime oldRampDownTimer = rampDownTimer;
+	public NotificationChain basicSetRampDownTimer(RampDownTimer newRampDownTimer, NotificationChain msgs) {
+		RampDownTimer oldRampDownTimer = rampDownTimer;
 		rampDownTimer = newRampDownTimer;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER, oldRampDownTimer, newRampDownTimer);
@@ -363,7 +399,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRampDownTimer(RampDownTime newRampDownTimer) {
+	public void setRampDownTimer(RampDownTimer newRampDownTimer) {
 		if (newRampDownTimer != rampDownTimer) {
 			NotificationChain msgs = null;
 			if (rampDownTimer != null)
@@ -375,6 +411,135 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER, newRampDownTimer, newRampDownTimer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RampDownTest getRampDownTest() {
+		return rampDownTest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRampDownTest(RampDownTest newRampDownTest, NotificationChain msgs) {
+		RampDownTest oldRampDownTest = rampDownTest;
+		rampDownTest = newRampDownTest;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST, oldRampDownTest, newRampDownTest);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRampDownTest(RampDownTest newRampDownTest) {
+		if (newRampDownTest != rampDownTest) {
+			NotificationChain msgs = null;
+			if (rampDownTest != null)
+				msgs = ((InternalEObject)rampDownTest).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST, null, msgs);
+			if (newRampDownTest != null)
+				msgs = ((InternalEObject)newRampDownTest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST, null, msgs);
+			msgs = basicSetRampDownTest(newRampDownTest, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST, newRampDownTest, newRampDownTest));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RampUpTest getRampUpTest() {
+		return rampUpTest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRampUpTest(RampUpTest newRampUpTest, NotificationChain msgs) {
+		RampUpTest oldRampUpTest = rampUpTest;
+		rampUpTest = newRampUpTest;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST, oldRampUpTest, newRampUpTest);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRampUpTest(RampUpTest newRampUpTest) {
+		if (newRampUpTest != rampUpTest) {
+			NotificationChain msgs = null;
+			if (rampUpTest != null)
+				msgs = ((InternalEObject)rampUpTest).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST, null, msgs);
+			if (newRampUpTest != null)
+				msgs = ((InternalEObject)newRampUpTest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST, null, msgs);
+			msgs = basicSetRampUpTest(newRampUpTest, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST, newRampUpTest, newRampUpTest));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Test getTest() {
+		return test;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTest(Test newTest, NotificationChain msgs) {
+		Test oldTest = test;
+		test = newTest;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TEST, oldTest, newTest);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTest(Test newTest) {
+		if (newTest != test) {
+			NotificationChain msgs = null;
+			if (test != null)
+				msgs = ((InternalEObject)test).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__TEST, null, msgs);
+			if (newTest != null)
+				msgs = ((InternalEObject)newTest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__TEST, null, msgs);
+			msgs = basicSetTest(newTest, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TEST, newTest, newTest));
 	}
 
 	/**
@@ -397,6 +562,12 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return basicSetTestDuration(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				return basicSetRampDownTimer(null, msgs);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
+				return basicSetRampDownTest(null, msgs);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
+				return basicSetRampUpTest(null, msgs);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
+				return basicSetTest(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -421,6 +592,12 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return getTestDuration();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				return getRampDownTimer();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
+				return getRampDownTest();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
+				return getRampUpTest();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
+				return getTest();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -449,7 +626,16 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				setTestDuration((TestDuration)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
-				setRampDownTimer((RampDownTime)newValue);
+				setRampDownTimer((RampDownTimer)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
+				setRampDownTest((RampDownTest)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
+				setRampUpTest((RampUpTest)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
+				setTest((Test)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -479,7 +665,16 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				setTestDuration((TestDuration)null);
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
-				setRampDownTimer((RampDownTime)null);
+				setRampDownTimer((RampDownTimer)null);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
+				setRampDownTest((RampDownTest)null);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
+				setRampUpTest((RampUpTest)null);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
+				setTest((Test)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -505,6 +700,12 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return testDuration != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				return rampDownTimer != null;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
+				return rampDownTest != null;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
+				return rampUpTest != null;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
+				return test != null;
 		}
 		return super.eIsSet(featureID);
 	}

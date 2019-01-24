@@ -185,13 +185,40 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int WORKLOAD__RAMP_DOWN_TIMER = 5;
 
 	/**
+	 * The feature id for the '<em><b>Ramp Down Test</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD__RAMP_DOWN_TEST = 6;
+
+	/**
+	 * The feature id for the '<em><b>Ramp Up Test</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD__RAMP_UP_TEST = 7;
+
+	/**
+	 * The feature id for the '<em><b>Test</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD__TEST = 8;
+
+	/**
 	 * The number of structural features of the '<em>Workload</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKLOAD_FEATURE_COUNT = 6;
+	int WORKLOAD_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Workload</em>' class.
@@ -434,6 +461,39 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getWorkload_RampDownTimer();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.Workload#getRampDownTest <em>Ramp Down Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ramp Down Test</em>'.
+	 * @see canopus.canopusPerformanceScenario.Workload#getRampDownTest()
+	 * @see #getWorkload()
+	 * @generated
+	 */
+	EReference getWorkload_RampDownTest();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.Workload#getRampUpTest <em>Ramp Up Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ramp Up Test</em>'.
+	 * @see canopus.canopusPerformanceScenario.Workload#getRampUpTest()
+	 * @see #getWorkload()
+	 * @generated
+	 */
+	EReference getWorkload_RampUpTest();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.Workload#getTest <em>Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Test</em>'.
+	 * @see canopus.canopusPerformanceScenario.Workload#getTest()
+	 * @see #getWorkload()
+	 * @generated
+	 */
+	EReference getWorkload_Test();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Scripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -653,6 +713,30 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WORKLOAD__RAMP_DOWN_TIMER = eINSTANCE.getWorkload_RampDownTimer();
+
+		/**
+		 * The meta object literal for the '<em><b>Ramp Down Test</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORKLOAD__RAMP_DOWN_TEST = eINSTANCE.getWorkload_RampDownTest();
+
+		/**
+		 * The meta object literal for the '<em><b>Ramp Up Test</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORKLOAD__RAMP_UP_TEST = eINSTANCE.getWorkload_RampUpTest();
+
+		/**
+		 * The meta object literal for the '<em><b>Test</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORKLOAD__TEST = eINSTANCE.getWorkload_Test();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl <em>Scripting</em>}' class.

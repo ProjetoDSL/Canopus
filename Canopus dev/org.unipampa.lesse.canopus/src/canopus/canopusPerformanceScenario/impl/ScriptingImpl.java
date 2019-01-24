@@ -11,6 +11,7 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Initial;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.SaveParameters;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,8 +23,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 

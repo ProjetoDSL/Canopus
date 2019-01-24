@@ -67,13 +67,40 @@ public interface CanopusPerformanceWorkloadFactory extends EFactory {
 	RampUpTimer createRampUpTimer();
 
 	/**
-	 * Returns a new object of class '<em>Ramp Down Time</em>'.
+	 * Returns a new object of class '<em>Ramp Down Timer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ramp Down Time</em>'.
+	 * @return a new object of class '<em>Ramp Down Timer</em>'.
 	 * @generated
 	 */
-	RampDownTime createRampDownTime();
+	RampDownTimer createRampDownTimer();
+
+	/**
+	 * Returns a new object of class '<em>Ramp Up Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ramp Up Test</em>'.
+	 * @generated
+	 */
+	RampUpTest createRampUpTest();
+
+	/**
+	 * Returns a new object of class '<em>Ramp Down Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ramp Down Test</em>'.
+	 * @generated
+	 */
+	RampDownTest createRampDownTest();
+
+	/**
+	 * Returns a new object of class '<em>Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Test</em>'.
+	 * @generated
+	 */
+	Test createTest();
 
 	/**
 	 * Returns the package supported by this factory.

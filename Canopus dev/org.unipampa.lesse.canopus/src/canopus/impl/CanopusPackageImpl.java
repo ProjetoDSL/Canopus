@@ -240,6 +240,15 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getScenario_Scenario() {
+		return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDiagram() {
 		return diagramEClass;
 	}
@@ -318,6 +327,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		createEReference(scenarioEClass, SCENARIO__USERS);
 		createEReference(scenarioEClass, SCENARIO__WORKLOADS);
 		createEReference(scenarioEClass, SCENARIO__SCRIPTING);
+		createEReference(scenarioEClass, SCENARIO__SCENARIO);
 
 		diagramEClass = createEClass(DIAGRAM);
 		createEAttribute(diagramEClass, DIAGRAM__NAME);
@@ -376,6 +386,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		initEReference(getScenario_Users(), theCanopusPerformanceScenarioPackage.getUserProfile(), null, "users", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_Workloads(), theCanopusPerformanceScenarioPackage.getWorkload(), null, "workloads", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_Scripting(), theCanopusPerformanceScenarioPackage.getScripting(), null, "scripting", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScenario_Scenario(), this.getScenario(), null, "scenario", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

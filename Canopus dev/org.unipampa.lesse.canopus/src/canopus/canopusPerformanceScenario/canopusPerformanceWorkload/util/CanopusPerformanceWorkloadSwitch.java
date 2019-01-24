@@ -96,9 +96,27 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIME: {
-				RampDownTime rampDownTime = (RampDownTime)theEObject;
-				T result = caseRampDownTime(rampDownTime);
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER: {
+				RampDownTimer rampDownTimer = (RampDownTimer)theEObject;
+				T result = caseRampDownTimer(rampDownTimer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CanopusPerformanceWorkloadPackage.RAMP_UP_TEST: {
+				RampUpTest rampUpTest = (RampUpTest)theEObject;
+				T result = caseRampUpTest(rampUpTest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TEST: {
+				RampDownTest rampDownTest = (RampDownTest)theEObject;
+				T result = caseRampDownTest(rampDownTest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CanopusPerformanceWorkloadPackage.TEST: {
+				Test test = (Test)theEObject;
+				T result = caseTest(test);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -182,17 +200,62 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ramp Down Time</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Ramp Down Timer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ramp Down Time</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Ramp Down Timer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRampDownTime(RampDownTime object) {
+	public T caseRampDownTimer(RampDownTimer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ramp Up Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ramp Up Test</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRampUpTest(RampUpTest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ramp Down Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ramp Down Test</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRampDownTest(RampDownTest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Test</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTest(Test object) {
 		return null;
 	}
 

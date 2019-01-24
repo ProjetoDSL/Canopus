@@ -187,26 +187,95 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime} instances.
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RampDownTimeItemProvider rampDownTimeItemProvider;
+	protected RampDownTimerItemProvider rampDownTimerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTime}.
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRampDownTimeAdapter() {
-		if (rampDownTimeItemProvider == null) {
-			rampDownTimeItemProvider = new RampDownTimeItemProvider(this);
+	public Adapter createRampDownTimerAdapter() {
+		if (rampDownTimerItemProvider == null) {
+			rampDownTimerItemProvider = new RampDownTimerItemProvider(this);
 		}
 
-		return rampDownTimeItemProvider;
+		return rampDownTimerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RampUpTestItemProvider rampUpTestItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRampUpTestAdapter() {
+		if (rampUpTestItemProvider == null) {
+			rampUpTestItemProvider = new RampUpTestItemProvider(this);
+		}
+
+		return rampUpTestItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RampDownTestItemProvider rampDownTestItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRampDownTestAdapter() {
+		if (rampDownTestItemProvider == null) {
+			rampDownTestItemProvider = new RampDownTestItemProvider(this);
+		}
+
+		return rampDownTestItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TestItemProvider testItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTestAdapter() {
+		if (testItemProvider == null) {
+			testItemProvider = new TestItemProvider(this);
+		}
+
+		return testItemProvider;
 	}
 
 	/**
@@ -313,7 +382,10 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 		if (rampUpUsersItemProvider != null) rampUpUsersItemProvider.dispose();
 		if (rampDownUsersItemProvider != null) rampDownUsersItemProvider.dispose();
 		if (rampUpTimerItemProvider != null) rampUpTimerItemProvider.dispose();
-		if (rampDownTimeItemProvider != null) rampDownTimeItemProvider.dispose();
+		if (rampDownTimerItemProvider != null) rampDownTimerItemProvider.dispose();
+		if (rampUpTestItemProvider != null) rampUpTestItemProvider.dispose();
+		if (rampDownTestItemProvider != null) rampDownTestItemProvider.dispose();
+		if (testItemProvider != null) testItemProvider.dispose();
 	}
 
 }

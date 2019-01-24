@@ -86,6 +86,9 @@ public class WorkloadItemProvider
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_USERS);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST_DURATION);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TIMER);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TEST);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TEST);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST);
 		}
 		return childrenFeatures;
 	}
@@ -144,6 +147,9 @@ public class WorkloadItemProvider
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -189,7 +195,22 @@ public class WorkloadItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TIMER,
-				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTime()));
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTimer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TEST,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TEST,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampUpTest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createTest()));
 	}
 
 	/**

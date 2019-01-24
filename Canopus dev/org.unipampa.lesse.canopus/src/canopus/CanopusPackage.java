@@ -294,13 +294,22 @@ public interface CanopusPackage extends EPackage {
 	int SCENARIO__SCRIPTING = DIAGRAM_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Scenario</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCENARIO__SCENARIO = DIAGRAM_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 3;
+	int SCENARIO_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Scenario</em>' class.
@@ -408,6 +417,17 @@ public interface CanopusPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getScenario_Scripting();
+
+	/**
+	 * Returns the meta object for the reference list '{@link canopus.Scenario#getScenario <em>Scenario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Scenario</em>'.
+	 * @see canopus.Scenario#getScenario()
+	 * @see #getScenario()
+	 * @generated
+	 */
+	EReference getScenario_Scenario();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.Diagram <em>Diagram</em>}'.
@@ -561,6 +581,14 @@ public interface CanopusPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCENARIO__SCRIPTING = eINSTANCE.getScenario_Scripting();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenario</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCENARIO__SCENARIO = eINSTANCE.getScenario_Scenario();
 
 		/**
 		 * The meta object literal for the '{@link canopus.impl.DiagramImpl <em>Diagram</em>}' class.
