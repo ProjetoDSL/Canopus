@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl#getTestduration <em>Testduration</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl#getVirtualusers <em>Virtualusers</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +50,26 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * @ordered
 	 */
 	protected VirtualUsers virtualusers;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,6 +171,27 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceWorkloadPackage.TEST__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -159,6 +201,8 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case CanopusPerformanceWorkloadPackage.TEST__VIRTUALUSERS:
 				if (resolve) return getVirtualusers();
 				return basicGetVirtualusers();
+			case CanopusPerformanceWorkloadPackage.TEST__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,6 +220,9 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 				return;
 			case CanopusPerformanceWorkloadPackage.TEST__VIRTUALUSERS:
 				setVirtualusers((VirtualUsers)newValue);
+				return;
+			case CanopusPerformanceWorkloadPackage.TEST__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,6 +242,9 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 			case CanopusPerformanceWorkloadPackage.TEST__VIRTUALUSERS:
 				setVirtualusers((VirtualUsers)null);
 				return;
+			case CanopusPerformanceWorkloadPackage.TEST__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -211,8 +261,26 @@ public class TestImpl extends MinimalEObjectImpl.Container implements Test {
 				return testduration != null;
 			case CanopusPerformanceWorkloadPackage.TEST__VIRTUALUSERS:
 				return virtualusers != null;
+			case CanopusPerformanceWorkloadPackage.TEST__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TestImpl

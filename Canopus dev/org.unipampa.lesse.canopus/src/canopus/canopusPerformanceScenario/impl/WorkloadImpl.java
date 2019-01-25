@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampDownTest <em>Ramp Down Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpTest <em>Ramp Up Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTest <em>Test</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,6 +136,26 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * @ordered
 	 */
 	protected Test test;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -547,6 +568,27 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -598,6 +640,8 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return getRampUpTest();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
 				return getTest();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -636,6 +680,9 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
 				setTest((Test)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -676,6 +723,9 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
 				setTest((Test)null);
 				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -706,8 +756,26 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return rampUpTest != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
 				return test != null;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //WorkloadImpl

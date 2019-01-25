@@ -399,13 +399,22 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	int TEST__VIRTUALUSERS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Test</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_FEATURE_COUNT = 2;
+	int TEST_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Test</em>' class.
@@ -415,6 +424,61 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEST_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl <em>Workload Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getWorkloadGroup()
+	 * @generated
+	 */
+	int WORKLOAD_GROUP = 9;
+
+	/**
+	 * The feature id for the '<em><b>Rampdowntest</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_GROUP__RAMPDOWNTEST = 0;
+
+	/**
+	 * The feature id for the '<em><b>Rampuptest</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_GROUP__RAMPUPTEST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Test</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_GROUP__TEST = 2;
+
+	/**
+	 * The number of structural features of the '<em>Workload Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_GROUP_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Workload Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_GROUP_OPERATION_COUNT = 0;
 
 
 	/**
@@ -640,6 +704,60 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	EReference getTest_Virtualusers();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getName()
+	 * @see #getTest()
+	 * @generated
+	 */
+	EAttribute getTest_Name();
+
+	/**
+	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup <em>Workload Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Workload Group</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup
+	 * @generated
+	 */
+	EClass getWorkloadGroup();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampdowntest <em>Rampdowntest</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Rampdowntest</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampdowntest()
+	 * @see #getWorkloadGroup()
+	 * @generated
+	 */
+	EReference getWorkloadGroup_Rampdowntest();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampuptest <em>Rampuptest</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Rampuptest</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampuptest()
+	 * @see #getWorkloadGroup()
+	 * @generated
+	 */
+	EReference getWorkloadGroup_Rampuptest();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getTest <em>Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Test</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getTest()
+	 * @see #getWorkloadGroup()
+	 * @generated
+	 */
+	EReference getWorkloadGroup_Test();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -847,6 +965,48 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEST__VIRTUALUSERS = eINSTANCE.getTest_Virtualusers();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEST__NAME = eINSTANCE.getTest_Name();
+
+		/**
+		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl <em>Workload Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl
+		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getWorkloadGroup()
+		 * @generated
+		 */
+		EClass WORKLOAD_GROUP = eINSTANCE.getWorkloadGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Rampdowntest</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORKLOAD_GROUP__RAMPDOWNTEST = eINSTANCE.getWorkloadGroup_Rampdowntest();
+
+		/**
+		 * The meta object literal for the '<em><b>Rampuptest</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORKLOAD_GROUP__RAMPUPTEST = eINSTANCE.getWorkloadGroup_Rampuptest();
+
+		/**
+		 * The meta object literal for the '<em><b>Test</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORKLOAD_GROUP__TEST = eINSTANCE.getWorkloadGroup_Test();
 
 	}
 

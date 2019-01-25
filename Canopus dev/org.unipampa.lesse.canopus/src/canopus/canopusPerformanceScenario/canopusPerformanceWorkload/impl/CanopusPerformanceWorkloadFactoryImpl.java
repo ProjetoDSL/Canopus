@@ -65,6 +65,7 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_TEST: return createRampUpTest();
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TEST: return createRampDownTest();
 			case CanopusPerformanceWorkloadPackage.TEST: return createTest();
+			case CanopusPerformanceWorkloadPackage.WORKLOAD_GROUP: return createWorkloadGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -158,6 +159,16 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	public Test createTest() {
 		TestImpl test = new TestImpl();
 		return test;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WorkloadGroup createWorkloadGroup() {
+		WorkloadGroupImpl workloadGroup = new WorkloadGroupImpl();
+		return workloadGroup;
 	}
 
 	/**

@@ -4,7 +4,6 @@ package canopus.canopusPerformanceScenario.canopusPerformanceWorkload.provider;
 
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
 
 import canopus.provider.CanopusEditPlugin;
 
@@ -23,17 +22,15 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test} object.
+ * This is the item provider adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TestItemProvider 
+public class WorkloadGroupItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -47,7 +44,7 @@ public class TestItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TestItemProvider(AdapterFactory adapterFactory) {
+	public WorkloadGroupItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,27 +59,27 @@ public class TestItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTestdurationPropertyDescriptor(object);
-			addVirtualusersPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
+			addRampdowntestPropertyDescriptor(object);
+			addRampuptestPropertyDescriptor(object);
+			addTestPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Testduration feature.
+	 * This adds a property descriptor for the Rampdowntest feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTestdurationPropertyDescriptor(Object object) {
+	protected void addRampdowntestPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Test_testduration_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Test_testduration_feature", "_UI_Test_type"),
-				 CanopusPerformanceWorkloadPackage.Literals.TEST__TESTDURATION,
+				 getString("_UI_WorkloadGroup_rampdowntest_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WorkloadGroup_rampdowntest_feature", "_UI_WorkloadGroup_type"),
+				 CanopusPerformanceWorkloadPackage.Literals.WORKLOAD_GROUP__RAMPDOWNTEST,
 				 true,
 				 false,
 				 true,
@@ -92,19 +89,19 @@ public class TestItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Virtualusers feature.
+	 * This adds a property descriptor for the Rampuptest feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVirtualusersPropertyDescriptor(Object object) {
+	protected void addRampuptestPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Test_virtualusers_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Test_virtualusers_feature", "_UI_Test_type"),
-				 CanopusPerformanceWorkloadPackage.Literals.TEST__VIRTUALUSERS,
+				 getString("_UI_WorkloadGroup_rampuptest_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WorkloadGroup_rampuptest_feature", "_UI_WorkloadGroup_type"),
+				 CanopusPerformanceWorkloadPackage.Literals.WORKLOAD_GROUP__RAMPUPTEST,
 				 true,
 				 false,
 				 true,
@@ -114,36 +111,36 @@ public class TestItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Test feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addTestPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Test_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Test_name_feature", "_UI_Test_type"),
-				 CanopusPerformanceWorkloadPackage.Literals.TEST__NAME,
+				 getString("_UI_WorkloadGroup_test_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WorkloadGroup_test_feature", "_UI_WorkloadGroup_type"),
+				 CanopusPerformanceWorkloadPackage.Literals.WORKLOAD_GROUP__TEST,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns Test.gif.
+	 * This returns WorkloadGroup.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Test"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/WorkloadGroup"));
 	}
 
 	/**
@@ -154,10 +151,7 @@ public class TestItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Test)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Test_type") :
-			getString("_UI_Test_type") + " " + label;
+		return getString("_UI_WorkloadGroup_type");
 	}
 
 
@@ -171,12 +165,6 @@ public class TestItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Test.class)) {
-			case CanopusPerformanceWorkloadPackage.TEST__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

@@ -212,13 +212,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int WORKLOAD__TEST = 8;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD__NAME = 9;
+
+	/**
 	 * The number of structural features of the '<em>Workload</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKLOAD_FEATURE_COUNT = 9;
+	int WORKLOAD_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Workload</em>' class.
@@ -494,6 +503,17 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getWorkload_Test();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.Workload#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see canopus.canopusPerformanceScenario.Workload#getName()
+	 * @see #getWorkload()
+	 * @generated
+	 */
+	EAttribute getWorkload_Name();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Scripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -737,6 +757,14 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WORKLOAD__TEST = eINSTANCE.getWorkload_Test();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WORKLOAD__NAME = eINSTANCE.getWorkload_Name();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl <em>Scripting</em>}' class.
