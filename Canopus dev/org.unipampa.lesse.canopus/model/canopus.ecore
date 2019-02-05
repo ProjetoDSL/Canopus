@@ -18,8 +18,6 @@
         eType="#//canopusPerformanceScenario/Workload" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
         eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" upperBound="-1"
-        eType="#//Scenario"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -200,6 +198,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="test" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/Test"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="workloadGroup" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Scripting">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

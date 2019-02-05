@@ -114,6 +114,7 @@ public class WorkloadItemProvider
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TEST);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TEST);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__WORKLOAD_GROUP);
 		}
 		return childrenFeatures;
 	}
@@ -181,6 +182,7 @@ public class WorkloadItemProvider
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -242,6 +244,11 @@ public class WorkloadItemProvider
 			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST,
 				 CanopusPerformanceWorkloadFactory.eINSTANCE.createTest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__WORKLOAD_GROUP,
+				 CanopusPerformanceWorkloadFactory.eINSTANCE.createWorkloadGroup()));
 	}
 
 	/**

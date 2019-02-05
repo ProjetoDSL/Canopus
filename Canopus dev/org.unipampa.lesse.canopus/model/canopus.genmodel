@@ -16,7 +16,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/users"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/workloads"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/scripting"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/scenario"/>
     </genClasses>
     <genClasses image="false" ecoreClass="canopus.ecore#//Diagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/name"/>
@@ -175,6 +174,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpTest"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/test"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Workload/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/workloadGroup"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Scripting">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Scripting/name"/>

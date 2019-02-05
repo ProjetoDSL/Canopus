@@ -11,6 +11,7 @@ import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampUpTest <em>Ramp Up Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getTest <em>Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getName <em>Name</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Workload#getWorkloadGroup <em>Workload Group</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload()
@@ -299,5 +301,31 @@ public interface Workload extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Workload Group</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Workload Group</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Workload Group</em>' containment reference.
+	 * @see #setWorkloadGroup(WorkloadGroup)
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_WorkloadGroup()
+	 * @model containment="true"
+	 * @generated
+	 */
+	WorkloadGroup getWorkloadGroup();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getWorkloadGroup <em>Workload Group</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Workload Group</em>' containment reference.
+	 * @see #getWorkloadGroup()
+	 * @generated
+	 */
+	void setWorkloadGroup(WorkloadGroup value);
 
 } // Workload

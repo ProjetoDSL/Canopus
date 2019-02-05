@@ -14,6 +14,7 @@ import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -42,6 +43,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpTest <em>Ramp Up Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTest <em>Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getName <em>Name</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getWorkloadGroup <em>Workload Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -156,6 +158,16 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getWorkloadGroup() <em>Workload Group</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWorkloadGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected WorkloadGroup workloadGroup;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -589,6 +601,49 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public WorkloadGroup getWorkloadGroup() {
+		return workloadGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetWorkloadGroup(WorkloadGroup newWorkloadGroup, NotificationChain msgs) {
+		WorkloadGroup oldWorkloadGroup = workloadGroup;
+		workloadGroup = newWorkloadGroup;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, oldWorkloadGroup, newWorkloadGroup);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWorkloadGroup(WorkloadGroup newWorkloadGroup) {
+		if (newWorkloadGroup != workloadGroup) {
+			NotificationChain msgs = null;
+			if (workloadGroup != null)
+				msgs = ((InternalEObject)workloadGroup).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, null, msgs);
+			if (newWorkloadGroup != null)
+				msgs = ((InternalEObject)newWorkloadGroup).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, null, msgs);
+			msgs = basicSetWorkloadGroup(newWorkloadGroup, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, newWorkloadGroup, newWorkloadGroup));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -610,6 +665,8 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return basicSetRampUpTest(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
 				return basicSetTest(null, msgs);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
+				return basicSetWorkloadGroup(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -642,6 +699,8 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return getTest();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				return getName();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
+				return getWorkloadGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -683,6 +742,9 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				setName((String)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
+				setWorkloadGroup((WorkloadGroup)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -726,6 +788,9 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
+				setWorkloadGroup((WorkloadGroup)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -758,6 +823,8 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return test != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
+				return workloadGroup != null;
 		}
 		return super.eIsSet(featureID);
 	}

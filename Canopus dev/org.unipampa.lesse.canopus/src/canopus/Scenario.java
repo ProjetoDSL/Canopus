@@ -20,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link canopus.Scenario#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.Scenario#getWorkloads <em>Workloads</em>}</li>
  *   <li>{@link canopus.Scenario#getScripting <em>Scripting</em>}</li>
- *   <li>{@link canopus.Scenario#getScenario <em>Scenario</em>}</li>
  * </ul>
  *
  * @see canopus.CanopusPackage#getScenario()
@@ -75,21 +74,5 @@ public interface Scenario extends Diagram {
 	 * @generated
 	 */
 	EList<Scripting> getScripting();
-
-	/**
-	 * Returns the value of the '<em><b>Scenario</b></em>' reference list.
-	 * The list contents are of type {@link canopus.Scenario}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scenario</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scenario</em>' reference list.
-	 * @see canopus.CanopusPackage#getScenario_Scenario()
-	 * @model
-	 * @generated
-	 */
-	EList<Scenario> getScenario();
 
 } // Scenario
