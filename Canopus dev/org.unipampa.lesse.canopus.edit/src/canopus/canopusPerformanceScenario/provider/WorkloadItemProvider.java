@@ -67,6 +67,8 @@ public class WorkloadItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addTimePropertyDescriptor(object);
+			addVirtualUsersPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,6 +96,50 @@ public class WorkloadItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Workload_time_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Workload_time_feature", "_UI_Workload_type"),
+				 CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Virtual Users feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVirtualUsersPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Workload_virtualUsers_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Workload_virtualUsers_feature", "_UI_Workload_type"),
+				 CanopusPerformanceScenarioPackage.Literals.WORKLOAD__VIRTUAL_USERS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -105,16 +151,12 @@ public class WorkloadItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__VIRTUAL_USERS);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TIMER);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_USERS);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_USERS);
-			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST_DURATION);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TIMER);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TEST);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TEST);
-			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST);
-			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__WORKLOAD_GROUP);
 		}
 		return childrenFeatures;
 	}
@@ -171,18 +213,16 @@ public class WorkloadItemProvider
 
 		switch (notification.getFeatureID(Workload.class)) {
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TIME:
+			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_USERS:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -202,11 +242,6 @@ public class WorkloadItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__VIRTUAL_USERS,
-				 CanopusPerformanceWorkloadFactory.eINSTANCE.createVirtualUsers()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TIMER,
 				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampUpTimer()));
 
@@ -222,11 +257,6 @@ public class WorkloadItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST_DURATION,
-				 CanopusPerformanceWorkloadFactory.eINSTANCE.createTestDuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_DOWN_TIMER,
 				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampDownTimer()));
 
@@ -239,16 +269,6 @@ public class WorkloadItemProvider
 			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__RAMP_UP_TEST,
 				 CanopusPerformanceWorkloadFactory.eINSTANCE.createRampUpTest()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__TEST,
-				 CanopusPerformanceWorkloadFactory.eINSTANCE.createTest()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPerformanceScenarioPackage.Literals.WORKLOAD__WORKLOAD_GROUP,
-				 CanopusPerformanceWorkloadFactory.eINSTANCE.createWorkloadGroup()));
 	}
 
 	/**

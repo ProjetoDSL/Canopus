@@ -54,7 +54,7 @@ public interface Scenario extends Diagram {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Workloads</em>' containment reference list.
 	 * @see canopus.CanopusPackage#getScenario_Workloads()
-	 * @model containment="true"
+	 * @model containment="true" upper="3"
 	 * @generated
 	 */
 	EList<Workload> getWorkloads();

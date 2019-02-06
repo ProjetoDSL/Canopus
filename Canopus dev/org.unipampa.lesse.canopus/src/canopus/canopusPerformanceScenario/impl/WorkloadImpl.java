@@ -11,10 +11,6 @@ import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownUse
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -33,32 +29,20 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getVirtualUsers <em>Virtual Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpTimer <em>Ramp Up Timer</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampDownUsers <em>Ramp Down Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpUsers <em>Ramp Up Users</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTestDuration <em>Test Duration</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampDownTimer <em>Ramp Down Timer</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampDownTest <em>Ramp Down Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getRampUpTest <em>Ramp Up Test</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTest <em>Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getName <em>Name</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getWorkloadGroup <em>Workload Group</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl#getVirtualUsers <em>Virtual Users</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WorkloadImpl extends MinimalEObjectImpl.Container implements Workload {
-	/**
-	 * The cached value of the '{@link #getVirtualUsers() <em>Virtual Users</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVirtualUsers()
-	 * @generated
-	 * @ordered
-	 */
-	protected VirtualUsers virtualUsers;
-
 	/**
 	 * The cached value of the '{@link #getRampUpTimer() <em>Ramp Up Timer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -88,16 +72,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * @ordered
 	 */
 	protected RampUpUsers rampUpUsers;
-
-	/**
-	 * The cached value of the '{@link #getTestDuration() <em>Test Duration</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTestDuration()
-	 * @generated
-	 * @ordered
-	 */
-	protected TestDuration testDuration;
 
 	/**
 	 * The cached value of the '{@link #getRampDownTimer() <em>Ramp Down Timer</em>}' containment reference.
@@ -130,16 +104,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	protected RampUpTest rampUpTest;
 
 	/**
-	 * The cached value of the '{@link #getTest() <em>Test</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTest()
-	 * @generated
-	 * @ordered
-	 */
-	protected Test test;
-
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -160,14 +124,44 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getWorkloadGroup() <em>Workload Group</em>}' containment reference.
+	 * The default value of the '{@link #getTime() <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWorkloadGroup()
+	 * @see #getTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected WorkloadGroup workloadGroup;
+	protected static final String TIME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTime() <em>Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected String time = TIME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVirtualUsers() <em>Virtual Users</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVirtualUsers()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int VIRTUAL_USERS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getVirtualUsers() <em>Virtual Users</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVirtualUsers()
+	 * @generated
+	 * @ordered
+	 */
+	protected int virtualUsers = VIRTUAL_USERS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,49 +180,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	@Override
 	protected EClass eStaticClass() {
 		return CanopusPerformanceScenarioPackage.Literals.WORKLOAD;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VirtualUsers getVirtualUsers() {
-		return virtualUsers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetVirtualUsers(VirtualUsers newVirtualUsers, NotificationChain msgs) {
-		VirtualUsers oldVirtualUsers = virtualUsers;
-		virtualUsers = newVirtualUsers;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS, oldVirtualUsers, newVirtualUsers);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVirtualUsers(VirtualUsers newVirtualUsers) {
-		if (newVirtualUsers != virtualUsers) {
-			NotificationChain msgs = null;
-			if (virtualUsers != null)
-				msgs = ((InternalEObject)virtualUsers).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS, null, msgs);
-			if (newVirtualUsers != null)
-				msgs = ((InternalEObject)newVirtualUsers).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS, null, msgs);
-			msgs = basicSetVirtualUsers(newVirtualUsers, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS, newVirtualUsers, newVirtualUsers));
 	}
 
 	/**
@@ -365,49 +316,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TestDuration getTestDuration() {
-		return testDuration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTestDuration(TestDuration newTestDuration, NotificationChain msgs) {
-		TestDuration oldTestDuration = testDuration;
-		testDuration = newTestDuration;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION, oldTestDuration, newTestDuration);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTestDuration(TestDuration newTestDuration) {
-		if (newTestDuration != testDuration) {
-			NotificationChain msgs = null;
-			if (testDuration != null)
-				msgs = ((InternalEObject)testDuration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION, null, msgs);
-			if (newTestDuration != null)
-				msgs = ((InternalEObject)newTestDuration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION, null, msgs);
-			msgs = basicSetTestDuration(newTestDuration, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION, newTestDuration, newTestDuration));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RampDownTimer getRampDownTimer() {
 		return rampDownTimer;
 	}
@@ -537,49 +445,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Test getTest() {
-		return test;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTest(Test newTest, NotificationChain msgs) {
-		Test oldTest = test;
-		test = newTest;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TEST, oldTest, newTest);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTest(Test newTest) {
-		if (newTest != test) {
-			NotificationChain msgs = null;
-			if (test != null)
-				msgs = ((InternalEObject)test).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__TEST, null, msgs);
-			if (newTest != null)
-				msgs = ((InternalEObject)newTest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__TEST, null, msgs);
-			msgs = basicSetTest(newTest, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TEST, newTest, newTest));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -601,8 +466,8 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorkloadGroup getWorkloadGroup() {
-		return workloadGroup;
+	public String getTime() {
+		return time;
 	}
 
 	/**
@@ -610,14 +475,11 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetWorkloadGroup(WorkloadGroup newWorkloadGroup, NotificationChain msgs) {
-		WorkloadGroup oldWorkloadGroup = workloadGroup;
-		workloadGroup = newWorkloadGroup;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, oldWorkloadGroup, newWorkloadGroup);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public void setTime(String newTime) {
+		String oldTime = time;
+		time = newTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__TIME, oldTime, time));
 	}
 
 	/**
@@ -625,18 +487,20 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWorkloadGroup(WorkloadGroup newWorkloadGroup) {
-		if (newWorkloadGroup != workloadGroup) {
-			NotificationChain msgs = null;
-			if (workloadGroup != null)
-				msgs = ((InternalEObject)workloadGroup).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, null, msgs);
-			if (newWorkloadGroup != null)
-				msgs = ((InternalEObject)newWorkloadGroup).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, null, msgs);
-			msgs = basicSetWorkloadGroup(newWorkloadGroup, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP, newWorkloadGroup, newWorkloadGroup));
+	public int getVirtualUsers() {
+		return virtualUsers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVirtualUsers(int newVirtualUsers) {
+		int oldVirtualUsers = virtualUsers;
+		virtualUsers = newVirtualUsers;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS, oldVirtualUsers, virtualUsers));
 	}
 
 	/**
@@ -647,26 +511,18 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
-				return basicSetVirtualUsers(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
 				return basicSetRampUpTimer(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_USERS:
 				return basicSetRampDownUsers(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
 				return basicSetRampUpUsers(null, msgs);
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
-				return basicSetTestDuration(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				return basicSetRampDownTimer(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
 				return basicSetRampDownTest(null, msgs);
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
 				return basicSetRampUpTest(null, msgs);
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
-				return basicSetTest(null, msgs);
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
-				return basicSetWorkloadGroup(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -679,28 +535,24 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
-				return getVirtualUsers();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
 				return getRampUpTimer();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_USERS:
 				return getRampDownUsers();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
 				return getRampUpUsers();
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
-				return getTestDuration();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				return getRampDownTimer();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
 				return getRampDownTest();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
 				return getRampUpTest();
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
-				return getTest();
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				return getName();
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
-				return getWorkloadGroup();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TIME:
+				return getTime();
+			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
+				return getVirtualUsers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -713,9 +565,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
-				setVirtualUsers((VirtualUsers)newValue);
-				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
 				setRampUpTimer((RampUpTimer)newValue);
 				return;
@@ -724,9 +573,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
 				setRampUpUsers((RampUpUsers)newValue);
-				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
-				setTestDuration((TestDuration)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				setRampDownTimer((RampDownTimer)newValue);
@@ -737,14 +583,14 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
 				setRampUpTest((RampUpTest)newValue);
 				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
-				setTest((Test)newValue);
-				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				setName((String)newValue);
 				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
-				setWorkloadGroup((WorkloadGroup)newValue);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TIME:
+				setTime((String)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
+				setVirtualUsers((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -758,9 +604,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
-				setVirtualUsers((VirtualUsers)null);
-				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
 				setRampUpTimer((RampUpTimer)null);
 				return;
@@ -769,9 +612,6 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
 				setRampUpUsers((RampUpUsers)null);
-				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
-				setTestDuration((TestDuration)null);
 				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				setRampDownTimer((RampDownTimer)null);
@@ -782,14 +622,14 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
 				setRampUpTest((RampUpTest)null);
 				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
-				setTest((Test)null);
-				return;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
-				setWorkloadGroup((WorkloadGroup)null);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TIME:
+				setTime(TIME_EDEFAULT);
+				return;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
+				setVirtualUsers(VIRTUAL_USERS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -803,28 +643,24 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
-				return virtualUsers != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TIMER:
 				return rampUpTimer != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_USERS:
 				return rampDownUsers != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_USERS:
 				return rampUpUsers != null;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST_DURATION:
-				return testDuration != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TIMER:
 				return rampDownTimer != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_DOWN_TEST:
 				return rampDownTest != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__RAMP_UP_TEST:
 				return rampUpTest != null;
-			case CanopusPerformanceScenarioPackage.WORKLOAD__TEST:
-				return test != null;
 			case CanopusPerformanceScenarioPackage.WORKLOAD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CanopusPerformanceScenarioPackage.WORKLOAD__WORKLOAD_GROUP:
-				return workloadGroup != null;
+			case CanopusPerformanceScenarioPackage.WORKLOAD__TIME:
+				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
+			case CanopusPerformanceScenarioPackage.WORKLOAD__VIRTUAL_USERS:
+				return virtualUsers != VIRTUAL_USERS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -841,6 +677,10 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", time: ");
+		result.append(time);
+		result.append(", virtualUsers: ");
+		result.append(virtualUsers);
 		result.append(')');
 		return result.toString();
 	}

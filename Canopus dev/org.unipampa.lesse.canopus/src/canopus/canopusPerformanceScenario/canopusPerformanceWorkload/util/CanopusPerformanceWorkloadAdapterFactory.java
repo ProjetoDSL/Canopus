@@ -68,14 +68,6 @@ public class CanopusPerformanceWorkloadAdapterFactory extends AdapterFactoryImpl
 	protected CanopusPerformanceWorkloadSwitch<Adapter> modelSwitch =
 		new CanopusPerformanceWorkloadSwitch<Adapter>() {
 			@Override
-			public Adapter caseVirtualUsers(VirtualUsers object) {
-				return createVirtualUsersAdapter();
-			}
-			@Override
-			public Adapter caseTestDuration(TestDuration object) {
-				return createTestDurationAdapter();
-			}
-			@Override
 			public Adapter caseRampUpUsers(RampUpUsers object) {
 				return createRampUpUsersAdapter();
 			}
@@ -100,14 +92,6 @@ public class CanopusPerformanceWorkloadAdapterFactory extends AdapterFactoryImpl
 				return createRampDownTestAdapter();
 			}
 			@Override
-			public Adapter caseTest(Test object) {
-				return createTestAdapter();
-			}
-			@Override
-			public Adapter caseWorkloadGroup(WorkloadGroup object) {
-				return createWorkloadGroupAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -126,34 +110,6 @@ public class CanopusPerformanceWorkloadAdapterFactory extends AdapterFactoryImpl
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers <em>Virtual Users</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers
-	 * @generated
-	 */
-	public Adapter createVirtualUsersAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration <em>Test Duration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration
-	 * @generated
-	 */
-	public Adapter createTestDurationAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers <em>Ramp Up Users</em>}'.
@@ -236,34 +192,6 @@ public class CanopusPerformanceWorkloadAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createRampDownTestAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test <em>Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test
-	 * @generated
-	 */
-	public Adapter createTestAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup <em>Workload Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup
-	 * @generated
-	 */
-	public Adapter createWorkloadGroupAdapter() {
 		return null;
 	}
 

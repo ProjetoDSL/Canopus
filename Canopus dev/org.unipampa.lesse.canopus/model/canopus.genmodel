@@ -164,17 +164,15 @@
             ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/UserProfile/scripting"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Workload">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/virtualUsers"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpTimer"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampDownUsers"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpUsers"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/testDuration"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampDownTimer"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampDownTest"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpTest"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/test"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Workload/name"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/workloadGroup"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Workload/time"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Workload/virtualUsers"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Scripting">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/Scripting/name"/>
@@ -188,12 +186,6 @@
       </genClasses>
       <nestedGenPackages prefix="CanopusPerformanceWorkload" disposableProviderFactory="true"
           ecorePackage="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload">
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/VirtualUsers">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/VirtualUsers/virtualUsers"/>
-        </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/TestDuration">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/TestDuration/time"/>
-        </genClasses>
         <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers">
           <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers/virtualUsers"/>
         </genClasses>
@@ -217,21 +209,6 @@
               ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTest/rampdowntimer"/>
           <genFeatures notify="false" createChild="false" propertySortChoices="true"
               ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTest/rampdownusers"/>
-        </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/Test">
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/Test/testduration"/>
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/Test/virtualusers"/>
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/Test/name"/>
-        </genClasses>
-        <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup">
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup/rampdowntest"/>
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup/rampuptest"/>
-          <genFeatures notify="false" createChild="false" propertySortChoices="true"
-              ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup/test"/>
         </genClasses>
       </nestedGenPackages>
       <nestedGenPackages prefix="CanopusPerformanceScripting" disposableProviderFactory="true"

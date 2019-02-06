@@ -22,24 +22,6 @@ public interface CanopusPerformanceWorkloadFactory extends EFactory {
 	CanopusPerformanceWorkloadFactory eINSTANCE = canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Virtual Users</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Virtual Users</em>'.
-	 * @generated
-	 */
-	VirtualUsers createVirtualUsers();
-
-	/**
-	 * Returns a new object of class '<em>Test Duration</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Test Duration</em>'.
-	 * @generated
-	 */
-	TestDuration createTestDuration();
-
-	/**
 	 * Returns a new object of class '<em>Ramp Up Users</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,24 +74,6 @@ public interface CanopusPerformanceWorkloadFactory extends EFactory {
 	 * @generated
 	 */
 	RampDownTest createRampDownTest();
-
-	/**
-	 * Returns a new object of class '<em>Test</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Test</em>'.
-	 * @generated
-	 */
-	Test createTest();
-
-	/**
-	 * Returns a new object of class '<em>Workload Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Workload Group</em>'.
-	 * @generated
-	 */
-	WorkloadGroup createWorkloadGroup();
 
 	/**
 	 * Returns the package supported by this factory.

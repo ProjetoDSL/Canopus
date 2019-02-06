@@ -8,10 +8,6 @@ import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownUse
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -24,17 +20,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link canopus.canopusPerformanceScenario.Workload#getVirtualUsers <em>Virtual Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampUpTimer <em>Ramp Up Timer</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampDownUsers <em>Ramp Down Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampUpUsers <em>Ramp Up Users</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Workload#getTestDuration <em>Test Duration</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampDownTimer <em>Ramp Down Timer</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampDownTest <em>Ramp Down Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampUpTest <em>Ramp Up Test</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Workload#getTest <em>Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getName <em>Name</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Workload#getWorkloadGroup <em>Workload Group</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Workload#getTime <em>Time</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Workload#getVirtualUsers <em>Virtual Users</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload()
@@ -42,32 +36,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Workload extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Virtual Users</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Virtual Users</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Virtual Users</em>' containment reference.
-	 * @see #setVirtualUsers(VirtualUsers)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_VirtualUsers()
-	 * @model containment="true"
-	 * @generated
-	 */
-	VirtualUsers getVirtualUsers();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getVirtualUsers <em>Virtual Users</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Virtual Users</em>' containment reference.
-	 * @see #getVirtualUsers()
-	 * @generated
-	 */
-	void setVirtualUsers(VirtualUsers value);
-
 	/**
 	 * Returns the value of the '<em><b>Ramp Up Timer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -79,7 +47,7 @@ public interface Workload extends EObject {
 	 * @return the value of the '<em>Ramp Up Timer</em>' containment reference.
 	 * @see #setRampUpTimer(RampUpTimer)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_RampUpTimer()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	RampUpTimer getRampUpTimer();
@@ -105,7 +73,7 @@ public interface Workload extends EObject {
 	 * @return the value of the '<em>Ramp Down Users</em>' containment reference.
 	 * @see #setRampDownUsers(RampDownUsers)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_RampDownUsers()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	RampDownUsers getRampDownUsers();
@@ -131,7 +99,7 @@ public interface Workload extends EObject {
 	 * @return the value of the '<em>Ramp Up Users</em>' containment reference.
 	 * @see #setRampUpUsers(RampUpUsers)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_RampUpUsers()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	RampUpUsers getRampUpUsers();
@@ -147,32 +115,6 @@ public interface Workload extends EObject {
 	void setRampUpUsers(RampUpUsers value);
 
 	/**
-	 * Returns the value of the '<em><b>Test Duration</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Test Duration</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test Duration</em>' containment reference.
-	 * @see #setTestDuration(TestDuration)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_TestDuration()
-	 * @model containment="true"
-	 * @generated
-	 */
-	TestDuration getTestDuration();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getTestDuration <em>Test Duration</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Test Duration</em>' containment reference.
-	 * @see #getTestDuration()
-	 * @generated
-	 */
-	void setTestDuration(TestDuration value);
-
-	/**
 	 * Returns the value of the '<em><b>Ramp Down Timer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -183,7 +125,7 @@ public interface Workload extends EObject {
 	 * @return the value of the '<em>Ramp Down Timer</em>' containment reference.
 	 * @see #setRampDownTimer(RampDownTimer)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_RampDownTimer()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	RampDownTimer getRampDownTimer();
@@ -251,32 +193,6 @@ public interface Workload extends EObject {
 	void setRampUpTest(RampUpTest value);
 
 	/**
-	 * Returns the value of the '<em><b>Test</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Test</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test</em>' containment reference.
-	 * @see #setTest(Test)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_Test()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Test getTest();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getTest <em>Test</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Test</em>' containment reference.
-	 * @see #getTest()
-	 * @generated
-	 */
-	void setTest(Test value);
-
-	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -303,29 +219,55 @@ public interface Workload extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Workload Group</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Workload Group</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Time</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Workload Group</em>' containment reference.
-	 * @see #setWorkloadGroup(WorkloadGroup)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_WorkloadGroup()
-	 * @model containment="true"
+	 * @return the value of the '<em>Time</em>' attribute.
+	 * @see #setTime(String)
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_Time()
+	 * @model
 	 * @generated
 	 */
-	WorkloadGroup getWorkloadGroup();
+	String getTime();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getWorkloadGroup <em>Workload Group</em>}' containment reference.
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getTime <em>Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Workload Group</em>' containment reference.
-	 * @see #getWorkloadGroup()
+	 * @param value the new value of the '<em>Time</em>' attribute.
+	 * @see #getTime()
 	 * @generated
 	 */
-	void setWorkloadGroup(WorkloadGroup value);
+	void setTime(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Virtual Users</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Virtual Users</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Virtual Users</em>' attribute.
+	 * @see #setVirtualUsers(int)
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_VirtualUsers()
+	 * @model
+	 * @generated
+	 */
+	int getVirtualUsers();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getVirtualUsers <em>Virtual Users</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Virtual Users</em>' attribute.
+	 * @see #getVirtualUsers()
+	 * @generated
+	 */
+	void setVirtualUsers(int value);
 
 } // Workload

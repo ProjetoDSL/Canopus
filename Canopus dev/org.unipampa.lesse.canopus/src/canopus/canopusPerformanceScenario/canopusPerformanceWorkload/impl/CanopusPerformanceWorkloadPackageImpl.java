@@ -30,10 +30,6 @@ import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownUse
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup;
 
 import canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl;
 
@@ -53,20 +49,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implements CanopusPerformanceWorkloadPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass virtualUsersEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass testDurationEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,20 +90,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	private EClass rampDownTestEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass testEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass workloadGroupEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -208,42 +176,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CanopusPerformanceWorkloadPackage.eNS_URI, theCanopusPerformanceWorkloadPackage);
 		return theCanopusPerformanceWorkloadPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVirtualUsers() {
-		return virtualUsersEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVirtualUsers_VirtualUsers() {
-		return (EAttribute)virtualUsersEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTestDuration() {
-		return testDurationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTestDuration_Time() {
-		return (EAttribute)testDurationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -377,78 +309,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTest() {
-		return testEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTest_Testduration() {
-		return (EReference)testEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTest_Virtualusers() {
-		return (EReference)testEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTest_Name() {
-		return (EAttribute)testEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWorkloadGroup() {
-		return workloadGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkloadGroup_Rampdowntest() {
-		return (EReference)workloadGroupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkloadGroup_Rampuptest() {
-		return (EReference)workloadGroupEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkloadGroup_Test() {
-		return (EReference)workloadGroupEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CanopusPerformanceWorkloadFactory getCanopusPerformanceWorkloadFactory() {
 		return (CanopusPerformanceWorkloadFactory)getEFactoryInstance();
 	}
@@ -472,12 +332,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		isCreated = true;
 
 		// Create classes and their features
-		virtualUsersEClass = createEClass(VIRTUAL_USERS);
-		createEAttribute(virtualUsersEClass, VIRTUAL_USERS__VIRTUAL_USERS);
-
-		testDurationEClass = createEClass(TEST_DURATION);
-		createEAttribute(testDurationEClass, TEST_DURATION__TIME);
-
 		rampUpUsersEClass = createEClass(RAMP_UP_USERS);
 		createEAttribute(rampUpUsersEClass, RAMP_UP_USERS__VIRTUAL_USERS);
 
@@ -497,16 +351,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		rampDownTestEClass = createEClass(RAMP_DOWN_TEST);
 		createEReference(rampDownTestEClass, RAMP_DOWN_TEST__RAMPDOWNTIMER);
 		createEReference(rampDownTestEClass, RAMP_DOWN_TEST__RAMPDOWNUSERS);
-
-		testEClass = createEClass(TEST);
-		createEReference(testEClass, TEST__TESTDURATION);
-		createEReference(testEClass, TEST__VIRTUALUSERS);
-		createEAttribute(testEClass, TEST__NAME);
-
-		workloadGroupEClass = createEClass(WORKLOAD_GROUP);
-		createEReference(workloadGroupEClass, WORKLOAD_GROUP__RAMPDOWNTEST);
-		createEReference(workloadGroupEClass, WORKLOAD_GROUP__RAMPUPTEST);
-		createEReference(workloadGroupEClass, WORKLOAD_GROUP__TEST);
 	}
 
 	/**
@@ -539,12 +383,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(virtualUsersEClass, VirtualUsers.class, "VirtualUsers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVirtualUsers_VirtualUsers(), ecorePackage.getEInt(), "virtualUsers", null, 0, 1, VirtualUsers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(testDurationEClass, TestDuration.class, "TestDuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTestDuration_Time(), ecorePackage.getEString(), "time", null, 0, 1, TestDuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(rampUpUsersEClass, RampUpUsers.class, "RampUpUsers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRampUpUsers_VirtualUsers(), ecorePackage.getEInt(), "virtualUsers", null, 0, 1, RampUpUsers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -564,16 +402,6 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 		initEClass(rampDownTestEClass, RampDownTest.class, "RampDownTest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRampDownTest_Rampdowntimer(), this.getRampDownTimer(), null, "rampdowntimer", null, 0, 1, RampDownTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRampDownTest_Rampdownusers(), this.getRampDownUsers(), null, "rampdownusers", null, 0, 1, RampDownTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTest_Testduration(), this.getTestDuration(), null, "testduration", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTest_Virtualusers(), this.getVirtualUsers(), null, "virtualusers", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTest_Name(), ecorePackage.getEString(), "name", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(workloadGroupEClass, WorkloadGroup.class, "WorkloadGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorkloadGroup_Rampdowntest(), this.getRampDownTest(), null, "rampdowntest", null, 0, 1, WorkloadGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkloadGroup_Rampuptest(), this.getRampUpTest(), null, "rampuptest", null, 0, 1, WorkloadGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkloadGroup_Test(), this.getTest(), null, "test", null, 0, 1, WorkloadGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //CanopusPerformanceWorkloadPackageImpl

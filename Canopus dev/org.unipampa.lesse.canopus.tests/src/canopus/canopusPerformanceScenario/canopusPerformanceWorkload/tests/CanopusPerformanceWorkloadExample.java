@@ -4,7 +4,7 @@ package canopus.canopusPerformanceScenario.canopusPerformanceWorkload.tests;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadFactory;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.CanopusPerformanceWorkloadPackage;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers;
+import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class CanopusPerformanceWorkloadExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.canopusperformanceworkload"));
-				VirtualUsers root = CanopusPerformanceWorkloadFactory.eINSTANCE.createVirtualUsers();
+				RampUpUsers root = CanopusPerformanceWorkloadFactory.eINSTANCE.createRampUpUsers();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

@@ -14,7 +14,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Scenario" eSuperTypes="#//Diagram">
     <eStructuralFeatures xsi:type="ecore:EReference" name="users" upperBound="-1"
         eType="#//canopusPerformanceScenario/UserProfile" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="workloads" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workloads" upperBound="3"
         eType="#//canopusPerformanceScenario/Workload" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
         eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
@@ -179,27 +179,25 @@
           eType="#//canopusPerformanceScenario/Scripting"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Workload">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="virtualUsers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/VirtualUsers"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTimer" lowerBound="1"
+          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTimer"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTimer" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTimer"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownUsers" lowerBound="1"
+          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownUsers"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownUsers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownUsers"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpUsers" lowerBound="1"
+          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpUsers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="testDuration" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/TestDuration"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownTimer" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTimer"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownTimer" lowerBound="1"
+          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTimer"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownTest" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTest"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTest" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTest"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="test" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/Test"
-          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="workloadGroup" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/WorkloadGroup"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Scripting">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -226,12 +224,6 @@
     </eClassifiers>
     <eSubpackages name="canopusPerformanceWorkload" nsURI="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
         nsPrefix="canopusPerformanceWorkload">
-      <eClassifiers xsi:type="ecore:EClass" name="VirtualUsers">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TestDuration">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="RampUpUsers">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eClassifiers>
@@ -251,16 +243,6 @@
       <eClassifiers xsi:type="ecore:EClass" name="RampDownTest">
         <eStructuralFeatures xsi:type="ecore:EReference" name="rampdowntimer" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTimer"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="rampdownusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownUsers"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Test">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="testduration" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/TestDuration"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="virtualusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/VirtualUsers"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="WorkloadGroup">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="rampdowntest" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTest"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="rampuptest" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTest"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="test" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/Test"/>
       </eClassifiers>
     </eSubpackages>
     <eSubpackages name="canopusPerformanceScripting" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScripting"

@@ -56,39 +56,15 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case CanopusPerformanceWorkloadPackage.VIRTUAL_USERS: return createVirtualUsers();
-			case CanopusPerformanceWorkloadPackage.TEST_DURATION: return createTestDuration();
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_USERS: return createRampUpUsers();
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_USERS: return createRampDownUsers();
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_TIMER: return createRampUpTimer();
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER: return createRampDownTimer();
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_TEST: return createRampUpTest();
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TEST: return createRampDownTest();
-			case CanopusPerformanceWorkloadPackage.TEST: return createTest();
-			case CanopusPerformanceWorkloadPackage.WORKLOAD_GROUP: return createWorkloadGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VirtualUsers createVirtualUsers() {
-		VirtualUsersImpl virtualUsers = new VirtualUsersImpl();
-		return virtualUsers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TestDuration createTestDuration() {
-		TestDurationImpl testDuration = new TestDurationImpl();
-		return testDuration;
 	}
 
 	/**
@@ -149,26 +125,6 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	public RampDownTest createRampDownTest() {
 		RampDownTestImpl rampDownTest = new RampDownTestImpl();
 		return rampDownTest;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Test createTest() {
-		TestImpl test = new TestImpl();
-		return test;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public WorkloadGroup createWorkloadGroup() {
-		WorkloadGroupImpl workloadGroup = new WorkloadGroupImpl();
-		return workloadGroup;
 	}
 
 	/**

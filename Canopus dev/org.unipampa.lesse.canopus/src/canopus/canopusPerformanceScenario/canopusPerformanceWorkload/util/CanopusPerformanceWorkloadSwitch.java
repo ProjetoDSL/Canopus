@@ -66,18 +66,6 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case CanopusPerformanceWorkloadPackage.VIRTUAL_USERS: {
-				VirtualUsers virtualUsers = (VirtualUsers)theEObject;
-				T result = caseVirtualUsers(virtualUsers);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CanopusPerformanceWorkloadPackage.TEST_DURATION: {
-				TestDuration testDuration = (TestDuration)theEObject;
-				T result = caseTestDuration(testDuration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_USERS: {
 				RampUpUsers rampUpUsers = (RampUpUsers)theEObject;
 				T result = caseRampUpUsers(rampUpUsers);
@@ -114,50 +102,8 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CanopusPerformanceWorkloadPackage.TEST: {
-				Test test = (Test)theEObject;
-				T result = caseTest(test);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CanopusPerformanceWorkloadPackage.WORKLOAD_GROUP: {
-				WorkloadGroup workloadGroup = (WorkloadGroup)theEObject;
-				T result = caseWorkloadGroup(workloadGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Virtual Users</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Virtual Users</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVirtualUsers(VirtualUsers object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Test Duration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Test Duration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTestDuration(TestDuration object) {
-		return null;
 	}
 
 	/**
@@ -247,36 +193,6 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRampDownTest(RampDownTest object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Test</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Test</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTest(Test object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Workload Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Workload Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWorkloadGroup(WorkloadGroup object) {
 		return null;
 	}
 

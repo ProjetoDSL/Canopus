@@ -57,80 +57,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	CanopusPerformanceWorkloadPackage eINSTANCE = canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.VirtualUsersImpl <em>Virtual Users</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.VirtualUsersImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getVirtualUsers()
-	 * @generated
-	 */
-	int VIRTUAL_USERS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Virtual Users</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIRTUAL_USERS__VIRTUAL_USERS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Virtual Users</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIRTUAL_USERS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Virtual Users</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIRTUAL_USERS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestDurationImpl <em>Test Duration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestDurationImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getTestDuration()
-	 * @generated
-	 */
-	int TEST_DURATION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST_DURATION__TIME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Test Duration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST_DURATION_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Test Duration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST_DURATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampUpUsersImpl <em>Ramp Up Users</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,7 +64,7 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampUpUsers()
 	 * @generated
 	 */
-	int RAMP_UP_USERS = 2;
+	int RAMP_UP_USERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Virtual Users</b></em>' attribute.
@@ -175,7 +101,7 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampDownUsers()
 	 * @generated
 	 */
-	int RAMP_DOWN_USERS = 3;
+	int RAMP_DOWN_USERS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Virtual Users</b></em>' attribute.
@@ -212,7 +138,7 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampUpTimer()
 	 * @generated
 	 */
-	int RAMP_UP_TIMER = 4;
+	int RAMP_UP_TIMER = 2;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -249,7 +175,7 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampDownTimer()
 	 * @generated
 	 */
-	int RAMP_DOWN_TIMER = 5;
+	int RAMP_DOWN_TIMER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -286,7 +212,7 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampUpTest()
 	 * @generated
 	 */
-	int RAMP_UP_TEST = 6;
+	int RAMP_UP_TEST = 4;
 
 	/**
 	 * The feature id for the '<em><b>Rampuptimer</b></em>' reference.
@@ -332,7 +258,7 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampDownTest()
 	 * @generated
 	 */
-	int RAMP_DOWN_TEST = 7;
+	int RAMP_DOWN_TEST = 5;
 
 	/**
 	 * The feature id for the '<em><b>Rampdowntimer</b></em>' reference.
@@ -370,158 +296,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 */
 	int RAMP_DOWN_TEST_OPERATION_COUNT = 0;
 
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl <em>Test</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getTest()
-	 * @generated
-	 */
-	int TEST = 8;
-
-	/**
-	 * The feature id for the '<em><b>Testduration</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST__TESTDURATION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Virtualusers</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST__VIRTUALUSERS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST__NAME = 2;
-
-	/**
-	 * The number of structural features of the '<em>Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEST_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl <em>Workload Group</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getWorkloadGroup()
-	 * @generated
-	 */
-	int WORKLOAD_GROUP = 9;
-
-	/**
-	 * The feature id for the '<em><b>Rampdowntest</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP__RAMPDOWNTEST = 0;
-
-	/**
-	 * The feature id for the '<em><b>Rampuptest</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP__RAMPUPTEST = 1;
-
-	/**
-	 * The feature id for the '<em><b>Test</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP__TEST = 2;
-
-	/**
-	 * The number of structural features of the '<em>Workload Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Workload Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD_GROUP_OPERATION_COUNT = 0;
-
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers <em>Virtual Users</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Virtual Users</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers
-	 * @generated
-	 */
-	EClass getVirtualUsers();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers#getVirtualUsers <em>Virtual Users</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Virtual Users</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers#getVirtualUsers()
-	 * @see #getVirtualUsers()
-	 * @generated
-	 */
-	EAttribute getVirtualUsers_VirtualUsers();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration <em>Test Duration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Test Duration</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration
-	 * @generated
-	 */
-	EClass getTestDuration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration#getTime <em>Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Time</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration#getTime()
-	 * @see #getTestDuration()
-	 * @generated
-	 */
-	EAttribute getTestDuration_Time();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers <em>Ramp Up Users</em>}'.
@@ -672,92 +446,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	EReference getRampDownTest_Rampdownusers();
 
 	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test <em>Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Test</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test
-	 * @generated
-	 */
-	EClass getTest();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getTestduration <em>Testduration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Testduration</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getTestduration()
-	 * @see #getTest()
-	 * @generated
-	 */
-	EReference getTest_Testduration();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getVirtualusers <em>Virtualusers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Virtualusers</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getVirtualusers()
-	 * @see #getTest()
-	 * @generated
-	 */
-	EReference getTest_Virtualusers();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test#getName()
-	 * @see #getTest()
-	 * @generated
-	 */
-	EAttribute getTest_Name();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup <em>Workload Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Workload Group</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup
-	 * @generated
-	 */
-	EClass getWorkloadGroup();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampdowntest <em>Rampdowntest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rampdowntest</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampdowntest()
-	 * @see #getWorkloadGroup()
-	 * @generated
-	 */
-	EReference getWorkloadGroup_Rampdowntest();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampuptest <em>Rampuptest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rampuptest</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getRampuptest()
-	 * @see #getWorkloadGroup()
-	 * @generated
-	 */
-	EReference getWorkloadGroup_Rampuptest();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getTest <em>Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Test</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup#getTest()
-	 * @see #getWorkloadGroup()
-	 * @generated
-	 */
-	EReference getWorkloadGroup_Test();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -780,42 +468,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.VirtualUsersImpl <em>Virtual Users</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.VirtualUsersImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getVirtualUsers()
-		 * @generated
-		 */
-		EClass VIRTUAL_USERS = eINSTANCE.getVirtualUsers();
-
-		/**
-		 * The meta object literal for the '<em><b>Virtual Users</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VIRTUAL_USERS__VIRTUAL_USERS = eINSTANCE.getVirtualUsers_VirtualUsers();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestDurationImpl <em>Test Duration</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestDurationImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getTestDuration()
-		 * @generated
-		 */
-		EClass TEST_DURATION = eINSTANCE.getTestDuration();
-
-		/**
-		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEST_DURATION__TIME = eINSTANCE.getTestDuration_Time();
-
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampUpUsersImpl <em>Ramp Up Users</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -939,74 +591,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RAMP_DOWN_TEST__RAMPDOWNUSERS = eINSTANCE.getRampDownTest_Rampdownusers();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl <em>Test</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.TestImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getTest()
-		 * @generated
-		 */
-		EClass TEST = eINSTANCE.getTest();
-
-		/**
-		 * The meta object literal for the '<em><b>Testduration</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEST__TESTDURATION = eINSTANCE.getTest_Testduration();
-
-		/**
-		 * The meta object literal for the '<em><b>Virtualusers</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEST__VIRTUALUSERS = eINSTANCE.getTest_Virtualusers();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEST__NAME = eINSTANCE.getTest_Name();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl <em>Workload Group</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.WorkloadGroupImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getWorkloadGroup()
-		 * @generated
-		 */
-		EClass WORKLOAD_GROUP = eINSTANCE.getWorkloadGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Rampdowntest</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKLOAD_GROUP__RAMPDOWNTEST = eINSTANCE.getWorkloadGroup_Rampdowntest();
-
-		/**
-		 * The meta object literal for the '<em><b>Rampuptest</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKLOAD_GROUP__RAMPUPTEST = eINSTANCE.getWorkloadGroup_Rampuptest();
-
-		/**
-		 * The meta object literal for the '<em><b>Test</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKLOAD_GROUP__TEST = eINSTANCE.getWorkloadGroup_Test();
 
 	}
 

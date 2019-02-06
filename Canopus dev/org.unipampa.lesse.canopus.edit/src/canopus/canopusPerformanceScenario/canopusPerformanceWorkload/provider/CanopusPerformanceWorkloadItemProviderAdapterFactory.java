@@ -72,52 +72,6 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VirtualUsersItemProvider virtualUsersItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.VirtualUsers}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVirtualUsersAdapter() {
-		if (virtualUsersItemProvider == null) {
-			virtualUsersItemProvider = new VirtualUsersItemProvider(this);
-		}
-
-		return virtualUsersItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TestDurationItemProvider testDurationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.TestDuration}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTestDurationAdapter() {
-		if (testDurationItemProvider == null) {
-			testDurationItemProvider = new TestDurationItemProvider(this);
-		}
-
-		return testDurationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,52 +210,6 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TestItemProvider testItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.Test}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTestAdapter() {
-		if (testItemProvider == null) {
-			testItemProvider = new TestItemProvider(this);
-		}
-
-		return testItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected WorkloadGroupItemProvider workloadGroupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.WorkloadGroup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createWorkloadGroupAdapter() {
-		if (workloadGroupItemProvider == null) {
-			workloadGroupItemProvider = new WorkloadGroupItemProvider(this);
-		}
-
-		return workloadGroupItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -400,16 +308,12 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 	 * @generated
 	 */
 	public void dispose() {
-		if (virtualUsersItemProvider != null) virtualUsersItemProvider.dispose();
-		if (testDurationItemProvider != null) testDurationItemProvider.dispose();
 		if (rampUpUsersItemProvider != null) rampUpUsersItemProvider.dispose();
 		if (rampDownUsersItemProvider != null) rampDownUsersItemProvider.dispose();
 		if (rampUpTimerItemProvider != null) rampUpTimerItemProvider.dispose();
 		if (rampDownTimerItemProvider != null) rampDownTimerItemProvider.dispose();
 		if (rampUpTestItemProvider != null) rampUpTestItemProvider.dispose();
 		if (rampDownTestItemProvider != null) rampDownTestItemProvider.dispose();
-		if (testItemProvider != null) testItemProvider.dispose();
-		if (workloadGroupItemProvider != null) workloadGroupItemProvider.dispose();
 	}
 
 }
