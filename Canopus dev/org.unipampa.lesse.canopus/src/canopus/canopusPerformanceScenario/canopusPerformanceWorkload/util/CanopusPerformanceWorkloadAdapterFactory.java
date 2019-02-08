@@ -84,14 +84,6 @@ public class CanopusPerformanceWorkloadAdapterFactory extends AdapterFactoryImpl
 				return createRampDownTimerAdapter();
 			}
 			@Override
-			public Adapter caseRampUpTest(RampUpTest object) {
-				return createRampUpTestAdapter();
-			}
-			@Override
-			public Adapter caseRampDownTest(RampDownTest object) {
-				return createRampDownTestAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -164,34 +156,6 @@ public class CanopusPerformanceWorkloadAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createRampDownTimerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest <em>Ramp Up Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest
-	 * @generated
-	 */
-	public Adapter createRampUpTestAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest <em>Ramp Down Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest
-	 * @generated
-	 */
-	public Adapter createRampDownTestAdapter() {
 		return null;
 	}
 

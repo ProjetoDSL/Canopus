@@ -191,10 +191,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownTimer" lowerBound="1"
           eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTimer"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownTest" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTest"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTest" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTest"
-          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -235,14 +231,6 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="RampDownTimer">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="RampUpTest">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="rampuptimer" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTimer"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="rampupusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers"/>
-      </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="RampDownTest">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="rampdowntimer" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTimer"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="rampdownusers" eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownUsers"/>
       </eClassifiers>
     </eSubpackages>
     <eSubpackages name="canopusPerformanceScripting" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScripting"

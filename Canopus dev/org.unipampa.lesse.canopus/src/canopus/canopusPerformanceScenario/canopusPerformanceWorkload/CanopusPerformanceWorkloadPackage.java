@@ -5,7 +5,6 @@ package canopus.canopusPerformanceScenario.canopusPerformanceWorkload;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -204,98 +203,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 */
 	int RAMP_DOWN_TIMER_OPERATION_COUNT = 0;
 
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampUpTestImpl <em>Ramp Up Test</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampUpTestImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampUpTest()
-	 * @generated
-	 */
-	int RAMP_UP_TEST = 4;
-
-	/**
-	 * The feature id for the '<em><b>Rampuptimer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_UP_TEST__RAMPUPTIMER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Rampupusers</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_UP_TEST__RAMPUPUSERS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Ramp Up Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_UP_TEST_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Ramp Up Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_UP_TEST_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampDownTestImpl <em>Ramp Down Test</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampDownTestImpl
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampDownTest()
-	 * @generated
-	 */
-	int RAMP_DOWN_TEST = 5;
-
-	/**
-	 * The feature id for the '<em><b>Rampdowntimer</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_DOWN_TEST__RAMPDOWNTIMER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Rampdownusers</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_DOWN_TEST__RAMPDOWNUSERS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Ramp Down Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_DOWN_TEST_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Ramp Down Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_DOWN_TEST_OPERATION_COUNT = 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers <em>Ramp Up Users</em>}'.
@@ -380,70 +287,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRampDownTimer_Time();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest <em>Ramp Up Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ramp Up Test</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest
-	 * @generated
-	 */
-	EClass getRampUpTest();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest#getRampuptimer <em>Rampuptimer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rampuptimer</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest#getRampuptimer()
-	 * @see #getRampUpTest()
-	 * @generated
-	 */
-	EReference getRampUpTest_Rampuptimer();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest#getRampupusers <em>Rampupusers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rampupusers</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest#getRampupusers()
-	 * @see #getRampUpTest()
-	 * @generated
-	 */
-	EReference getRampUpTest_Rampupusers();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest <em>Ramp Down Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ramp Down Test</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest
-	 * @generated
-	 */
-	EClass getRampDownTest();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest#getRampdowntimer <em>Rampdowntimer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rampdowntimer</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest#getRampdowntimer()
-	 * @see #getRampDownTest()
-	 * @generated
-	 */
-	EReference getRampDownTest_Rampdowntimer();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest#getRampdownusers <em>Rampdownusers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Rampdownusers</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest#getRampdownusers()
-	 * @see #getRampDownTest()
-	 * @generated
-	 */
-	EReference getRampDownTest_Rampdownusers();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -539,58 +382,6 @@ public interface CanopusPerformanceWorkloadPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RAMP_DOWN_TIMER__TIME = eINSTANCE.getRampDownTimer_Time();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampUpTestImpl <em>Ramp Up Test</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampUpTestImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampUpTest()
-		 * @generated
-		 */
-		EClass RAMP_UP_TEST = eINSTANCE.getRampUpTest();
-
-		/**
-		 * The meta object literal for the '<em><b>Rampuptimer</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP_UP_TEST__RAMPUPTIMER = eINSTANCE.getRampUpTest_Rampuptimer();
-
-		/**
-		 * The meta object literal for the '<em><b>Rampupusers</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP_UP_TEST__RAMPUPUSERS = eINSTANCE.getRampUpTest_Rampupusers();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampDownTestImpl <em>Ramp Down Test</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.RampDownTestImpl
-		 * @see canopus.canopusPerformanceScenario.canopusPerformanceWorkload.impl.CanopusPerformanceWorkloadPackageImpl#getRampDownTest()
-		 * @generated
-		 */
-		EClass RAMP_DOWN_TEST = eINSTANCE.getRampDownTest();
-
-		/**
-		 * The meta object literal for the '<em><b>Rampdowntimer</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP_DOWN_TEST__RAMPDOWNTIMER = eINSTANCE.getRampDownTest_Rampdowntimer();
-
-		/**
-		 * The meta object literal for the '<em><b>Rampdownusers</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP_DOWN_TEST__RAMPDOWNUSERS = eINSTANCE.getRampDownTest_Rampdownusers();
 
 	}
 

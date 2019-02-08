@@ -90,18 +90,6 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CanopusPerformanceWorkloadPackage.RAMP_UP_TEST: {
-				RampUpTest rampUpTest = (RampUpTest)theEObject;
-				T result = caseRampUpTest(rampUpTest);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TEST: {
-				RampDownTest rampDownTest = (RampDownTest)theEObject;
-				T result = caseRampDownTest(rampDownTest);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -163,36 +151,6 @@ public class CanopusPerformanceWorkloadSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRampDownTimer(RampDownTimer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ramp Up Test</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ramp Up Test</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRampUpTest(RampUpTest object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ramp Down Test</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ramp Down Test</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRampDownTest(RampDownTest object) {
 		return null;
 	}
 

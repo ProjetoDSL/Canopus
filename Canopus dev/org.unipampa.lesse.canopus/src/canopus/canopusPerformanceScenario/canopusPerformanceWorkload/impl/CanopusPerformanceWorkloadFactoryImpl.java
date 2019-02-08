@@ -60,8 +60,6 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_USERS: return createRampDownUsers();
 			case CanopusPerformanceWorkloadPackage.RAMP_UP_TIMER: return createRampUpTimer();
 			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TIMER: return createRampDownTimer();
-			case CanopusPerformanceWorkloadPackage.RAMP_UP_TEST: return createRampUpTest();
-			case CanopusPerformanceWorkloadPackage.RAMP_DOWN_TEST: return createRampDownTest();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -105,26 +103,6 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	public RampDownTimer createRampDownTimer() {
 		RampDownTimerImpl rampDownTimer = new RampDownTimerImpl();
 		return rampDownTimer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RampUpTest createRampUpTest() {
-		RampUpTestImpl rampUpTest = new RampUpTestImpl();
-		return rampUpTest;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RampDownTest createRampDownTest() {
-		RampDownTestImpl rampDownTest = new RampDownTestImpl();
-		return rampDownTest;
 	}
 
 	/**

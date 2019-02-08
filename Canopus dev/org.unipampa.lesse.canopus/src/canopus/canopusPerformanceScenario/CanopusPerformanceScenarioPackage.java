@@ -167,31 +167,13 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int WORKLOAD__RAMP_DOWN_TIMER = 3;
 
 	/**
-	 * The feature id for the '<em><b>Ramp Down Test</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD__RAMP_DOWN_TEST = 4;
-
-	/**
-	 * The feature id for the '<em><b>Ramp Up Test</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKLOAD__RAMP_UP_TEST = 5;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKLOAD__NAME = 6;
+	int WORKLOAD__NAME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -200,7 +182,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKLOAD__TIME = 7;
+	int WORKLOAD__TIME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Virtual Users</b></em>' attribute.
@@ -209,7 +191,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKLOAD__VIRTUAL_USERS = 8;
+	int WORKLOAD__VIRTUAL_USERS = 6;
 
 	/**
 	 * The number of structural features of the '<em>Workload</em>' class.
@@ -218,7 +200,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKLOAD_FEATURE_COUNT = 9;
+	int WORKLOAD_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Workload</em>' class.
@@ -437,28 +419,6 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWorkload_RampDownTimer();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.Workload#getRampDownTest <em>Ramp Down Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Ramp Down Test</em>'.
-	 * @see canopus.canopusPerformanceScenario.Workload#getRampDownTest()
-	 * @see #getWorkload()
-	 * @generated
-	 */
-	EReference getWorkload_RampDownTest();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.Workload#getRampUpTest <em>Ramp Up Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Ramp Up Test</em>'.
-	 * @see canopus.canopusPerformanceScenario.Workload#getRampUpTest()
-	 * @see #getWorkload()
-	 * @generated
-	 */
-	EReference getWorkload_RampUpTest();
 
 	/**
 	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.Workload#getName <em>Name</em>}'.
@@ -697,22 +657,6 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WORKLOAD__RAMP_DOWN_TIMER = eINSTANCE.getWorkload_RampDownTimer();
-
-		/**
-		 * The meta object literal for the '<em><b>Ramp Down Test</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKLOAD__RAMP_DOWN_TEST = eINSTANCE.getWorkload_RampDownTest();
-
-		/**
-		 * The meta object literal for the '<em><b>Ramp Up Test</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORKLOAD__RAMP_UP_TEST = eINSTANCE.getWorkload_RampUpTest();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

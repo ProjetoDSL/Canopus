@@ -2,10 +2,8 @@
  */
 package canopus.canopusPerformanceScenario;
 
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownUsers;
-import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTimer;
 import canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpUsers;
 
@@ -24,8 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampDownUsers <em>Ramp Down Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampUpUsers <em>Ramp Up Users</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampDownTimer <em>Ramp Down Timer</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampDownTest <em>Ramp Down Test</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Workload#getRampUpTest <em>Ramp Up Test</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getTime <em>Time</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Workload#getVirtualUsers <em>Virtual Users</em>}</li>
@@ -139,58 +135,6 @@ public interface Workload extends EObject {
 	 * @generated
 	 */
 	void setRampDownTimer(RampDownTimer value);
-
-	/**
-	 * Returns the value of the '<em><b>Ramp Down Test</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ramp Down Test</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ramp Down Test</em>' containment reference.
-	 * @see #setRampDownTest(RampDownTest)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_RampDownTest()
-	 * @model containment="true"
-	 * @generated
-	 */
-	RampDownTest getRampDownTest();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getRampDownTest <em>Ramp Down Test</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ramp Down Test</em>' containment reference.
-	 * @see #getRampDownTest()
-	 * @generated
-	 */
-	void setRampDownTest(RampDownTest value);
-
-	/**
-	 * Returns the value of the '<em><b>Ramp Up Test</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ramp Up Test</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ramp Up Test</em>' containment reference.
-	 * @see #setRampUpTest(RampUpTest)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getWorkload_RampUpTest()
-	 * @model containment="true"
-	 * @generated
-	 */
-	RampUpTest getRampUpTest();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Workload#getRampUpTest <em>Ramp Up Test</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ramp Up Test</em>' containment reference.
-	 * @see #getRampUpTest()
-	 * @generated
-	 */
-	void setRampUpTest(RampUpTest value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

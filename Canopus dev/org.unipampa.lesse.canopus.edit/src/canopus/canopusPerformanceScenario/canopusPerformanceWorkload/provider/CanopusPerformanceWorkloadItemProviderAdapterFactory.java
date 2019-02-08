@@ -164,52 +164,6 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RampUpTestItemProvider rampUpTestItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampUpTest}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRampUpTestAdapter() {
-		if (rampUpTestItemProvider == null) {
-			rampUpTestItemProvider = new RampUpTestItemProvider(this);
-		}
-
-		return rampUpTestItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RampDownTestItemProvider rampDownTestItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceWorkload.RampDownTest}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRampDownTestAdapter() {
-		if (rampDownTestItemProvider == null) {
-			rampDownTestItemProvider = new RampDownTestItemProvider(this);
-		}
-
-		return rampDownTestItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,8 +266,6 @@ public class CanopusPerformanceWorkloadItemProviderAdapterFactory extends Canopu
 		if (rampDownUsersItemProvider != null) rampDownUsersItemProvider.dispose();
 		if (rampUpTimerItemProvider != null) rampUpTimerItemProvider.dispose();
 		if (rampDownTimerItemProvider != null) rampDownTimerItemProvider.dispose();
-		if (rampUpTestItemProvider != null) rampUpTestItemProvider.dispose();
-		if (rampDownTestItemProvider != null) rampDownTestItemProvider.dispose();
 	}
 
 }

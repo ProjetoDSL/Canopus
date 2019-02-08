@@ -249,26 +249,8 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorkload_RampDownTest() {
-		return (EReference)workloadEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkload_RampUpTest() {
-		return (EReference)workloadEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getWorkload_Name() {
-		return (EAttribute)workloadEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)workloadEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -277,7 +259,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	public EAttribute getWorkload_Time() {
-		return (EAttribute)workloadEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)workloadEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -286,7 +268,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	public EAttribute getWorkload_VirtualUsers() {
-		return (EAttribute)workloadEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)workloadEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -409,8 +391,6 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		createEReference(workloadEClass, WORKLOAD__RAMP_DOWN_USERS);
 		createEReference(workloadEClass, WORKLOAD__RAMP_UP_USERS);
 		createEReference(workloadEClass, WORKLOAD__RAMP_DOWN_TIMER);
-		createEReference(workloadEClass, WORKLOAD__RAMP_DOWN_TEST);
-		createEReference(workloadEClass, WORKLOAD__RAMP_UP_TEST);
 		createEAttribute(workloadEClass, WORKLOAD__NAME);
 		createEAttribute(workloadEClass, WORKLOAD__TIME);
 		createEAttribute(workloadEClass, WORKLOAD__VIRTUAL_USERS);
@@ -475,8 +455,6 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEReference(getWorkload_RampDownUsers(), theCanopusPerformanceWorkloadPackage.getRampDownUsers(), null, "rampDownUsers", null, 1, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkload_RampUpUsers(), theCanopusPerformanceWorkloadPackage.getRampUpUsers(), null, "rampUpUsers", null, 1, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkload_RampDownTimer(), theCanopusPerformanceWorkloadPackage.getRampDownTimer(), null, "rampDownTimer", null, 1, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkload_RampDownTest(), theCanopusPerformanceWorkloadPackage.getRampDownTest(), null, "rampDownTest", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkload_RampUpTest(), theCanopusPerformanceWorkloadPackage.getRampUpTest(), null, "rampUpTest", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkload_Name(), ecorePackage.getEString(), "name", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkload_Time(), ecorePackage.getEString(), "time", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkload_VirtualUsers(), ecorePackage.getEInt(), "virtualUsers", null, 0, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
