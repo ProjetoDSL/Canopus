@@ -11,6 +11,7 @@ import canopus.canopusPerformanceMonitoring.SUT_TYPE;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -112,7 +113,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	protected EList<SUT> sut;
 
 	/**
-	 * The cached value of the '{@link #getMetricmodel() <em>Metricmodel</em>}' reference.
+	 * The cached value of the '{@link #getMetricmodel() <em>Metricmodel</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMetricmodel()
@@ -241,14 +242,6 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * @generated
 	 */
 	public MetricModel getMetricmodel() {
-		if (metricmodel != null && metricmodel.eIsProxy()) {
-			InternalEObject oldMetricmodel = (InternalEObject)metricmodel;
-			metricmodel = (MetricModel)eResolveProxy(oldMetricmodel);
-			if (metricmodel != oldMetricmodel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceMonitoringPackage.SUT__METRICMODEL, oldMetricmodel, metricmodel));
-			}
-		}
 		return metricmodel;
 	}
 
@@ -257,8 +250,14 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MetricModel basicGetMetricmodel() {
-		return metricmodel;
+	public NotificationChain basicSetMetricmodel(MetricModel newMetricmodel, NotificationChain msgs) {
+		MetricModel oldMetricmodel = metricmodel;
+		metricmodel = newMetricmodel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.SUT__METRICMODEL, oldMetricmodel, newMetricmodel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -267,10 +266,17 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * @generated
 	 */
 	public void setMetricmodel(MetricModel newMetricmodel) {
-		MetricModel oldMetricmodel = metricmodel;
-		metricmodel = newMetricmodel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.SUT__METRICMODEL, oldMetricmodel, metricmodel));
+		if (newMetricmodel != metricmodel) {
+			NotificationChain msgs = null;
+			if (metricmodel != null)
+				msgs = ((InternalEObject)metricmodel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.SUT__METRICMODEL, null, msgs);
+			if (newMetricmodel != null)
+				msgs = ((InternalEObject)newMetricmodel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.SUT__METRICMODEL, null, msgs);
+			msgs = basicSetMetricmodel(newMetricmodel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.SUT__METRICMODEL, newMetricmodel, newMetricmodel));
 	}
 
 	/**
@@ -300,6 +306,20 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CanopusPerformanceMonitoringPackage.SUT__METRICMODEL:
+				return basicSetMetricmodel(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CanopusPerformanceMonitoringPackage.SUT__HOSTNAME:
@@ -311,8 +331,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 			case CanopusPerformanceMonitoringPackage.SUT__SUT:
 				return getSut();
 			case CanopusPerformanceMonitoringPackage.SUT__METRICMODEL:
-				if (resolve) return getMetricmodel();
-				return basicGetMetricmodel();
+				return getMetricmodel();
 			case CanopusPerformanceMonitoringPackage.SUT__TYPE:
 				return getType();
 		}

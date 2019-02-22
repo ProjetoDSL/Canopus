@@ -104,7 +104,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int SUT__SUT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Metricmodel</b></em>' reference.
+	 * The feature id for the '<em><b>Metricmodel</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -506,10 +506,10 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getSUT_Sut();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceMonitoring.SUT#getMetricmodel <em>Metricmodel</em>}'.
+	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceMonitoring.SUT#getMetricmodel <em>Metricmodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Metricmodel</em>'.
+	 * @return the meta object for the containment reference '<em>Metricmodel</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.SUT#getMetricmodel()
 	 * @see #getSUT()
 	 * @generated
@@ -896,7 +896,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference SUT__SUT = eINSTANCE.getSUT_Sut();
 
 		/**
-		 * The meta object literal for the '<em><b>Metricmodel</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Metricmodel</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

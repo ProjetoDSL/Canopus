@@ -602,7 +602,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		initEAttribute(getSUT_Ip(), ecorePackage.getEString(), "ip", null, 0, 1, canopus.canopusPerformanceMonitoring.SUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSUT_Hardware(), this.getHARDWARE(), "hardware", null, 0, 1, canopus.canopusPerformanceMonitoring.SUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSUT_Sut(), this.getSUT(), null, "sut", null, 0, -1, canopus.canopusPerformanceMonitoring.SUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSUT_Metricmodel(), this.getMetricModel(), null, "metricmodel", null, 0, 1, canopus.canopusPerformanceMonitoring.SUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSUT_Metricmodel(), this.getMetricModel(), null, "metricmodel", null, 0, 1, canopus.canopusPerformanceMonitoring.SUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSUT_Type(), this.getSUT_TYPE(), "type", null, 0, 1, canopus.canopusPerformanceMonitoring.SUT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(loadGeneratorEClass, LoadGenerator.class, "LoadGenerator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

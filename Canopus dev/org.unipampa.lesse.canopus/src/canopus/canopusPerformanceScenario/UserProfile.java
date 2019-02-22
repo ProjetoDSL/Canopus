@@ -88,22 +88,11 @@ public interface UserProfile extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Percentage</em>' attribute.
-	 * @see #setPercentage(int)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Percentage()
-	 * @model default="100"
+	 * @model default="100" changeable="false"
 	 * @generated
 	 */
 	int getPercentage();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentage <em>Percentage</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Percentage</em>' attribute.
-	 * @see #getPercentage()
-	 * @generated
-	 */
-	void setPercentage(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.

@@ -33,7 +33,8 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/HARDWARE"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" upperBound="-1"
           eType="#//canopusPerformanceMonitoring/SUT"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"
+          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//canopusPerformanceMonitoring/SUT_TYPE"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LoadGenerator">
@@ -173,10 +174,12 @@
     <eClassifiers xsi:type="ecore:EClass" name="UserProfile">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-          defaultValueLiteral="100"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageTotal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          changeable="false" defaultValueLiteral="100"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
           eType="#//canopusPerformanceScenario/Scripting"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageScript" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          changeable="false" defaultValueLiteral="100"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Workload">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTimer" lowerBound="1"

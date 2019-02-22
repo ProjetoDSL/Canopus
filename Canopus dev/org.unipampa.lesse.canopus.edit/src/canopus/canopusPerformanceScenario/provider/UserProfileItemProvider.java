@@ -128,7 +128,7 @@ public class UserProfileItemProvider
 				 getString("_UI_UserProfile_percentage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentage_feature", "_UI_UserProfile_type"),
 				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,

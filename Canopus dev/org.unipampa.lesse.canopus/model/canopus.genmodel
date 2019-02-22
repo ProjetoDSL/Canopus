@@ -42,8 +42,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/SUT/hardware"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/SUT/sut"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/SUT/metricmodel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceMonitoring/SUT/metricmodel"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceMonitoring/SUT/type"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceMonitoring/LoadGenerator">
@@ -159,9 +158,10 @@
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/UserProfile">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/description"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/percentage"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/percentageTotal"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/UserProfile/scripting"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//canopusPerformanceScenario/UserProfile/percentageScript"/>
       </genClasses>
       <genClasses ecoreClass="canopus.ecore#//canopusPerformanceScenario/Workload">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//canopusPerformanceScenario/Workload/rampUpTimer"/>

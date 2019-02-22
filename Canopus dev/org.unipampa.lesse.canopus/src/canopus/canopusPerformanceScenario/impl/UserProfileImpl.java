@@ -181,18 +181,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPercentage(int newPercentage) {
-		int oldPercentage = percentage;
-		percentage = newPercentage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE, oldPercentage, percentage));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Scripting> getScripting() {
 		if (scripting == null) {
 			scripting = new EObjectResolvingEList<Scripting>(Scripting.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING);
@@ -235,9 +223,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
-				setPercentage((Integer)newValue);
-				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
 				getScripting().clear();
 				getScripting().addAll((Collection<? extends Scripting>)newValue);
@@ -259,9 +244,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
-				return;
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
-				setPercentage(PERCENTAGE_EDEFAULT);
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
 				getScripting().clear();

@@ -3,6 +3,7 @@
 package canopus.canopusPerformanceMonitoring.provider;
 
 
+import canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringFactory;
 import canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage;
 import canopus.canopusPerformanceMonitoring.SUT;
 
@@ -15,6 +16,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -66,7 +69,6 @@ public class SUTItemProvider
 			addIpPropertyDescriptor(object);
 			addHardwarePropertyDescriptor(object);
 			addSutPropertyDescriptor(object);
-			addMetricmodelPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -161,28 +163,6 @@ public class SUTItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Metricmodel feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMetricmodelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SUT_metricmodel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SUT_metricmodel_feature", "_UI_SUT_type"),
-				 CanopusPerformanceMonitoringPackage.Literals.SUT__METRICMODEL,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,6 +182,36 @@ public class SUTItemProvider
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(CanopusPerformanceMonitoringPackage.Literals.SUT__METRICMODEL);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -248,6 +258,9 @@ public class SUTItemProvider
 			case CanopusPerformanceMonitoringPackage.SUT__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case CanopusPerformanceMonitoringPackage.SUT__METRICMODEL:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -262,6 +275,11 @@ public class SUTItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceMonitoringPackage.Literals.SUT__METRICMODEL,
+				 CanopusPerformanceMonitoringFactory.eINSTANCE.createMetricModel()));
 	}
 
 	/**
