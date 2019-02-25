@@ -186,7 +186,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int LOAD_GENERATOR__SUT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Metricmodel</b></em>' reference.
+	 * The feature id for the '<em><b>Metricmodel</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -582,10 +582,10 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getLoadGenerator_Sut();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceMonitoring.LoadGenerator#getMetricmodel <em>Metricmodel</em>}'.
+	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceMonitoring.LoadGenerator#getMetricmodel <em>Metricmodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Metricmodel</em>'.
+	 * @return the meta object for the containment reference '<em>Metricmodel</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.LoadGenerator#getMetricmodel()
 	 * @see #getLoadGenerator()
 	 * @generated
@@ -954,7 +954,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference LOAD_GENERATOR__SUT = eINSTANCE.getLoadGenerator_Sut();
 
 		/**
-		 * The meta object literal for the '<em><b>Metricmodel</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Metricmodel</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

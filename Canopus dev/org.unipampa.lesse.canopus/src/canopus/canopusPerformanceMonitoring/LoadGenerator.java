@@ -124,26 +124,26 @@ public interface LoadGenerator extends EObject {
 	EList<SUT> getSut();
 
 	/**
-	 * Returns the value of the '<em><b>Metricmodel</b></em>' reference.
+	 * Returns the value of the '<em><b>Metricmodel</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Metricmodel</em>' reference isn't clear,
+	 * If the meaning of the '<em>Metricmodel</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Metricmodel</em>' reference.
+	 * @return the value of the '<em>Metricmodel</em>' containment reference.
 	 * @see #setMetricmodel(MetricModel)
 	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getLoadGenerator_Metricmodel()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	MetricModel getMetricmodel();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.LoadGenerator#getMetricmodel <em>Metricmodel</em>}' reference.
+	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.LoadGenerator#getMetricmodel <em>Metricmodel</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Metricmodel</em>' reference.
+	 * @param value the new value of the '<em>Metricmodel</em>' containment reference.
 	 * @see #getMetricmodel()
 	 * @generated
 	 */

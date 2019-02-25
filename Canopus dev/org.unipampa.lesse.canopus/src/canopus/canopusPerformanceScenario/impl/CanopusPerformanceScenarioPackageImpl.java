@@ -186,7 +186,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUserProfile_Percentage() {
+	public EAttribute getUserProfile_PercentageTotal() {
 		return (EAttribute)userProfileEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -197,6 +197,15 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 */
 	public EReference getUserProfile_Scripting() {
 		return (EReference)userProfileEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUserProfile_PercentageScript() {
+		return (EAttribute)userProfileEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -383,8 +392,9 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		userProfileEClass = createEClass(USER_PROFILE);
 		createEAttribute(userProfileEClass, USER_PROFILE__NAME);
 		createEAttribute(userProfileEClass, USER_PROFILE__DESCRIPTION);
-		createEAttribute(userProfileEClass, USER_PROFILE__PERCENTAGE);
+		createEAttribute(userProfileEClass, USER_PROFILE__PERCENTAGE_TOTAL);
 		createEReference(userProfileEClass, USER_PROFILE__SCRIPTING);
+		createEAttribute(userProfileEClass, USER_PROFILE__PERCENTAGE_SCRIPT);
 
 		workloadEClass = createEClass(WORKLOAD);
 		createEReference(workloadEClass, WORKLOAD__RAMP_UP_TIMER);
@@ -447,8 +457,9 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEClass(userProfileEClass, UserProfile.class, "UserProfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserProfile_Name(), ecorePackage.getEString(), "name", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserProfile_Description(), ecorePackage.getEString(), "description", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUserProfile_Percentage(), ecorePackage.getEInt(), "percentage", "100", 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserProfile_PercentageTotal(), ecorePackage.getEInt(), "percentageTotal", "100", 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUserProfile_Scripting(), this.getScripting(), null, "scripting", null, 0, -1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserProfile_PercentageScript(), ecorePackage.getEInt(), "percentageScript", "100", 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(workloadEClass, Workload.class, "Workload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorkload_RampUpTimer(), theCanopusPerformanceWorkloadPackage.getRampUpTimer(), null, "rampUpTimer", null, 1, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

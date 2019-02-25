@@ -610,7 +610,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		initEAttribute(getLoadGenerator_Ip(), ecorePackage.getEString(), "ip", null, 0, 1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoadGenerator_IsMonitor(), ecorePackage.getEBoolean(), "isMonitor", null, 0, 1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLoadGenerator_Sut(), this.getSUT(), null, "sut", null, 0, -1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoadGenerator_Metricmodel(), this.getMetricModel(), null, "metricmodel", null, 0, 1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoadGenerator_Metricmodel(), this.getMetricModel(), null, "metricmodel", null, 0, 1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoadGenerator_Hardware(), this.getHARDWARE(), "hardware", null, 0, 1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLoadGenerator_Monitor(), this.getMonitor(), null, "monitor", null, 0, 1, LoadGenerator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

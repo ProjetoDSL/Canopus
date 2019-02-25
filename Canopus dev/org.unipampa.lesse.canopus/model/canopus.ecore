@@ -43,7 +43,8 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMonitor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" upperBound="-1"
           eType="#//canopusPerformanceMonitoring/SUT"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"
+          containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/HARDWARE"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="monitor" eType="#//canopusPerformanceMonitoring/Monitor"/>
     </eClassifiers>

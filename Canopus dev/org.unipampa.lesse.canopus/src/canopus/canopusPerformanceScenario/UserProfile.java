@@ -17,8 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getDescription <em>Description</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentage <em>Percentage</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageTotal <em>Percentage Total</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageScript <em>Percentage Script</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile()
@@ -79,20 +80,20 @@ public interface UserProfile extends EObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Percentage</b></em>' attribute.
+	 * Returns the value of the '<em><b>Percentage Total</b></em>' attribute.
 	 * The default value is <code>"100"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Percentage</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Percentage Total</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Percentage</em>' attribute.
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Percentage()
+	 * @return the value of the '<em>Percentage Total</em>' attribute.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_PercentageTotal()
 	 * @model default="100" changeable="false"
 	 * @generated
 	 */
-	int getPercentage();
+	int getPercentageTotal();
 
 	/**
 	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
@@ -109,5 +110,21 @@ public interface UserProfile extends EObject {
 	 * @generated
 	 */
 	EList<Scripting> getScripting();
+
+	/**
+	 * Returns the value of the '<em><b>Percentage Script</b></em>' attribute.
+	 * The default value is <code>"100"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Percentage Script</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Percentage Script</em>' attribute.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_PercentageScript()
+	 * @model default="100" changeable="false"
+	 * @generated
+	 */
+	int getPercentageScript();
 
 } // UserProfile

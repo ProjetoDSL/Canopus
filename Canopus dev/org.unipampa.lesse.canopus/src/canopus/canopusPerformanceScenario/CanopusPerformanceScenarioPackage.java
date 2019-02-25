@@ -85,13 +85,13 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int USER_PROFILE__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Percentage</b></em>' attribute.
+	 * The feature id for the '<em><b>Percentage Total</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_PROFILE__PERCENTAGE = 2;
+	int USER_PROFILE__PERCENTAGE_TOTAL = 2;
 
 	/**
 	 * The feature id for the '<em><b>Scripting</b></em>' reference list.
@@ -103,13 +103,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int USER_PROFILE__SCRIPTING = 3;
 
 	/**
+	 * The feature id for the '<em><b>Percentage Script</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_PROFILE__PERCENTAGE_SCRIPT = 4;
+
+	/**
 	 * The number of structural features of the '<em>User Profile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_PROFILE_FEATURE_COUNT = 4;
+	int USER_PROFILE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>User Profile</em>' class.
@@ -345,15 +354,15 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EAttribute getUserProfile_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentage <em>Percentage</em>}'.
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageTotal <em>Percentage Total</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Percentage</em>'.
-	 * @see canopus.canopusPerformanceScenario.UserProfile#getPercentage()
+	 * @return the meta object for the attribute '<em>Percentage Total</em>'.
+	 * @see canopus.canopusPerformanceScenario.UserProfile#getPercentageTotal()
 	 * @see #getUserProfile()
 	 * @generated
 	 */
-	EAttribute getUserProfile_Percentage();
+	EAttribute getUserProfile_PercentageTotal();
 
 	/**
 	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}'.
@@ -365,6 +374,17 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUserProfile_Scripting();
+
+	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageScript <em>Percentage Script</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Percentage Script</em>'.
+	 * @see canopus.canopusPerformanceScenario.UserProfile#getPercentageScript()
+	 * @see #getUserProfile()
+	 * @generated
+	 */
+	EAttribute getUserProfile_PercentageScript();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Workload <em>Workload</em>}'.
@@ -601,12 +621,12 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EAttribute USER_PROFILE__DESCRIPTION = eINSTANCE.getUserProfile_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Percentage</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Percentage Total</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_PROFILE__PERCENTAGE = eINSTANCE.getUserProfile_Percentage();
+		EAttribute USER_PROFILE__PERCENTAGE_TOTAL = eINSTANCE.getUserProfile_PercentageTotal();
 
 		/**
 		 * The meta object literal for the '<em><b>Scripting</b></em>' reference list feature.
@@ -615,6 +635,14 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference USER_PROFILE__SCRIPTING = eINSTANCE.getUserProfile_Scripting();
+
+		/**
+		 * The meta object literal for the '<em><b>Percentage Script</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER_PROFILE__PERCENTAGE_SCRIPT = eINSTANCE.getUserProfile_PercentageScript();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl <em>Workload</em>}' class.

@@ -64,8 +64,9 @@ public class UserProfileItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addPercentagePropertyDescriptor(object);
+			addPercentageTotalPropertyDescriptor(object);
 			addScriptingPropertyDescriptor(object);
+			addPercentageScriptPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -115,19 +116,19 @@ public class UserProfileItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Percentage feature.
+	 * This adds a property descriptor for the Percentage Total feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPercentagePropertyDescriptor(Object object) {
+	protected void addPercentageTotalPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UserProfile_percentage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentage_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE,
+				 getString("_UI_UserProfile_percentageTotal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentageTotal_feature", "_UI_UserProfile_type"),
+				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE_TOTAL,
 				 false,
 				 false,
 				 false,
@@ -154,6 +155,28 @@ public class UserProfileItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Percentage Script feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPercentageScriptPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UserProfile_percentageScript_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentageScript_feature", "_UI_UserProfile_type"),
+				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE_SCRIPT,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -198,7 +221,8 @@ public class UserProfileItemProvider
 		switch (notification.getFeatureID(UserProfile.class)) {
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__NAME:
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__DESCRIPTION:
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_TOTAL:
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_SCRIPT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
