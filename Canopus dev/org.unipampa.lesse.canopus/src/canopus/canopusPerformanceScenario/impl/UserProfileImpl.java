@@ -9,15 +9,18 @@ import canopus.canopusPerformanceScenario.UserProfile;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,8 +33,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getPercentageTotal <em>Percentage Total</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getScripting <em>Scripting</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getPercentageScript <em>Percentage Script</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getScripting <em>Scripting</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,16 +101,6 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	protected int percentageTotal = PERCENTAGE_TOTAL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getScripting()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Scripting> scripting;
-
-	/**
 	 * The default value of the '{@link #getPercentageScript() <em>Percentage Script</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -126,6 +119,16 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * @ordered
 	 */
 	protected int percentageScript = PERCENTAGE_SCRIPT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScripting()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Scripting> scripting;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,9 +205,18 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getPercentageScript() {
+		return percentageScript;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Scripting> getScripting() {
 		if (scripting == null) {
-			scripting = new EObjectResolvingEList<Scripting>(Scripting.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING);
+			scripting = new EObjectWithInverseResolvingEList<Scripting>(Scripting.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE);
 		}
 		return scripting;
 	}
@@ -214,8 +226,28 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPercentageScript() {
-		return percentageScript;
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScripting()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
+				return ((InternalEList<?>)getScripting()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -232,10 +264,10 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return getDescription();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_TOTAL:
 				return getPercentageTotal();
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
-				return getScripting();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_SCRIPT:
 				return getPercentageScript();
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
+				return getScripting();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,10 +330,10 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_TOTAL:
 				return percentageTotal != PERCENTAGE_TOTAL_EDEFAULT;
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
-				return scripting != null && !scripting.isEmpty();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_SCRIPT:
 				return percentageScript != PERCENTAGE_SCRIPT_EDEFAULT;
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING:
+				return scripting != null && !scripting.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

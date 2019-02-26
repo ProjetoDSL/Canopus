@@ -6,12 +6,13 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerf
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Memory;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class MemoryImpl extends MetricImpl implements Memory {
 	/**
-	 * The cached value of the '{@link #getMemoryCounter() <em>Memory Counter</em>}' reference.
+	 * The cached value of the '{@link #getMemoryCounter() <em>Memory Counter</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMemoryCounter()
 	 * @generated
 	 * @ordered
 	 */
-	protected MemoryCounter memoryCounter;
+	protected EList<MemoryCounter> memoryCounter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,37 +62,11 @@ public class MemoryImpl extends MetricImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MemoryCounter getMemoryCounter() {
-		if (memoryCounter != null && memoryCounter.eIsProxy()) {
-			InternalEObject oldMemoryCounter = (InternalEObject)memoryCounter;
-			memoryCounter = (MemoryCounter)eResolveProxy(oldMemoryCounter);
-			if (memoryCounter != oldMemoryCounter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER, oldMemoryCounter, memoryCounter));
-			}
+	public EList<MemoryCounter> getMemoryCounter() {
+		if (memoryCounter == null) {
+			memoryCounter = new EObjectResolvingEList<MemoryCounter>(MemoryCounter.class, this, CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER);
 		}
 		return memoryCounter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MemoryCounter basicGetMemoryCounter() {
-		return memoryCounter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMemoryCounter(MemoryCounter newMemoryCounter) {
-		MemoryCounter oldMemoryCounter = memoryCounter;
-		memoryCounter = newMemoryCounter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER, oldMemoryCounter, memoryCounter));
 	}
 
 	/**
@@ -103,8 +78,7 @@ public class MemoryImpl extends MetricImpl implements Memory {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER:
-				if (resolve) return getMemoryCounter();
-				return basicGetMemoryCounter();
+				return getMemoryCounter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,11 +88,13 @@ public class MemoryImpl extends MetricImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER:
-				setMemoryCounter((MemoryCounter)newValue);
+				getMemoryCounter().clear();
+				getMemoryCounter().addAll((Collection<? extends MemoryCounter>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +109,7 @@ public class MemoryImpl extends MetricImpl implements Memory {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER:
-				setMemoryCounter((MemoryCounter)null);
+				getMemoryCounter().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,7 +124,7 @@ public class MemoryImpl extends MetricImpl implements Memory {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER:
-				return memoryCounter != null;
+				return memoryCounter != null && !memoryCounter.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

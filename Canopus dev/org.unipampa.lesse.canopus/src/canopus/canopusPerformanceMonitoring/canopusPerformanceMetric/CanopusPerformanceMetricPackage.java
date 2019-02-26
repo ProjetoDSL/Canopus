@@ -114,7 +114,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int MEMORY__NAME = METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Memory Counter</b></em>' reference.
+	 * The feature id for the '<em><b>Memory Counter</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -160,7 +160,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int DISK__NAME = METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Disk io counter</b></em>' reference.
+	 * The feature id for the '<em><b>Disk io counter</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -316,7 +316,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int DISK_IO_COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD;
 
 	/**
-	 * The feature id for the '<em><b>Counter Disk</b></em>' attribute list.
+	 * The feature id for the '<em><b>Counter Disk</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -445,7 +445,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int MEMORY_COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD;
 
 	/**
-	 * The feature id for the '<em><b>Counter Memory</b></em>' attribute list.
+	 * The feature id for the '<em><b>Counter Memory</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -491,7 +491,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int TRANSACTION__NAME = METRIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Transaction Counter</b></em>' reference.
+	 * The feature id for the '<em><b>Transaction Counter</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -546,7 +546,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	int TRANSACTION_COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD;
 
 	/**
-	 * The feature id for the '<em><b>Counter Transaction</b></em>' attribute list.
+	 * The feature id for the '<em><b>Counter Transaction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -624,10 +624,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EClass getMemory();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Memory#getMemoryCounter <em>Memory Counter</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Memory#getMemoryCounter <em>Memory Counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Memory Counter</em>'.
+	 * @return the meta object for the reference list '<em>Memory Counter</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Memory#getMemoryCounter()
 	 * @see #getMemory()
 	 * @generated
@@ -645,10 +645,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EClass getDisk();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk#getDisk_io_counter <em>Disk io counter</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk#getDisk_io_counter <em>Disk io counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Disk io counter</em>'.
+	 * @return the meta object for the reference list '<em>Disk io counter</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk#getDisk_io_counter()
 	 * @see #getDisk()
 	 * @generated
@@ -741,10 +741,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EClass getDisk_IO_Counter();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk_IO_Counter#getCounterDisk <em>Counter Disk</em>}'.
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk_IO_Counter#getCounterDisk <em>Counter Disk</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Counter Disk</em>'.
+	 * @return the meta object for the attribute '<em>Counter Disk</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk_IO_Counter#getCounterDisk()
 	 * @see #getDisk_IO_Counter()
 	 * @generated
@@ -804,10 +804,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EClass getMemoryCounter();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter#getCounterMemory <em>Counter Memory</em>}'.
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter#getCounterMemory <em>Counter Memory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Counter Memory</em>'.
+	 * @return the meta object for the attribute '<em>Counter Memory</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter#getCounterMemory()
 	 * @see #getMemoryCounter()
 	 * @generated
@@ -825,10 +825,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EClass getTransaction();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Transaction#getTransactionCounter <em>Transaction Counter</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Transaction#getTransactionCounter <em>Transaction Counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Transaction Counter</em>'.
+	 * @return the meta object for the reference list '<em>Transaction Counter</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Transaction#getTransactionCounter()
 	 * @see #getTransaction()
 	 * @generated
@@ -846,10 +846,10 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 	EClass getTransactionCounter();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter#getCounterTransaction <em>Counter Transaction</em>}'.
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter#getCounterTransaction <em>Counter Transaction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Counter Transaction</em>'.
+	 * @return the meta object for the attribute '<em>Counter Transaction</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter#getCounterTransaction()
 	 * @see #getTransactionCounter()
 	 * @generated
@@ -951,7 +951,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EClass MEMORY = eINSTANCE.getMemory();
 
 		/**
-		 * The meta object literal for the '<em><b>Memory Counter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Memory Counter</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -969,7 +969,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EClass DISK = eINSTANCE.getDisk();
 
 		/**
-		 * The meta object literal for the '<em><b>Disk io counter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Disk io counter</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1047,7 +1047,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EClass DISK_IO_COUNTER = eINSTANCE.getDisk_IO_Counter();
 
 		/**
-		 * The meta object literal for the '<em><b>Counter Disk</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Counter Disk</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1101,7 +1101,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EClass MEMORY_COUNTER = eINSTANCE.getMemoryCounter();
 
 		/**
-		 * The meta object literal for the '<em><b>Counter Memory</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Counter Memory</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1119,7 +1119,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EClass TRANSACTION = eINSTANCE.getTransaction();
 
 		/**
-		 * The meta object literal for the '<em><b>Transaction Counter</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Transaction Counter</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1137,7 +1137,7 @@ public interface CanopusPerformanceMetricPackage extends EPackage {
 		EClass TRANSACTION_COUNTER = eINSTANCE.getTransactionCounter();
 
 		/**
-		 * The meta object literal for the '<em><b>Counter Transaction</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Counter Transaction</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

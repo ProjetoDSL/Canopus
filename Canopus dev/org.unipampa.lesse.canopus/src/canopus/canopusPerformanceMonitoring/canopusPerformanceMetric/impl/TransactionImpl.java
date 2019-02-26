@@ -6,12 +6,13 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerf
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Transaction;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TransactionImpl extends MetricImpl implements Transaction {
 	/**
-	 * The cached value of the '{@link #getTransactionCounter() <em>Transaction Counter</em>}' reference.
+	 * The cached value of the '{@link #getTransactionCounter() <em>Transaction Counter</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTransactionCounter()
 	 * @generated
 	 * @ordered
 	 */
-	protected TransactionCounter transactionCounter;
+	protected EList<TransactionCounter> transactionCounter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,37 +62,11 @@ public class TransactionImpl extends MetricImpl implements Transaction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransactionCounter getTransactionCounter() {
-		if (transactionCounter != null && transactionCounter.eIsProxy()) {
-			InternalEObject oldTransactionCounter = (InternalEObject)transactionCounter;
-			transactionCounter = (TransactionCounter)eResolveProxy(oldTransactionCounter);
-			if (transactionCounter != oldTransactionCounter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER, oldTransactionCounter, transactionCounter));
-			}
+	public EList<TransactionCounter> getTransactionCounter() {
+		if (transactionCounter == null) {
+			transactionCounter = new EObjectResolvingEList<TransactionCounter>(TransactionCounter.class, this, CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER);
 		}
 		return transactionCounter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TransactionCounter basicGetTransactionCounter() {
-		return transactionCounter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransactionCounter(TransactionCounter newTransactionCounter) {
-		TransactionCounter oldTransactionCounter = transactionCounter;
-		transactionCounter = newTransactionCounter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER, oldTransactionCounter, transactionCounter));
 	}
 
 	/**
@@ -103,8 +78,7 @@ public class TransactionImpl extends MetricImpl implements Transaction {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER:
-				if (resolve) return getTransactionCounter();
-				return basicGetTransactionCounter();
+				return getTransactionCounter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,11 +88,13 @@ public class TransactionImpl extends MetricImpl implements Transaction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER:
-				setTransactionCounter((TransactionCounter)newValue);
+				getTransactionCounter().clear();
+				getTransactionCounter().addAll((Collection<? extends TransactionCounter>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +109,7 @@ public class TransactionImpl extends MetricImpl implements Transaction {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER:
-				setTransactionCounter((TransactionCounter)null);
+				getTransactionCounter().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,7 +124,7 @@ public class TransactionImpl extends MetricImpl implements Transaction {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER:
-				return transactionCounter != null;
+				return transactionCounter != null && !transactionCounter.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

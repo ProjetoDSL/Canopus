@@ -6,13 +6,11 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.COUNTER_MEM
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +27,24 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	/**
-	 * The cached value of the '{@link #getCounterMemory() <em>Counter Memory</em>}' attribute list.
+	 * The default value of the '{@link #getCounterMemory() <em>Counter Memory</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCounterMemory()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<COUNTER_MEMORY> counterMemory;
+	protected static final COUNTER_MEMORY COUNTER_MEMORY_EDEFAULT = COUNTER_MEMORY.AVALIABLE_MBYTES_COUNTER;
+
+	/**
+	 * The cached value of the '{@link #getCounterMemory() <em>Counter Memory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCounterMemory()
+	 * @generated
+	 * @ordered
+	 */
+	protected COUNTER_MEMORY counterMemory = COUNTER_MEMORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,11 +70,20 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<COUNTER_MEMORY> getCounterMemory() {
-		if (counterMemory == null) {
-			counterMemory = new EDataTypeUniqueEList<COUNTER_MEMORY>(COUNTER_MEMORY.class, this, CanopusPerformanceMetricPackage.MEMORY_COUNTER__COUNTER_MEMORY);
-		}
+	public COUNTER_MEMORY getCounterMemory() {
 		return counterMemory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCounterMemory(COUNTER_MEMORY newCounterMemory) {
+		COUNTER_MEMORY oldCounterMemory = counterMemory;
+		counterMemory = newCounterMemory == null ? COUNTER_MEMORY_EDEFAULT : newCounterMemory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.MEMORY_COUNTER__COUNTER_MEMORY, oldCounterMemory, counterMemory));
 	}
 
 	/**
@@ -88,13 +105,11 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY_COUNTER__COUNTER_MEMORY:
-				getCounterMemory().clear();
-				getCounterMemory().addAll((Collection<? extends COUNTER_MEMORY>)newValue);
+				setCounterMemory((COUNTER_MEMORY)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,7 +124,7 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY_COUNTER__COUNTER_MEMORY:
-				getCounterMemory().clear();
+				setCounterMemory(COUNTER_MEMORY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -124,7 +139,7 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.MEMORY_COUNTER__COUNTER_MEMORY:
-				return counterMemory != null && !counterMemory.isEmpty();
+				return counterMemory != COUNTER_MEMORY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

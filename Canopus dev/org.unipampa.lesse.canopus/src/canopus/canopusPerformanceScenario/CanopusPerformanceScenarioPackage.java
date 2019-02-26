@@ -94,22 +94,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int USER_PROFILE__PERCENTAGE_TOTAL = 2;
 
 	/**
-	 * The feature id for the '<em><b>Scripting</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USER_PROFILE__SCRIPTING = 3;
-
-	/**
 	 * The feature id for the '<em><b>Percentage Script</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_PROFILE__PERCENTAGE_SCRIPT = 4;
+	int USER_PROFILE__PERCENTAGE_SCRIPT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Scripting</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_PROFILE__SCRIPTING = 4;
 
 	/**
 	 * The number of structural features of the '<em>User Profile</em>' class.
@@ -303,13 +303,31 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int SCRIPTING__SCRIPTS = 7;
 
 	/**
+	 * The feature id for the '<em><b>Userprofile</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPTING__USERPROFILE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Dedicated Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPTING__DEDICATED_TIME = 9;
+
+	/**
 	 * The number of structural features of the '<em>Scripting</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING_FEATURE_COUNT = 8;
+	int SCRIPTING_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Scripting</em>' class.
@@ -365,17 +383,6 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EAttribute getUserProfile_PercentageTotal();
 
 	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Scripting</em>'.
-	 * @see canopus.canopusPerformanceScenario.UserProfile#getScripting()
-	 * @see #getUserProfile()
-	 * @generated
-	 */
-	EReference getUserProfile_Scripting();
-
-	/**
 	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageScript <em>Percentage Script</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,6 +392,17 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUserProfile_PercentageScript();
+
+	/**
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Scripting</em>'.
+	 * @see canopus.canopusPerformanceScenario.UserProfile#getScripting()
+	 * @see #getUserProfile()
+	 * @generated
+	 */
+	EReference getUserProfile_Scripting();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Workload <em>Workload</em>}'.
@@ -572,6 +590,28 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getScripting_Scripts();
 
 	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofile <em>Userprofile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Userprofile</em>'.
+	 * @see canopus.canopusPerformanceScenario.Scripting#getUserprofile()
+	 * @see #getScripting()
+	 * @generated
+	 */
+	EReference getScripting_Userprofile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.Scripting#getDedicatedTime <em>Dedicated Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dedicated Time</em>'.
+	 * @see canopus.canopusPerformanceScenario.Scripting#getDedicatedTime()
+	 * @see #getScripting()
+	 * @generated
+	 */
+	EAttribute getScripting_DedicatedTime();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -629,20 +669,20 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EAttribute USER_PROFILE__PERCENTAGE_TOTAL = eINSTANCE.getUserProfile_PercentageTotal();
 
 		/**
-		 * The meta object literal for the '<em><b>Scripting</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USER_PROFILE__SCRIPTING = eINSTANCE.getUserProfile_Scripting();
-
-		/**
 		 * The meta object literal for the '<em><b>Percentage Script</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute USER_PROFILE__PERCENTAGE_SCRIPT = eINSTANCE.getUserProfile_PercentageScript();
+
+		/**
+		 * The meta object literal for the '<em><b>Scripting</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USER_PROFILE__SCRIPTING = eINSTANCE.getUserProfile_Scripting();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl <em>Workload</em>}' class.
@@ -783,6 +823,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCRIPTING__SCRIPTS = eINSTANCE.getScripting_Scripts();
+
+		/**
+		 * The meta object literal for the '<em><b>Userprofile</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCRIPTING__USERPROFILE = eINSTANCE.getScripting_Userprofile();
+
+		/**
+		 * The meta object literal for the '<em><b>Dedicated Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCRIPTING__DEDICATED_TIME = eINSTANCE.getScripting_DedicatedTime();
 
 	}
 

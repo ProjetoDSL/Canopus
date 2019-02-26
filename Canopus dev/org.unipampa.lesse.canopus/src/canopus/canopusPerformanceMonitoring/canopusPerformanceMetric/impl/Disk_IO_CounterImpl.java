@@ -6,13 +6,11 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.COUNTER_DIS
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk_IO_Counter;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +27,24 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter {
 	/**
-	 * The cached value of the '{@link #getCounterDisk() <em>Counter Disk</em>}' attribute list.
+	 * The default value of the '{@link #getCounterDisk() <em>Counter Disk</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCounterDisk()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<COUNTER_DISK> counterDisk;
+	protected static final COUNTER_DISK COUNTER_DISK_EDEFAULT = COUNTER_DISK.AVG_DISK_SECS_TRANSFER_COUNTER;
+
+	/**
+	 * The cached value of the '{@link #getCounterDisk() <em>Counter Disk</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCounterDisk()
+	 * @generated
+	 * @ordered
+	 */
+	protected COUNTER_DISK counterDisk = COUNTER_DISK_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,11 +70,20 @@ public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<COUNTER_DISK> getCounterDisk() {
-		if (counterDisk == null) {
-			counterDisk = new EDataTypeUniqueEList<COUNTER_DISK>(COUNTER_DISK.class, this, CanopusPerformanceMetricPackage.DISK_IO_COUNTER__COUNTER_DISK);
-		}
+	public COUNTER_DISK getCounterDisk() {
 		return counterDisk;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCounterDisk(COUNTER_DISK newCounterDisk) {
+		COUNTER_DISK oldCounterDisk = counterDisk;
+		counterDisk = newCounterDisk == null ? COUNTER_DISK_EDEFAULT : newCounterDisk;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.DISK_IO_COUNTER__COUNTER_DISK, oldCounterDisk, counterDisk));
 	}
 
 	/**
@@ -88,13 +105,11 @@ public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK_IO_COUNTER__COUNTER_DISK:
-				getCounterDisk().clear();
-				getCounterDisk().addAll((Collection<? extends COUNTER_DISK>)newValue);
+				setCounterDisk((COUNTER_DISK)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,7 +124,7 @@ public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK_IO_COUNTER__COUNTER_DISK:
-				getCounterDisk().clear();
+				setCounterDisk(COUNTER_DISK_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -124,7 +139,7 @@ public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK_IO_COUNTER__COUNTER_DISK:
-				return counterDisk != null && !counterDisk.isEmpty();
+				return counterDisk != COUNTER_DISK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

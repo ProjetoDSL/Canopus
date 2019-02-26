@@ -2,6 +2,7 @@
  */
 package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,29 +22,19 @@ package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
  */
 public interface Transaction extends Metric {
 	/**
-	 * Returns the value of the '<em><b>Transaction Counter</b></em>' reference.
+	 * Returns the value of the '<em><b>Transaction Counter</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Transaction Counter</em>' reference isn't clear,
+	 * If the meaning of the '<em>Transaction Counter</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transaction Counter</em>' reference.
-	 * @see #setTransactionCounter(TransactionCounter)
+	 * @return the value of the '<em>Transaction Counter</em>' reference list.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage#getTransaction_TransactionCounter()
 	 * @model
 	 * @generated
 	 */
-	TransactionCounter getTransactionCounter();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Transaction#getTransactionCounter <em>Transaction Counter</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transaction Counter</em>' reference.
-	 * @see #getTransactionCounter()
-	 * @generated
-	 */
-	void setTransactionCounter(TransactionCounter value);
+	EList<TransactionCounter> getTransactionCounter();
 
 } // Transaction

@@ -6,13 +6,11 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.COUNTER_TRA
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +27,24 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public class TransactionCounterImpl extends CounterImpl implements TransactionCounter {
 	/**
-	 * The cached value of the '{@link #getCounterTransaction() <em>Counter Transaction</em>}' attribute list.
+	 * The default value of the '{@link #getCounterTransaction() <em>Counter Transaction</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCounterTransaction()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<COUNTER_TRANSACTION> counterTransaction;
+	protected static final COUNTER_TRANSACTION COUNTER_TRANSACTION_EDEFAULT = COUNTER_TRANSACTION.TRANSACTION_RESPONSE_TIME;
+
+	/**
+	 * The cached value of the '{@link #getCounterTransaction() <em>Counter Transaction</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCounterTransaction()
+	 * @generated
+	 * @ordered
+	 */
+	protected COUNTER_TRANSACTION counterTransaction = COUNTER_TRANSACTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,11 +70,20 @@ public class TransactionCounterImpl extends CounterImpl implements TransactionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<COUNTER_TRANSACTION> getCounterTransaction() {
-		if (counterTransaction == null) {
-			counterTransaction = new EDataTypeUniqueEList<COUNTER_TRANSACTION>(COUNTER_TRANSACTION.class, this, CanopusPerformanceMetricPackage.TRANSACTION_COUNTER__COUNTER_TRANSACTION);
-		}
+	public COUNTER_TRANSACTION getCounterTransaction() {
 		return counterTransaction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCounterTransaction(COUNTER_TRANSACTION newCounterTransaction) {
+		COUNTER_TRANSACTION oldCounterTransaction = counterTransaction;
+		counterTransaction = newCounterTransaction == null ? COUNTER_TRANSACTION_EDEFAULT : newCounterTransaction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.TRANSACTION_COUNTER__COUNTER_TRANSACTION, oldCounterTransaction, counterTransaction));
 	}
 
 	/**
@@ -88,13 +105,11 @@ public class TransactionCounterImpl extends CounterImpl implements TransactionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION_COUNTER__COUNTER_TRANSACTION:
-				getCounterTransaction().clear();
-				getCounterTransaction().addAll((Collection<? extends COUNTER_TRANSACTION>)newValue);
+				setCounterTransaction((COUNTER_TRANSACTION)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,7 +124,7 @@ public class TransactionCounterImpl extends CounterImpl implements TransactionCo
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION_COUNTER__COUNTER_TRANSACTION:
-				getCounterTransaction().clear();
+				setCounterTransaction(COUNTER_TRANSACTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -124,7 +139,7 @@ public class TransactionCounterImpl extends CounterImpl implements TransactionCo
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.TRANSACTION_COUNTER__COUNTER_TRANSACTION:
-				return counterTransaction != null && !counterTransaction.isEmpty();
+				return counterTransaction != COUNTER_TRANSACTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

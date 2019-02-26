@@ -368,7 +368,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = 6;
 
 	/**
-	 * The feature id for the '<em><b>Disk Counter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Disk Counter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -377,7 +377,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int METRIC_MODEL__DISK_COUNTER = 7;
 
 	/**
-	 * The feature id for the '<em><b>Transaction Counter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Transaction Counter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -386,7 +386,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int METRIC_MODEL__TRANSACTION_COUNTER = 8;
 
 	/**
-	 * The feature id for the '<em><b>Memory Counter</b></em>' containment reference.
+	 * The feature id for the '<em><b>Memory Counter</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -404,7 +404,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int METRIC_MODEL__COUNTER = 10;
 
 	/**
-	 * The feature id for the '<em><b>Metric</b></em>' reference list.
+	 * The feature id for the '<em><b>Metric</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -756,10 +756,10 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getMetricModel_Associationcountercriteriathreshold();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceMonitoring.MetricModel#getDiskCounter <em>Disk Counter</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getDiskCounter <em>Disk Counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Disk Counter</em>'.
+	 * @return the meta object for the containment reference list '<em>Disk Counter</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getDiskCounter()
 	 * @see #getMetricModel()
 	 * @generated
@@ -767,10 +767,10 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getMetricModel_DiskCounter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceMonitoring.MetricModel#getTransactionCounter <em>Transaction Counter</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getTransactionCounter <em>Transaction Counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Transaction Counter</em>'.
+	 * @return the meta object for the containment reference list '<em>Transaction Counter</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getTransactionCounter()
 	 * @see #getMetricModel()
 	 * @generated
@@ -778,10 +778,10 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getMetricModel_TransactionCounter();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemoryCounter <em>Memory Counter</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemoryCounter <em>Memory Counter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Memory Counter</em>'.
+	 * @return the meta object for the containment reference list '<em>Memory Counter</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getMemoryCounter()
 	 * @see #getMetricModel()
 	 * @generated
@@ -800,10 +800,10 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EReference getMetricModel_Counter();
 
 	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMetric <em>Metric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Metric</em>'.
+	 * @return the meta object for the containment reference list '<em>Metric</em>'.
 	 * @see canopus.canopusPerformanceMonitoring.MetricModel#getMetric()
 	 * @see #getMetricModel()
 	 * @generated
@@ -1086,7 +1086,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD = eINSTANCE.getMetricModel_Associationcountercriteriathreshold();
 
 		/**
-		 * The meta object literal for the '<em><b>Disk Counter</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Disk Counter</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1094,7 +1094,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference METRIC_MODEL__DISK_COUNTER = eINSTANCE.getMetricModel_DiskCounter();
 
 		/**
-		 * The meta object literal for the '<em><b>Transaction Counter</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Transaction Counter</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1102,7 +1102,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference METRIC_MODEL__TRANSACTION_COUNTER = eINSTANCE.getMetricModel_TransactionCounter();
 
 		/**
-		 * The meta object literal for the '<em><b>Memory Counter</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Memory Counter</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1118,7 +1118,7 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		EReference METRIC_MODEL__COUNTER = eINSTANCE.getMetricModel_Counter();
 
 		/**
-		 * The meta object literal for the '<em><b>Metric</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Metric</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

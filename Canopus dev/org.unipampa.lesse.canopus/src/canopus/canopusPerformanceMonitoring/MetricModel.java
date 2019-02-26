@@ -199,82 +199,52 @@ public interface MetricModel extends EObject {
 	EList<AssociationCounterCriteriaThreshold> getAssociationcountercriteriathreshold();
 
 	/**
-	 * Returns the value of the '<em><b>Disk Counter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Disk Counter</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk_IO_Counter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Disk Counter</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Disk Counter</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Disk Counter</em>' containment reference.
-	 * @see #setDiskCounter(Disk_IO_Counter)
+	 * @return the value of the '<em>Disk Counter</em>' containment reference list.
 	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_DiskCounter()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Disk_IO_Counter getDiskCounter();
+	EList<Disk_IO_Counter> getDiskCounter();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.MetricModel#getDiskCounter <em>Disk Counter</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Disk Counter</em>' containment reference.
-	 * @see #getDiskCounter()
-	 * @generated
-	 */
-	void setDiskCounter(Disk_IO_Counter value);
-
-	/**
-	 * Returns the value of the '<em><b>Transaction Counter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Transaction Counter</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.TransactionCounter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Transaction Counter</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Transaction Counter</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Transaction Counter</em>' containment reference.
-	 * @see #setTransactionCounter(TransactionCounter)
+	 * @return the value of the '<em>Transaction Counter</em>' containment reference list.
 	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_TransactionCounter()
 	 * @model containment="true"
 	 * @generated
 	 */
-	TransactionCounter getTransactionCounter();
+	EList<TransactionCounter> getTransactionCounter();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.MetricModel#getTransactionCounter <em>Transaction Counter</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Transaction Counter</em>' containment reference.
-	 * @see #getTransactionCounter()
-	 * @generated
-	 */
-	void setTransactionCounter(TransactionCounter value);
-
-	/**
-	 * Returns the value of the '<em><b>Memory Counter</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Memory Counter</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Memory Counter</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Memory Counter</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Memory Counter</em>' containment reference.
-	 * @see #setMemoryCounter(MemoryCounter)
+	 * @return the value of the '<em>Memory Counter</em>' containment reference list.
 	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_MemoryCounter()
 	 * @model containment="true"
 	 * @generated
 	 */
-	MemoryCounter getMemoryCounter();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.MetricModel#getMemoryCounter <em>Memory Counter</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Memory Counter</em>' containment reference.
-	 * @see #getMemoryCounter()
-	 * @generated
-	 */
-	void setMemoryCounter(MemoryCounter value);
+	EList<MemoryCounter> getMemoryCounter();
 
 	/**
 	 * Returns the value of the '<em><b>Counter</b></em>' containment reference list.
@@ -293,17 +263,17 @@ public interface MetricModel extends EObject {
 	EList<Counter> getCounter();
 
 	/**
-	 * Returns the value of the '<em><b>Metric</b></em>' reference list.
+	 * Returns the value of the '<em><b>Metric</b></em>' containment reference list.
 	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Metric}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Metric</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Metric</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Metric</em>' reference list.
+	 * @return the value of the '<em>Metric</em>' containment reference list.
 	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMetricModel_Metric()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Metric> getMetric();

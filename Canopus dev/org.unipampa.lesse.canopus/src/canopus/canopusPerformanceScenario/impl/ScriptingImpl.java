@@ -4,6 +4,7 @@ package canopus.canopusPerformanceScenario.impl;
 
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 import canopus.canopusPerformanceScenario.Scripting;
+import canopus.canopusPerformanceScenario.UserProfile;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
@@ -44,6 +45,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getDatatables <em>Datatables</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getThinkTime <em>Think Time</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getScripts <em>Scripts</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getUserprofile <em>Userprofile</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getDedicatedTime <em>Dedicated Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -138,6 +141,36 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * @ordered
 	 */
 	protected EList<Scripting> scripts;
+
+	/**
+	 * The cached value of the '{@link #getUserprofile() <em>Userprofile</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUserprofile()
+	 * @generated
+	 * @ordered
+	 */
+	protected UserProfile userprofile;
+
+	/**
+	 * The default value of the '{@link #getDedicatedTime() <em>Dedicated Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDedicatedTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int DEDICATED_TIME_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getDedicatedTime() <em>Dedicated Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDedicatedTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected int dedicatedTime = DEDICATED_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -330,6 +363,103 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public UserProfile getUserprofile() {
+		if (userprofile != null && userprofile.eIsProxy()) {
+			InternalEObject oldUserprofile = (InternalEObject)userprofile;
+			userprofile = (UserProfile)eResolveProxy(oldUserprofile);
+			if (userprofile != oldUserprofile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE, oldUserprofile, userprofile));
+			}
+		}
+		return userprofile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserProfile basicGetUserprofile() {
+		return userprofile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUserprofile(UserProfile newUserprofile, NotificationChain msgs) {
+		UserProfile oldUserprofile = userprofile;
+		userprofile = newUserprofile;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE, oldUserprofile, newUserprofile);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUserprofile(UserProfile newUserprofile) {
+		if (newUserprofile != userprofile) {
+			NotificationChain msgs = null;
+			if (userprofile != null)
+				msgs = ((InternalEObject)userprofile).eInverseRemove(this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING, UserProfile.class, msgs);
+			if (newUserprofile != null)
+				msgs = ((InternalEObject)newUserprofile).eInverseAdd(this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING, UserProfile.class, msgs);
+			msgs = basicSetUserprofile(newUserprofile, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE, newUserprofile, newUserprofile));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getDedicatedTime() {
+		return dedicatedTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDedicatedTime(int newDedicatedTime) {
+		int oldDedicatedTime = dedicatedTime;
+		dedicatedTime = newDedicatedTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.SCRIPTING__DEDICATED_TIME, oldDedicatedTime, dedicatedTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE:
+				if (userprofile != null)
+					msgs = ((InternalEObject)userprofile).eInverseRemove(this, CanopusPerformanceScenarioPackage.USER_PROFILE__SCRIPTING, UserProfile.class, msgs);
+				return basicSetUserprofile((UserProfile)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -347,6 +477,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return ((InternalEList<?>)getThinkTime()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				return ((InternalEList<?>)getScripts()).basicRemove(otherEnd, msgs);
+			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE:
+				return basicSetUserprofile(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -375,6 +507,11 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return getThinkTime();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				return getScripts();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE:
+				if (resolve) return getUserprofile();
+				return basicGetUserprofile();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DEDICATED_TIME:
+				return getDedicatedTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -417,6 +554,12 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				getScripts().clear();
 				getScripts().addAll((Collection<? extends Scripting>)newValue);
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE:
+				setUserprofile((UserProfile)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DEDICATED_TIME:
+				setDedicatedTime((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -453,6 +596,12 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				getScripts().clear();
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE:
+				setUserprofile((UserProfile)null);
+				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DEDICATED_TIME:
+				setDedicatedTime(DEDICATED_TIME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -481,6 +630,10 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return thinkTime != null && !thinkTime.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				return scripts != null && !scripts.isEmpty();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILE:
+				return userprofile != null;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DEDICATED_TIME:
+				return dedicatedTime != DEDICATED_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -497,6 +650,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", dedicatedTime: ");
+		result.append(dedicatedTime);
 		result.append(')');
 		return result.toString();
 	}

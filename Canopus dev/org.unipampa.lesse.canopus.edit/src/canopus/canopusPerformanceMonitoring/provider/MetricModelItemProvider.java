@@ -67,7 +67,6 @@ public class MetricModelItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addMetricPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,28 +94,6 @@ public class MetricModelItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Metric feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMetricPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MetricModel_metric_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MetricModel_metric_feature", "_UI_MetricModel_type"),
-				 CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__METRIC,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -138,6 +115,7 @@ public class MetricModelItemProvider
 			childrenFeatures.add(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__TRANSACTION_COUNTER);
 			childrenFeatures.add(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__MEMORY_COUNTER);
 			childrenFeatures.add(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__COUNTER);
+			childrenFeatures.add(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__METRIC);
 		}
 		return childrenFeatures;
 	}
@@ -206,6 +184,7 @@ public class MetricModelItemProvider
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER:
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -282,6 +261,21 @@ public class MetricModelItemProvider
 			(createChildParameter
 				(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__COUNTER,
 				 CanopusPerformanceMetricFactory.eINSTANCE.createTransactionCounter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__METRIC,
+				 CanopusPerformanceMetricFactory.eINSTANCE.createMemory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__METRIC,
+				 CanopusPerformanceMetricFactory.eINSTANCE.createDisk()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__METRIC,
+				 CanopusPerformanceMetricFactory.eINSTANCE.createTransaction()));
 	}
 
 	/**
@@ -296,6 +290,10 @@ public class MetricModelItemProvider
 		Object childObject = child;
 
 		boolean qualify =
+			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__MEMORY ||
+			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__METRIC ||
+			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__TRANSACTION ||
+			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__DISK ||
 			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__DISK_COUNTER ||
 			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__COUNTER ||
 			childFeature == CanopusPerformanceMonitoringPackage.Literals.METRIC_MODEL__TRANSACTION_COUNTER ||

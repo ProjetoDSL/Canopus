@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -140,34 +139,34 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	protected EList<AssociationCounterCriteriaThreshold> associationcountercriteriathreshold;
 
 	/**
-	 * The cached value of the '{@link #getDiskCounter() <em>Disk Counter</em>}' containment reference.
+	 * The cached value of the '{@link #getDiskCounter() <em>Disk Counter</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDiskCounter()
 	 * @generated
 	 * @ordered
 	 */
-	protected Disk_IO_Counter diskCounter;
+	protected EList<Disk_IO_Counter> diskCounter;
 
 	/**
-	 * The cached value of the '{@link #getTransactionCounter() <em>Transaction Counter</em>}' containment reference.
+	 * The cached value of the '{@link #getTransactionCounter() <em>Transaction Counter</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTransactionCounter()
 	 * @generated
 	 * @ordered
 	 */
-	protected TransactionCounter transactionCounter;
+	protected EList<TransactionCounter> transactionCounter;
 
 	/**
-	 * The cached value of the '{@link #getMemoryCounter() <em>Memory Counter</em>}' containment reference.
+	 * The cached value of the '{@link #getMemoryCounter() <em>Memory Counter</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMemoryCounter()
 	 * @generated
 	 * @ordered
 	 */
-	protected MemoryCounter memoryCounter;
+	protected EList<MemoryCounter> memoryCounter;
 
 	/**
 	 * The cached value of the '{@link #getCounter() <em>Counter</em>}' containment reference list.
@@ -180,7 +179,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	protected EList<Counter> counter;
 
 	/**
-	 * The cached value of the '{@link #getMetric() <em>Metric</em>}' reference list.
+	 * The cached value of the '{@link #getMetric() <em>Metric</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMetric()
@@ -399,7 +398,10 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Disk_IO_Counter getDiskCounter() {
+	public EList<Disk_IO_Counter> getDiskCounter() {
+		if (diskCounter == null) {
+			diskCounter = new EObjectContainmentEList<Disk_IO_Counter>(Disk_IO_Counter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER);
+		}
 		return diskCounter;
 	}
 
@@ -408,41 +410,10 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDiskCounter(Disk_IO_Counter newDiskCounter, NotificationChain msgs) {
-		Disk_IO_Counter oldDiskCounter = diskCounter;
-		diskCounter = newDiskCounter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER, oldDiskCounter, newDiskCounter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<TransactionCounter> getTransactionCounter() {
+		if (transactionCounter == null) {
+			transactionCounter = new EObjectContainmentEList<TransactionCounter>(TransactionCounter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDiskCounter(Disk_IO_Counter newDiskCounter) {
-		if (newDiskCounter != diskCounter) {
-			NotificationChain msgs = null;
-			if (diskCounter != null)
-				msgs = ((InternalEObject)diskCounter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER, null, msgs);
-			if (newDiskCounter != null)
-				msgs = ((InternalEObject)newDiskCounter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER, null, msgs);
-			msgs = basicSetDiskCounter(newDiskCounter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER, newDiskCounter, newDiskCounter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TransactionCounter getTransactionCounter() {
 		return transactionCounter;
 	}
 
@@ -451,76 +422,11 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTransactionCounter(TransactionCounter newTransactionCounter, NotificationChain msgs) {
-		TransactionCounter oldTransactionCounter = transactionCounter;
-		transactionCounter = newTransactionCounter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER, oldTransactionCounter, newTransactionCounter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<MemoryCounter> getMemoryCounter() {
+		if (memoryCounter == null) {
+			memoryCounter = new EObjectContainmentEList<MemoryCounter>(MemoryCounter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTransactionCounter(TransactionCounter newTransactionCounter) {
-		if (newTransactionCounter != transactionCounter) {
-			NotificationChain msgs = null;
-			if (transactionCounter != null)
-				msgs = ((InternalEObject)transactionCounter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER, null, msgs);
-			if (newTransactionCounter != null)
-				msgs = ((InternalEObject)newTransactionCounter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER, null, msgs);
-			msgs = basicSetTransactionCounter(newTransactionCounter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER, newTransactionCounter, newTransactionCounter));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MemoryCounter getMemoryCounter() {
 		return memoryCounter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetMemoryCounter(MemoryCounter newMemoryCounter, NotificationChain msgs) {
-		MemoryCounter oldMemoryCounter = memoryCounter;
-		memoryCounter = newMemoryCounter;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER, oldMemoryCounter, newMemoryCounter);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMemoryCounter(MemoryCounter newMemoryCounter) {
-		if (newMemoryCounter != memoryCounter) {
-			NotificationChain msgs = null;
-			if (memoryCounter != null)
-				msgs = ((InternalEObject)memoryCounter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER, null, msgs);
-			if (newMemoryCounter != null)
-				msgs = ((InternalEObject)newMemoryCounter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER, null, msgs);
-			msgs = basicSetMemoryCounter(newMemoryCounter, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER, newMemoryCounter, newMemoryCounter));
 	}
 
 	/**
@@ -542,7 +448,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 */
 	public EList<Metric> getMetric() {
 		if (metric == null) {
-			metric = new EObjectResolvingEList<Metric>(Metric.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC);
+			metric = new EObjectContainmentEList<Metric>(Metric.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC);
 		}
 		return metric;
 	}
@@ -568,13 +474,15 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD:
 				return ((InternalEList<?>)getAssociationcountercriteriathreshold()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER:
-				return basicSetDiskCounter(null, msgs);
+				return ((InternalEList<?>)getDiskCounter()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER:
-				return basicSetTransactionCounter(null, msgs);
+				return ((InternalEList<?>)getTransactionCounter()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
-				return basicSetMemoryCounter(null, msgs);
+				return ((InternalEList<?>)getMemoryCounter()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				return ((InternalEList<?>)getCounter()).basicRemove(otherEnd, msgs);
+			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:
+				return ((InternalEList<?>)getMetric()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -649,13 +557,16 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 				getAssociationcountercriteriathreshold().addAll((Collection<? extends AssociationCounterCriteriaThreshold>)newValue);
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER:
-				setDiskCounter((Disk_IO_Counter)newValue);
+				getDiskCounter().clear();
+				getDiskCounter().addAll((Collection<? extends Disk_IO_Counter>)newValue);
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER:
-				setTransactionCounter((TransactionCounter)newValue);
+				getTransactionCounter().clear();
+				getTransactionCounter().addAll((Collection<? extends TransactionCounter>)newValue);
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
-				setMemoryCounter((MemoryCounter)newValue);
+				getMemoryCounter().clear();
+				getMemoryCounter().addAll((Collection<? extends MemoryCounter>)newValue);
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				getCounter().clear();
@@ -699,13 +610,13 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 				getAssociationcountercriteriathreshold().clear();
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER:
-				setDiskCounter((Disk_IO_Counter)null);
+				getDiskCounter().clear();
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER:
-				setTransactionCounter((TransactionCounter)null);
+				getTransactionCounter().clear();
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
-				setMemoryCounter((MemoryCounter)null);
+				getMemoryCounter().clear();
 				return;
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				getCounter().clear();
@@ -740,11 +651,11 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD:
 				return associationcountercriteriathreshold != null && !associationcountercriteriathreshold.isEmpty();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER:
-				return diskCounter != null;
+				return diskCounter != null && !diskCounter.isEmpty();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER:
-				return transactionCounter != null;
+				return transactionCounter != null && !transactionCounter.isEmpty();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER:
-				return memoryCounter != null;
+				return memoryCounter != null && !memoryCounter.isEmpty();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER:
 				return counter != null && !counter.isEmpty();
 			case CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC:

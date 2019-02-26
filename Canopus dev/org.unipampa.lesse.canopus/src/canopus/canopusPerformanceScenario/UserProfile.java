@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getDescription <em>Description</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageTotal <em>Percentage Total</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageScript <em>Percentage Script</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile()
@@ -96,22 +96,6 @@ public interface UserProfile extends EObject {
 	int getPercentageTotal();
 
 	/**
-	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Scripting}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scripting</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripting</em>' reference list.
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Scripting()
-	 * @model
-	 * @generated
-	 */
-	EList<Scripting> getScripting();
-
-	/**
 	 * Returns the value of the '<em><b>Percentage Script</b></em>' attribute.
 	 * The default value is <code>"100"</code>.
 	 * <!-- begin-user-doc -->
@@ -126,5 +110,23 @@ public interface UserProfile extends EObject {
 	 * @generated
 	 */
 	int getPercentageScript();
+
+	/**
+	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Scripting}.
+	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofile <em>Userprofile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scripting</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Scripting</em>' reference list.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Scripting()
+	 * @see canopus.canopusPerformanceScenario.Scripting#getUserprofile
+	 * @model opposite="userprofile"
+	 * @generated
+	 */
+	EList<Scripting> getScripting();
 
 } // UserProfile

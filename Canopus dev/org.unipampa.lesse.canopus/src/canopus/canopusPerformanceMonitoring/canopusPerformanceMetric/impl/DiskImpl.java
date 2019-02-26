@@ -6,12 +6,13 @@ import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerf
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk;
 import canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Disk_IO_Counter;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class DiskImpl extends MetricImpl implements Disk {
 	/**
-	 * The cached value of the '{@link #getDisk_io_counter() <em>Disk io counter</em>}' reference.
+	 * The cached value of the '{@link #getDisk_io_counter() <em>Disk io counter</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDisk_io_counter()
 	 * @generated
 	 * @ordered
 	 */
-	protected Disk_IO_Counter disk_io_counter;
+	protected EList<Disk_IO_Counter> disk_io_counter;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,37 +62,11 @@ public class DiskImpl extends MetricImpl implements Disk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Disk_IO_Counter getDisk_io_counter() {
-		if (disk_io_counter != null && disk_io_counter.eIsProxy()) {
-			InternalEObject oldDisk_io_counter = (InternalEObject)disk_io_counter;
-			disk_io_counter = (Disk_IO_Counter)eResolveProxy(oldDisk_io_counter);
-			if (disk_io_counter != oldDisk_io_counter) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER, oldDisk_io_counter, disk_io_counter));
-			}
+	public EList<Disk_IO_Counter> getDisk_io_counter() {
+		if (disk_io_counter == null) {
+			disk_io_counter = new EObjectResolvingEList<Disk_IO_Counter>(Disk_IO_Counter.class, this, CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER);
 		}
 		return disk_io_counter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Disk_IO_Counter basicGetDisk_io_counter() {
-		return disk_io_counter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDisk_io_counter(Disk_IO_Counter newDisk_io_counter) {
-		Disk_IO_Counter oldDisk_io_counter = disk_io_counter;
-		disk_io_counter = newDisk_io_counter;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER, oldDisk_io_counter, disk_io_counter));
 	}
 
 	/**
@@ -103,8 +78,7 @@ public class DiskImpl extends MetricImpl implements Disk {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER:
-				if (resolve) return getDisk_io_counter();
-				return basicGetDisk_io_counter();
+				return getDisk_io_counter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,11 +88,13 @@ public class DiskImpl extends MetricImpl implements Disk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER:
-				setDisk_io_counter((Disk_IO_Counter)newValue);
+				getDisk_io_counter().clear();
+				getDisk_io_counter().addAll((Collection<? extends Disk_IO_Counter>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +109,7 @@ public class DiskImpl extends MetricImpl implements Disk {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER:
-				setDisk_io_counter((Disk_IO_Counter)null);
+				getDisk_io_counter().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -148,7 +124,7 @@ public class DiskImpl extends MetricImpl implements Disk {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER:
-				return disk_io_counter != null;
+				return disk_io_counter != null && !disk_io_counter.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

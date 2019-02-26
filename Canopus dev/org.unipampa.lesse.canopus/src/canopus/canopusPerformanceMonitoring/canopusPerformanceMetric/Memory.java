@@ -2,6 +2,7 @@
  */
 package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,29 +22,19 @@ package canopus.canopusPerformanceMonitoring.canopusPerformanceMetric;
  */
 public interface Memory extends Metric {
 	/**
-	 * Returns the value of the '<em><b>Memory Counter</b></em>' reference.
+	 * Returns the value of the '<em><b>Memory Counter</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.MemoryCounter}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Memory Counter</em>' reference isn't clear,
+	 * If the meaning of the '<em>Memory Counter</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Memory Counter</em>' reference.
-	 * @see #setMemoryCounter(MemoryCounter)
+	 * @return the value of the '<em>Memory Counter</em>' reference list.
 	 * @see canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.CanopusPerformanceMetricPackage#getMemory_MemoryCounter()
 	 * @model
 	 * @generated
 	 */
-	MemoryCounter getMemoryCounter();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.Memory#getMemoryCounter <em>Memory Counter</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Memory Counter</em>' reference.
-	 * @see #getMemoryCounter()
-	 * @generated
-	 */
-	void setMemoryCounter(MemoryCounter value);
+	EList<MemoryCounter> getMemoryCounter();
 
 } // Memory
