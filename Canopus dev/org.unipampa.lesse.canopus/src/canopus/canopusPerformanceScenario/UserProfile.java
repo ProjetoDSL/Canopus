@@ -3,7 +3,6 @@
 package canopus.canopusPerformanceScenario;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,9 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getDescription <em>Description</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageTotal <em>Percentage Total</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getPercentageScript <em>Percentage Script</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.UserProfile#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile()
@@ -80,53 +77,21 @@ public interface UserProfile extends EObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Percentage Total</b></em>' attribute.
-	 * The default value is <code>"100"</code>.
+	 * Returns the value of the '<em><b>Userprofiletoscript</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.UserProfileToScript}.
+	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getUserprofile <em>Userprofile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Percentage Total</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Userprofiletoscript</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Percentage Total</em>' attribute.
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_PercentageTotal()
-	 * @model default="100" changeable="false"
-	 * @generated
-	 */
-	int getPercentageTotal();
-
-	/**
-	 * Returns the value of the '<em><b>Percentage Script</b></em>' attribute.
-	 * The default value is <code>"100"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Percentage Script</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Percentage Script</em>' attribute.
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_PercentageScript()
-	 * @model default="100" changeable="false"
-	 * @generated
-	 */
-	int getPercentageScript();
-
-	/**
-	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Scripting}.
-	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofile <em>Userprofile</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Scripting</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripting</em>' reference list.
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Scripting()
-	 * @see canopus.canopusPerformanceScenario.Scripting#getUserprofile
+	 * @return the value of the '<em>Userprofiletoscript</em>' reference list.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Userprofiletoscript()
+	 * @see canopus.canopusPerformanceScenario.UserProfileToScript#getUserprofile
 	 * @model opposite="userprofile"
 	 * @generated
 	 */
-	EList<Scripting> getScripting();
+	EList<UserProfileToScript> getUserprofiletoscript();
 
 } // UserProfile

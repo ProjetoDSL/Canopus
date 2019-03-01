@@ -49,6 +49,42 @@ public interface CanopusPerformanceScenarioFactory extends EFactory {
 	Scripting createScripting();
 
 	/**
+	 * Returns a new object of class '<em>Teste1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teste1</em>'.
+	 * @generated
+	 */
+	Teste1 createTeste1();
+
+	/**
+	 * Returns a new object of class '<em>Teste2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teste2</em>'.
+	 * @generated
+	 */
+	Teste2 createTeste2();
+
+	/**
+	 * Returns a new object of class '<em>Teste1 E2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Teste1 E2</em>'.
+	 * @generated
+	 */
+	Teste1E2 createTeste1E2();
+
+	/**
+	 * Returns a new object of class '<em>User Profile To Script</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User Profile To Script</em>'.
+	 * @generated
+	 */
+	UserProfileToScript createUserProfileToScript();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

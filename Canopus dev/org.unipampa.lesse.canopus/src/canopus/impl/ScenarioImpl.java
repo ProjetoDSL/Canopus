@@ -6,7 +6,11 @@ import canopus.CanopusPackage;
 import canopus.Scenario;
 
 import canopus.canopusPerformanceScenario.Scripting;
+import canopus.canopusPerformanceScenario.Teste1;
+import canopus.canopusPerformanceScenario.Teste1E2;
+import canopus.canopusPerformanceScenario.Teste2;
 import canopus.canopusPerformanceScenario.UserProfile;
+import canopus.canopusPerformanceScenario.UserProfileToScript;
 import canopus.canopusPerformanceScenario.Workload;
 
 import java.util.Collection;
@@ -32,6 +36,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.impl.ScenarioImpl#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getWorkloads <em>Workloads</em>}</li>
  *   <li>{@link canopus.impl.ScenarioImpl#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getTeste1 <em>Teste1</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getTeste2 <em>Teste2</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getTeste1e2 <em>Teste1e2</em>}</li>
+ *   <li>{@link canopus.impl.ScenarioImpl#getUserProfileToScript <em>User Profile To Script</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +74,46 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * @ordered
 	 */
 	protected EList<Scripting> scripting;
+
+	/**
+	 * The cached value of the '{@link #getTeste1() <em>Teste1</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTeste1()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Teste1> teste1;
+
+	/**
+	 * The cached value of the '{@link #getTeste2() <em>Teste2</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTeste2()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Teste2> teste2;
+
+	/**
+	 * The cached value of the '{@link #getTeste1e2() <em>Teste1e2</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTeste1e2()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Teste1E2> teste1e2;
+
+	/**
+	 * The cached value of the '{@link #getUserProfileToScript() <em>User Profile To Script</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUserProfileToScript()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<UserProfileToScript> userProfileToScript;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,6 +175,54 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Teste1> getTeste1() {
+		if (teste1 == null) {
+			teste1 = new EObjectContainmentEList<Teste1>(Teste1.class, this, CanopusPackage.SCENARIO__TESTE1);
+		}
+		return teste1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Teste2> getTeste2() {
+		if (teste2 == null) {
+			teste2 = new EObjectContainmentEList<Teste2>(Teste2.class, this, CanopusPackage.SCENARIO__TESTE2);
+		}
+		return teste2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Teste1E2> getTeste1e2() {
+		if (teste1e2 == null) {
+			teste1e2 = new EObjectContainmentEList<Teste1E2>(Teste1E2.class, this, CanopusPackage.SCENARIO__TESTE1E2);
+		}
+		return teste1e2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<UserProfileToScript> getUserProfileToScript() {
+		if (userProfileToScript == null) {
+			userProfileToScript = new EObjectContainmentEList<UserProfileToScript>(UserProfileToScript.class, this, CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT);
+		}
+		return userProfileToScript;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -136,6 +232,14 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return ((InternalEList<?>)getWorkloads()).basicRemove(otherEnd, msgs);
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				return ((InternalEList<?>)getScripting()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCENARIO__TESTE1:
+				return ((InternalEList<?>)getTeste1()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCENARIO__TESTE2:
+				return ((InternalEList<?>)getTeste2()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCENARIO__TESTE1E2:
+				return ((InternalEList<?>)getTeste1e2()).basicRemove(otherEnd, msgs);
+			case CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT:
+				return ((InternalEList<?>)getUserProfileToScript()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -154,6 +258,14 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return getWorkloads();
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				return getScripting();
+			case CanopusPackage.SCENARIO__TESTE1:
+				return getTeste1();
+			case CanopusPackage.SCENARIO__TESTE2:
+				return getTeste2();
+			case CanopusPackage.SCENARIO__TESTE1E2:
+				return getTeste1e2();
+			case CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT:
+				return getUserProfileToScript();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,6 +291,22 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				getScripting().clear();
 				getScripting().addAll((Collection<? extends Scripting>)newValue);
 				return;
+			case CanopusPackage.SCENARIO__TESTE1:
+				getTeste1().clear();
+				getTeste1().addAll((Collection<? extends Teste1>)newValue);
+				return;
+			case CanopusPackage.SCENARIO__TESTE2:
+				getTeste2().clear();
+				getTeste2().addAll((Collection<? extends Teste2>)newValue);
+				return;
+			case CanopusPackage.SCENARIO__TESTE1E2:
+				getTeste1e2().clear();
+				getTeste1e2().addAll((Collection<? extends Teste1E2>)newValue);
+				return;
+			case CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT:
+				getUserProfileToScript().clear();
+				getUserProfileToScript().addAll((Collection<? extends UserProfileToScript>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -200,6 +328,18 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				getScripting().clear();
 				return;
+			case CanopusPackage.SCENARIO__TESTE1:
+				getTeste1().clear();
+				return;
+			case CanopusPackage.SCENARIO__TESTE2:
+				getTeste2().clear();
+				return;
+			case CanopusPackage.SCENARIO__TESTE1E2:
+				getTeste1e2().clear();
+				return;
+			case CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT:
+				getUserProfileToScript().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -218,6 +358,14 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 				return workloads != null && !workloads.isEmpty();
 			case CanopusPackage.SCENARIO__SCRIPTING:
 				return scripting != null && !scripting.isEmpty();
+			case CanopusPackage.SCENARIO__TESTE1:
+				return teste1 != null && !teste1.isEmpty();
+			case CanopusPackage.SCENARIO__TESTE2:
+				return teste2 != null && !teste2.isEmpty();
+			case CanopusPackage.SCENARIO__TESTE1E2:
+				return teste1e2 != null && !teste1e2.isEmpty();
+			case CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT:
+				return userProfileToScript != null && !userProfileToScript.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

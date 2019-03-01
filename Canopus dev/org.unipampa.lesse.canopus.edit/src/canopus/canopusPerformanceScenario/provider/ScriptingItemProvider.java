@@ -68,8 +68,7 @@ public class ScriptingItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addUserprofilePropertyDescriptor(object);
-			addDedicatedTimePropertyDescriptor(object);
+			addUserprofiletoscriptPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -97,45 +96,23 @@ public class ScriptingItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Userprofile feature.
+	 * This adds a property descriptor for the Userprofiletoscript feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUserprofilePropertyDescriptor(Object object) {
+	protected void addUserprofiletoscriptPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Scripting_userprofile_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_userprofile_feature", "_UI_Scripting_type"),
-				 CanopusPerformanceScenarioPackage.Literals.SCRIPTING__USERPROFILE,
+				 getString("_UI_Scripting_userprofiletoscript_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_userprofiletoscript_feature", "_UI_Scripting_type"),
+				 CanopusPerformanceScenarioPackage.Literals.SCRIPTING__USERPROFILETOSCRIPT,
 				 true,
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dedicated Time feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDedicatedTimePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scripting_dedicatedTime_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scripting_dedicatedTime_feature", "_UI_Scripting_type"),
-				 CanopusPerformanceScenarioPackage.Literals.SCRIPTING__DEDICATED_TIME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -215,7 +192,6 @@ public class ScriptingItemProvider
 
 		switch (notification.getFeatureID(Scripting.class)) {
 			case CanopusPerformanceScenarioPackage.SCRIPTING__NAME:
-			case CanopusPerformanceScenarioPackage.SCRIPTING__DEDICATED_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CanopusPerformanceScenarioPackage.SCRIPTING__INITIAL:

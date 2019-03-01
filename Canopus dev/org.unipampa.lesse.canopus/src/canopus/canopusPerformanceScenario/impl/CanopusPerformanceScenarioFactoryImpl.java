@@ -59,6 +59,10 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 			case CanopusPerformanceScenarioPackage.USER_PROFILE: return createUserProfile();
 			case CanopusPerformanceScenarioPackage.WORKLOAD: return createWorkload();
 			case CanopusPerformanceScenarioPackage.SCRIPTING: return createScripting();
+			case CanopusPerformanceScenarioPackage.TESTE1: return createTeste1();
+			case CanopusPerformanceScenarioPackage.TESTE2: return createTeste2();
+			case CanopusPerformanceScenarioPackage.TESTE1_E2: return createTeste1E2();
+			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT: return createUserProfileToScript();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +96,46 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	public Scripting createScripting() {
 		ScriptingImpl scripting = new ScriptingImpl();
 		return scripting;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Teste1 createTeste1() {
+		Teste1Impl teste1 = new Teste1Impl();
+		return teste1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Teste2 createTeste2() {
+		Teste2Impl teste2 = new Teste2Impl();
+		return teste2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Teste1E2 createTeste1E2() {
+		Teste1E2Impl teste1E2 = new Teste1E2Impl();
+		return teste1E2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserProfileToScript createUserProfileToScript() {
+		UserProfileToScriptImpl userProfileToScript = new UserProfileToScriptImpl();
+		return userProfileToScript;
 	}
 
 	/**

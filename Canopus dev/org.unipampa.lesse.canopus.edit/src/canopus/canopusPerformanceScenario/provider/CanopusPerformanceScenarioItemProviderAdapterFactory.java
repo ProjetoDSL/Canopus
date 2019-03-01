@@ -141,6 +141,98 @@ public class CanopusPerformanceScenarioItemProviderAdapterFactory extends Canopu
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.Teste1} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Teste1ItemProvider teste1ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.Teste1}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTeste1Adapter() {
+		if (teste1ItemProvider == null) {
+			teste1ItemProvider = new Teste1ItemProvider(this);
+		}
+
+		return teste1ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.Teste2} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Teste2ItemProvider teste2ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.Teste2}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTeste2Adapter() {
+		if (teste2ItemProvider == null) {
+			teste2ItemProvider = new Teste2ItemProvider(this);
+		}
+
+		return teste2ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.Teste1E2} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Teste1E2ItemProvider teste1E2ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.Teste1E2}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTeste1E2Adapter() {
+		if (teste1E2ItemProvider == null) {
+			teste1E2ItemProvider = new Teste1E2ItemProvider(this);
+		}
+
+		return teste1E2ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.UserProfileToScript} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UserProfileToScriptItemProvider userProfileToScriptItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.UserProfileToScript}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUserProfileToScriptAdapter() {
+		if (userProfileToScriptItemProvider == null) {
+			userProfileToScriptItemProvider = new UserProfileToScriptItemProvider(this);
+		}
+
+		return userProfileToScriptItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +334,10 @@ public class CanopusPerformanceScenarioItemProviderAdapterFactory extends Canopu
 		if (userProfileItemProvider != null) userProfileItemProvider.dispose();
 		if (workloadItemProvider != null) workloadItemProvider.dispose();
 		if (scriptingItemProvider != null) scriptingItemProvider.dispose();
+		if (teste1ItemProvider != null) teste1ItemProvider.dispose();
+		if (teste2ItemProvider != null) teste2ItemProvider.dispose();
+		if (teste1E2ItemProvider != null) teste1E2ItemProvider.dispose();
+		if (userProfileToScriptItemProvider != null) userProfileToScriptItemProvider.dispose();
 	}
 
 }

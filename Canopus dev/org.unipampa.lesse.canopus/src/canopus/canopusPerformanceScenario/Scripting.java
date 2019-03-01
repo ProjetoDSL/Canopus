@@ -30,8 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getDatatables <em>Datatables</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getThinkTime <em>Think Time</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getScripts <em>Scripts</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getUserprofile <em>Userprofile</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getDedicatedTime <em>Dedicated Time</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting()
@@ -198,57 +197,31 @@ public interface Scripting extends EObject {
 	EList<Scripting> getScripts();
 
 	/**
-	 * Returns the value of the '<em><b>Userprofile</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.UserProfile#getScripting <em>Scripting</em>}'.
+	 * Returns the value of the '<em><b>Userprofiletoscript</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getScripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Userprofile</em>' reference isn't clear,
+	 * If the meaning of the '<em>Userprofiletoscript</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Userprofile</em>' reference.
-	 * @see #setUserprofile(UserProfile)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Userprofile()
-	 * @see canopus.canopusPerformanceScenario.UserProfile#getScripting
-	 * @model opposite="scripting"
+	 * @return the value of the '<em>Userprofiletoscript</em>' reference.
+	 * @see #setUserprofiletoscript(UserProfileToScript)
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Userprofiletoscript()
+	 * @see canopus.canopusPerformanceScenario.UserProfileToScript#getScripting
+	 * @model opposite="scripting" required="true"
 	 * @generated
 	 */
-	UserProfile getUserprofile();
+	UserProfileToScript getUserprofiletoscript();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofile <em>Userprofile</em>}' reference.
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Userprofile</em>' reference.
-	 * @see #getUserprofile()
+	 * @param value the new value of the '<em>Userprofiletoscript</em>' reference.
+	 * @see #getUserprofiletoscript()
 	 * @generated
 	 */
-	void setUserprofile(UserProfile value);
-
-	/**
-	 * Returns the value of the '<em><b>Dedicated Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Dedicated Time</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dedicated Time</em>' attribute.
-	 * @see #setDedicatedTime(int)
-	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_DedicatedTime()
-	 * @model
-	 * @generated
-	 */
-	int getDedicatedTime();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Scripting#getDedicatedTime <em>Dedicated Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dedicated Time</em>' attribute.
-	 * @see #getDedicatedTime()
-	 * @generated
-	 */
-	void setDedicatedTime(int value);
+	void setUserprofiletoscript(UserProfileToScript value);
 
 } // Scripting

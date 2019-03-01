@@ -18,6 +18,14 @@
         eType="#//canopusPerformanceScenario/Workload" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
         eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teste1" upperBound="-1"
+        eType="#//canopusPerformanceScenario/Teste1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teste2" upperBound="-1"
+        eType="#//canopusPerformanceScenario/Teste2" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teste1e2" upperBound="-1"
+        eType="#//canopusPerformanceScenario/Teste1E2" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userProfileToScript" upperBound="-1"
+        eType="#//canopusPerformanceScenario/UserProfileToScript" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -181,12 +189,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="UserProfile">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageTotal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-          changeable="false" defaultValueLiteral="100"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentageScript" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-          changeable="false" defaultValueLiteral="100"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
-          eType="#//canopusPerformanceScenario/Scripting" eOpposite="#//canopusPerformanceScenario/Scripting/userprofile"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userprofiletoscript"
+          upperBound="-1" eType="#//canopusPerformanceScenario/UserProfileToScript"
+          eOpposite="#//canopusPerformanceScenario/UserProfileToScript/userprofile"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Workload">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTimer" lowerBound="1"
@@ -227,9 +232,30 @@
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scripts" upperBound="-1"
           eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userprofiletoscript"
+          eType="#//canopusPerformanceScenario/UserProfileToScript" eOpposite="#//canopusPerformanceScenario/UserProfileToScript/scripting"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Teste1">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="teste1e2" lowerBound="1"
+          upperBound="-1" eType="#//canopusPerformanceScenario/Teste1E2" eOpposite="#//canopusPerformanceScenario/Teste1E2/teste1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Teste2">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="teste1e2" lowerBound="1"
+          eType="#//canopusPerformanceScenario/Teste1E2" eOpposite="#//canopusPerformanceScenario/Teste1E2/teste2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Teste1E2">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="porcentagem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="teste1" lowerBound="1"
+          eType="#//canopusPerformanceScenario/Teste1" eOpposite="#//canopusPerformanceScenario/Teste1/teste1e2"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="teste2" lowerBound="1"
+          eType="#//canopusPerformanceScenario/Teste2" eOpposite="#//canopusPerformanceScenario/Teste2/teste1e2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UserProfileToScript">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timePercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userprofile" eType="#//canopusPerformanceScenario/UserProfile"
-          eOpposite="#//canopusPerformanceScenario/UserProfile/scripting"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dedicatedTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+          eOpposite="#//canopusPerformanceScenario/UserProfile/userprofiletoscript"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" lowerBound="1"
+          eType="#//canopusPerformanceScenario/Scripting" eOpposite="#//canopusPerformanceScenario/Scripting/userprofiletoscript"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceWorkload" nsURI="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
         nsPrefix="canopusPerformanceWorkload">

@@ -64,9 +64,7 @@ public class UserProfileItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addPercentageTotalPropertyDescriptor(object);
-			addPercentageScriptPropertyDescriptor(object);
-			addScriptingPropertyDescriptor(object);
+			addUserprofiletoscriptPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -116,63 +114,19 @@ public class UserProfileItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Percentage Total feature.
+	 * This adds a property descriptor for the Userprofiletoscript feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPercentageTotalPropertyDescriptor(Object object) {
+	protected void addUserprofiletoscriptPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UserProfile_percentageTotal_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentageTotal_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE_TOTAL,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Percentage Script feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPercentageScriptPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UserProfile_percentageScript_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentageScript_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE_SCRIPT,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Scripting feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addScriptingPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UserProfile_scripting_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_scripting_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__SCRIPTING,
+				 getString("_UI_UserProfile_userprofiletoscript_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_userprofiletoscript_feature", "_UI_UserProfile_type"),
+				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__USERPROFILETOSCRIPT,
 				 true,
 				 false,
 				 true,
@@ -221,8 +175,6 @@ public class UserProfileItemProvider
 		switch (notification.getFeatureID(UserProfile.class)) {
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__NAME:
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__DESCRIPTION:
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_TOTAL:
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE_SCRIPT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
