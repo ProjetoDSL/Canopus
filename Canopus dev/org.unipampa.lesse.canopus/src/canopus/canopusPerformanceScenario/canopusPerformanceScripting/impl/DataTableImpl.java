@@ -9,14 +9,20 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterH
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.ExternalFile;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,14 +82,14 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	protected ExternalFile attachedfile;
 
 	/**
-	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference.
+	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getActivity()
 	 * @generated
 	 * @ordered
 	 */
-	protected Activity activity;
+	protected EList<Activity> activity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -211,37 +217,11 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Activity getActivity() {
-		if (activity != null && activity.eIsProxy()) {
-			InternalEObject oldActivity = (InternalEObject)activity;
-			activity = (Activity)eResolveProxy(oldActivity);
-			if (activity != oldActivity) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY, oldActivity, activity));
-			}
+	public EList<Activity> getActivity() {
+		if (activity == null) {
+			activity = new EObjectResolvingEList<Activity>(Activity.class, this, CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY);
 		}
 		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Activity basicGetActivity() {
-		return activity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setActivity(Activity newActivity) {
-		Activity oldActivity = activity;
-		activity = newActivity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY, oldActivity, activity));
 	}
 
 	/**
@@ -274,8 +254,7 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
 				return getAttachedfile();
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
-				if (resolve) return getActivity();
-				return basicGetActivity();
+				return getActivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -285,6 +264,7 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -298,7 +278,8 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 				setAttachedfile((ExternalFile)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
-				setActivity((Activity)newValue);
+				getActivity().clear();
+				getActivity().addAll((Collection<? extends Activity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -322,7 +303,7 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 				setAttachedfile((ExternalFile)null);
 				return;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
-				setActivity((Activity)null);
+				getActivity().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -343,7 +324,7 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
 				return attachedfile != null;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
-				return activity != null;
+				return activity != null && !activity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

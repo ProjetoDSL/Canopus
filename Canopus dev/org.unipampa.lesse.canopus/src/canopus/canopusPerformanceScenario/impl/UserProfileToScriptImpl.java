@@ -6,8 +6,10 @@ import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 import canopus.canopusPerformanceScenario.Scripting;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.UserProfileToScript;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -235,7 +237,6 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -292,7 +293,6 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

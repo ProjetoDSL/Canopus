@@ -1,10 +1,10 @@
 /**
  */
-package canopus.canopusPerformanceScenario.provider;
+package canopus.canopusPerformanceScenario.canopusPerformanceScripting.provider;
 
 
-import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
-import canopus.canopusPerformanceScenario.UserProfile;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 
 import canopus.provider.CanopusEditPlugin;
 
@@ -28,12 +28,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link canopus.canopusPerformanceScenario.UserProfile} object.
+ * This is the item provider adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UserProfileItemProvider 
+public class ActivityToActivityItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -47,7 +47,7 @@ public class UserProfileItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserProfileItemProvider(AdapterFactory adapterFactory) {
+	public ActivityToActivityItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,94 +62,27 @@ public class UserProfileItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
-			addUserprofiletoscriptPropertyDescriptor(object);
-			addPercentagePropertyDescriptor(object);
+			addTimePercentagePropertyDescriptor(object);
+			addActivityPropertyDescriptor(object);
+			addActiviesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Time Percentage feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addTimePercentagePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_UserProfile_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_name_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UserProfile_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_description_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Userprofiletoscript feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUserprofiletoscriptPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UserProfile_userprofiletoscript_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_userprofiletoscript_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__USERPROFILETOSCRIPT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Percentage feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPercentagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UserProfile_percentage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UserProfile_percentage_feature", "_UI_UserProfile_type"),
-				 CanopusPerformanceScenarioPackage.Literals.USER_PROFILE__PERCENTAGE,
+				 getString("_UI_ActivityToActivity_timePercentage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActivityToActivity_timePercentage_feature", "_UI_ActivityToActivity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY_TO_ACTIVITY__TIME_PERCENTAGE,
 				 true,
 				 false,
 				 false,
@@ -159,14 +92,58 @@ public class UserProfileItemProvider
 	}
 
 	/**
-	 * This returns UserProfile.gif.
+	 * This adds a property descriptor for the Activity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActivityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActivityToActivity_activity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActivityToActivity_activity_feature", "_UI_ActivityToActivity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY_TO_ACTIVITY__ACTIVITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Activies feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActiviesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ActivityToActivity_activies_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ActivityToActivity_activies_feature", "_UI_ActivityToActivity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY_TO_ACTIVITY__ACTIVIES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns ActivityToActivity.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/UserProfile"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ActivityToActivity"));
 	}
 
 	/**
@@ -177,10 +154,8 @@ public class UserProfileItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((UserProfile)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_UserProfile_type") :
-			getString("_UI_UserProfile_type") + " " + label;
+		ActivityToActivity activityToActivity = (ActivityToActivity)object;
+		return getString("_UI_ActivityToActivity_type") + " " + activityToActivity.getTimePercentage();
 	}
 
 
@@ -195,10 +170,8 @@ public class UserProfileItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(UserProfile.class)) {
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__NAME:
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__DESCRIPTION:
-			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
+		switch (notification.getFeatureID(ActivityToActivity.class)) {
+			case CanopusPerformanceScriptingPackage.ACTIVITY_TO_ACTIVITY__TIME_PERCENTAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

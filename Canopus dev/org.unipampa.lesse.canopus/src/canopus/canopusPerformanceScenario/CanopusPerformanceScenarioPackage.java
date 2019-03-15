@@ -94,13 +94,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int USER_PROFILE__USERPROFILETOSCRIPT = 2;
 
 	/**
+	 * The feature id for the '<em><b>Percentage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_PROFILE__PERCENTAGE = 3;
+
+	/**
 	 * The number of structural features of the '<em>User Profile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_PROFILE_FEATURE_COUNT = 3;
+	int USER_PROFILE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>User Profile</em>' class.
@@ -294,13 +303,31 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int SCRIPTING__USERPROFILETOSCRIPT = 8;
 
 	/**
+	 * The feature id for the '<em><b>Paramenters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPTING__PARAMENTERS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Activity To Activity</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPTING__ACTIVITY_TO_ACTIVITY = 10;
+
+	/**
 	 * The number of structural features of the '<em>Scripting</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING_FEATURE_COUNT = 9;
+	int SCRIPTING_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Scripting</em>' class.
@@ -540,6 +567,17 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getUserProfile_Userprofiletoscript();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentage <em>Percentage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Percentage</em>'.
+	 * @see canopus.canopusPerformanceScenario.UserProfile#getPercentage()
+	 * @see #getUserProfile()
+	 * @generated
+	 */
+	EAttribute getUserProfile_Percentage();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Workload <em>Workload</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -736,6 +774,28 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getScripting_Userprofiletoscript();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScenario.Scripting#getParamenters <em>Paramenters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Paramenters</em>'.
+	 * @see canopus.canopusPerformanceScenario.Scripting#getParamenters()
+	 * @see #getScripting()
+	 * @generated
+	 */
+	EReference getScripting_Paramenters();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScenario.Scripting#getActivityToActivity <em>Activity To Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Activity To Activity</em>'.
+	 * @see canopus.canopusPerformanceScenario.Scripting#getActivityToActivity()
+	 * @see #getScripting()
+	 * @generated
+	 */
+	EReference getScripting_ActivityToActivity();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Teste1 <em>Teste1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -921,6 +981,14 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EReference USER_PROFILE__USERPROFILETOSCRIPT = eINSTANCE.getUserProfile_Userprofiletoscript();
 
 		/**
+		 * The meta object literal for the '<em><b>Percentage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER_PROFILE__PERCENTAGE = eINSTANCE.getUserProfile_Percentage();
+
+		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.WorkloadImpl <em>Workload</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1067,6 +1135,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCRIPTING__USERPROFILETOSCRIPT = eINSTANCE.getScripting_Userprofiletoscript();
+
+		/**
+		 * The meta object literal for the '<em><b>Paramenters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCRIPTING__PARAMENTERS = eINSTANCE.getScripting_Paramenters();
+
+		/**
+		 * The meta object literal for the '<em><b>Activity To Activity</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCRIPTING__ACTIVITY_TO_ACTIVITY = eINSTANCE.getScripting_ActivityToActivity();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.Teste1Impl <em>Teste1</em>}' class.

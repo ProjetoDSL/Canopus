@@ -7,9 +7,11 @@ import canopus.canopusPerformanceScenario.Scripting;
 import canopus.canopusPerformanceScenario.UserProfileToScript;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Initial;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.SaveParameters;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime;
 
@@ -46,6 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getThinkTime <em>Think Time</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getScripts <em>Scripts</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getParamenters <em>Paramenters</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getActivityToActivity <em>Activity To Activity</em>}</li>
  * </ul>
  *
  * @generated
@@ -150,6 +154,26 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * @ordered
 	 */
 	protected UserProfileToScript userprofiletoscript;
+
+	/**
+	 * The cached value of the '{@link #getParamenters() <em>Paramenters</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParamenters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ParameterHiddenObject> paramenters;
+
+	/**
+	 * The cached value of the '{@link #getActivityToActivity() <em>Activity To Activity</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivityToActivity()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ActivityToActivity> activityToActivity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -402,6 +426,30 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ParameterHiddenObject> getParamenters() {
+		if (paramenters == null) {
+			paramenters = new EObjectContainmentEList<ParameterHiddenObject>(ParameterHiddenObject.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS);
+		}
+		return paramenters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ActivityToActivity> getActivityToActivity() {
+		if (activityToActivity == null) {
+			activityToActivity = new EObjectContainmentEList<ActivityToActivity>(ActivityToActivity.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY);
+		}
+		return activityToActivity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -437,6 +485,10 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return ((InternalEList<?>)getScripts()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
 				return basicSetUserprofiletoscript(null, msgs);
+			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
+				return ((InternalEList<?>)getParamenters()).basicRemove(otherEnd, msgs);
+			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
+				return ((InternalEList<?>)getActivityToActivity()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -468,6 +520,10 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
 				if (resolve) return getUserprofiletoscript();
 				return basicGetUserprofiletoscript();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
+				return getParamenters();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
+				return getActivityToActivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -513,6 +569,14 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
 				setUserprofiletoscript((UserProfileToScript)newValue);
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
+				getParamenters().clear();
+				getParamenters().addAll((Collection<? extends ParameterHiddenObject>)newValue);
+				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
+				getActivityToActivity().clear();
+				getActivityToActivity().addAll((Collection<? extends ActivityToActivity>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -552,6 +616,12 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
 				setUserprofiletoscript((UserProfileToScript)null);
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
+				getParamenters().clear();
+				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
+				getActivityToActivity().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -582,6 +652,10 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return scripts != null && !scripts.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
 				return userprofiletoscript != null;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
+				return paramenters != null && !paramenters.isEmpty();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
+				return activityToActivity != null && !activityToActivity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -7,15 +7,18 @@ import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.UserProfileToScript;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -30,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.UserProfileImpl#getPercentage <em>Percentage</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,6 +88,26 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * @ordered
 	 */
 	protected EList<UserProfileToScript> userprofiletoscript;
+
+	/**
+	 * The default value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPercentage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int PERCENTAGE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPercentage()
+	 * @generated
+	 * @ordered
+	 */
+	protected int percentage = PERCENTAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,6 +187,27 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getPercentage() {
+		return percentage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPercentage(int newPercentage) {
+		int oldPercentage = percentage;
+		percentage = newPercentage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE, oldPercentage, percentage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -201,6 +246,8 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return getDescription();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT:
 				return getUserprofiletoscript();
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
+				return getPercentage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,6 +271,9 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				getUserprofiletoscript().clear();
 				getUserprofiletoscript().addAll((Collection<? extends UserProfileToScript>)newValue);
 				return;
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
+				setPercentage((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -245,6 +295,9 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT:
 				getUserprofiletoscript().clear();
 				return;
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
+				setPercentage(PERCENTAGE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -263,6 +316,8 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT:
 				return userprofiletoscript != null && !userprofiletoscript.isEmpty();
+			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
+				return percentage != PERCENTAGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -281,6 +336,8 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", percentage: ");
+		result.append(percentage);
 		result.append(')');
 		return result.toString();
 	}

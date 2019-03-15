@@ -196,7 +196,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int ACTIVITY__LOOP_INSTANCES = 4;
 
 	/**
-	 * The feature id for the '<em><b>Parameterhiddenobject</b></em>' containment reference.
+	 * The feature id for the '<em><b>Parameterhiddenobject</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,22 +214,13 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int ACTIVITY__TRANSACTION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__ACTIVITY = 7;
-
-	/**
 	 * The feature id for the '<em><b>Final</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__FINAL = 8;
+	int ACTIVITY__FINAL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Thinktime</b></em>' reference.
@@ -238,7 +229,25 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__THINKTIME = 9;
+	int ACTIVITY__THINKTIME = 8;
+
+	/**
+	 * The feature id for the '<em><b>Scripting</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__SCRIPTING = 9;
+
+	/**
+	 * The feature id for the '<em><b>Activitytoactivity</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__ACTIVITYTOACTIVITY = 10;
 
 	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
@@ -247,7 +256,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 10;
+	int ACTIVITY_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -397,7 +406,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int DATA_TABLE__ATTACHEDFILE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * The feature id for the '<em><b>Activity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -552,6 +561,61 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int COLUMNS_HIDDEN_OBJECT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityToActivityImpl <em>Activity To Activity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityToActivityImpl
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getActivityToActivity()
+	 * @generated
+	 */
+	int ACTIVITY_TO_ACTIVITY = 8;
+
+	/**
+	 * The feature id for the '<em><b>Time Percentage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_TO_ACTIVITY__TIME_PERCENTAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Activity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_TO_ACTIVITY__ACTIVITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Activies</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_TO_ACTIVITY__ACTIVIES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Activity To Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_TO_ACTIVITY_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Activity To Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_TO_ACTIVITY_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -559,7 +623,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getTYPEACTION()
 	 * @generated
 	 */
-	int TYPEACTION = 8;
+	int TYPEACTION = 9;
 
 	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.UPDATED_VALUE_ON <em>UPDATED VALUE ON</em>}' enum.
@@ -569,7 +633,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getUPDATED_VALUE_ON()
 	 * @generated
 	 */
-	int UPDATED_VALUE_ON = 9;
+	int UPDATED_VALUE_ON = 10;
 
 	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.SELECT_NEXT_ROW <em>SELECT NEXT ROW</em>}' enum.
@@ -579,7 +643,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getSELECT_NEXT_ROW()
 	 * @generated
 	 */
-	int SELECT_NEXT_ROW = 10;
+	int SELECT_NEXT_ROW = 11;
 
 
 	/**
@@ -701,10 +765,10 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EAttribute getActivity_LoopInstances();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getParameterhiddenobject <em>Parameterhiddenobject</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getParameterhiddenobject <em>Parameterhiddenobject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Parameterhiddenobject</em>'.
+	 * @return the meta object for the reference list '<em>Parameterhiddenobject</em>'.
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getParameterhiddenobject()
 	 * @see #getActivity()
 	 * @generated
@@ -721,17 +785,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getActivity_Transaction();
-
-	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getActivity <em>Activity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Activity</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getActivity()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EReference getActivity_Activity();
 
 	/**
 	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getFinal <em>Final</em>}'.
@@ -754,6 +807,28 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivity_Thinktime();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getScripting <em>Scripting</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scripting</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getScripting()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Scripting();
+
+	/**
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getActivitytoactivity <em>Activitytoactivity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Activitytoactivity</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getActivitytoactivity()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Activitytoactivity();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime <em>Think Time</em>}'.
@@ -874,10 +949,10 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EReference getDataTable_Attachedfile();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getActivity <em>Activity</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getActivity <em>Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @return the meta object for the reference list '<em>Activity</em>'.
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getActivity()
 	 * @see #getDataTable()
 	 * @generated
@@ -991,6 +1066,49 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getColumnsHiddenObject_ParameterName();
+
+	/**
+	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity <em>Activity To Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Activity To Activity</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity
+	 * @generated
+	 */
+	EClass getActivityToActivity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity#getTimePercentage <em>Time Percentage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time Percentage</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity#getTimePercentage()
+	 * @see #getActivityToActivity()
+	 * @generated
+	 */
+	EAttribute getActivityToActivity_TimePercentage();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity#getActivity <em>Activity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Activity</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity#getActivity()
+	 * @see #getActivityToActivity()
+	 * @generated
+	 */
+	EReference getActivityToActivity_Activity();
+
+	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity#getActivies <em>Activies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Activies</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity#getActivies()
+	 * @see #getActivityToActivity()
+	 * @generated
+	 */
+	EReference getActivityToActivity_Activies();
 
 	/**
 	 * Returns the meta object for enum '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}'.
@@ -1140,7 +1258,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EAttribute ACTIVITY__LOOP_INSTANCES = eINSTANCE.getActivity_LoopInstances();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameterhiddenobject</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Parameterhiddenobject</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1154,14 +1272,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACTIVITY__TRANSACTION = eINSTANCE.getActivity_Transaction();
-
-		/**
-		 * The meta object literal for the '<em><b>Activity</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTIVITY__ACTIVITY = eINSTANCE.getActivity_Activity();
 
 		/**
 		 * The meta object literal for the '<em><b>Final</b></em>' reference feature.
@@ -1178,6 +1288,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__THINKTIME = eINSTANCE.getActivity_Thinktime();
+
+		/**
+		 * The meta object literal for the '<em><b>Scripting</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__SCRIPTING = eINSTANCE.getActivity_Scripting();
+
+		/**
+		 * The meta object literal for the '<em><b>Activitytoactivity</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__ACTIVITYTOACTIVITY = eINSTANCE.getActivity_Activitytoactivity();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ThinkTimeImpl <em>Think Time</em>}' class.
@@ -1274,7 +1400,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EReference DATA_TABLE__ATTACHEDFILE = eINSTANCE.getDataTable_Attachedfile();
 
 		/**
-		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1364,6 +1490,40 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLUMNS_HIDDEN_OBJECT__PARAMETER_NAME = eINSTANCE.getColumnsHiddenObject_ParameterName();
+
+		/**
+		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityToActivityImpl <em>Activity To Activity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityToActivityImpl
+		 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getActivityToActivity()
+		 * @generated
+		 */
+		EClass ACTIVITY_TO_ACTIVITY = eINSTANCE.getActivityToActivity();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Percentage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTIVITY_TO_ACTIVITY__TIME_PERCENTAGE = eINSTANCE.getActivityToActivity_TimePercentage();
+
+		/**
+		 * The meta object literal for the '<em><b>Activity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY_TO_ACTIVITY__ACTIVITY = eINSTANCE.getActivityToActivity_Activity();
+
+		/**
+		 * The meta object literal for the '<em><b>Activies</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY_TO_ACTIVITY__ACTIVIES = eINSTANCE.getActivityToActivity_Activies();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION <em>TYPEACTION</em>}' enum.

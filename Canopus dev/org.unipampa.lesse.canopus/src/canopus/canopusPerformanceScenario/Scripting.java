@@ -3,9 +3,11 @@
 package canopus.canopusPerformanceScenario;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Initial;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.SaveParameters;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime;
 
@@ -31,6 +33,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getThinkTime <em>Think Time</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getScripts <em>Scripts</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getParamenters <em>Paramenters</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getActivityToActivity <em>Activity To Activity</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting()
@@ -143,7 +147,7 @@ public interface Scripting extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Saveparameters</em>' containment reference list.
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Saveparameters()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<SaveParameters> getSaveparameters();
@@ -209,7 +213,7 @@ public interface Scripting extends EObject {
 	 * @see #setUserprofiletoscript(UserProfileToScript)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Userprofiletoscript()
 	 * @see canopus.canopusPerformanceScenario.UserProfileToScript#getScripting
-	 * @model opposite="scripting" required="true"
+	 * @model opposite="scripting"
 	 * @generated
 	 */
 	UserProfileToScript getUserprofiletoscript();
@@ -223,5 +227,37 @@ public interface Scripting extends EObject {
 	 * @generated
 	 */
 	void setUserprofiletoscript(UserProfileToScript value);
+
+	/**
+	 * Returns the value of the '<em><b>Paramenters</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Paramenters</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Paramenters</em>' containment reference list.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Paramenters()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ParameterHiddenObject> getParamenters();
+
+	/**
+	 * Returns the value of the '<em><b>Activity To Activity</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Activity To Activity</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Activity To Activity</em>' containment reference list.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_ActivityToActivity()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ActivityToActivity> getActivityToActivity();
 
 } // Scripting

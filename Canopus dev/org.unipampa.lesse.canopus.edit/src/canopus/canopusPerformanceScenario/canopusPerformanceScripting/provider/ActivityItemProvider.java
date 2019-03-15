@@ -4,7 +4,6 @@ package canopus.canopusPerformanceScenario.canopusPerformanceScripting.provider;
 
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
-import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingFactory;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 
 import canopus.provider.CanopusEditPlugin;
@@ -16,8 +15,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -70,10 +67,12 @@ public class ActivityItemProvider
 			addMethodPropertyDescriptor(object);
 			addTypeActionPropertyDescriptor(object);
 			addLoopInstancesPropertyDescriptor(object);
+			addParameterhiddenobjectPropertyDescriptor(object);
 			addTransactionPropertyDescriptor(object);
-			addActivityPropertyDescriptor(object);
 			addFinalPropertyDescriptor(object);
 			addThinktimePropertyDescriptor(object);
+			addScriptingPropertyDescriptor(object);
+			addActivitytoactivityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -189,6 +188,28 @@ public class ActivityItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Parameterhiddenobject feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addParameterhiddenobjectPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_parameterhiddenobject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_parameterhiddenobject_feature", "_UI_Activity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__PARAMETERHIDDENOBJECT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Transaction feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,28 +227,6 @@ public class ActivityItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Activity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addActivityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Activity_activity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_activity_feature", "_UI_Activity_type"),
-				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__ACTIVITY,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -277,33 +276,47 @@ public class ActivityItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Scripting feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(CanopusPerformanceScriptingPackage.Literals.ACTIVITY__PARAMETERHIDDENOBJECT);
-		}
-		return childrenFeatures;
+	protected void addScriptingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_scripting_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_scripting_feature", "_UI_Activity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__SCRIPTING,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
+	 * This adds a property descriptor for the Activitytoactivity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addActivitytoactivityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_activitytoactivity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_activitytoactivity_feature", "_UI_Activity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__ACTIVITYTOACTIVITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -352,9 +365,6 @@ public class ActivityItemProvider
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TRANSACTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -369,11 +379,6 @@ public class ActivityItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPerformanceScriptingPackage.Literals.ACTIVITY__PARAMETERHIDDENOBJECT,
-				 CanopusPerformanceScriptingFactory.eINSTANCE.createParameterHiddenObject()));
 	}
 
 	/**

@@ -256,6 +256,29 @@ public class CanopusPerformanceScriptingItemProviderAdapterFactory extends Canop
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ActivityToActivityItemProvider activityToActivityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createActivityToActivityAdapter() {
+		if (activityToActivityItemProvider == null) {
+			activityToActivityItemProvider = new ActivityToActivityItemProvider(this);
+		}
+
+		return activityToActivityItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +385,7 @@ public class CanopusPerformanceScriptingItemProviderAdapterFactory extends Canop
 		if (dataTableItemProvider != null) dataTableItemProvider.dispose();
 		if (parameterHiddenObjectItemProvider != null) parameterHiddenObjectItemProvider.dispose();
 		if (columnsHiddenObjectItemProvider != null) columnsHiddenObjectItemProvider.dispose();
+		if (activityToActivityItemProvider != null) activityToActivityItemProvider.dispose();
 	}
 
 }

@@ -2,7 +2,10 @@
  */
 package canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl;
 
+import canopus.canopusPerformanceScenario.Scripting;
+
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
@@ -23,6 +26,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,9 +44,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getLoopInstances <em>Loop Instances</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getParameterhiddenobject <em>Parameterhiddenobject</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#isTransaction <em>Transaction</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getActivity <em>Activity</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getFinal <em>Final</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getThinktime <em>Thinktime</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getScripting <em>Scripting</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getActivitytoactivity <em>Activitytoactivity</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,7 +141,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int LOOP_INSTANCES_EDEFAULT = 0;
+	protected static final int LOOP_INSTANCES_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getLoopInstances() <em>Loop Instances</em>}' attribute.
@@ -148,14 +154,14 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	protected int loopInstances = LOOP_INSTANCES_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParameterhiddenobject() <em>Parameterhiddenobject</em>}' containment reference.
+	 * The cached value of the '{@link #getParameterhiddenobject() <em>Parameterhiddenobject</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getParameterhiddenobject()
 	 * @generated
 	 * @ordered
 	 */
-	protected ParameterHiddenObject parameterhiddenobject;
+	protected EList<ParameterHiddenObject> parameterhiddenobject;
 
 	/**
 	 * The default value of the '{@link #isTransaction() <em>Transaction</em>}' attribute.
@@ -178,16 +184,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	protected boolean transaction = TRANSACTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getActivity()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Activity> activity;
-
-	/**
 	 * The cached value of the '{@link #getFinal() <em>Final</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,6 +202,26 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected ThinkTime thinktime;
+
+	/**
+	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScripting()
+	 * @generated
+	 * @ordered
+	 */
+	protected Scripting scripting;
+
+	/**
+	 * The cached value of the '{@link #getActivitytoactivity() <em>Activitytoactivity</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActivitytoactivity()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ActivityToActivity> activitytoactivity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -336,42 +352,11 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterHiddenObject getParameterhiddenobject() {
+	public EList<ParameterHiddenObject> getParameterhiddenobject() {
+		if (parameterhiddenobject == null) {
+			parameterhiddenobject = new EObjectResolvingEList<ParameterHiddenObject>(ParameterHiddenObject.class, this, CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT);
+		}
 		return parameterhiddenobject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetParameterhiddenobject(ParameterHiddenObject newParameterhiddenobject, NotificationChain msgs) {
-		ParameterHiddenObject oldParameterhiddenobject = parameterhiddenobject;
-		parameterhiddenobject = newParameterhiddenobject;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT, oldParameterhiddenobject, newParameterhiddenobject);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParameterhiddenobject(ParameterHiddenObject newParameterhiddenobject) {
-		if (newParameterhiddenobject != parameterhiddenobject) {
-			NotificationChain msgs = null;
-			if (parameterhiddenobject != null)
-				msgs = ((InternalEObject)parameterhiddenobject).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT, null, msgs);
-			if (newParameterhiddenobject != null)
-				msgs = ((InternalEObject)newParameterhiddenobject).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT, null, msgs);
-			msgs = basicSetParameterhiddenobject(newParameterhiddenobject, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT, newParameterhiddenobject, newParameterhiddenobject));
 	}
 
 	/**
@@ -393,18 +378,6 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 		transaction = newTransaction;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__TRANSACTION, oldTransaction, transaction));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Activity> getActivity() {
-		if (activity == null) {
-			activity = new EObjectResolvingEList<Activity>(Activity.class, this, CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY);
-		}
-		return activity;
 	}
 
 	/**
@@ -488,11 +461,76 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Scripting getScripting() {
+		if (scripting != null && scripting.eIsProxy()) {
+			InternalEObject oldScripting = (InternalEObject)scripting;
+			scripting = (Scripting)eResolveProxy(oldScripting);
+			if (scripting != oldScripting) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTING, oldScripting, scripting));
+			}
+		}
+		return scripting;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Scripting basicGetScripting() {
+		return scripting;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScripting(Scripting newScripting) {
+		Scripting oldScripting = scripting;
+		scripting = newScripting;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTING, oldScripting, scripting));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ActivityToActivity> getActivitytoactivity() {
+		if (activitytoactivity == null) {
+			activitytoactivity = new EObjectWithInverseResolvingEList<ActivityToActivity>(ActivityToActivity.class, this, CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY, CanopusPerformanceScriptingPackage.ACTIVITY_TO_ACTIVITY__ACTIVITY);
+		}
+		return activitytoactivity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActivitytoactivity()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
-				return basicSetParameterhiddenobject(null, msgs);
+			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
+				return ((InternalEList<?>)getActivitytoactivity()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -519,14 +557,17 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return getParameterhiddenobject();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TRANSACTION:
 				return isTransaction();
-			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
-				return getActivity();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				if (resolve) return getFinal();
 				return basicGetFinal();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
 				if (resolve) return getThinktime();
 				return basicGetThinktime();
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTING:
+				if (resolve) return getScripting();
+				return basicGetScripting();
+			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
+				return getActivitytoactivity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -556,20 +597,24 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				setLoopInstances((Integer)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
-				setParameterhiddenobject((ParameterHiddenObject)newValue);
+				getParameterhiddenobject().clear();
+				getParameterhiddenobject().addAll((Collection<? extends ParameterHiddenObject>)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TRANSACTION:
 				setTransaction((Boolean)newValue);
-				return;
-			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
-				getActivity().clear();
-				getActivity().addAll((Collection<? extends Activity>)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				setFinal((Final)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
 				setThinktime((ThinkTime)newValue);
+				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTING:
+				setScripting((Scripting)newValue);
+				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
+				getActivitytoactivity().clear();
+				getActivitytoactivity().addAll((Collection<? extends ActivityToActivity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -599,19 +644,22 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				setLoopInstances(LOOP_INSTANCES_EDEFAULT);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
-				setParameterhiddenobject((ParameterHiddenObject)null);
+				getParameterhiddenobject().clear();
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TRANSACTION:
 				setTransaction(TRANSACTION_EDEFAULT);
-				return;
-			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
-				getActivity().clear();
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				setFinal((Final)null);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
 				setThinktime((ThinkTime)null);
+				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTING:
+				setScripting((Scripting)null);
+				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
+				getActivitytoactivity().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -636,15 +684,17 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case CanopusPerformanceScriptingPackage.ACTIVITY__LOOP_INSTANCES:
 				return loopInstances != LOOP_INSTANCES_EDEFAULT;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT:
-				return parameterhiddenobject != null;
+				return parameterhiddenobject != null && !parameterhiddenobject.isEmpty();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TRANSACTION:
 				return transaction != TRANSACTION_EDEFAULT;
-			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITY:
-				return activity != null && !activity.isEmpty();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__FINAL:
 				return final_ != null;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__THINKTIME:
 				return thinktime != null;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SCRIPTING:
+				return scripting != null;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
+				return activitytoactivity != null && !activitytoactivity.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

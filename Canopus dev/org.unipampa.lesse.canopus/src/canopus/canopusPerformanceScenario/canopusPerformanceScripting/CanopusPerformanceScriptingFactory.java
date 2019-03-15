@@ -94,6 +94,15 @@ public interface CanopusPerformanceScriptingFactory extends EFactory {
 	ColumnsHiddenObject createColumnsHiddenObject();
 
 	/**
+	 * Returns a new object of class '<em>Activity To Activity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Activity To Activity</em>'.
+	 * @generated
+	 */
+	ActivityToActivity createActivityToActivity();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -114,6 +114,12 @@ public class CanopusPerformanceScriptingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CanopusPerformanceScriptingPackage.ACTIVITY_TO_ACTIVITY: {
+				ActivityToActivity activityToActivity = (ActivityToActivity)theEObject;
+				T result = caseActivityToActivity(activityToActivity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -235,6 +241,21 @@ public class CanopusPerformanceScriptingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseColumnsHiddenObject(ColumnsHiddenObject object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Activity To Activity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Activity To Activity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseActivityToActivity(ActivityToActivity object) {
 		return null;
 	}
 

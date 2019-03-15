@@ -4,6 +4,8 @@ package canopus.canopusPerformanceScenario.canopusPerformanceScripting;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.ExternalFile;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -105,29 +107,19 @@ public interface DataTable extends EObject {
 	void setAttachedfile(ExternalFile value);
 
 	/**
-	 * Returns the value of the '<em><b>Activity</b></em>' reference.
+	 * Returns the value of the '<em><b>Activity</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Activity</em>' reference isn't clear,
+	 * If the meaning of the '<em>Activity</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activity</em>' reference.
-	 * @see #setActivity(Activity)
+	 * @return the value of the '<em>Activity</em>' reference list.
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getDataTable_Activity()
 	 * @model
 	 * @generated
 	 */
-	Activity getActivity();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getActivity <em>Activity</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Activity</em>' reference.
-	 * @see #getActivity()
-	 * @generated
-	 */
-	void setActivity(Activity value);
+	EList<Activity> getActivity();
 
 } // DataTable

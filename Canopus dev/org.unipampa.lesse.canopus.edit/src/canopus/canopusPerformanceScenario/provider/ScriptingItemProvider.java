@@ -136,6 +136,8 @@ public class ScriptingItemProvider
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__DATATABLES);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__THINK_TIME);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__SCRIPTS);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__PARAMENTERS);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__ACTIVITY_TO_ACTIVITY);
 		}
 		return childrenFeatures;
 	}
@@ -201,6 +203,8 @@ public class ScriptingItemProvider
 			case CanopusPerformanceScenarioPackage.SCRIPTING__DATATABLES:
 			case CanopusPerformanceScenarioPackage.SCRIPTING__THINK_TIME:
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
+			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
+			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -252,6 +256,16 @@ public class ScriptingItemProvider
 			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__SCRIPTS,
 				 CanopusPerformanceScenarioFactory.eINSTANCE.createScripting()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__PARAMENTERS,
+				 CanopusPerformanceScriptingFactory.eINSTANCE.createParameterHiddenObject()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__ACTIVITY_TO_ACTIVITY,
+				 CanopusPerformanceScriptingFactory.eINSTANCE.createActivityToActivity()));
 	}
 
 	/**

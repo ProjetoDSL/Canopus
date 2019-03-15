@@ -15,6 +15,7 @@ import canopus.canopusPerformanceMonitoring.impl.CanopusPerformanceMonitoringPac
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingFactory;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject;
@@ -107,6 +108,13 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	private EClass columnsHiddenObjectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activityToActivityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -338,7 +346,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivity_Activity() {
+	public EReference getActivity_Final() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -347,7 +355,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivity_Final() {
+	public EReference getActivity_Thinktime() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -356,8 +364,17 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getActivity_Thinktime() {
+	public EReference getActivity_Scripting() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Activitytoactivity() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -563,6 +580,42 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getActivityToActivity() {
+		return activityToActivityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivityToActivity_TimePercentage() {
+		return (EAttribute)activityToActivityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivityToActivity_Activity() {
+		return (EReference)activityToActivityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivityToActivity_Activies() {
+		return (EReference)activityToActivityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTYPEACTION() {
 		return typeactionEEnum;
 	}
@@ -628,9 +681,10 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		createEAttribute(activityEClass, ACTIVITY__LOOP_INSTANCES);
 		createEReference(activityEClass, ACTIVITY__PARAMETERHIDDENOBJECT);
 		createEAttribute(activityEClass, ACTIVITY__TRANSACTION);
-		createEReference(activityEClass, ACTIVITY__ACTIVITY);
 		createEReference(activityEClass, ACTIVITY__FINAL);
 		createEReference(activityEClass, ACTIVITY__THINKTIME);
+		createEReference(activityEClass, ACTIVITY__SCRIPTING);
+		createEReference(activityEClass, ACTIVITY__ACTIVITYTOACTIVITY);
 
 		thinkTimeEClass = createEClass(THINK_TIME);
 		createEAttribute(thinkTimeEClass, THINK_TIME__NAME);
@@ -658,6 +712,11 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__SELECTNEXTROW);
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__UPDATEDVALUEON);
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__PARAMETER_NAME);
+
+		activityToActivityEClass = createEClass(ACTIVITY_TO_ACTIVITY);
+		createEAttribute(activityToActivityEClass, ACTIVITY_TO_ACTIVITY__TIME_PERCENTAGE);
+		createEReference(activityToActivityEClass, ACTIVITY_TO_ACTIVITY__ACTIVITY);
+		createEReference(activityToActivityEClass, ACTIVITY_TO_ACTIVITY__ACTIVIES);
 
 		// Create enums
 		typeactionEEnum = createEEnum(TYPEACTION);
@@ -690,6 +749,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 
 		// Obtain other dependent packages
 		CanopusPerformanceExternalFilePackage theCanopusPerformanceExternalFilePackage = (CanopusPerformanceExternalFilePackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceExternalFilePackage.eNS_URI);
+		CanopusPerformanceScenarioPackage theCanopusPerformanceScenarioPackage = (CanopusPerformanceScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(CanopusPerformanceScenarioPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theCanopusPerformanceExternalFilePackage);
@@ -713,12 +773,13 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEAttribute(getActivity_Action(), ecorePackage.getEString(), "action", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Method(), ecorePackage.getEBoolean(), "method", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivity_LoopInstances(), ecorePackage.getEInt(), "loopInstances", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivity_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_LoopInstances(), ecorePackage.getEInt(), "loopInstances", "1", 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 3, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Transaction(), ecorePackage.getEBoolean(), "transaction", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActivity_Activity(), this.getActivity(), null, "activity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Final(), this.getFinal(), null, "final", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Thinktime(), this.getThinkTime(), null, "thinktime", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Scripting(), theCanopusPerformanceScenarioPackage.getScripting(), null, "scripting", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Activitytoactivity(), this.getActivityToActivity(), this.getActivityToActivity_Activity(), "activitytoactivity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thinkTimeEClass, ThinkTime.class, "ThinkTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getThinkTime_Name(), ecorePackage.getEString(), "name", null, 0, 1, ThinkTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -733,7 +794,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEAttribute(getDataTable_Delimeter(), ecorePackage.getEString(), "delimeter", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataTable_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataTable_Attachedfile(), theCanopusPerformanceExternalFilePackage.getExternalFile(), null, "attachedfile", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataTable_Activity(), this.getActivity(), null, "activity", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataTable_Activity(), this.getActivity(), null, "activity", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterHiddenObjectEClass, ParameterHiddenObject.class, "ParameterHiddenObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameterHiddenObject_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -746,6 +807,11 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEAttribute(getColumnsHiddenObject_Selectnextrow(), this.getSELECT_NEXT_ROW(), "selectnextrow", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getColumnsHiddenObject_Updatedvalueon(), this.getUPDATED_VALUE_ON(), "updatedvalueon", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getColumnsHiddenObject_ParameterName(), ecorePackage.getEString(), "parameterName", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(activityToActivityEClass, ActivityToActivity.class, "ActivityToActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getActivityToActivity_TimePercentage(), ecorePackage.getEInt(), "timePercentage", null, 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityToActivity_Activity(), this.getActivity(), this.getActivity_Activitytoactivity(), "activity", null, 1, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityToActivity_Activies(), this.getActivity(), null, "activies", null, 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.class, "TYPEACTION");

@@ -11,6 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>SUT</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * sdsfhdfgdkfgdjgfdjkfgjkd
+ * 
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
