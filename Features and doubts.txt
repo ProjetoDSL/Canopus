@@ -6,6 +6,14 @@ Como inserir serviços e chamados para dinamicamente alterar conteudo na sirius 
 Ligar modelos xtext com modelos EMF:
 https://typefox.io/linking-xtext-models-with-other-emf-models
 
+Manual 1 Sirius:
+https://www.eclipse.org/sirius/doc/developer/Sirius%20Developer%20Manual.html
+
+Specifying Model Operations manual:
+https://www.eclipse.org/sirius/doc/specifier/general/Model_Operations.html#create_view
+
+Specifying Diagram Editors:
+https://www.eclipse.org/sirius/doc/specifier/diagrams/Diagrams.html
 
 Links Sirius:
 https://wiki.eclipse.org/Sirius/Tutorials/
