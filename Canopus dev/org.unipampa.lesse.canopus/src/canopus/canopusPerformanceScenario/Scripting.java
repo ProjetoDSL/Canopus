@@ -4,6 +4,7 @@ package canopus.canopusPerformanceScenario;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Initial;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getParamenters <em>Paramenters</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getActivityToActivity <em>Activity To Activity</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.Scripting#getColumns <em>Columns</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting()
@@ -259,5 +261,21 @@ public interface Scripting extends EObject {
 	 * @generated
 	 */
 	EList<ActivityToActivity> getActivityToActivity();
+
+	/**
+	 * Returns the value of the '<em><b>Columns</b></em>' containment reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Columns</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Columns</em>' containment reference list.
+	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Columns()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ColumnsHiddenObject> getColumns();
 
 } // Scripting

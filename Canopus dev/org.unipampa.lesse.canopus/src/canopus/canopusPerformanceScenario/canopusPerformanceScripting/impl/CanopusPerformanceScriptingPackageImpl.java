@@ -454,7 +454,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDataTable_Delimeter() {
+	public EAttribute getDataTable_AttachedFile() {
 		return (EAttribute)dataTableEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -463,17 +463,8 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataTable_Parameterhiddenobject() {
-		return (EReference)dataTableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataTable_Attachedfile() {
-		return (EReference)dataTableEClass.getEStructuralFeatures().get(2);
+	public EAttribute getDataTable_Delimeter() {
+		return (EAttribute)dataTableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -482,6 +473,15 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	public EReference getDataTable_Activity() {
+		return (EReference)dataTableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDataTable_Columnshiddenobject() {
 		return (EReference)dataTableEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -526,7 +526,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameterHiddenObject_Dynamicvalues() {
+	public EReference getParameterHiddenObject_Columnshiddenobject() {
 		return (EReference)parameterHiddenObjectEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -696,16 +696,16 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		createEReference(saveParametersEClass, SAVE_PARAMETERS__PARAMETERHIDDENOBJECT);
 
 		dataTableEClass = createEClass(DATA_TABLE);
+		createEAttribute(dataTableEClass, DATA_TABLE__ATTACHED_FILE);
 		createEAttribute(dataTableEClass, DATA_TABLE__DELIMETER);
-		createEReference(dataTableEClass, DATA_TABLE__PARAMETERHIDDENOBJECT);
-		createEReference(dataTableEClass, DATA_TABLE__ATTACHEDFILE);
 		createEReference(dataTableEClass, DATA_TABLE__ACTIVITY);
+		createEReference(dataTableEClass, DATA_TABLE__COLUMNSHIDDENOBJECT);
 
 		parameterHiddenObjectEClass = createEClass(PARAMETER_HIDDEN_OBJECT);
 		createEAttribute(parameterHiddenObjectEClass, PARAMETER_HIDDEN_OBJECT__TYPE_ACTION);
 		createEAttribute(parameterHiddenObjectEClass, PARAMETER_HIDDEN_OBJECT__PARAMETER_NAME);
 		createEAttribute(parameterHiddenObjectEClass, PARAMETER_HIDDEN_OBJECT__STATIC_VALUE);
-		createEReference(parameterHiddenObjectEClass, PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES);
+		createEReference(parameterHiddenObjectEClass, PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT);
 
 		columnsHiddenObjectEClass = createEClass(COLUMNS_HIDDEN_OBJECT);
 		createEAttribute(columnsHiddenObjectEClass, COLUMNS_HIDDEN_OBJECT__REFERENDED_PARAMETER);
@@ -791,16 +791,16 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEReference(getSaveParameters_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 1, SaveParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTableEClass, DataTable.class, "DataTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataTable_AttachedFile(), ecorePackage.getEString(), "attachedFile", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataTable_Delimeter(), ecorePackage.getEString(), "delimeter", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataTable_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataTable_Attachedfile(), theCanopusPerformanceExternalFilePackage.getExternalFile(), null, "attachedfile", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataTable_Activity(), this.getActivity(), null, "activity", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataTable_Columnshiddenobject(), this.getColumnsHiddenObject(), null, "columnshiddenobject", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterHiddenObjectEClass, ParameterHiddenObject.class, "ParameterHiddenObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameterHiddenObject_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameterHiddenObject_ParameterName(), ecorePackage.getEString(), "parameterName", null, 0, 1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameterHiddenObject_StaticValue(), ecorePackage.getEString(), "staticValue", null, 0, 1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameterHiddenObject_Dynamicvalues(), this.getColumnsHiddenObject(), null, "dynamicvalues", null, 0, 1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameterHiddenObject_Columnshiddenobject(), this.getColumnsHiddenObject(), null, "columnshiddenobject", null, 0, -1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(columnsHiddenObjectEClass, ColumnsHiddenObject.class, "ColumnsHiddenObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumnsHiddenObject_ReferendedParameter(), ecorePackage.getEString(), "referendedParameter", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -809,7 +809,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEAttribute(getColumnsHiddenObject_ParameterName(), ecorePackage.getEString(), "parameterName", null, 0, 1, ColumnsHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(activityToActivityEClass, ActivityToActivity.class, "ActivityToActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getActivityToActivity_TimePercentage(), ecorePackage.getEInt(), "timePercentage", null, 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivityToActivity_TimePercentage(), ecorePackage.getEInt(), "timePercentage", "1", 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityToActivity_Activity(), this.getActivity(), this.getActivity_Activitytoactivity(), "activity", null, 1, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivityToActivity_Activies(), this.getActivity(), null, "activies", null, 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

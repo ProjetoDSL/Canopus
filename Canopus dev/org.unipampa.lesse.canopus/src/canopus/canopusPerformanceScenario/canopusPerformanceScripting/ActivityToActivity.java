@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ActivityToActivity extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Time Percentage</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Time Percentage</em>' attribute isn't clear,
@@ -34,7 +35,7 @@ public interface ActivityToActivity extends EObject {
 	 * @return the value of the '<em>Time Percentage</em>' attribute.
 	 * @see #setTimePercentage(int)
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivityToActivity_TimePercentage()
-	 * @model
+	 * @model default="1"
 	 * @generated
 	 */
 	int getTimePercentage();

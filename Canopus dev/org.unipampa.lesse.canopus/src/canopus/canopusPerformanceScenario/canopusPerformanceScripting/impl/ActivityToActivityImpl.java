@@ -39,7 +39,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int TIME_PERCENTAGE_EDEFAULT = 0;
+	protected static final int TIME_PERCENTAGE_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getTimePercentage() <em>Time Percentage</em>}' attribute.

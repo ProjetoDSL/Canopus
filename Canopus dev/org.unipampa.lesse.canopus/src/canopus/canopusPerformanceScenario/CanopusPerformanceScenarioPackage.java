@@ -321,13 +321,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int SCRIPTING__ACTIVITY_TO_ACTIVITY = 10;
 
 	/**
+	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPTING__COLUMNS = 11;
+
+	/**
 	 * The number of structural features of the '<em>Scripting</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING_FEATURE_COUNT = 11;
+	int SCRIPTING_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Scripting</em>' class.
@@ -796,6 +805,17 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getScripting_ActivityToActivity();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScenario.Scripting#getColumns <em>Columns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Columns</em>'.
+	 * @see canopus.canopusPerformanceScenario.Scripting#getColumns()
+	 * @see #getScripting()
+	 * @generated
+	 */
+	EReference getScripting_Columns();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Teste1 <em>Teste1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1151,6 +1171,14 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCRIPTING__ACTIVITY_TO_ACTIVITY = eINSTANCE.getScripting_ActivityToActivity();
+
+		/**
+		 * The meta object literal for the '<em><b>Columns</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCRIPTING__COLUMNS = eINSTANCE.getScripting_Columns();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.Teste1Impl <em>Teste1</em>}' class.

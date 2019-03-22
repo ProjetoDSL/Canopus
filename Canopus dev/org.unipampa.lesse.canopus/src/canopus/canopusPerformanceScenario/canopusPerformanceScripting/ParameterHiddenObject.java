@@ -2,6 +2,8 @@
  */
 package canopus.canopusPerformanceScenario.canopusPerformanceScripting;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getTypeAction <em>Type Action</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getParameterName <em>Parameter Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getStaticValue <em>Static Value</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getDynamicvalues <em>Dynamicvalues</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getColumnshiddenobject <em>Columnshiddenobject</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getParameterHiddenObject()
@@ -106,29 +108,19 @@ public interface ParameterHiddenObject extends EObject {
 	void setStaticValue(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Dynamicvalues</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Columnshiddenobject</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Dynamicvalues</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Columnshiddenobject</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dynamicvalues</em>' containment reference.
-	 * @see #setDynamicvalues(ColumnsHiddenObject)
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getParameterHiddenObject_Dynamicvalues()
-	 * @model containment="true"
+	 * @return the value of the '<em>Columnshiddenobject</em>' reference list.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getParameterHiddenObject_Columnshiddenobject()
+	 * @model
 	 * @generated
 	 */
-	ColumnsHiddenObject getDynamicvalues();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getDynamicvalues <em>Dynamicvalues</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dynamicvalues</em>' containment reference.
-	 * @see #getDynamicvalues()
-	 * @generated
-	 */
-	void setDynamicvalues(ColumnsHiddenObject value);
+	EList<ColumnsHiddenObject> getColumnshiddenobject();
 
 } // ParameterHiddenObject

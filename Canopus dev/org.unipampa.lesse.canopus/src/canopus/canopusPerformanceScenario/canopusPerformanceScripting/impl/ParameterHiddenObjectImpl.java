@@ -7,14 +7,18 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHid
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ParameterHiddenObjectImpl#getTypeAction <em>Type Action</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ParameterHiddenObjectImpl#getParameterName <em>Parameter Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ParameterHiddenObjectImpl#getStaticValue <em>Static Value</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ParameterHiddenObjectImpl#getDynamicvalues <em>Dynamicvalues</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ParameterHiddenObjectImpl#getColumnshiddenobject <em>Columnshiddenobject</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,14 +98,14 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	protected String staticValue = STATIC_VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDynamicvalues() <em>Dynamicvalues</em>}' containment reference.
+	 * The cached value of the '{@link #getColumnshiddenobject() <em>Columnshiddenobject</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDynamicvalues()
+	 * @see #getColumnshiddenobject()
 	 * @generated
 	 * @ordered
 	 */
-	protected ColumnsHiddenObject dynamicvalues;
+	protected EList<ColumnsHiddenObject> columnshiddenobject;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -190,56 +194,11 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ColumnsHiddenObject getDynamicvalues() {
-		return dynamicvalues;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDynamicvalues(ColumnsHiddenObject newDynamicvalues, NotificationChain msgs) {
-		ColumnsHiddenObject oldDynamicvalues = dynamicvalues;
-		dynamicvalues = newDynamicvalues;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES, oldDynamicvalues, newDynamicvalues);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<ColumnsHiddenObject> getColumnshiddenobject() {
+		if (columnshiddenobject == null) {
+			columnshiddenobject = new EObjectResolvingEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDynamicvalues(ColumnsHiddenObject newDynamicvalues) {
-		if (newDynamicvalues != dynamicvalues) {
-			NotificationChain msgs = null;
-			if (dynamicvalues != null)
-				msgs = ((InternalEObject)dynamicvalues).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES, null, msgs);
-			if (newDynamicvalues != null)
-				msgs = ((InternalEObject)newDynamicvalues).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES, null, msgs);
-			msgs = basicSetDynamicvalues(newDynamicvalues, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES, newDynamicvalues, newDynamicvalues));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES:
-				return basicSetDynamicvalues(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return columnshiddenobject;
 	}
 
 	/**
@@ -256,8 +215,8 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 				return getParameterName();
 			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__STATIC_VALUE:
 				return getStaticValue();
-			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES:
-				return getDynamicvalues();
+			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT:
+				return getColumnshiddenobject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,6 +226,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -279,8 +239,9 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__STATIC_VALUE:
 				setStaticValue((String)newValue);
 				return;
-			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES:
-				setDynamicvalues((ColumnsHiddenObject)newValue);
+			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT:
+				getColumnshiddenobject().clear();
+				getColumnshiddenobject().addAll((Collection<? extends ColumnsHiddenObject>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -303,8 +264,8 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__STATIC_VALUE:
 				setStaticValue(STATIC_VALUE_EDEFAULT);
 				return;
-			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES:
-				setDynamicvalues((ColumnsHiddenObject)null);
+			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT:
+				getColumnshiddenobject().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -324,8 +285,8 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 				return PARAMETER_NAME_EDEFAULT == null ? parameterName != null : !PARAMETER_NAME_EDEFAULT.equals(parameterName);
 			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__STATIC_VALUE:
 				return STATIC_VALUE_EDEFAULT == null ? staticValue != null : !STATIC_VALUE_EDEFAULT.equals(staticValue);
-			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES:
-				return dynamicvalues != null;
+			case CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT:
+				return columnshiddenobject != null && !columnshiddenobject.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -4,24 +4,17 @@ package canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
-import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
-
-import canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.ExternalFile;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -32,15 +25,35 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.DataTableImpl#getAttachedFile <em>Attached File</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.DataTableImpl#getDelimeter <em>Delimeter</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.DataTableImpl#getParameterhiddenobject <em>Parameterhiddenobject</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.DataTableImpl#getAttachedfile <em>Attachedfile</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.DataTableImpl#getActivity <em>Activity</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.DataTableImpl#getColumnshiddenobject <em>Columnshiddenobject</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DataTableImpl extends MinimalEObjectImpl.Container implements DataTable {
+	/**
+	 * The default value of the '{@link #getAttachedFile() <em>Attached File</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttachedFile()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ATTACHED_FILE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAttachedFile() <em>Attached File</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttachedFile()
+	 * @generated
+	 * @ordered
+	 */
+	protected String attachedFile = ATTACHED_FILE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getDelimeter() <em>Delimeter</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -62,26 +75,6 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	protected String delimeter = DELIMETER_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParameterhiddenobject() <em>Parameterhiddenobject</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParameterhiddenobject()
-	 * @generated
-	 * @ordered
-	 */
-	protected ParameterHiddenObject parameterhiddenobject;
-
-	/**
-	 * The cached value of the '{@link #getAttachedfile() <em>Attachedfile</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAttachedfile()
-	 * @generated
-	 * @ordered
-	 */
-	protected ExternalFile attachedfile;
-
-	/**
 	 * The cached value of the '{@link #getActivity() <em>Activity</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,6 +83,16 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	 * @ordered
 	 */
 	protected EList<Activity> activity;
+
+	/**
+	 * The cached value of the '{@link #getColumnshiddenobject() <em>Columnshiddenobject</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColumnshiddenobject()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ColumnsHiddenObject> columnshiddenobject;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,6 +111,27 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	@Override
 	protected EClass eStaticClass() {
 		return CanopusPerformanceScriptingPackage.Literals.DATA_TABLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAttachedFile() {
+		return attachedFile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttachedFile(String newAttachedFile) {
+		String oldAttachedFile = attachedFile;
+		attachedFile = newAttachedFile;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHED_FILE, oldAttachedFile, attachedFile));
 	}
 
 	/**
@@ -136,87 +160,6 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterHiddenObject getParameterhiddenobject() {
-		if (parameterhiddenobject != null && parameterhiddenobject.eIsProxy()) {
-			InternalEObject oldParameterhiddenobject = (InternalEObject)parameterhiddenobject;
-			parameterhiddenobject = (ParameterHiddenObject)eResolveProxy(oldParameterhiddenobject);
-			if (parameterhiddenobject != oldParameterhiddenobject) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.DATA_TABLE__PARAMETERHIDDENOBJECT, oldParameterhiddenobject, parameterhiddenobject));
-			}
-		}
-		return parameterhiddenobject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ParameterHiddenObject basicGetParameterhiddenobject() {
-		return parameterhiddenobject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParameterhiddenobject(ParameterHiddenObject newParameterhiddenobject) {
-		ParameterHiddenObject oldParameterhiddenobject = parameterhiddenobject;
-		parameterhiddenobject = newParameterhiddenobject;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.DATA_TABLE__PARAMETERHIDDENOBJECT, oldParameterhiddenobject, parameterhiddenobject));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExternalFile getAttachedfile() {
-		return attachedfile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAttachedfile(ExternalFile newAttachedfile, NotificationChain msgs) {
-		ExternalFile oldAttachedfile = attachedfile;
-		attachedfile = newAttachedfile;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE, oldAttachedfile, newAttachedfile);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAttachedfile(ExternalFile newAttachedfile) {
-		if (newAttachedfile != attachedfile) {
-			NotificationChain msgs = null;
-			if (attachedfile != null)
-				msgs = ((InternalEObject)attachedfile).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE, null, msgs);
-			if (newAttachedfile != null)
-				msgs = ((InternalEObject)newAttachedfile).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE, null, msgs);
-			msgs = basicSetAttachedfile(newAttachedfile, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE, newAttachedfile, newAttachedfile));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Activity> getActivity() {
 		if (activity == null) {
 			activity = new EObjectResolvingEList<Activity>(Activity.class, this, CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY);
@@ -229,13 +172,11 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
-				return basicSetAttachedfile(null, msgs);
+	public EList<ColumnsHiddenObject> getColumnshiddenobject() {
+		if (columnshiddenobject == null) {
+			columnshiddenobject = new EObjectResolvingEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT);
 		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return columnshiddenobject;
 	}
 
 	/**
@@ -246,15 +187,14 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHED_FILE:
+				return getAttachedFile();
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__DELIMETER:
 				return getDelimeter();
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__PARAMETERHIDDENOBJECT:
-				if (resolve) return getParameterhiddenobject();
-				return basicGetParameterhiddenobject();
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
-				return getAttachedfile();
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
 				return getActivity();
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT:
+				return getColumnshiddenobject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -268,18 +208,19 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHED_FILE:
+				setAttachedFile((String)newValue);
+				return;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__DELIMETER:
 				setDelimeter((String)newValue);
-				return;
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__PARAMETERHIDDENOBJECT:
-				setParameterhiddenobject((ParameterHiddenObject)newValue);
-				return;
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
-				setAttachedfile((ExternalFile)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
 				getActivity().clear();
 				getActivity().addAll((Collection<? extends Activity>)newValue);
+				return;
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT:
+				getColumnshiddenobject().clear();
+				getColumnshiddenobject().addAll((Collection<? extends ColumnsHiddenObject>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,17 +234,17 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHED_FILE:
+				setAttachedFile(ATTACHED_FILE_EDEFAULT);
+				return;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__DELIMETER:
 				setDelimeter(DELIMETER_EDEFAULT);
 				return;
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__PARAMETERHIDDENOBJECT:
-				setParameterhiddenobject((ParameterHiddenObject)null);
-				return;
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
-				setAttachedfile((ExternalFile)null);
-				return;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
 				getActivity().clear();
+				return;
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT:
+				getColumnshiddenobject().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -317,14 +258,14 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHED_FILE:
+				return ATTACHED_FILE_EDEFAULT == null ? attachedFile != null : !ATTACHED_FILE_EDEFAULT.equals(attachedFile);
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__DELIMETER:
 				return DELIMETER_EDEFAULT == null ? delimeter != null : !DELIMETER_EDEFAULT.equals(delimeter);
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__PARAMETERHIDDENOBJECT:
-				return parameterhiddenobject != null;
-			case CanopusPerformanceScriptingPackage.DATA_TABLE__ATTACHEDFILE:
-				return attachedfile != null;
 			case CanopusPerformanceScriptingPackage.DATA_TABLE__ACTIVITY:
 				return activity != null && !activity.isEmpty();
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT:
+				return columnshiddenobject != null && !columnshiddenobject.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -339,7 +280,9 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (delimeter: ");
+		result.append(" (attachedFile: ");
+		result.append(attachedFile);
+		result.append(", delimeter: ");
 		result.append(delimeter);
 		result.append(')');
 		return result.toString();

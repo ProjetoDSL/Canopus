@@ -416,6 +416,15 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getScripting_Columns() {
+		return (EReference)scriptingEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTeste1() {
 		return teste1EClass;
 	}
@@ -574,6 +583,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		createEReference(scriptingEClass, SCRIPTING__USERPROFILETOSCRIPT);
 		createEReference(scriptingEClass, SCRIPTING__PARAMENTERS);
 		createEReference(scriptingEClass, SCRIPTING__ACTIVITY_TO_ACTIVITY);
+		createEReference(scriptingEClass, SCRIPTING__COLUMNS);
 
 		teste1EClass = createEClass(TESTE1);
 		createEReference(teste1EClass, TESTE1__TESTE1E2);
@@ -657,6 +667,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEReference(getScripting_Userprofiletoscript(), this.getUserProfileToScript(), this.getUserProfileToScript_Scripting(), "userprofiletoscript", null, 0, 1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_Paramenters(), theCanopusPerformanceScriptingPackage.getParameterHiddenObject(), null, "paramenters", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_ActivityToActivity(), theCanopusPerformanceScriptingPackage.getActivityToActivity(), null, "activityToActivity", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScripting_Columns(), theCanopusPerformanceScriptingPackage.getColumnsHiddenObject(), null, "columns", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(teste1EClass, Teste1.class, "Teste1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTeste1_Teste1e2(), this.getTeste1E2(), this.getTeste1E2_Teste1(), "teste1e2", null, 1, -1, Teste1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

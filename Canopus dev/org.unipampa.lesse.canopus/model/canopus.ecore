@@ -65,6 +65,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" upperBound="-1"
           eType="#//canopusPerformanceMonitoring/SUT"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/HARDWARE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" defaultValueLiteral="Machine responsible for monitoring the performance metrics of the SUT. This object is optional, since the Load Generator object, besides generating workload for virtual users, can also play the role of monitoring."
+          unsettable="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="SUT_TYPE">
       <eLiterals name="DESKTOPAPP" literal="Desktop App"/>
@@ -244,6 +247,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="activityToActivity" upperBound="-1"
           eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ActivityToActivity"
           containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Teste1">
       <eStructuralFeatures xsi:type="ecore:EReference" name="teste1e2" lowerBound="1"
@@ -321,20 +327,19 @@
             containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="DataTable">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="attachedFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="delimeter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="parameterhiddenobject"
-            eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ParameterHiddenObject"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="attachedfile" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/canopusPerformanceExternalFile/ExternalFile"
-            containment="true"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="activity" upperBound="-1"
             eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="columnshiddenobject"
+            upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ParameterHiddenObject">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/TYPEACTION"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="staticValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="dynamicvalues" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"
-            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="columnshiddenobject"
+            upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="TYPEACTION">
         <eLiterals name="BODY"/>

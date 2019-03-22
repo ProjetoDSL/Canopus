@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MonitorImpl#getIp <em>Ip</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MonitorImpl#getSut <em>Sut</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MonitorImpl#getHardware <em>Hardware</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.impl.MonitorImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -106,6 +107,35 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * @ordered
 	 */
 	protected HARDWARE hardware = HARDWARE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = "Machine responsible for monitoring the performance metrics of the SUT. This object is optional, since the Load Generator object, besides generating workload for virtual users, can also play the role of monitoring.";
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * This is true if the Description attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean descriptionESet;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -206,6 +236,24 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDescription() {
+		return descriptionESet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -217,6 +265,8 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 				return getSut();
 			case CanopusPerformanceMonitoringPackage.MONITOR__HARDWARE:
 				return getHardware();
+			case CanopusPerformanceMonitoringPackage.MONITOR__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -287,6 +337,8 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 				return sut != null && !sut.isEmpty();
 			case CanopusPerformanceMonitoringPackage.MONITOR__HARDWARE:
 				return hardware != HARDWARE_EDEFAULT;
+			case CanopusPerformanceMonitoringPackage.MONITOR__DESCRIPTION:
+				return isSetDescription();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -307,6 +359,8 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 		result.append(ip);
 		result.append(", hardware: ");
 		result.append(hardware);
+		result.append(", description: ");
+		if (descriptionESet) result.append(description); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}

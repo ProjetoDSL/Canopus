@@ -8,6 +8,7 @@ import canopus.canopusPerformanceScenario.UserProfileToScript;
 
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Initial;
@@ -50,6 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getUserprofiletoscript <em>Userprofiletoscript</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getParamenters <em>Paramenters</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getActivityToActivity <em>Activity To Activity</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getColumns <em>Columns</em>}</li>
  * </ul>
  *
  * @generated
@@ -174,6 +176,16 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * @ordered
 	 */
 	protected EList<ActivityToActivity> activityToActivity;
+
+	/**
+	 * The cached value of the '{@link #getColumns() <em>Columns</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColumns()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ColumnsHiddenObject> columns;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -450,6 +462,18 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ColumnsHiddenObject> getColumns() {
+		if (columns == null) {
+			columns = new EObjectContainmentEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS);
+		}
+		return columns;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -489,6 +513,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return ((InternalEList<?>)getParamenters()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
 				return ((InternalEList<?>)getActivityToActivity()).basicRemove(otherEnd, msgs);
+			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
+				return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -524,6 +550,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return getParamenters();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
 				return getActivityToActivity();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
+				return getColumns();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -577,6 +605,10 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				getActivityToActivity().clear();
 				getActivityToActivity().addAll((Collection<? extends ActivityToActivity>)newValue);
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
+				getColumns().clear();
+				getColumns().addAll((Collection<? extends ColumnsHiddenObject>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -622,6 +654,9 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
 				getActivityToActivity().clear();
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
+				getColumns().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -656,6 +691,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return paramenters != null && !paramenters.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
 				return activityToActivity != null && !activityToActivity.isEmpty();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
+				return columns != null && !columns.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

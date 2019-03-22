@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceMonitoring.Monitor#getIp <em>Ip</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.Monitor#getSut <em>Sut</em>}</li>
  *   <li>{@link canopus.canopusPerformanceMonitoring.Monitor#getHardware <em>Hardware</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceMonitoring.Monitor#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMonitor()
@@ -122,5 +123,32 @@ public interface Monitor extends EObject {
 	 * @generated
 	 */
 	void setHardware(HARDWARE value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * The default value is <code>"Machine responsible for monitoring the performance metrics of the SUT. This object is optional, since the Load Generator object, besides generating workload for virtual users, can also play the role of monitoring."</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #isSetDescription()
+	 * @see canopus.canopusPerformanceMonitoring.CanopusPerformanceMonitoringPackage#getMonitor_Description()
+	 * @model default="Machine responsible for monitoring the performance metrics of the SUT. This object is optional, since the Load Generator object, besides generating workload for virtual users, can also play the role of monitoring." unsettable="true" changeable="false"
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Returns whether the value of the '{@link canopus.canopusPerformanceMonitoring.Monitor#getDescription <em>Description</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Description</em>' attribute is set.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	boolean isSetDescription();
 
 } // Monitor

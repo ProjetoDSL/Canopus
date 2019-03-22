@@ -379,31 +379,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int DATA_TABLE = 5;
 
 	/**
+	 * The feature id for the '<em><b>Attached File</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TABLE__ATTACHED_FILE = 0;
+
+	/**
 	 * The feature id for the '<em><b>Delimeter</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TABLE__DELIMETER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Parameterhiddenobject</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TABLE__PARAMETERHIDDENOBJECT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Attachedfile</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TABLE__ATTACHEDFILE = 2;
+	int DATA_TABLE__DELIMETER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Activity</b></em>' reference list.
@@ -412,7 +403,16 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TABLE__ACTIVITY = 3;
+	int DATA_TABLE__ACTIVITY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Columnshiddenobject</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_TABLE__COLUMNSHIDDENOBJECT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Data Table</em>' class.
@@ -470,13 +470,13 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int PARAMETER_HIDDEN_OBJECT__STATIC_VALUE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Dynamicvalues</b></em>' containment reference.
+	 * The feature id for the '<em><b>Columnshiddenobject</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES = 3;
+	int PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT = 3;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Hidden Object</em>' class.
@@ -916,6 +916,17 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EClass getDataTable();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getAttachedFile <em>Attached File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attached File</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getAttachedFile()
+	 * @see #getDataTable()
+	 * @generated
+	 */
+	EAttribute getDataTable_AttachedFile();
+
+	/**
 	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getDelimeter <em>Delimeter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -927,28 +938,6 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EAttribute getDataTable_Delimeter();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getParameterhiddenobject <em>Parameterhiddenobject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parameterhiddenobject</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getParameterhiddenobject()
-	 * @see #getDataTable()
-	 * @generated
-	 */
-	EReference getDataTable_Parameterhiddenobject();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getAttachedfile <em>Attachedfile</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Attachedfile</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getAttachedfile()
-	 * @see #getDataTable()
-	 * @generated
-	 */
-	EReference getDataTable_Attachedfile();
-
-	/**
 	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getActivity <em>Activity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -958,6 +947,17 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDataTable_Activity();
+
+	/**
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getColumnshiddenobject <em>Columnshiddenobject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Columnshiddenobject</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getColumnshiddenobject()
+	 * @see #getDataTable()
+	 * @generated
+	 */
+	EReference getDataTable_Columnshiddenobject();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject <em>Parameter Hidden Object</em>}'.
@@ -1003,15 +1003,15 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EAttribute getParameterHiddenObject_StaticValue();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getDynamicvalues <em>Dynamicvalues</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getColumnshiddenobject <em>Columnshiddenobject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Dynamicvalues</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getDynamicvalues()
+	 * @return the meta object for the reference list '<em>Columnshiddenobject</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject#getColumnshiddenobject()
 	 * @see #getParameterHiddenObject()
 	 * @generated
 	 */
-	EReference getParameterHiddenObject_Dynamicvalues();
+	EReference getParameterHiddenObject_Columnshiddenobject();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject <em>Columns Hidden Object</em>}'.
@@ -1376,6 +1376,14 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EClass DATA_TABLE = eINSTANCE.getDataTable();
 
 		/**
+		 * The meta object literal for the '<em><b>Attached File</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_TABLE__ATTACHED_FILE = eINSTANCE.getDataTable_AttachedFile();
+
+		/**
 		 * The meta object literal for the '<em><b>Delimeter</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1384,28 +1392,20 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EAttribute DATA_TABLE__DELIMETER = eINSTANCE.getDataTable_Delimeter();
 
 		/**
-		 * The meta object literal for the '<em><b>Parameterhiddenobject</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DATA_TABLE__PARAMETERHIDDENOBJECT = eINSTANCE.getDataTable_Parameterhiddenobject();
-
-		/**
-		 * The meta object literal for the '<em><b>Attachedfile</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DATA_TABLE__ATTACHEDFILE = eINSTANCE.getDataTable_Attachedfile();
-
-		/**
 		 * The meta object literal for the '<em><b>Activity</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference DATA_TABLE__ACTIVITY = eINSTANCE.getDataTable_Activity();
+
+		/**
+		 * The meta object literal for the '<em><b>Columnshiddenobject</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_TABLE__COLUMNSHIDDENOBJECT = eINSTANCE.getDataTable_Columnshiddenobject();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ParameterHiddenObjectImpl <em>Parameter Hidden Object</em>}' class.
@@ -1442,12 +1442,12 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EAttribute PARAMETER_HIDDEN_OBJECT__STATIC_VALUE = eINSTANCE.getParameterHiddenObject_StaticValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Dynamicvalues</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Columnshiddenobject</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARAMETER_HIDDEN_OBJECT__DYNAMICVALUES = eINSTANCE.getParameterHiddenObject_Dynamicvalues();
+		EReference PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT = eINSTANCE.getParameterHiddenObject_Columnshiddenobject();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ColumnsHiddenObjectImpl <em>Columns Hidden Object</em>}' class.

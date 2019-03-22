@@ -138,6 +138,7 @@ public class ScriptingItemProvider
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__SCRIPTS);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__PARAMENTERS);
 			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__ACTIVITY_TO_ACTIVITY);
+			childrenFeatures.add(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__COLUMNS);
 		}
 		return childrenFeatures;
 	}
@@ -205,6 +206,7 @@ public class ScriptingItemProvider
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
+			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -266,6 +268,11 @@ public class ScriptingItemProvider
 			(createChildParameter
 				(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__ACTIVITY_TO_ACTIVITY,
 				 CanopusPerformanceScriptingFactory.eINSTANCE.createActivityToActivity()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CanopusPerformanceScenarioPackage.Literals.SCRIPTING__COLUMNS,
+				 CanopusPerformanceScriptingFactory.eINSTANCE.createColumnsHiddenObject()));
 	}
 
 	/**

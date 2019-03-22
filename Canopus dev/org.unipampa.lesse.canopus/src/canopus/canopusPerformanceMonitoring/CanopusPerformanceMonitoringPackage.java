@@ -277,13 +277,22 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	int MONITOR__HARDWARE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONITOR__DESCRIPTION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Monitor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MONITOR_FEATURE_COUNT = 4;
+	int MONITOR_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Monitor</em>' class.
@@ -669,6 +678,17 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 	EAttribute getMonitor_Hardware();
 
 	/**
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceMonitoring.Monitor#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see canopus.canopusPerformanceMonitoring.Monitor#getDescription()
+	 * @see #getMonitor()
+	 * @generated
+	 */
+	EAttribute getMonitor_Description();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceMonitoring.MetricModel <em>Metric Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1018,6 +1038,14 @@ public interface CanopusPerformanceMonitoringPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MONITOR__HARDWARE = eINSTANCE.getMonitor_Hardware();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MONITOR__DESCRIPTION = eINSTANCE.getMonitor_Description();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceMonitoring.impl.MetricModelImpl <em>Metric Model</em>}' class.

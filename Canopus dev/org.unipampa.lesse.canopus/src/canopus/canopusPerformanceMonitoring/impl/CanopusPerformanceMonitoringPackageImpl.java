@@ -361,6 +361,15 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMonitor_Description() {
+		return (EAttribute)monitorEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMetricModel() {
 		return metricModelEClass;
 	}
@@ -541,6 +550,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		createEAttribute(monitorEClass, MONITOR__IP);
 		createEReference(monitorEClass, MONITOR__SUT);
 		createEAttribute(monitorEClass, MONITOR__HARDWARE);
+		createEAttribute(monitorEClass, MONITOR__DESCRIPTION);
 
 		metricModelEClass = createEClass(METRIC_MODEL);
 		createEAttribute(metricModelEClass, METRIC_MODEL__NAME);
@@ -619,6 +629,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 		initEAttribute(getMonitor_Ip(), ecorePackage.getEString(), "ip", null, 0, 1, Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMonitor_Sut(), this.getSUT(), null, "sut", null, 0, -1, Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMonitor_Hardware(), this.getHARDWARE(), "hardware", null, 0, 1, Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMonitor_Description(), ecorePackage.getEString(), "description", "Machine responsible for monitoring the performance metrics of the SUT. This object is optional, since the Load Generator object, besides generating workload for virtual users, can also play the role of monitoring.", 0, 1, Monitor.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metricModelEClass, MetricModel.class, "MetricModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMetricModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, MetricModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
