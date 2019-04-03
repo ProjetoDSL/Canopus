@@ -382,6 +382,15 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getActivity_Saveparameters() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getThinkTime() {
 		return thinkTimeEClass;
 	}
@@ -685,6 +694,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		createEReference(activityEClass, ACTIVITY__THINKTIME);
 		createEReference(activityEClass, ACTIVITY__SCRIPTING);
 		createEReference(activityEClass, ACTIVITY__ACTIVITYTOACTIVITY);
+		createEReference(activityEClass, ACTIVITY__SAVEPARAMETERS);
 
 		thinkTimeEClass = createEClass(THINK_TIME);
 		createEAttribute(thinkTimeEClass, THINK_TIME__NAME);
@@ -780,6 +790,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEReference(getActivity_Thinktime(), this.getThinkTime(), null, "thinktime", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Scripting(), theCanopusPerformanceScenarioPackage.getScripting(), null, "scripting", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Activitytoactivity(), this.getActivityToActivity(), this.getActivityToActivity_Activity(), "activitytoactivity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Saveparameters(), this.getSaveParameters(), null, "saveparameters", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thinkTimeEClass, ThinkTime.class, "ThinkTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getThinkTime_Name(), ecorePackage.getEString(), "name", null, 0, 1, ThinkTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -794,7 +805,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEAttribute(getDataTable_AttachedFile(), ecorePackage.getEString(), "attachedFile", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataTable_Delimeter(), ecorePackage.getEString(), "delimeter", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataTable_Activity(), this.getActivity(), null, "activity", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataTable_Columnshiddenobject(), this.getColumnsHiddenObject(), null, "columnshiddenobject", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataTable_Columnshiddenobject(), this.getColumnsHiddenObject(), null, "columnshiddenobject", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterHiddenObjectEClass, ParameterHiddenObject.class, "ParameterHiddenObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParameterHiddenObject_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, ParameterHiddenObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

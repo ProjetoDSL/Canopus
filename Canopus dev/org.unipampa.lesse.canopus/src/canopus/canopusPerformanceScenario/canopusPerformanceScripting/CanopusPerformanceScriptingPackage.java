@@ -250,13 +250,22 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int ACTIVITY__ACTIVITYTOACTIVITY = 10;
 
 	/**
+	 * The feature id for the '<em><b>Saveparameters</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__SAVEPARAMETERS = 11;
+
+	/**
 	 * The number of structural features of the '<em>Activity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY_FEATURE_COUNT = 11;
+	int ACTIVITY_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Activity</em>' class.
@@ -406,7 +415,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	int DATA_TABLE__ACTIVITY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Columnshiddenobject</b></em>' reference list.
+	 * The feature id for the '<em><b>Columnshiddenobject</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -831,6 +840,17 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EReference getActivity_Activitytoactivity();
 
 	/**
+	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getSaveparameters <em>Saveparameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Saveparameters</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getSaveparameters()
+	 * @see #getActivity()
+	 * @generated
+	 */
+	EReference getActivity_Saveparameters();
+
+	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime <em>Think Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -949,10 +969,10 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EReference getDataTable_Activity();
 
 	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getColumnshiddenobject <em>Columnshiddenobject</em>}'.
+	 * Returns the meta object for the containment reference list '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getColumnshiddenobject <em>Columnshiddenobject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Columnshiddenobject</em>'.
+	 * @return the meta object for the containment reference list '<em>Columnshiddenobject</em>'.
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable#getColumnshiddenobject()
 	 * @see #getDataTable()
 	 * @generated
@@ -1306,6 +1326,14 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EReference ACTIVITY__ACTIVITYTOACTIVITY = eINSTANCE.getActivity_Activitytoactivity();
 
 		/**
+		 * The meta object literal for the '<em><b>Saveparameters</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTIVITY__SAVEPARAMETERS = eINSTANCE.getActivity_Saveparameters();
+
+		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ThinkTimeImpl <em>Think Time</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1400,7 +1428,7 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		EReference DATA_TABLE__ACTIVITY = eINSTANCE.getDataTable_Activity();
 
 		/**
-		 * The meta object literal for the '<em><b>Columnshiddenobject</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Columnshiddenobject</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

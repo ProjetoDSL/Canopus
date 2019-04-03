@@ -10,12 +10,19 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.DataTable;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -85,7 +92,7 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	protected EList<Activity> activity;
 
 	/**
-	 * The cached value of the '{@link #getColumnshiddenobject() <em>Columnshiddenobject</em>}' reference list.
+	 * The cached value of the '{@link #getColumnshiddenobject() <em>Columnshiddenobject</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getColumnshiddenobject()
@@ -174,9 +181,23 @@ public class DataTableImpl extends MinimalEObjectImpl.Container implements DataT
 	 */
 	public EList<ColumnsHiddenObject> getColumnshiddenobject() {
 		if (columnshiddenobject == null) {
-			columnshiddenobject = new EObjectResolvingEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT);
+			columnshiddenobject = new EObjectContainmentEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT);
 		}
 		return columnshiddenobject;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CanopusPerformanceScriptingPackage.DATA_TABLE__COLUMNSHIDDENOBJECT:
+				return ((InternalEList<?>)getColumnshiddenobject()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

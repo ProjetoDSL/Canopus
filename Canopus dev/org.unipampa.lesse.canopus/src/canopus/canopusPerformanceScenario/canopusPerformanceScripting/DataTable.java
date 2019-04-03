@@ -95,7 +95,7 @@ public interface DataTable extends EObject {
 	EList<Activity> getActivity();
 
 	/**
-	 * Returns the value of the '<em><b>Columnshiddenobject</b></em>' reference list.
+	 * Returns the value of the '<em><b>Columnshiddenobject</b></em>' containment reference list.
 	 * The list contents are of type {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.ColumnsHiddenObject}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -103,9 +103,9 @@ public interface DataTable extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Columnshiddenobject</em>' reference list.
+	 * @return the value of the '<em>Columnshiddenobject</em>' containment reference list.
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getDataTable_Columnshiddenobject()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ColumnsHiddenObject> getColumnshiddenobject();

@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getThinktime <em>Thinktime</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getScripting <em>Scripting</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getActivitytoactivity <em>Activitytoactivity</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getSaveparameters <em>Saveparameters</em>}</li>
  * </ul>
  *
  * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity()
@@ -306,5 +307,31 @@ public interface Activity extends EObject {
 	 * @generated
 	 */
 	EList<ActivityToActivity> getActivitytoactivity();
+
+	/**
+	 * Returns the value of the '<em><b>Saveparameters</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Saveparameters</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Saveparameters</em>' reference.
+	 * @see #setSaveparameters(SaveParameters)
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity_Saveparameters()
+	 * @model
+	 * @generated
+	 */
+	SaveParameters getSaveparameters();
+
+	/**
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getSaveparameters <em>Saveparameters</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Saveparameters</em>' reference.
+	 * @see #getSaveparameters()
+	 * @generated
+	 */
+	void setSaveparameters(SaveParameters value);
 
 } // Activity

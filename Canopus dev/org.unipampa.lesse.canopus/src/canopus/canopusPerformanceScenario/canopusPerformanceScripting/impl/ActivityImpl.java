@@ -9,6 +9,7 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityTo
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.SaveParameters;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ThinkTime;
 
@@ -48,6 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getThinktime <em>Thinktime</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getScripting <em>Scripting</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getActivitytoactivity <em>Activitytoactivity</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getSaveparameters <em>Saveparameters</em>}</li>
  * </ul>
  *
  * @generated
@@ -222,6 +224,16 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * @ordered
 	 */
 	protected EList<ActivityToActivity> activitytoactivity;
+
+	/**
+	 * The cached value of the '{@link #getSaveparameters() <em>Saveparameters</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveparameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected SaveParameters saveparameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -511,6 +523,44 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SaveParameters getSaveparameters() {
+		if (saveparameters != null && saveparameters.eIsProxy()) {
+			InternalEObject oldSaveparameters = (InternalEObject)saveparameters;
+			saveparameters = (SaveParameters)eResolveProxy(oldSaveparameters);
+			if (saveparameters != oldSaveparameters) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScriptingPackage.ACTIVITY__SAVEPARAMETERS, oldSaveparameters, saveparameters));
+			}
+		}
+		return saveparameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SaveParameters basicGetSaveparameters() {
+		return saveparameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSaveparameters(SaveParameters newSaveparameters) {
+		SaveParameters oldSaveparameters = saveparameters;
+		saveparameters = newSaveparameters;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__SAVEPARAMETERS, oldSaveparameters, saveparameters));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -568,6 +618,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return basicGetScripting();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
 				return getActivitytoactivity();
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SAVEPARAMETERS:
+				if (resolve) return getSaveparameters();
+				return basicGetSaveparameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -616,6 +669,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				getActivitytoactivity().clear();
 				getActivitytoactivity().addAll((Collection<? extends ActivityToActivity>)newValue);
 				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SAVEPARAMETERS:
+				setSaveparameters((SaveParameters)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -661,6 +717,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
 				getActivitytoactivity().clear();
 				return;
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SAVEPARAMETERS:
+				setSaveparameters((SaveParameters)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -695,6 +754,8 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				return scripting != null;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY:
 				return activitytoactivity != null && !activitytoactivity.isEmpty();
+			case CanopusPerformanceScriptingPackage.ACTIVITY__SAVEPARAMETERS:
+				return saveparameters != null;
 		}
 		return super.eIsSet(featureID);
 	}

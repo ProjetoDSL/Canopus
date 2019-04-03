@@ -73,6 +73,7 @@ public class ActivityItemProvider
 			addThinktimePropertyDescriptor(object);
 			addScriptingPropertyDescriptor(object);
 			addActivitytoactivityPropertyDescriptor(object);
+			addSaveparametersPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -311,6 +312,28 @@ public class ActivityItemProvider
 				 getString("_UI_Activity_activitytoactivity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_activitytoactivity_feature", "_UI_Activity_type"),
 				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__ACTIVITYTOACTIVITY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Saveparameters feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSaveparametersPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Activity_saveparameters_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_saveparameters_feature", "_UI_Activity_type"),
+				 CanopusPerformanceScriptingPackage.Literals.ACTIVITY__SAVEPARAMETERS,
 				 true,
 				 false,
 				 true,
