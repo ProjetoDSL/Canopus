@@ -89,7 +89,7 @@ public interface DataTable extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Activity</em>' reference list.
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getDataTable_Activity()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<Activity> getActivity();
