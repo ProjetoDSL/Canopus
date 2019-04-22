@@ -330,13 +330,22 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int SCRIPTING__COLUMNS = 11;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCRIPTING__DESCRIPTION = 12;
+
+	/**
 	 * The number of structural features of the '<em>Scripting</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCRIPTING_FEATURE_COUNT = 12;
+	int SCRIPTING_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Scripting</em>' class.
@@ -348,135 +357,6 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int SCRIPTING_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.impl.Teste1Impl <em>Teste1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.impl.Teste1Impl
-	 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getTeste1()
-	 * @generated
-	 */
-	int TESTE1 = 3;
-
-	/**
-	 * The feature id for the '<em><b>Teste1e2</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1__TESTE1E2 = 0;
-
-	/**
-	 * The number of structural features of the '<em>Teste1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Teste1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.impl.Teste2Impl <em>Teste2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.impl.Teste2Impl
-	 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getTeste2()
-	 * @generated
-	 */
-	int TESTE2 = 4;
-
-	/**
-	 * The feature id for the '<em><b>Teste1e2</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE2__TESTE1E2 = 0;
-
-	/**
-	 * The number of structural features of the '<em>Teste2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE2_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Teste2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE2_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.impl.Teste1E2Impl <em>Teste1 E2</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see canopus.canopusPerformanceScenario.impl.Teste1E2Impl
-	 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getTeste1E2()
-	 * @generated
-	 */
-	int TESTE1_E2 = 5;
-
-	/**
-	 * The feature id for the '<em><b>Porcentagem</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_E2__PORCENTAGEM = 0;
-
-	/**
-	 * The feature id for the '<em><b>Teste1</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_E2__TESTE1 = 1;
-
-	/**
-	 * The feature id for the '<em><b>Teste2</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_E2__TESTE2 = 2;
-
-	/**
-	 * The number of structural features of the '<em>Teste1 E2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_E2_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Teste1 E2</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TESTE1_E2_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.impl.UserProfileToScriptImpl <em>User Profile To Script</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -484,7 +364,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getUserProfileToScript()
 	 * @generated
 	 */
-	int USER_PROFILE_TO_SCRIPT = 6;
+	int USER_PROFILE_TO_SCRIPT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Time Percentage</b></em>' attribute.
@@ -816,89 +696,15 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getScripting_Columns();
 
 	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Teste1 <em>Teste1</em>}'.
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.Scripting#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Teste1</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste1
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see canopus.canopusPerformanceScenario.Scripting#getDescription()
+	 * @see #getScripting()
 	 * @generated
 	 */
-	EClass getTeste1();
-
-	/**
-	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.Teste1#getTeste1e2 <em>Teste1e2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Teste1e2</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste1#getTeste1e2()
-	 * @see #getTeste1()
-	 * @generated
-	 */
-	EReference getTeste1_Teste1e2();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Teste2 <em>Teste2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Teste2</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste2
-	 * @generated
-	 */
-	EClass getTeste2();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.Teste2#getTeste1e2 <em>Teste1e2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Teste1e2</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste2#getTeste1e2()
-	 * @see #getTeste2()
-	 * @generated
-	 */
-	EReference getTeste2_Teste1e2();
-
-	/**
-	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.Teste1E2 <em>Teste1 E2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Teste1 E2</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste1E2
-	 * @generated
-	 */
-	EClass getTeste1E2();
-
-	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.Teste1E2#getPorcentagem <em>Porcentagem</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Porcentagem</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste1E2#getPorcentagem()
-	 * @see #getTeste1E2()
-	 * @generated
-	 */
-	EAttribute getTeste1E2_Porcentagem();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.Teste1E2#getTeste1 <em>Teste1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Teste1</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste1E2#getTeste1()
-	 * @see #getTeste1E2()
-	 * @generated
-	 */
-	EReference getTeste1E2_Teste1();
-
-	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.Teste1E2#getTeste2 <em>Teste2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Teste2</em>'.
-	 * @see canopus.canopusPerformanceScenario.Teste1E2#getTeste2()
-	 * @see #getTeste1E2()
-	 * @generated
-	 */
-	EReference getTeste1E2_Teste2();
+	EAttribute getScripting_Description();
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.UserProfileToScript <em>User Profile To Script</em>}'.
@@ -1181,74 +987,12 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EReference SCRIPTING__COLUMNS = eINSTANCE.getScripting_Columns();
 
 		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.Teste1Impl <em>Teste1</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.impl.Teste1Impl
-		 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getTeste1()
-		 * @generated
-		 */
-		EClass TESTE1 = eINSTANCE.getTeste1();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste1e2</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TESTE1__TESTE1E2 = eINSTANCE.getTeste1_Teste1e2();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.Teste2Impl <em>Teste2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.impl.Teste2Impl
-		 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getTeste2()
-		 * @generated
-		 */
-		EClass TESTE2 = eINSTANCE.getTeste2();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste1e2</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TESTE2__TESTE1E2 = eINSTANCE.getTeste2_Teste1e2();
-
-		/**
-		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.Teste1E2Impl <em>Teste1 E2</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see canopus.canopusPerformanceScenario.impl.Teste1E2Impl
-		 * @see canopus.canopusPerformanceScenario.impl.CanopusPerformanceScenarioPackageImpl#getTeste1E2()
-		 * @generated
-		 */
-		EClass TESTE1_E2 = eINSTANCE.getTeste1E2();
-
-		/**
-		 * The meta object literal for the '<em><b>Porcentagem</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TESTE1_E2__PORCENTAGEM = eINSTANCE.getTeste1E2_Porcentagem();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste1</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TESTE1_E2__TESTE1 = eINSTANCE.getTeste1E2_Teste1();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste2</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TESTE1_E2__TESTE2 = eINSTANCE.getTeste1E2_Teste2();
+		EAttribute SCRIPTING__DESCRIPTION = eINSTANCE.getScripting_Description();
 
 		/**
 		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.impl.UserProfileToScriptImpl <em>User Profile To Script</em>}' class.

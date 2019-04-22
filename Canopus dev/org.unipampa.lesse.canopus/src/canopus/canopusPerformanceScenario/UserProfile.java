@@ -105,12 +105,12 @@ public interface UserProfile extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Percentage</em>' attribute.
-	 * @see #setPercentage(int)
+	 * @see #setPercentage(String)
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfile_Percentage()
 	 * @model
 	 * @generated
 	 */
-	int getPercentage();
+	String getPercentage();
 
 	/**
 	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.UserProfile#getPercentage <em>Percentage</em>}' attribute.
@@ -120,6 +120,6 @@ public interface UserProfile extends EObject {
 	 * @see #getPercentage()
 	 * @generated
 	 */
-	void setPercentage(int value);
+	void setPercentage(String value);
 
 } // UserProfile

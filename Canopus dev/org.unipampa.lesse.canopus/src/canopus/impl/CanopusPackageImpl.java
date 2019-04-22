@@ -240,35 +240,8 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScenario_Teste1() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScenario_Teste2() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getScenario_Teste1e2() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getScenario_UserProfileToScript() {
-		return (EReference)scenarioEClass.getEStructuralFeatures().get(6);
+		return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -354,9 +327,6 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		createEReference(scenarioEClass, SCENARIO__USERS);
 		createEReference(scenarioEClass, SCENARIO__WORKLOADS);
 		createEReference(scenarioEClass, SCENARIO__SCRIPTING);
-		createEReference(scenarioEClass, SCENARIO__TESTE1);
-		createEReference(scenarioEClass, SCENARIO__TESTE2);
-		createEReference(scenarioEClass, SCENARIO__TESTE1E2);
 		createEReference(scenarioEClass, SCENARIO__USER_PROFILE_TO_SCRIPT);
 
 		diagramEClass = createEClass(DIAGRAM);
@@ -416,9 +386,6 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 		initEReference(getScenario_Users(), theCanopusPerformanceScenarioPackage.getUserProfile(), null, "users", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_Workloads(), theCanopusPerformanceScenarioPackage.getWorkload(), null, "workloads", null, 0, 3, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_Scripting(), theCanopusPerformanceScenarioPackage.getScripting(), null, "scripting", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScenario_Teste1(), theCanopusPerformanceScenarioPackage.getTeste1(), null, "teste1", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScenario_Teste2(), theCanopusPerformanceScenarioPackage.getTeste2(), null, "teste2", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScenario_Teste1e2(), theCanopusPerformanceScenarioPackage.getTeste1E2(), null, "teste1e2", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenario_UserProfileToScript(), theCanopusPerformanceScenarioPackage.getUserProfileToScript(), null, "userProfileToScript", null, 0, -1, Scenario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diagramEClass, Diagram.class, "Diagram", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

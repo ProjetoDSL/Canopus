@@ -13,13 +13,17 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Activity</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Characterizes the interactions of virtual user behavior from the point of view of the SUT. Every script must have at least one Activity object. This object allows to repeat not only one but a set of activities, it is possible to associate a subgraph model (another Canopus Performance Scripting) into an Activity object. This feature is represented by “+” (plus symbol) on the bottom of the Activity object.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getAction <em>Action</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#isMethod <em>Method</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getMethod <em>Method</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getTypeAction <em>Type Action</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getLoopInstances <em>Loop Instances</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getParameterhiddenobject <em>Parameterhiddenobject</em>}</li>
@@ -65,11 +69,10 @@ public interface Activity extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Action</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * HTTP address of the SUT request.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Action</em>' attribute.
 	 * @see #setAction(String)
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity_Action()
@@ -90,6 +93,7 @@ public interface Activity extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' attribute.
+	 * The literals are from the enumeration {@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Method</em>' attribute isn't clear,
@@ -97,22 +101,24 @@ public interface Activity extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method</em>' attribute.
-	 * @see #setMethod(boolean)
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD
+	 * @see #setMethod(METHOD)
 	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage#getActivity_Method()
-	 * @model
+	 * @model dataType="canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD"
 	 * @generated
 	 */
-	boolean isMethod();
+	METHOD getMethod();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#isMethod <em>Method</em>}' attribute.
+	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getMethod <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Method</em>' attribute.
-	 * @see #isMethod()
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD
+	 * @see #getMethod()
 	 * @generated
 	 */
-	void setMethod(boolean value);
+	void setMethod(METHOD value);
 
 	/**
 	 * Returns the value of the '<em><b>Type Action</b></em>' attribute.

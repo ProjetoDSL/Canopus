@@ -294,40 +294,13 @@ public interface CanopusPackage extends EPackage {
 	int SCENARIO__SCRIPTING = DIAGRAM_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Teste1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__TESTE1 = DIAGRAM_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Teste2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__TESTE2 = DIAGRAM_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Teste1e2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCENARIO__TESTE1E2 = DIAGRAM_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>User Profile To Script</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO__USER_PROFILE_TO_SCRIPT = DIAGRAM_FEATURE_COUNT + 6;
+	int SCENARIO__USER_PROFILE_TO_SCRIPT = DIAGRAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Scenario</em>' class.
@@ -336,7 +309,7 @@ public interface CanopusPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 7;
+	int SCENARIO_FEATURE_COUNT = DIAGRAM_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Scenario</em>' class.
@@ -444,39 +417,6 @@ public interface CanopusPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getScenario_Scripting();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getTeste1 <em>Teste1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Teste1</em>'.
-	 * @see canopus.Scenario#getTeste1()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_Teste1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getTeste2 <em>Teste2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Teste2</em>'.
-	 * @see canopus.Scenario#getTeste2()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_Teste2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getTeste1e2 <em>Teste1e2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Teste1e2</em>'.
-	 * @see canopus.Scenario#getTeste1e2()
-	 * @see #getScenario()
-	 * @generated
-	 */
-	EReference getScenario_Teste1e2();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link canopus.Scenario#getUserProfileToScript <em>User Profile To Script</em>}'.
@@ -641,30 +581,6 @@ public interface CanopusPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCENARIO__SCRIPTING = eINSTANCE.getScenario_Scripting();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste1</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__TESTE1 = eINSTANCE.getScenario_Teste1();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste2</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__TESTE2 = eINSTANCE.getScenario_Teste2();
-
-		/**
-		 * The meta object literal for the '<em><b>Teste1e2</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCENARIO__TESTE1E2 = eINSTANCE.getScenario_Teste1e2();
 
 		/**
 		 * The meta object literal for the '<em><b>User Profile To Script</b></em>' containment reference list feature.

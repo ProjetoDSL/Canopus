@@ -66,9 +66,6 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__USERS);
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__WORKLOADS);
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__SCRIPTING);
-			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__TESTE1);
-			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__TESTE2);
-			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__TESTE1E2);
 			childrenFeatures.add(CanopusPackage.Literals.SCENARIO__USER_PROFILE_TO_SCRIPT);
 		}
 		return childrenFeatures;
@@ -128,9 +125,6 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 			case CanopusPackage.SCENARIO__USERS:
 			case CanopusPackage.SCENARIO__WORKLOADS:
 			case CanopusPackage.SCENARIO__SCRIPTING:
-			case CanopusPackage.SCENARIO__TESTE1:
-			case CanopusPackage.SCENARIO__TESTE2:
-			case CanopusPackage.SCENARIO__TESTE1E2:
 			case CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -163,21 +157,6 @@ public class ScenarioItemProvider extends DiagramItemProvider {
 			(createChildParameter
 				(CanopusPackage.Literals.SCENARIO__SCRIPTING,
 				 CanopusPerformanceScenarioFactory.eINSTANCE.createScripting()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPackage.Literals.SCENARIO__TESTE1,
-				 CanopusPerformanceScenarioFactory.eINSTANCE.createTeste1()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPackage.Literals.SCENARIO__TESTE2,
-				 CanopusPerformanceScenarioFactory.eINSTANCE.createTeste2()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CanopusPackage.Literals.SCENARIO__TESTE1E2,
-				 CanopusPerformanceScenarioFactory.eINSTANCE.createTeste1E2()));
 
 		newChildDescriptors.add
 			(createChildParameter

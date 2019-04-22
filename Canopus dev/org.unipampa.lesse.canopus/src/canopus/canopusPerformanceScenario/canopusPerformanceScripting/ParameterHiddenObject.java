@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Parameter Hidden Object</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Determines the data that is consumed by the activities. Specified by a filename that must contain a data table, e.g. a .CSV file.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

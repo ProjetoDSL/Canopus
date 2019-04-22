@@ -52,6 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getParamenters <em>Paramenters</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getActivityToActivity <em>Activity To Activity</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getColumns <em>Columns</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.impl.ScriptingImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -186,6 +187,26 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * @ordered
 	 */
 	protected EList<ColumnsHiddenObject> columns;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -474,6 +495,27 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.SCRIPTING__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -552,6 +594,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return getActivityToActivity();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
 				return getColumns();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -609,6 +653,9 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				getColumns().clear();
 				getColumns().addAll((Collection<? extends ColumnsHiddenObject>)newValue);
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -657,6 +704,9 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
 				getColumns().clear();
 				return;
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -693,6 +743,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				return activityToActivity != null && !activityToActivity.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS:
 				return columns != null && !columns.isEmpty();
+			case CanopusPerformanceScenarioPackage.SCRIPTING__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -709,6 +761,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

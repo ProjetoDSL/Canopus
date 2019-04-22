@@ -9,6 +9,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Final</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Defines the end of the interaction of a virtual user within a test script. Every script must have only one Final object. The graphical notation for the Initial object is shown as a thick single circle.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

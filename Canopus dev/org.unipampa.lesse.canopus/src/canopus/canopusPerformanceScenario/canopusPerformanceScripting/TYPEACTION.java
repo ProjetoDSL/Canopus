@@ -26,7 +26,7 @@ public enum TYPEACTION implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BODY(0, "BODY", "BODY"),
+	BODY(0, "BODY", "Body"),
 
 	/**
 	 * The '<em><b>BUTTON</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum TYPEACTION implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BUTTON(1, "BUTTON", "BUTTON"),
+	BUTTON(1, "BUTTON", "Button"),
 
 	/**
 	 * The '<em><b>CHECKBOX</b></em>' literal object.
@@ -46,7 +46,87 @@ public enum TYPEACTION implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CHECKBOX(2, "CHECKBOX", "CHECKBOX");
+	CHECKBOX(2, "CHECKBOX", "Checkbox"),
+
+	/**
+	 * The '<em><b>DROPDOWNLIST</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DROPDOWNLIST_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	DROPDOWNLIST(3, "DROPDOWNLIST", "Drop-down list"),
+
+	/**
+	 * The '<em><b>INPUTFIELD</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #INPUTFIELD_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	INPUTFIELD(4, "INPUTFIELD", "Input field"),
+
+	/**
+	 * The '<em><b>IMAGE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #IMAGE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	IMAGE(5, "IMAGE", "image"),
+
+	/**
+	 * The '<em><b>LINK</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LINK_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LINK(6, "LINK", "Link"),
+
+	/**
+	 * The '<em><b>RADIOBUTTON</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RADIOBUTTON_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	RADIOBUTTON(7, "RADIOBUTTON", "Radio button"),
+
+	/**
+	 * The '<em><b>SAVEPARAMETER</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SAVEPARAMETER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SAVEPARAMETER(8, "SAVEPARAMETER", "Save Parameter"),
+
+	/**
+	 * The '<em><b>SUBMITBUTTON</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SUBMITBUTTON_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SUBMITBUTTON(9, "SUBMITBUTTON", "Submit button"),
+
+	/**
+	 * The '<em><b>TEXTAREA</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TEXTAREA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	TEXTAREA(10, "TEXTAREA", "Textarea");
 
 	/**
 	 * The '<em><b>BODY</b></em>' literal value.
@@ -57,7 +137,7 @@ public enum TYPEACTION implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BODY
-	 * @model
+	 * @model literal="Body"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +152,7 @@ public enum TYPEACTION implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BUTTON
-	 * @model
+	 * @model literal="Button"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,11 +167,131 @@ public enum TYPEACTION implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CHECKBOX
-	 * @model
+	 * @model literal="Checkbox"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int CHECKBOX_VALUE = 2;
+
+	/**
+	 * The '<em><b>DROPDOWNLIST</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DROPDOWNLIST</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DROPDOWNLIST
+	 * @model literal="Drop-down list"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DROPDOWNLIST_VALUE = 3;
+
+	/**
+	 * The '<em><b>INPUTFIELD</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>INPUTFIELD</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #INPUTFIELD
+	 * @model literal="Input field"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int INPUTFIELD_VALUE = 4;
+
+	/**
+	 * The '<em><b>IMAGE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>IMAGE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #IMAGE
+	 * @model literal="image"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int IMAGE_VALUE = 5;
+
+	/**
+	 * The '<em><b>LINK</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>LINK</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #LINK
+	 * @model literal="Link"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LINK_VALUE = 6;
+
+	/**
+	 * The '<em><b>RADIOBUTTON</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>RADIOBUTTON</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #RADIOBUTTON
+	 * @model literal="Radio button"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RADIOBUTTON_VALUE = 7;
+
+	/**
+	 * The '<em><b>SAVEPARAMETER</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SAVEPARAMETER</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SAVEPARAMETER
+	 * @model literal="Save Parameter"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SAVEPARAMETER_VALUE = 8;
+
+	/**
+	 * The '<em><b>SUBMITBUTTON</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SUBMITBUTTON</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SUBMITBUTTON
+	 * @model literal="Submit button"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SUBMITBUTTON_VALUE = 9;
+
+	/**
+	 * The '<em><b>TEXTAREA</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>TEXTAREA</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TEXTAREA
+	 * @model literal="Textarea"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TEXTAREA_VALUE = 10;
 
 	/**
 	 * An array of all the '<em><b>TYPEACTION</b></em>' enumerators.
@@ -104,6 +304,14 @@ public enum TYPEACTION implements Enumerator {
 			BODY,
 			BUTTON,
 			CHECKBOX,
+			DROPDOWNLIST,
+			INPUTFIELD,
+			IMAGE,
+			LINK,
+			RADIOBUTTON,
+			SAVEPARAMETER,
+			SUBMITBUTTON,
+			TEXTAREA,
 		};
 
 	/**
@@ -163,6 +371,14 @@ public enum TYPEACTION implements Enumerator {
 			case BODY_VALUE: return BODY;
 			case BUTTON_VALUE: return BUTTON;
 			case CHECKBOX_VALUE: return CHECKBOX;
+			case DROPDOWNLIST_VALUE: return DROPDOWNLIST;
+			case INPUTFIELD_VALUE: return INPUTFIELD;
+			case IMAGE_VALUE: return IMAGE;
+			case LINK_VALUE: return LINK;
+			case RADIOBUTTON_VALUE: return RADIOBUTTON;
+			case SAVEPARAMETER_VALUE: return SAVEPARAMETER;
+			case SUBMITBUTTON_VALUE: return SUBMITBUTTON;
+			case TEXTAREA_VALUE: return TEXTAREA;
 		}
 		return null;
 	}

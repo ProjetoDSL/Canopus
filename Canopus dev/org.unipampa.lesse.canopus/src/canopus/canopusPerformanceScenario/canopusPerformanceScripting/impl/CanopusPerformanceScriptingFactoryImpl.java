@@ -85,6 +85,8 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 				return createUPDATED_VALUE_ONFromString(eDataType, initialValue);
 			case CanopusPerformanceScriptingPackage.SELECT_NEXT_ROW:
 				return createSELECT_NEXT_ROWFromString(eDataType, initialValue);
+			case CanopusPerformanceScriptingPackage.METHOD:
+				return createMETHODFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -104,6 +106,8 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 				return convertUPDATED_VALUE_ONToString(eDataType, instanceValue);
 			case CanopusPerformanceScriptingPackage.SELECT_NEXT_ROW:
 				return convertSELECT_NEXT_ROWToString(eDataType, instanceValue);
+			case CanopusPerformanceScriptingPackage.METHOD:
+				return convertMETHODToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -256,6 +260,26 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * @generated
 	 */
 	public String convertSELECT_NEXT_ROWToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public METHOD createMETHODFromString(EDataType eDataType, String initialValue) {
+		METHOD result = METHOD.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMETHODToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

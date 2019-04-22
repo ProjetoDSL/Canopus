@@ -9,6 +9,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Save Parameters</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Supports that a parameter generated in runtime can be saved to be used in other activities of the same script flow.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

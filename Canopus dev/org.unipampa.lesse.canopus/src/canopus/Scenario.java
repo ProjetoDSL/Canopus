@@ -3,9 +3,6 @@
 package canopus;
 
 import canopus.canopusPerformanceScenario.Scripting;
-import canopus.canopusPerformanceScenario.Teste1;
-import canopus.canopusPerformanceScenario.Teste1E2;
-import canopus.canopusPerformanceScenario.Teste2;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.UserProfileToScript;
 import canopus.canopusPerformanceScenario.Workload;
@@ -24,9 +21,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link canopus.Scenario#getUsers <em>Users</em>}</li>
  *   <li>{@link canopus.Scenario#getWorkloads <em>Workloads</em>}</li>
  *   <li>{@link canopus.Scenario#getScripting <em>Scripting</em>}</li>
- *   <li>{@link canopus.Scenario#getTeste1 <em>Teste1</em>}</li>
- *   <li>{@link canopus.Scenario#getTeste2 <em>Teste2</em>}</li>
- *   <li>{@link canopus.Scenario#getTeste1e2 <em>Teste1e2</em>}</li>
  *   <li>{@link canopus.Scenario#getUserProfileToScript <em>User Profile To Script</em>}</li>
  * </ul>
  *
@@ -82,54 +76,6 @@ public interface Scenario extends Diagram {
 	 * @generated
 	 */
 	EList<Scripting> getScripting();
-
-	/**
-	 * Returns the value of the '<em><b>Teste1</b></em>' containment reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Teste1}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Teste1</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Teste1</em>' containment reference list.
-	 * @see canopus.CanopusPackage#getScenario_Teste1()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Teste1> getTeste1();
-
-	/**
-	 * Returns the value of the '<em><b>Teste2</b></em>' containment reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Teste2}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Teste2</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Teste2</em>' containment reference list.
-	 * @see canopus.CanopusPackage#getScenario_Teste2()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Teste2> getTeste2();
-
-	/**
-	 * Returns the value of the '<em><b>Teste1e2</b></em>' containment reference list.
-	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Teste1E2}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Teste1e2</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Teste1e2</em>' containment reference list.
-	 * @see canopus.CanopusPackage#getScenario_Teste1e2()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Teste1E2> getTeste1e2();
 
 	/**
 	 * Returns the value of the '<em><b>User Profile To Script</b></em>' containment reference list.

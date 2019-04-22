@@ -654,6 +654,16 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 */
 	int SELECT_NEXT_ROW = 11;
 
+	/**
+	 * The meta object id for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD <em>METHOD</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getMETHOD()
+	 * @generated
+	 */
+	int METHOD = 12;
+
 
 	/**
 	 * Returns the meta object for class '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Initial <em>Initial</em>}'.
@@ -741,11 +751,11 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	EAttribute getActivity_Action();
 
 	/**
-	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#isMethod <em>Method</em>}'.
+	 * Returns the meta object for the attribute '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getMethod <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Method</em>'.
-	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#isMethod()
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity#getMethod()
 	 * @see #getActivity()
 	 * @generated
 	 */
@@ -1159,6 +1169,16 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getSELECT_NEXT_ROW();
+
+	/**
+	 * Returns the meta object for enum '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD <em>METHOD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>METHOD</em>'.
+	 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD
+	 * @generated
+	 */
+	EEnum getMETHOD();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1582,6 +1602,16 @@ public interface CanopusPerformanceScriptingPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum SELECT_NEXT_ROW = eINSTANCE.getSELECT_NEXT_ROW();
+
+		/**
+		 * The meta object literal for the '{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD <em>METHOD</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD
+		 * @see canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.CanopusPerformanceScriptingPackageImpl#getMETHOD()
+		 * @generated
+		 */
+		EEnum METHOD = eINSTANCE.getMETHOD();
 
 	}
 

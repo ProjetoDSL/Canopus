@@ -9,6 +9,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Initial</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Determines the start of the interaction of a virtual user within a test script. Every script must have only one Initial object. The graphical notation for the Initial object is shown as a double circles.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

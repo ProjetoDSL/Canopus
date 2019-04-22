@@ -97,7 +97,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int PERCENTAGE_EDEFAULT = 0;
+	protected static final String PERCENTAGE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
@@ -107,7 +107,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * @generated
 	 * @ordered
 	 */
-	protected int percentage = PERCENTAGE_EDEFAULT;
+	protected String percentage = PERCENTAGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,7 +187,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPercentage() {
+	public String getPercentage() {
 		return percentage;
 	}
 
@@ -196,8 +196,8 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPercentage(int newPercentage) {
-		int oldPercentage = percentage;
+	public void setPercentage(String newPercentage) {
+		String oldPercentage = percentage;
 		percentage = newPercentage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE, oldPercentage, percentage));
@@ -272,7 +272,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 				getUserprofiletoscript().addAll((Collection<? extends UserProfileToScript>)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
-				setPercentage((Integer)newValue);
+				setPercentage((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -317,7 +317,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT:
 				return userprofiletoscript != null && !userprofiletoscript.isEmpty();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE__PERCENTAGE:
-				return percentage != PERCENTAGE_EDEFAULT;
+				return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
 		}
 		return super.eIsSet(featureID);
 	}

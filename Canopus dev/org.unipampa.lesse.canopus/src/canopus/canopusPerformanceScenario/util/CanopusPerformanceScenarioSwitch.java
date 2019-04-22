@@ -84,24 +84,6 @@ public class CanopusPerformanceScenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CanopusPerformanceScenarioPackage.TESTE1: {
-				Teste1 teste1 = (Teste1)theEObject;
-				T result = caseTeste1(teste1);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CanopusPerformanceScenarioPackage.TESTE2: {
-				Teste2 teste2 = (Teste2)theEObject;
-				T result = caseTeste2(teste2);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case CanopusPerformanceScenarioPackage.TESTE1_E2: {
-				Teste1E2 teste1E2 = (Teste1E2)theEObject;
-				T result = caseTeste1E2(teste1E2);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT: {
 				UserProfileToScript userProfileToScript = (UserProfileToScript)theEObject;
 				T result = caseUserProfileToScript(userProfileToScript);
@@ -154,51 +136,6 @@ public class CanopusPerformanceScenarioSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseScripting(Scripting object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Teste1</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Teste1</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTeste1(Teste1 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Teste2</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Teste2</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTeste2(Teste2 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Teste1 E2</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Teste1 E2</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTeste1E2(Teste1E2 object) {
 		return null;
 	}
 

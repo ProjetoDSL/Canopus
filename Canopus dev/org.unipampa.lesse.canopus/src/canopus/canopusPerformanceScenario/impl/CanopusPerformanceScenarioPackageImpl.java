@@ -15,9 +15,6 @@ import canopus.canopusPerformanceMonitoring.impl.CanopusPerformanceMonitoringPac
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioFactory;
 import canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage;
 import canopus.canopusPerformanceScenario.Scripting;
-import canopus.canopusPerformanceScenario.Teste1;
-import canopus.canopusPerformanceScenario.Teste1E2;
-import canopus.canopusPerformanceScenario.Teste2;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.UserProfileToScript;
 import canopus.canopusPerformanceScenario.Workload;
@@ -70,27 +67,6 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	private EClass scriptingEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass teste1EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass teste2EClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass teste1E2EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -425,71 +401,8 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTeste1() {
-		return teste1EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeste1_Teste1e2() {
-		return (EReference)teste1EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTeste2() {
-		return teste2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeste2_Teste1e2() {
-		return (EReference)teste2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTeste1E2() {
-		return teste1E2EClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTeste1E2_Porcentagem() {
-		return (EAttribute)teste1E2EClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeste1E2_Teste1() {
-		return (EReference)teste1E2EClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeste1E2_Teste2() {
-		return (EReference)teste1E2EClass.getEStructuralFeatures().get(2);
+	public EAttribute getScripting_Description() {
+		return (EAttribute)scriptingEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -584,17 +497,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		createEReference(scriptingEClass, SCRIPTING__PARAMENTERS);
 		createEReference(scriptingEClass, SCRIPTING__ACTIVITY_TO_ACTIVITY);
 		createEReference(scriptingEClass, SCRIPTING__COLUMNS);
-
-		teste1EClass = createEClass(TESTE1);
-		createEReference(teste1EClass, TESTE1__TESTE1E2);
-
-		teste2EClass = createEClass(TESTE2);
-		createEReference(teste2EClass, TESTE2__TESTE1E2);
-
-		teste1E2EClass = createEClass(TESTE1_E2);
-		createEAttribute(teste1E2EClass, TESTE1_E2__PORCENTAGEM);
-		createEReference(teste1E2EClass, TESTE1_E2__TESTE1);
-		createEReference(teste1E2EClass, TESTE1_E2__TESTE2);
+		createEAttribute(scriptingEClass, SCRIPTING__DESCRIPTION);
 
 		userProfileToScriptEClass = createEClass(USER_PROFILE_TO_SCRIPT);
 		createEAttribute(userProfileToScriptEClass, USER_PROFILE_TO_SCRIPT__TIME_PERCENTAGE);
@@ -644,7 +547,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEAttribute(getUserProfile_Name(), ecorePackage.getEString(), "name", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUserProfile_Description(), ecorePackage.getEString(), "description", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUserProfile_Userprofiletoscript(), this.getUserProfileToScript(), this.getUserProfileToScript_Userprofile(), "userprofiletoscript", null, 0, -1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUserProfile_Percentage(), ecorePackage.getEInt(), "percentage", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserProfile_Percentage(), ecorePackage.getEString(), "percentage", null, 0, 1, UserProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(workloadEClass, Workload.class, "Workload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getWorkload_RampUpTimer(), theCanopusPerformanceWorkloadPackage.getRampUpTimer(), null, "rampUpTimer", null, 1, 1, Workload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -668,17 +571,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEReference(getScripting_Paramenters(), theCanopusPerformanceScriptingPackage.getParameterHiddenObject(), null, "paramenters", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_ActivityToActivity(), theCanopusPerformanceScriptingPackage.getActivityToActivity(), null, "activityToActivity", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_Columns(), theCanopusPerformanceScriptingPackage.getColumnsHiddenObject(), null, "columns", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(teste1EClass, Teste1.class, "Teste1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTeste1_Teste1e2(), this.getTeste1E2(), this.getTeste1E2_Teste1(), "teste1e2", null, 1, -1, Teste1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(teste2EClass, Teste2.class, "Teste2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTeste2_Teste1e2(), this.getTeste1E2(), this.getTeste1E2_Teste2(), "teste1e2", null, 1, 1, Teste2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(teste1E2EClass, Teste1E2.class, "Teste1E2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTeste1E2_Porcentagem(), ecorePackage.getEInt(), "porcentagem", null, 0, 1, Teste1E2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeste1E2_Teste1(), this.getTeste1(), this.getTeste1_Teste1e2(), "teste1", null, 1, 1, Teste1E2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeste1E2_Teste2(), this.getTeste2(), this.getTeste2_Teste1e2(), "teste2", null, 1, 1, Teste1E2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScripting_Description(), ecorePackage.getEString(), "description", null, 0, 1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userProfileToScriptEClass, UserProfileToScript.class, "UserProfileToScript", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserProfileToScript_TimePercentage(), ecorePackage.getEInt(), "timePercentage", null, 0, 1, UserProfileToScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

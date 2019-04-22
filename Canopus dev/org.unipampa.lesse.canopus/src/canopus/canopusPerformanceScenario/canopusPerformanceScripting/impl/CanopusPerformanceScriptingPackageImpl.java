@@ -138,6 +138,13 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	private EEnum selecT_NEXT_ROWEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum methodEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -652,6 +659,15 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getMETHOD() {
+		return methodEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CanopusPerformanceScriptingFactory getCanopusPerformanceScriptingFactory() {
 		return (CanopusPerformanceScriptingFactory)getEFactoryInstance();
 	}
@@ -732,6 +748,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		typeactionEEnum = createEEnum(TYPEACTION);
 		updateD_VALUE_ONEEnum = createEEnum(UPDATED_VALUE_ON);
 		selecT_NEXT_ROWEEnum = createEEnum(SELECT_NEXT_ROW);
+		methodEEnum = createEEnum(METHOD);
 	}
 
 	/**
@@ -781,7 +798,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActivity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_Action(), ecorePackage.getEString(), "action", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActivity_Method(), ecorePackage.getEBoolean(), "method", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Method(), this.getMETHOD(), "method", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActivity_LoopInstances(), ecorePackage.getEInt(), "loopInstances", "1", 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Parameterhiddenobject(), this.getParameterHiddenObject(), null, "parameterhiddenobject", null, 0, 3, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -829,6 +846,14 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.BODY);
 		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.BUTTON);
 		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.CHECKBOX);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.DROPDOWNLIST);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.INPUTFIELD);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.IMAGE);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.LINK);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.RADIOBUTTON);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.SAVEPARAMETER);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.SUBMITBUTTON);
+		addEEnumLiteral(typeactionEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION.TEXTAREA);
 
 		initEEnum(updateD_VALUE_ONEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.UPDATED_VALUE_ON.class, "UPDATED_VALUE_ON");
 		addEEnumLiteral(updateD_VALUE_ONEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.UPDATED_VALUE_ON.EACH_INTERACTION);
@@ -840,6 +865,10 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 		addEEnumLiteral(selecT_NEXT_ROWEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.SELECT_NEXT_ROW.RANDOM);
 		addEEnumLiteral(selecT_NEXT_ROWEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.SELECT_NEXT_ROW.UNIQUE);
 		addEEnumLiteral(selecT_NEXT_ROWEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.SELECT_NEXT_ROW.SAME_AS_OTHER_PARAM);
+
+		initEEnum(methodEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD.class, "METHOD");
+		addEEnumLiteral(methodEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD.GET);
+		addEEnumLiteral(methodEEnum, canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD.POST);
 	}
 
 } //CanopusPerformanceScriptingPackageImpl

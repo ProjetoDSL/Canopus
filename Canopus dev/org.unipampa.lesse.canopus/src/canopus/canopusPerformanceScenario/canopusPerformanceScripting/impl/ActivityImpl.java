@@ -8,6 +8,7 @@ import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Activity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ActivityToActivity;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.CanopusPerformanceScriptingPackage;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.Final;
+import canopus.canopusPerformanceScenario.canopusPerformanceScripting.METHOD;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.ParameterHiddenObject;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.SaveParameters;
 import canopus.canopusPerformanceScenario.canopusPerformanceScripting.TYPEACTION;
@@ -40,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getName <em>Name</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getAction <em>Action</em>}</li>
- *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#isMethod <em>Method</em>}</li>
+ *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getTypeAction <em>Type Action</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getLoopInstances <em>Loop Instances</em>}</li>
  *   <li>{@link canopus.canopusPerformanceScenario.canopusPerformanceScripting.impl.ActivityImpl#getParameterhiddenobject <em>Parameterhiddenobject</em>}</li>
@@ -96,24 +97,24 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	protected String action = ACTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isMethod() <em>Method</em>}' attribute.
+	 * The default value of the '{@link #getMethod() <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isMethod()
+	 * @see #getMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean METHOD_EDEFAULT = false;
+	protected static final METHOD METHOD_EDEFAULT = METHOD.GET;
 
 	/**
-	 * The cached value of the '{@link #isMethod() <em>Method</em>}' attribute.
+	 * The cached value of the '{@link #getMethod() <em>Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isMethod()
+	 * @see #getMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean method = METHOD_EDEFAULT;
+	protected METHOD method = METHOD_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTypeAction() <em>Type Action</em>}' attribute.
@@ -301,7 +302,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isMethod() {
+	public METHOD getMethod() {
 		return method;
 	}
 
@@ -310,9 +311,9 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethod(boolean newMethod) {
-		boolean oldMethod = method;
-		method = newMethod;
+	public void setMethod(METHOD newMethod) {
+		METHOD oldMethod = method;
+		method = newMethod == null ? METHOD_EDEFAULT : newMethod;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScriptingPackage.ACTIVITY__METHOD, oldMethod, method));
 	}
@@ -598,7 +599,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 			case CanopusPerformanceScriptingPackage.ACTIVITY__ACTION:
 				return getAction();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__METHOD:
-				return isMethod();
+				return getMethod();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TYPE_ACTION:
 				return getTypeAction();
 			case CanopusPerformanceScriptingPackage.ACTIVITY__LOOP_INSTANCES:
@@ -641,7 +642,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 				setAction((String)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__METHOD:
-				setMethod((Boolean)newValue);
+				setMethod((METHOD)newValue);
 				return;
 			case CanopusPerformanceScriptingPackage.ACTIVITY__TYPE_ACTION:
 				setTypeAction((TYPEACTION)newValue);

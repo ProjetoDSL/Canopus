@@ -9,6 +9,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Think Time</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Denotes the time between the moment the activity becomes available to the user and the moment the user decides to execute it, for example, the time of filling in form before its submission.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

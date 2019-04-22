@@ -80,18 +80,6 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 				return createScriptingAdapter();
 			}
 			@Override
-			public Adapter caseTeste1(Teste1 object) {
-				return createTeste1Adapter();
-			}
-			@Override
-			public Adapter caseTeste2(Teste2 object) {
-				return createTeste2Adapter();
-			}
-			@Override
-			public Adapter caseTeste1E2(Teste1E2 object) {
-				return createTeste1E2Adapter();
-			}
-			@Override
 			public Adapter caseUserProfileToScript(UserProfileToScript object) {
 				return createUserProfileToScriptAdapter();
 			}
@@ -154,48 +142,6 @@ public class CanopusPerformanceScenarioAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createScriptingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Teste1 <em>Teste1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.Teste1
-	 * @generated
-	 */
-	public Adapter createTeste1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Teste2 <em>Teste2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.Teste2
-	 * @generated
-	 */
-	public Adapter createTeste2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link canopus.canopusPerformanceScenario.Teste1E2 <em>Teste1 E2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see canopus.canopusPerformanceScenario.Teste1E2
-	 * @generated
-	 */
-	public Adapter createTeste1E2Adapter() {
 		return null;
 	}
 
