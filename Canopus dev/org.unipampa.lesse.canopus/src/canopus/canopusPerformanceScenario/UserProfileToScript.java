@@ -2,6 +2,7 @@
  */
 package canopus.canopusPerformanceScenario;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -50,7 +51,8 @@ public interface UserProfileToScript extends EObject {
 	void setTimePercentage(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Userprofile</b></em>' reference.
+	 * Returns the value of the '<em><b>Userprofile</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.UserProfile}.
 	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.UserProfile#getUserprofiletoscript <em>Userprofiletoscript</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -58,27 +60,17 @@ public interface UserProfileToScript extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Userprofile</em>' reference.
-	 * @see #setUserprofile(UserProfile)
+	 * @return the value of the '<em>Userprofile</em>' reference list.
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfileToScript_Userprofile()
 	 * @see canopus.canopusPerformanceScenario.UserProfile#getUserprofiletoscript
 	 * @model opposite="userprofiletoscript"
 	 * @generated
 	 */
-	UserProfile getUserprofile();
+	EList<UserProfile> getUserprofile();
 
 	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getUserprofile <em>Userprofile</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Userprofile</em>' reference.
-	 * @see #getUserprofile()
-	 * @generated
-	 */
-	void setUserprofile(UserProfile value);
-
-	/**
-	 * Returns the value of the '<em><b>Scripting</b></em>' reference.
+	 * Returns the value of the '<em><b>Scripting</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.Scripting}.
 	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -86,23 +78,12 @@ public interface UserProfileToScript extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scripting</em>' reference.
-	 * @see #setScripting(Scripting)
+	 * @return the value of the '<em>Scripting</em>' reference list.
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getUserProfileToScript_Scripting()
 	 * @see canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript
 	 * @model opposite="userprofiletoscript" required="true"
 	 * @generated
 	 */
-	Scripting getScripting();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getScripting <em>Scripting</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scripting</em>' reference.
-	 * @see #getScripting()
-	 * @generated
-	 */
-	void setScripting(Scripting value);
+	EList<Scripting> getScripting();
 
 } // UserProfileToScript

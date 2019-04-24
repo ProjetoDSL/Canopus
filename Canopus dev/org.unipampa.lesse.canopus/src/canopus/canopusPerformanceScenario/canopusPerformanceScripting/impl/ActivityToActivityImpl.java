@@ -95,6 +95,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTimePercentage() {
 		return timePercentage;
 	}
@@ -104,6 +105,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimePercentage(int newTimePercentage) {
 		int oldTimePercentage = timePercentage;
 		timePercentage = newTimePercentage;
@@ -116,6 +118,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivity() {
 		if (activity != null && activity.eIsProxy()) {
 			InternalEObject oldActivity = (InternalEObject)activity;
@@ -157,6 +160,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivity(Activity newActivity) {
 		if (newActivity != activity) {
 			NotificationChain msgs = null;
@@ -176,6 +180,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivies() {
 		if (activies != null && activies.eIsProxy()) {
 			InternalEObject oldActivies = (InternalEObject)activies;
@@ -202,6 +207,7 @@ public class ActivityToActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivies(Activity newActivies) {
 		Activity oldActivies = activies;
 		activies = newActivies;

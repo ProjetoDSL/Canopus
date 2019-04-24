@@ -294,7 +294,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int SCRIPTING__SCRIPTS = 7;
 
 	/**
-	 * The feature id for the '<em><b>Userprofiletoscript</b></em>' reference.
+	 * The feature id for the '<em><b>Userprofiletoscript</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -376,7 +376,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int USER_PROFILE_TO_SCRIPT__TIME_PERCENTAGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Userprofile</b></em>' reference.
+	 * The feature id for the '<em><b>Userprofile</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -385,7 +385,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	int USER_PROFILE_TO_SCRIPT__USERPROFILE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Scripting</b></em>' reference.
+	 * The feature id for the '<em><b>Scripting</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -652,10 +652,10 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getScripting_Scripts();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Userprofiletoscript</em>'.
+	 * @return the meta object for the reference list '<em>Userprofiletoscript</em>'.
 	 * @see canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript()
 	 * @see #getScripting()
 	 * @generated
@@ -728,10 +728,10 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EAttribute getUserProfileToScript_TimePercentage();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getUserprofile <em>Userprofile</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getUserprofile <em>Userprofile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Userprofile</em>'.
+	 * @return the meta object for the reference list '<em>Userprofile</em>'.
 	 * @see canopus.canopusPerformanceScenario.UserProfileToScript#getUserprofile()
 	 * @see #getUserProfileToScript()
 	 * @generated
@@ -739,10 +739,10 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 	EReference getUserProfileToScript_Userprofile();
 
 	/**
-	 * Returns the meta object for the reference '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getScripting <em>Scripting</em>}'.
+	 * Returns the meta object for the reference list '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getScripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Scripting</em>'.
+	 * @return the meta object for the reference list '<em>Scripting</em>'.
 	 * @see canopus.canopusPerformanceScenario.UserProfileToScript#getScripting()
 	 * @see #getUserProfileToScript()
 	 * @generated
@@ -955,7 +955,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EReference SCRIPTING__SCRIPTS = eINSTANCE.getScripting_Scripts();
 
 		/**
-		 * The meta object literal for the '<em><b>Userprofiletoscript</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Userprofiletoscript</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1013,7 +1013,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EAttribute USER_PROFILE_TO_SCRIPT__TIME_PERCENTAGE = eINSTANCE.getUserProfileToScript_TimePercentage();
 
 		/**
-		 * The meta object literal for the '<em><b>Userprofile</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Userprofile</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1021,7 +1021,7 @@ public interface CanopusPerformanceScenarioPackage extends EPackage {
 		EReference USER_PROFILE_TO_SCRIPT__USERPROFILE = eINSTANCE.getUserProfileToScript_Userprofile();
 
 		/**
-		 * The meta object literal for the '<em><b>Scripting</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Scripting</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

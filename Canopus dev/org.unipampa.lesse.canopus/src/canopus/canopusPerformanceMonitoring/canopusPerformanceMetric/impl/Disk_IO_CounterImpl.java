@@ -70,6 +70,7 @@ public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public COUNTER_DISK getCounterDisk() {
 		return counterDisk;
 	}
@@ -79,6 +80,7 @@ public class Disk_IO_CounterImpl extends CounterImpl implements Disk_IO_Counter 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCounterDisk(COUNTER_DISK newCounterDisk) {
 		COUNTER_DISK oldCounterDisk = counterDisk;
 		counterDisk = newCounterDisk == null ? COUNTER_DISK_EDEFAULT : newCounterDisk;

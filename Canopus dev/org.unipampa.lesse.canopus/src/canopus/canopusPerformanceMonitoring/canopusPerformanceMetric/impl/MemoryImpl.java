@@ -62,6 +62,7 @@ public class MemoryImpl extends MetricImpl implements Memory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MemoryCounter> getMemoryCounter() {
 		if (memoryCounter == null) {
 			memoryCounter = new EObjectResolvingEList<MemoryCounter>(MemoryCounter.class, this, CanopusPerformanceMetricPackage.MEMORY__MEMORY_COUNTER);

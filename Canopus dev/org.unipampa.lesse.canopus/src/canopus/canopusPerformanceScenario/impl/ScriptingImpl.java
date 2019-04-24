@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -149,14 +150,14 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	protected EList<Scripting> scripts;
 
 	/**
-	 * The cached value of the '{@link #getUserprofiletoscript() <em>Userprofiletoscript</em>}' reference.
+	 * The cached value of the '{@link #getUserprofiletoscript() <em>Userprofiletoscript</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUserprofiletoscript()
 	 * @generated
 	 * @ordered
 	 */
-	protected UserProfileToScript userprofiletoscript;
+	protected EList<UserProfileToScript> userprofiletoscript;
 
 	/**
 	 * The cached value of the '{@link #getParamenters() <em>Paramenters</em>}' containment reference list.
@@ -232,6 +233,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -241,6 +243,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -253,6 +256,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Initial getInitial() {
 		return initial;
 	}
@@ -277,6 +281,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitial(Initial newInitial) {
 		if (newInitial != initial) {
 			NotificationChain msgs = null;
@@ -296,6 +301,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Final getFinal() {
 		return final_;
 	}
@@ -320,6 +326,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFinal(Final newFinal) {
 		if (newFinal != final_) {
 			NotificationChain msgs = null;
@@ -339,6 +346,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Activity> getActivities() {
 		if (activities == null) {
 			activities = new EObjectContainmentEList<Activity>(Activity.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITIES);
@@ -351,6 +359,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SaveParameters> getSaveparameters() {
 		if (saveparameters == null) {
 			saveparameters = new EObjectContainmentEList<SaveParameters>(SaveParameters.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__SAVEPARAMETERS);
@@ -363,6 +372,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DataTable> getDatatables() {
 		if (datatables == null) {
 			datatables = new EObjectContainmentEList<DataTable>(DataTable.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__DATATABLES);
@@ -375,6 +385,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ThinkTime> getThinkTime() {
 		if (thinkTime == null) {
 			thinkTime = new EObjectContainmentEList<ThinkTime>(ThinkTime.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__THINK_TIME);
@@ -387,6 +398,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Scripting> getScripts() {
 		if (scripts == null) {
 			scripts = new EObjectContainmentEList<Scripting>(Scripting.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS);
@@ -399,14 +411,10 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserProfileToScript getUserprofiletoscript() {
-		if (userprofiletoscript != null && userprofiletoscript.eIsProxy()) {
-			InternalEObject oldUserprofiletoscript = (InternalEObject)userprofiletoscript;
-			userprofiletoscript = (UserProfileToScript)eResolveProxy(oldUserprofiletoscript);
-			if (userprofiletoscript != oldUserprofiletoscript) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, oldUserprofiletoscript, userprofiletoscript));
-			}
+	@Override
+	public EList<UserProfileToScript> getUserprofiletoscript() {
+		if (userprofiletoscript == null) {
+			userprofiletoscript = new EObjectWithInverseResolvingEList.ManyInverse<UserProfileToScript>(UserProfileToScript.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING);
 		}
 		return userprofiletoscript;
 	}
@@ -416,49 +424,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserProfileToScript basicGetUserprofiletoscript() {
-		return userprofiletoscript;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetUserprofiletoscript(UserProfileToScript newUserprofiletoscript, NotificationChain msgs) {
-		UserProfileToScript oldUserprofiletoscript = userprofiletoscript;
-		userprofiletoscript = newUserprofiletoscript;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, oldUserprofiletoscript, newUserprofiletoscript);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUserprofiletoscript(UserProfileToScript newUserprofiletoscript) {
-		if (newUserprofiletoscript != userprofiletoscript) {
-			NotificationChain msgs = null;
-			if (userprofiletoscript != null)
-				msgs = ((InternalEObject)userprofiletoscript).eInverseRemove(this, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, UserProfileToScript.class, msgs);
-			if (newUserprofiletoscript != null)
-				msgs = ((InternalEObject)newUserprofiletoscript).eInverseAdd(this, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, UserProfileToScript.class, msgs);
-			msgs = basicSetUserprofiletoscript(newUserprofiletoscript, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, newUserprofiletoscript, newUserprofiletoscript));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EList<ParameterHiddenObject> getParamenters() {
 		if (paramenters == null) {
 			paramenters = new EObjectContainmentEList<ParameterHiddenObject>(ParameterHiddenObject.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS);
@@ -471,6 +437,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityToActivity> getActivityToActivity() {
 		if (activityToActivity == null) {
 			activityToActivity = new EObjectContainmentEList<ActivityToActivity>(ActivityToActivity.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY);
@@ -483,6 +450,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ColumnsHiddenObject> getColumns() {
 		if (columns == null) {
 			columns = new EObjectContainmentEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScenarioPackage.SCRIPTING__COLUMNS);
@@ -495,6 +463,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -504,6 +473,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -516,13 +486,12 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
-				if (userprofiletoscript != null)
-					msgs = ((InternalEObject)userprofiletoscript).eInverseRemove(this, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, UserProfileToScript.class, msgs);
-				return basicSetUserprofiletoscript((UserProfileToScript)otherEnd, msgs);
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUserprofiletoscript()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -550,7 +519,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				return ((InternalEList<?>)getScripts()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
-				return basicSetUserprofiletoscript(null, msgs);
+				return ((InternalEList<?>)getUserprofiletoscript()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
 				return ((InternalEList<?>)getParamenters()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
@@ -586,8 +555,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				return getScripts();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
-				if (resolve) return getUserprofiletoscript();
-				return basicGetUserprofiletoscript();
+				return getUserprofiletoscript();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
 				return getParamenters();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:
@@ -639,7 +607,8 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				getScripts().addAll((Collection<? extends Scripting>)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
-				setUserprofiletoscript((UserProfileToScript)newValue);
+				getUserprofiletoscript().clear();
+				getUserprofiletoscript().addAll((Collection<? extends UserProfileToScript>)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
 				getParamenters().clear();
@@ -693,7 +662,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 				getScripts().clear();
 				return;
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
-				setUserprofiletoscript((UserProfileToScript)null);
+				getUserprofiletoscript().clear();
 				return;
 			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
 				getParamenters().clear();
@@ -736,7 +705,7 @@ public class ScriptingImpl extends MinimalEObjectImpl.Container implements Scrip
 			case CanopusPerformanceScenarioPackage.SCRIPTING__SCRIPTS:
 				return scripts != null && !scripts.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT:
-				return userprofiletoscript != null;
+				return userprofiletoscript != null && !userprofiletoscript.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__PARAMENTERS:
 				return paramenters != null && !paramenters.isEmpty();
 			case CanopusPerformanceScenarioPackage.SCRIPTING__ACTIVITY_TO_ACTIVITY:

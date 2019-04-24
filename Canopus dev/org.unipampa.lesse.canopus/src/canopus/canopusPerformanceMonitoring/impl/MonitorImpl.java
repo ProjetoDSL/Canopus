@@ -161,6 +161,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHostname() {
 		return hostname;
 	}
@@ -170,6 +171,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHostname(String newHostname) {
 		String oldHostname = hostname;
 		hostname = newHostname;
@@ -182,6 +184,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIp() {
 		return ip;
 	}
@@ -191,6 +194,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIp(String newIp) {
 		String oldIp = ip;
 		ip = newIp;
@@ -203,6 +207,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SUT> getSut() {
 		if (sut == null) {
 			sut = new EObjectResolvingEList<SUT>(SUT.class, this, CanopusPerformanceMonitoringPackage.MONITOR__SUT);
@@ -215,6 +220,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HARDWARE getHardware() {
 		return hardware;
 	}
@@ -224,6 +230,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHardware(HARDWARE newHardware) {
 		HARDWARE oldHardware = hardware;
 		hardware = newHardware == null ? HARDWARE_EDEFAULT : newHardware;
@@ -236,6 +243,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -245,6 +253,7 @@ public class MonitorImpl extends MinimalEObjectImpl.Container implements Monitor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDescription() {
 		return descriptionESet;
 	}

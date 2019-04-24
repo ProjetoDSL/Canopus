@@ -166,6 +166,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHostname() {
 		return hostname;
 	}
@@ -175,6 +176,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHostname(String newHostname) {
 		String oldHostname = hostname;
 		hostname = newHostname;
@@ -187,6 +189,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIp() {
 		return ip;
 	}
@@ -196,6 +199,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIp(String newIp) {
 		String oldIp = ip;
 		ip = newIp;
@@ -208,6 +212,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HARDWARE getHardware() {
 		return hardware;
 	}
@@ -217,6 +222,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHardware(HARDWARE newHardware) {
 		HARDWARE oldHardware = hardware;
 		hardware = newHardware == null ? HARDWARE_EDEFAULT : newHardware;
@@ -229,6 +235,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SUT> getSut() {
 		if (sut == null) {
 			sut = new EObjectResolvingEList<SUT>(SUT.class, this, CanopusPerformanceMonitoringPackage.SUT__SUT);
@@ -241,6 +248,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MetricModel getMetricmodel() {
 		return metricmodel;
 	}
@@ -265,6 +273,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMetricmodel(MetricModel newMetricmodel) {
 		if (newMetricmodel != metricmodel) {
 			NotificationChain msgs = null;
@@ -284,6 +293,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SUT_TYPE getType() {
 		return type;
 	}
@@ -293,6 +303,7 @@ public class SUTImpl extends MinimalEObjectImpl.Container implements SUT {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(SUT_TYPE newType) {
 		SUT_TYPE oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;

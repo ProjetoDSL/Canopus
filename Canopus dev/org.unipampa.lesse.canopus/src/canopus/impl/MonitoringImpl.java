@@ -106,6 +106,7 @@ public class MonitoringImpl extends DiagramImpl implements Monitoring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SUT> getSuts() {
 		if (suts == null) {
 			suts = new EObjectContainmentEList<SUT>(SUT.class, this, CanopusPackage.MONITORING__SUTS);
@@ -118,6 +119,7 @@ public class MonitoringImpl extends DiagramImpl implements Monitoring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LoadGenerator getLoadGenerators() {
 		return loadGenerators;
 	}
@@ -142,6 +144,7 @@ public class MonitoringImpl extends DiagramImpl implements Monitoring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLoadGenerators(LoadGenerator newLoadGenerators) {
 		if (newLoadGenerators != loadGenerators) {
 			NotificationChain msgs = null;
@@ -161,6 +164,7 @@ public class MonitoringImpl extends DiagramImpl implements Monitoring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Monitor getMonitors() {
 		return monitors;
 	}
@@ -185,6 +189,7 @@ public class MonitoringImpl extends DiagramImpl implements Monitoring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMonitors(Monitor newMonitors) {
 		if (newMonitors != monitors) {
 			NotificationChain msgs = null;
@@ -204,6 +209,7 @@ public class MonitoringImpl extends DiagramImpl implements Monitoring {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MetricModel> getMetricModel() {
 		if (metricModel == null) {
 			metricModel = new EObjectContainmentEList<MetricModel>(MetricModel.class, this, CanopusPackage.MONITORING__METRIC_MODEL);

@@ -1066,7 +1066,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_blkmUDxPEemawpny8whwhg" sourceNode="_h5R6gPydEei4TtaqMdxA0w" targetNode="_We8DsDxPEemawpny8whwhg" beginLabel="[0..1] userprofile" endLabel="[0..*] userprofiletoscript">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_blkmUDxPEemawpny8whwhg" sourceNode="_h5R6gPydEei4TtaqMdxA0w" targetNode="_We8DsDxPEemawpny8whwhg" beginLabel="[0..*] userprofile" endLabel="[0..*] userprofiletoscript">
       <target xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceScenario/UserProfile/userprofiletoscript"/>
       <semanticElements xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceScenario/UserProfileToScript/userprofile"/>
       <semanticElements xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceScenario/UserProfile/userprofiletoscript"/>
@@ -1077,7 +1077,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_f67dADxPEemawpny8whwhg" sourceNode="_PZNNUP1oEeiEU9xrxiNvAQ" targetNode="_We8DsDxPEemawpny8whwhg" beginLabel="[1..1] scripting" endLabel="[0..1] userprofiletoscript">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_f67dADxPEemawpny8whwhg" sourceNode="_PZNNUP1oEeiEU9xrxiNvAQ" targetNode="_We8DsDxPEemawpny8whwhg" beginLabel="[1..*] scripting" endLabel="[0..*] userprofiletoscript">
       <target xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceScenario/Scripting/userprofiletoscript"/>
       <semanticElements xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceScenario/UserProfileToScript/scripting"/>
       <semanticElements xmi:type="ecore:EReference" href="canopus.ecore#//canopusPerformanceScenario/Scripting/userprofiletoscript"/>

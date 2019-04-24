@@ -260,6 +260,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -269,6 +270,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -281,6 +283,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAction() {
 		return action;
 	}
@@ -290,6 +293,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAction(String newAction) {
 		String oldAction = action;
 		action = newAction;
@@ -302,6 +306,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public METHOD getMethod() {
 		return method;
 	}
@@ -311,6 +316,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(METHOD newMethod) {
 		METHOD oldMethod = method;
 		method = newMethod == null ? METHOD_EDEFAULT : newMethod;
@@ -323,6 +329,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TYPEACTION getTypeAction() {
 		return typeAction;
 	}
@@ -332,6 +339,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeAction(TYPEACTION newTypeAction) {
 		TYPEACTION oldTypeAction = typeAction;
 		typeAction = newTypeAction == null ? TYPE_ACTION_EDEFAULT : newTypeAction;
@@ -344,6 +352,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLoopInstances() {
 		return loopInstances;
 	}
@@ -353,6 +362,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLoopInstances(int newLoopInstances) {
 		int oldLoopInstances = loopInstances;
 		loopInstances = newLoopInstances;
@@ -365,6 +375,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterHiddenObject> getParameterhiddenobject() {
 		if (parameterhiddenobject == null) {
 			parameterhiddenobject = new EObjectResolvingEList<ParameterHiddenObject>(ParameterHiddenObject.class, this, CanopusPerformanceScriptingPackage.ACTIVITY__PARAMETERHIDDENOBJECT);
@@ -377,6 +388,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTransaction() {
 		return transaction;
 	}
@@ -386,6 +398,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransaction(boolean newTransaction) {
 		boolean oldTransaction = transaction;
 		transaction = newTransaction;
@@ -398,6 +411,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Final getFinal() {
 		if (final_ != null && final_.eIsProxy()) {
 			InternalEObject oldFinal = (InternalEObject)final_;
@@ -424,6 +438,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFinal(Final newFinal) {
 		Final oldFinal = final_;
 		final_ = newFinal;
@@ -436,6 +451,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThinkTime getThinktime() {
 		if (thinktime != null && thinktime.eIsProxy()) {
 			InternalEObject oldThinktime = (InternalEObject)thinktime;
@@ -462,6 +478,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThinktime(ThinkTime newThinktime) {
 		ThinkTime oldThinktime = thinktime;
 		thinktime = newThinktime;
@@ -474,6 +491,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Scripting getScripting() {
 		if (scripting != null && scripting.eIsProxy()) {
 			InternalEObject oldScripting = (InternalEObject)scripting;
@@ -500,6 +518,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScripting(Scripting newScripting) {
 		Scripting oldScripting = scripting;
 		scripting = newScripting;
@@ -512,6 +531,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityToActivity> getActivitytoactivity() {
 		if (activitytoactivity == null) {
 			activitytoactivity = new EObjectWithInverseResolvingEList<ActivityToActivity>(ActivityToActivity.class, this, CanopusPerformanceScriptingPackage.ACTIVITY__ACTIVITYTOACTIVITY, CanopusPerformanceScriptingPackage.ACTIVITY_TO_ACTIVITY__ACTIVITY);
@@ -524,6 +544,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SaveParameters getSaveparameters() {
 		if (saveparameters != null && saveparameters.eIsProxy()) {
 			InternalEObject oldSaveparameters = (InternalEObject)saveparameters;
@@ -550,6 +571,7 @@ public class ActivityImpl extends MinimalEObjectImpl.Container implements Activi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSaveparameters(SaveParameters newSaveparameters) {
 		SaveParameters oldSaveparameters = saveparameters;
 		saveparameters = newSaveparameters;

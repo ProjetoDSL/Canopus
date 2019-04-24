@@ -133,6 +133,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -142,6 +143,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -154,6 +156,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getProjectLabel() {
 		return projectLabel;
 	}
@@ -163,6 +166,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProjectLabel(String newProjectLabel) {
 		String oldProjectLabel = projectLabel;
 		projectLabel = newProjectLabel;
@@ -175,6 +179,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getProjectAuthor() {
 		return projectAuthor;
 	}
@@ -184,6 +189,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProjectAuthor(String newProjectAuthor) {
 		String oldProjectAuthor = projectAuthor;
 		projectAuthor = newProjectAuthor;
@@ -196,6 +202,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -205,6 +212,7 @@ public abstract class DiagramImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;

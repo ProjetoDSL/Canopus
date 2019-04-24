@@ -118,6 +118,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Initial createInitial() {
 		InitialImpl initial = new InitialImpl();
 		return initial;
@@ -128,6 +129,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Final createFinal() {
 		FinalImpl final_ = new FinalImpl();
 		return final_;
@@ -138,6 +140,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity createActivity() {
 		ActivityImpl activity = new ActivityImpl();
 		return activity;
@@ -148,6 +151,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ThinkTime createThinkTime() {
 		ThinkTimeImpl thinkTime = new ThinkTimeImpl();
 		return thinkTime;
@@ -158,6 +162,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SaveParameters createSaveParameters() {
 		SaveParametersImpl saveParameters = new SaveParametersImpl();
 		return saveParameters;
@@ -168,6 +173,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataTable createDataTable() {
 		DataTableImpl dataTable = new DataTableImpl();
 		return dataTable;
@@ -178,6 +184,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterHiddenObject createParameterHiddenObject() {
 		ParameterHiddenObjectImpl parameterHiddenObject = new ParameterHiddenObjectImpl();
 		return parameterHiddenObject;
@@ -188,6 +195,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColumnsHiddenObject createColumnsHiddenObject() {
 		ColumnsHiddenObjectImpl columnsHiddenObject = new ColumnsHiddenObjectImpl();
 		return columnsHiddenObject;
@@ -198,6 +206,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityToActivity createActivityToActivity() {
 		ActivityToActivityImpl activityToActivity = new ActivityToActivityImpl();
 		return activityToActivity;
@@ -288,6 +297,7 @@ public class CanopusPerformanceScriptingFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceScriptingPackage getCanopusPerformanceScriptingPackage() {
 		return (CanopusPerformanceScriptingPackage)getEPackage();
 	}

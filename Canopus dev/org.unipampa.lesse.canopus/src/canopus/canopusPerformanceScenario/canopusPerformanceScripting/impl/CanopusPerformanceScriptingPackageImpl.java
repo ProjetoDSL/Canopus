@@ -236,6 +236,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInitial() {
 		return initialEClass;
 	}
@@ -245,6 +246,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInitial_Name() {
 		return (EAttribute)initialEClass.getEStructuralFeatures().get(0);
 	}
@@ -254,6 +256,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInitial_Activity() {
 		return (EReference)initialEClass.getEStructuralFeatures().get(1);
 	}
@@ -263,6 +266,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFinal() {
 		return finalEClass;
 	}
@@ -272,6 +276,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFinal_Name() {
 		return (EAttribute)finalEClass.getEStructuralFeatures().get(0);
 	}
@@ -281,6 +286,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getActivity() {
 		return activityEClass;
 	}
@@ -290,6 +296,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivity_Name() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(0);
 	}
@@ -299,6 +306,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivity_Action() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(1);
 	}
@@ -308,6 +316,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivity_Method() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(2);
 	}
@@ -317,6 +326,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivity_TypeAction() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(3);
 	}
@@ -326,6 +336,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivity_LoopInstances() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(4);
 	}
@@ -335,6 +346,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Parameterhiddenobject() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(5);
 	}
@@ -344,6 +356,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivity_Transaction() {
 		return (EAttribute)activityEClass.getEStructuralFeatures().get(6);
 	}
@@ -353,6 +366,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Final() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(7);
 	}
@@ -362,6 +376,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Thinktime() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(8);
 	}
@@ -371,6 +386,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Scripting() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(9);
 	}
@@ -380,6 +396,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Activitytoactivity() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(10);
 	}
@@ -389,6 +406,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivity_Saveparameters() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(11);
 	}
@@ -398,6 +416,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThinkTime() {
 		return thinkTimeEClass;
 	}
@@ -407,6 +426,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getThinkTime_Name() {
 		return (EAttribute)thinkTimeEClass.getEStructuralFeatures().get(0);
 	}
@@ -416,6 +436,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getThinkTime_Time() {
 		return (EAttribute)thinkTimeEClass.getEStructuralFeatures().get(1);
 	}
@@ -425,6 +446,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getThinkTime_Activity() {
 		return (EReference)thinkTimeEClass.getEStructuralFeatures().get(2);
 	}
@@ -434,6 +456,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSaveParameters() {
 		return saveParametersEClass;
 	}
@@ -443,6 +466,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSaveParameters_Name() {
 		return (EAttribute)saveParametersEClass.getEStructuralFeatures().get(0);
 	}
@@ -452,6 +476,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSaveParameters_Parameterhiddenobject() {
 		return (EReference)saveParametersEClass.getEStructuralFeatures().get(1);
 	}
@@ -461,6 +486,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDataTable() {
 		return dataTableEClass;
 	}
@@ -470,6 +496,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTable_AttachedFile() {
 		return (EAttribute)dataTableEClass.getEStructuralFeatures().get(0);
 	}
@@ -479,6 +506,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDataTable_Delimeter() {
 		return (EAttribute)dataTableEClass.getEStructuralFeatures().get(1);
 	}
@@ -488,6 +516,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataTable_Activity() {
 		return (EReference)dataTableEClass.getEStructuralFeatures().get(2);
 	}
@@ -497,6 +526,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDataTable_Columnshiddenobject() {
 		return (EReference)dataTableEClass.getEStructuralFeatures().get(3);
 	}
@@ -506,6 +536,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameterHiddenObject() {
 		return parameterHiddenObjectEClass;
 	}
@@ -515,6 +546,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameterHiddenObject_TypeAction() {
 		return (EAttribute)parameterHiddenObjectEClass.getEStructuralFeatures().get(0);
 	}
@@ -524,6 +556,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameterHiddenObject_ParameterName() {
 		return (EAttribute)parameterHiddenObjectEClass.getEStructuralFeatures().get(1);
 	}
@@ -533,6 +566,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getParameterHiddenObject_StaticValue() {
 		return (EAttribute)parameterHiddenObjectEClass.getEStructuralFeatures().get(2);
 	}
@@ -542,6 +576,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getParameterHiddenObject_Columnshiddenobject() {
 		return (EReference)parameterHiddenObjectEClass.getEStructuralFeatures().get(3);
 	}
@@ -551,6 +586,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getColumnsHiddenObject() {
 		return columnsHiddenObjectEClass;
 	}
@@ -560,6 +596,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColumnsHiddenObject_ReferendedParameter() {
 		return (EAttribute)columnsHiddenObjectEClass.getEStructuralFeatures().get(0);
 	}
@@ -569,6 +606,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColumnsHiddenObject_Selectnextrow() {
 		return (EAttribute)columnsHiddenObjectEClass.getEStructuralFeatures().get(1);
 	}
@@ -578,6 +616,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColumnsHiddenObject_Updatedvalueon() {
 		return (EAttribute)columnsHiddenObjectEClass.getEStructuralFeatures().get(2);
 	}
@@ -587,6 +626,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColumnsHiddenObject_ParameterName() {
 		return (EAttribute)columnsHiddenObjectEClass.getEStructuralFeatures().get(3);
 	}
@@ -596,6 +636,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getActivityToActivity() {
 		return activityToActivityEClass;
 	}
@@ -605,6 +646,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActivityToActivity_TimePercentage() {
 		return (EAttribute)activityToActivityEClass.getEStructuralFeatures().get(0);
 	}
@@ -614,6 +656,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivityToActivity_Activity() {
 		return (EReference)activityToActivityEClass.getEStructuralFeatures().get(1);
 	}
@@ -623,6 +666,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getActivityToActivity_Activies() {
 		return (EReference)activityToActivityEClass.getEStructuralFeatures().get(2);
 	}
@@ -632,6 +676,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getTYPEACTION() {
 		return typeactionEEnum;
 	}
@@ -641,6 +686,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getUPDATED_VALUE_ON() {
 		return updateD_VALUE_ONEEnum;
 	}
@@ -650,6 +696,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSELECT_NEXT_ROW() {
 		return selecT_NEXT_ROWEEnum;
 	}
@@ -659,6 +706,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMETHOD() {
 		return methodEEnum;
 	}
@@ -668,6 +716,7 @@ public class CanopusPerformanceScriptingPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceScriptingFactory getCanopusPerformanceScriptingFactory() {
 		return (CanopusPerformanceScriptingFactory)getEFactoryInstance();
 	}

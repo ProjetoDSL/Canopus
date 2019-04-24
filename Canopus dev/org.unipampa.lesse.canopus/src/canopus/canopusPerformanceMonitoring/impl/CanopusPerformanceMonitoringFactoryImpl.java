@@ -105,6 +105,7 @@ public class CanopusPerformanceMonitoringFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SUT createSUT() {
 		SUTImpl sut = new SUTImpl();
 		return sut;
@@ -115,6 +116,7 @@ public class CanopusPerformanceMonitoringFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LoadGenerator createLoadGenerator() {
 		LoadGeneratorImpl loadGenerator = new LoadGeneratorImpl();
 		return loadGenerator;
@@ -125,6 +127,7 @@ public class CanopusPerformanceMonitoringFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Monitor createMonitor() {
 		MonitorImpl monitor = new MonitorImpl();
 		return monitor;
@@ -135,6 +138,7 @@ public class CanopusPerformanceMonitoringFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MetricModel createMetricModel() {
 		MetricModelImpl metricModel = new MetricModelImpl();
 		return metricModel;
@@ -185,6 +189,7 @@ public class CanopusPerformanceMonitoringFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceMonitoringPackage getCanopusPerformanceMonitoringPackage() {
 		return (CanopusPerformanceMonitoringPackage)getEPackage();
 	}

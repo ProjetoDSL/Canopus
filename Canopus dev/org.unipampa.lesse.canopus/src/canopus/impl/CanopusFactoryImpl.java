@@ -68,6 +68,7 @@ public class CanopusFactoryImpl extends EFactoryImpl implements CanopusFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Monitoring createMonitoring() {
 		MonitoringImpl monitoring = new MonitoringImpl();
 		return monitoring;
@@ -78,6 +79,7 @@ public class CanopusFactoryImpl extends EFactoryImpl implements CanopusFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Scenario createScenario() {
 		ScenarioImpl scenario = new ScenarioImpl();
 		return scenario;
@@ -88,6 +90,7 @@ public class CanopusFactoryImpl extends EFactoryImpl implements CanopusFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPackage getCanopusPackage() {
 		return (CanopusPackage)getEPackage();
 	}

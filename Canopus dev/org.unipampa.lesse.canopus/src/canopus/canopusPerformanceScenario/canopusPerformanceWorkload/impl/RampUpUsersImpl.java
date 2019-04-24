@@ -70,6 +70,7 @@ public class RampUpUsersImpl extends MinimalEObjectImpl.Container implements Ram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getVirtualUsers() {
 		return virtualUsers;
 	}
@@ -79,6 +80,7 @@ public class RampUpUsersImpl extends MinimalEObjectImpl.Container implements Ram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVirtualUsers(int newVirtualUsers) {
 		int oldVirtualUsers = virtualUsers;
 		virtualUsers = newVirtualUsers;

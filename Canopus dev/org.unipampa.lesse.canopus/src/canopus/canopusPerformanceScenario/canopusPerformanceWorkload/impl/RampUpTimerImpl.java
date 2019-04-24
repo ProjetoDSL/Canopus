@@ -70,6 +70,7 @@ public class RampUpTimerImpl extends MinimalEObjectImpl.Container implements Ram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTime() {
 		return time;
 	}
@@ -79,6 +80,7 @@ public class RampUpTimerImpl extends MinimalEObjectImpl.Container implements Ram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(int newTime) {
 		int oldTime = time;
 		time = newTime;

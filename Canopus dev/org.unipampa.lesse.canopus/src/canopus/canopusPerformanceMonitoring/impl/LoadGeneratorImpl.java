@@ -178,6 +178,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHostname() {
 		return hostname;
 	}
@@ -187,6 +188,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHostname(String newHostname) {
 		String oldHostname = hostname;
 		hostname = newHostname;
@@ -199,6 +201,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIp() {
 		return ip;
 	}
@@ -208,6 +211,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIp(String newIp) {
 		String oldIp = ip;
 		ip = newIp;
@@ -220,6 +224,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIsMonitor() {
 		return isMonitor;
 	}
@@ -229,6 +234,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsMonitor(boolean newIsMonitor) {
 		boolean oldIsMonitor = isMonitor;
 		isMonitor = newIsMonitor;
@@ -241,6 +247,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SUT> getSut() {
 		if (sut == null) {
 			sut = new EObjectResolvingEList<SUT>(SUT.class, this, CanopusPerformanceMonitoringPackage.LOAD_GENERATOR__SUT);
@@ -253,6 +260,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MetricModel getMetricmodel() {
 		return metricmodel;
 	}
@@ -277,6 +285,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMetricmodel(MetricModel newMetricmodel) {
 		if (newMetricmodel != metricmodel) {
 			NotificationChain msgs = null;
@@ -296,6 +305,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public HARDWARE getHardware() {
 		return hardware;
 	}
@@ -305,6 +315,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHardware(HARDWARE newHardware) {
 		HARDWARE oldHardware = hardware;
 		hardware = newHardware == null ? HARDWARE_EDEFAULT : newHardware;
@@ -317,6 +328,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Monitor getMonitor() {
 		if (monitor != null && monitor.eIsProxy()) {
 			InternalEObject oldMonitor = (InternalEObject)monitor;
@@ -343,6 +355,7 @@ public class LoadGeneratorImpl extends MinimalEObjectImpl.Container implements L
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMonitor(Monitor newMonitor) {
 		Monitor oldMonitor = monitor;
 		monitor = newMonitor;

@@ -62,6 +62,7 @@ public class TransactionImpl extends MetricImpl implements Transaction {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TransactionCounter> getTransactionCounter() {
 		if (transactionCounter == null) {
 			transactionCounter = new EObjectResolvingEList<TransactionCounter>(TransactionCounter.class, this, CanopusPerformanceMetricPackage.TRANSACTION__TRANSACTION_COUNTER);

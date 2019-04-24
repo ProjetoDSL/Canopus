@@ -7,14 +7,18 @@ import canopus.canopusPerformanceScenario.Scripting;
 import canopus.canopusPerformanceScenario.UserProfile;
 import canopus.canopusPerformanceScenario.UserProfileToScript;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,24 +57,24 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	protected int timePercentage = TIME_PERCENTAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUserprofile() <em>Userprofile</em>}' reference.
+	 * The cached value of the '{@link #getUserprofile() <em>Userprofile</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUserprofile()
 	 * @generated
 	 * @ordered
 	 */
-	protected UserProfile userprofile;
+	protected EList<UserProfile> userprofile;
 
 	/**
-	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference.
+	 * The cached value of the '{@link #getScripting() <em>Scripting</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getScripting()
 	 * @generated
 	 * @ordered
 	 */
-	protected Scripting scripting;
+	protected EList<Scripting> scripting;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,6 +100,7 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTimePercentage() {
 		return timePercentage;
 	}
@@ -105,6 +110,7 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimePercentage(int newTimePercentage) {
 		int oldTimePercentage = timePercentage;
 		timePercentage = newTimePercentage;
@@ -117,119 +123,12 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserProfile getUserprofile() {
-		if (userprofile != null && userprofile.eIsProxy()) {
-			InternalEObject oldUserprofile = (InternalEObject)userprofile;
-			userprofile = (UserProfile)eResolveProxy(oldUserprofile);
-			if (userprofile != oldUserprofile) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE, oldUserprofile, userprofile));
-			}
+	@Override
+	public EList<UserProfile> getUserprofile() {
+		if (userprofile == null) {
+			userprofile = new EObjectWithInverseResolvingEList.ManyInverse<UserProfile>(UserProfile.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE, CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT);
 		}
 		return userprofile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserProfile basicGetUserprofile() {
-		return userprofile;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetUserprofile(UserProfile newUserprofile, NotificationChain msgs) {
-		UserProfile oldUserprofile = userprofile;
-		userprofile = newUserprofile;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE, oldUserprofile, newUserprofile);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUserprofile(UserProfile newUserprofile) {
-		if (newUserprofile != userprofile) {
-			NotificationChain msgs = null;
-			if (userprofile != null)
-				msgs = ((InternalEObject)userprofile).eInverseRemove(this, CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT, UserProfile.class, msgs);
-			if (newUserprofile != null)
-				msgs = ((InternalEObject)newUserprofile).eInverseAdd(this, CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT, UserProfile.class, msgs);
-			msgs = basicSetUserprofile(newUserprofile, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE, newUserprofile, newUserprofile));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Scripting getScripting() {
-		if (scripting != null && scripting.eIsProxy()) {
-			InternalEObject oldScripting = (InternalEObject)scripting;
-			scripting = (Scripting)eResolveProxy(oldScripting);
-			if (scripting != oldScripting) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, oldScripting, scripting));
-			}
-		}
-		return scripting;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Scripting basicGetScripting() {
-		return scripting;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetScripting(Scripting newScripting, NotificationChain msgs) {
-		Scripting oldScripting = scripting;
-		scripting = newScripting;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, oldScripting, newScripting);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setScripting(Scripting newScripting) {
-		if (newScripting != scripting) {
-			NotificationChain msgs = null;
-			if (scripting != null)
-				msgs = ((InternalEObject)scripting).eInverseRemove(this, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, Scripting.class, msgs);
-			if (newScripting != null)
-				msgs = ((InternalEObject)newScripting).eInverseAdd(this, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, Scripting.class, msgs);
-			msgs = basicSetScripting(newScripting, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, newScripting, newScripting));
 	}
 
 	/**
@@ -238,16 +137,26 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
+	public EList<Scripting> getScripting() {
+		if (scripting == null) {
+			scripting = new EObjectWithInverseResolvingEList.ManyInverse<Scripting>(Scripting.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT);
+		}
+		return scripting;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE:
-				if (userprofile != null)
-					msgs = ((InternalEObject)userprofile).eInverseRemove(this, CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT, UserProfile.class, msgs);
-				return basicSetUserprofile((UserProfile)otherEnd, msgs);
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUserprofile()).basicAdd(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING:
-				if (scripting != null)
-					msgs = ((InternalEObject)scripting).eInverseRemove(this, CanopusPerformanceScenarioPackage.SCRIPTING__USERPROFILETOSCRIPT, Scripting.class, msgs);
-				return basicSetScripting((Scripting)otherEnd, msgs);
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getScripting()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -261,9 +170,9 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE:
-				return basicSetUserprofile(null, msgs);
+				return ((InternalEList<?>)getUserprofile()).basicRemove(otherEnd, msgs);
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING:
-				return basicSetScripting(null, msgs);
+				return ((InternalEList<?>)getScripting()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -279,11 +188,9 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__TIME_PERCENTAGE:
 				return getTimePercentage();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE:
-				if (resolve) return getUserprofile();
-				return basicGetUserprofile();
+				return getUserprofile();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING:
-				if (resolve) return getScripting();
-				return basicGetScripting();
+				return getScripting();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -293,6 +200,7 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -300,10 +208,12 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 				setTimePercentage((Integer)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE:
-				setUserprofile((UserProfile)newValue);
+				getUserprofile().clear();
+				getUserprofile().addAll((Collection<? extends UserProfile>)newValue);
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING:
-				setScripting((Scripting)newValue);
+				getScripting().clear();
+				getScripting().addAll((Collection<? extends Scripting>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -321,10 +231,10 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 				setTimePercentage(TIME_PERCENTAGE_EDEFAULT);
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE:
-				setUserprofile((UserProfile)null);
+				getUserprofile().clear();
 				return;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING:
-				setScripting((Scripting)null);
+				getScripting().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -341,9 +251,9 @@ public class UserProfileToScriptImpl extends MinimalEObjectImpl.Container implem
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__TIME_PERCENTAGE:
 				return timePercentage != TIME_PERCENTAGE_EDEFAULT;
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE:
-				return userprofile != null;
+				return userprofile != null && !userprofile.isEmpty();
 			case CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__SCRIPTING:
-				return scripting != null;
+				return scripting != null && !scripting.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

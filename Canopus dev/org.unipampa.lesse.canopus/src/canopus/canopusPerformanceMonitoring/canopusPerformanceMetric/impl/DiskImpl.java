@@ -62,6 +62,7 @@ public class DiskImpl extends MetricImpl implements Disk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Disk_IO_Counter> getDisk_io_counter() {
 		if (disk_io_counter == null) {
 			disk_io_counter = new EObjectResolvingEList<Disk_IO_Counter>(Disk_IO_Counter.class, this, CanopusPerformanceMetricPackage.DISK__DISK_IO_COUNTER);

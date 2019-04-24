@@ -159,6 +159,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMonitoring() {
 		return monitoringEClass;
 	}
@@ -168,6 +169,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMonitoring_Suts() {
 		return (EReference)monitoringEClass.getEStructuralFeatures().get(0);
 	}
@@ -177,6 +179,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMonitoring_LoadGenerators() {
 		return (EReference)monitoringEClass.getEStructuralFeatures().get(1);
 	}
@@ -186,6 +189,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMonitoring_Monitors() {
 		return (EReference)monitoringEClass.getEStructuralFeatures().get(2);
 	}
@@ -195,6 +199,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMonitoring_MetricModel() {
 		return (EReference)monitoringEClass.getEStructuralFeatures().get(3);
 	}
@@ -204,6 +209,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getScenario() {
 		return scenarioEClass;
 	}
@@ -213,6 +219,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScenario_Users() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(0);
 	}
@@ -222,6 +229,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScenario_Workloads() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(1);
 	}
@@ -231,6 +239,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScenario_Scripting() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(2);
 	}
@@ -240,6 +249,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScenario_UserProfileToScript() {
 		return (EReference)scenarioEClass.getEStructuralFeatures().get(3);
 	}
@@ -249,6 +259,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDiagram() {
 		return diagramEClass;
 	}
@@ -258,6 +269,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagram_Name() {
 		return (EAttribute)diagramEClass.getEStructuralFeatures().get(0);
 	}
@@ -267,6 +279,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagram_ProjectLabel() {
 		return (EAttribute)diagramEClass.getEStructuralFeatures().get(1);
 	}
@@ -276,6 +289,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagram_ProjectAuthor() {
 		return (EAttribute)diagramEClass.getEStructuralFeatures().get(2);
 	}
@@ -285,6 +299,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagram_Description() {
 		return (EAttribute)diagramEClass.getEStructuralFeatures().get(3);
 	}
@@ -294,6 +309,7 @@ public class CanopusPackageImpl extends EPackageImpl implements CanopusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusFactory getCanopusFactory() {
 		return (CanopusFactory)getEFactoryInstance();
 	}

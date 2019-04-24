@@ -163,6 +163,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampUpTimer getRampUpTimer() {
 		return rampUpTimer;
 	}
@@ -187,6 +188,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRampUpTimer(RampUpTimer newRampUpTimer) {
 		if (newRampUpTimer != rampUpTimer) {
 			NotificationChain msgs = null;
@@ -206,6 +208,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampDownUsers getRampDownUsers() {
 		return rampDownUsers;
 	}
@@ -230,6 +233,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRampDownUsers(RampDownUsers newRampDownUsers) {
 		if (newRampDownUsers != rampDownUsers) {
 			NotificationChain msgs = null;
@@ -249,6 +253,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampUpUsers getRampUpUsers() {
 		return rampUpUsers;
 	}
@@ -273,6 +278,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRampUpUsers(RampUpUsers newRampUpUsers) {
 		if (newRampUpUsers != rampUpUsers) {
 			NotificationChain msgs = null;
@@ -292,6 +298,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampDownTimer getRampDownTimer() {
 		return rampDownTimer;
 	}
@@ -316,6 +323,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRampDownTimer(RampDownTimer newRampDownTimer) {
 		if (newRampDownTimer != rampDownTimer) {
 			NotificationChain msgs = null;
@@ -335,6 +343,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -344,6 +353,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -356,6 +366,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTime() {
 		return time;
 	}
@@ -365,6 +376,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(String newTime) {
 		String oldTime = time;
 		time = newTime;
@@ -377,6 +389,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getVirtualUsers() {
 		return virtualUsers;
 	}
@@ -386,6 +399,7 @@ public class WorkloadImpl extends MinimalEObjectImpl.Container implements Worklo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVirtualUsers(int newVirtualUsers) {
 		int oldVirtualUsers = virtualUsers;
 		virtualUsers = newVirtualUsers;

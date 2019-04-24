@@ -84,6 +84,7 @@ public class SaveParametersImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -93,6 +94,7 @@ public class SaveParametersImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -105,6 +107,7 @@ public class SaveParametersImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterHiddenObject getParameterhiddenobject() {
 		return parameterhiddenobject;
 	}
@@ -129,6 +132,7 @@ public class SaveParametersImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameterhiddenobject(ParameterHiddenObject newParameterhiddenobject) {
 		if (newParameterhiddenobject != parameterhiddenobject) {
 			NotificationChain msgs = null;

@@ -234,7 +234,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="scripts" upperBound="-1"
           eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userprofiletoscript"
-          eType="#//canopusPerformanceScenario/UserProfileToScript" eOpposite="#//canopusPerformanceScenario/UserProfileToScript/scripting"/>
+          upperBound="-1" eType="#//canopusPerformanceScenario/UserProfileToScript"
+          eOpposite="#//canopusPerformanceScenario/UserProfileToScript/scripting"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="paramenters" upperBound="-1"
           eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ParameterHiddenObject"
           containment="true"/>
@@ -248,10 +249,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UserProfileToScript">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="timePercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="userprofile" eType="#//canopusPerformanceScenario/UserProfile"
-          eOpposite="#//canopusPerformanceScenario/UserProfile/userprofiletoscript"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="userprofile" upperBound="-1"
+          eType="#//canopusPerformanceScenario/UserProfile" eOpposite="#//canopusPerformanceScenario/UserProfile/userprofiletoscript"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" lowerBound="1"
-          eType="#//canopusPerformanceScenario/Scripting" eOpposite="#//canopusPerformanceScenario/Scripting/userprofiletoscript"/>
+          upperBound="-1" eType="#//canopusPerformanceScenario/Scripting" eOpposite="#//canopusPerformanceScenario/Scripting/userprofiletoscript"/>
     </eClassifiers>
     <eSubpackages name="canopusPerformanceWorkload" nsURI="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
         nsPrefix="canopusPerformanceWorkload">

@@ -252,6 +252,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMemory() {
 		return memoryEClass;
 	}
@@ -261,6 +262,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMemory_MemoryCounter() {
 		return (EReference)memoryEClass.getEStructuralFeatures().get(0);
 	}
@@ -270,6 +272,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDisk() {
 		return diskEClass;
 	}
@@ -279,6 +282,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDisk_Disk_io_counter() {
 		return (EReference)diskEClass.getEStructuralFeatures().get(0);
 	}
@@ -288,6 +292,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssociationCounterCriteriaThreshold() {
 		return associationCounterCriteriaThresholdEClass;
 	}
@@ -297,6 +302,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAssociationCounterCriteriaThreshold_AssociationCriteria() {
 		return (EAttribute)associationCounterCriteriaThresholdEClass.getEStructuralFeatures().get(0);
 	}
@@ -306,6 +312,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationCounterCriteriaThreshold_Threshold() {
 		return (EReference)associationCounterCriteriaThresholdEClass.getEStructuralFeatures().get(1);
 	}
@@ -315,6 +322,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssociationCounterCriteriaThreshold_Criteria() {
 		return (EReference)associationCounterCriteriaThresholdEClass.getEStructuralFeatures().get(2);
 	}
@@ -324,6 +332,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCounter() {
 		return counterEClass;
 	}
@@ -333,6 +342,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCounter_Name() {
 		return (EAttribute)counterEClass.getEStructuralFeatures().get(0);
 	}
@@ -342,6 +352,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCounter_Associationcountercriteriathreshold() {
 		return (EReference)counterEClass.getEStructuralFeatures().get(1);
 	}
@@ -351,6 +362,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDisk_IO_Counter() {
 		return disk_IO_CounterEClass;
 	}
@@ -360,6 +372,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDisk_IO_Counter_CounterDisk() {
 		return (EAttribute)disk_IO_CounterEClass.getEStructuralFeatures().get(0);
 	}
@@ -369,6 +382,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCriteria() {
 		return criteriaEClass;
 	}
@@ -378,6 +392,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCriteria_Value() {
 		return (EAttribute)criteriaEClass.getEStructuralFeatures().get(0);
 	}
@@ -387,6 +402,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThreshold() {
 		return thresholdEClass;
 	}
@@ -396,6 +412,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getThreshold_Value() {
 		return (EAttribute)thresholdEClass.getEStructuralFeatures().get(0);
 	}
@@ -405,6 +422,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMemoryCounter() {
 		return memoryCounterEClass;
 	}
@@ -414,6 +432,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMemoryCounter_CounterMemory() {
 		return (EAttribute)memoryCounterEClass.getEStructuralFeatures().get(0);
 	}
@@ -423,6 +442,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransaction() {
 		return transactionEClass;
 	}
@@ -432,6 +452,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTransaction_TransactionCounter() {
 		return (EReference)transactionEClass.getEStructuralFeatures().get(0);
 	}
@@ -441,6 +462,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransactionCounter() {
 		return transactionCounterEClass;
 	}
@@ -450,6 +472,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransactionCounter_CounterTransaction() {
 		return (EAttribute)transactionCounterEClass.getEStructuralFeatures().get(0);
 	}
@@ -459,6 +482,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMetric() {
 		return metricEClass;
 	}
@@ -468,6 +492,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMetric_Name() {
 		return (EAttribute)metricEClass.getEStructuralFeatures().get(0);
 	}
@@ -477,6 +502,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getASSOCIATION_CRITERIA() {
 		return associatioN_CRITERIAEEnum;
 	}
@@ -486,6 +512,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCOUNTER_DISK() {
 		return counteR_DISKEEnum;
 	}
@@ -495,6 +522,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCOUNTER_MEMORY() {
 		return counteR_MEMORYEEnum;
 	}
@@ -504,6 +532,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCOUNTER_TRANSACTION() {
 		return counteR_TRANSACTIONEEnum;
 	}
@@ -513,6 +542,7 @@ public class CanopusPerformanceMetricPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceMetricFactory getCanopusPerformanceMetricFactory() {
 		return (CanopusPerformanceMetricFactory)getEFactoryInstance();
 	}

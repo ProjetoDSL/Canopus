@@ -70,6 +70,7 @@ public class TransactionCounterImpl extends CounterImpl implements TransactionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public COUNTER_TRANSACTION getCounterTransaction() {
 		return counterTransaction;
 	}
@@ -79,6 +80,7 @@ public class TransactionCounterImpl extends CounterImpl implements TransactionCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCounterTransaction(COUNTER_TRANSACTION newCounterTransaction) {
 		COUNTER_TRANSACTION oldCounterTransaction = counterTransaction;
 		counterTransaction = newCounterTransaction == null ? COUNTER_TRANSACTION_EDEFAULT : newCounterTransaction;

@@ -88,6 +88,7 @@ public abstract class CounterImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -97,6 +98,7 @@ public abstract class CounterImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -109,6 +111,7 @@ public abstract class CounterImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AssociationCounterCriteriaThreshold> getAssociationcountercriteriathreshold() {
 		if (associationcountercriteriathreshold == null) {
 			associationcountercriteriathreshold = new EObjectResolvingEList<AssociationCounterCriteriaThreshold>(AssociationCounterCriteriaThreshold.class, this, CanopusPerformanceMetricPackage.COUNTER__ASSOCIATIONCOUNTERCRITERIATHRESHOLD);

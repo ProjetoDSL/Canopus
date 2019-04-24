@@ -67,6 +67,7 @@ public class CanopusPerformanceExternalFileFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExternalFile createExternalFile() {
 		ExternalFileImpl externalFile = new ExternalFileImpl();
 		return externalFile;
@@ -77,6 +78,7 @@ public class CanopusPerformanceExternalFileFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceExternalFilePackage getCanopusPerformanceExternalFilePackage() {
 		return (CanopusPerformanceExternalFilePackage)getEPackage();
 	}

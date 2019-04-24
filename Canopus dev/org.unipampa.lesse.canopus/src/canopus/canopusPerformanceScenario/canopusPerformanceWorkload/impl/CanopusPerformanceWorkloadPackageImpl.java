@@ -166,6 +166,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRampUpUsers() {
 		return rampUpUsersEClass;
 	}
@@ -175,6 +176,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRampUpUsers_VirtualUsers() {
 		return (EAttribute)rampUpUsersEClass.getEStructuralFeatures().get(0);
 	}
@@ -184,6 +186,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRampDownUsers() {
 		return rampDownUsersEClass;
 	}
@@ -193,6 +196,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRampDownUsers_VirtualUsers() {
 		return (EAttribute)rampDownUsersEClass.getEStructuralFeatures().get(0);
 	}
@@ -202,6 +206,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRampUpTimer() {
 		return rampUpTimerEClass;
 	}
@@ -211,6 +216,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRampUpTimer_Time() {
 		return (EAttribute)rampUpTimerEClass.getEStructuralFeatures().get(0);
 	}
@@ -220,6 +226,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRampDownTimer() {
 		return rampDownTimerEClass;
 	}
@@ -229,6 +236,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRampDownTimer_Time() {
 		return (EAttribute)rampDownTimerEClass.getEStructuralFeatures().get(0);
 	}
@@ -238,6 +246,7 @@ public class CanopusPerformanceWorkloadPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceWorkloadFactory getCanopusPerformanceWorkloadFactory() {
 		return (CanopusPerformanceWorkloadFactory)getEFactoryInstance();
 	}

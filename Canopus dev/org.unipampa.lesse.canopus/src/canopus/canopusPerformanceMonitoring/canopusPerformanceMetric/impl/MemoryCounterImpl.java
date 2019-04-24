@@ -70,6 +70,7 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public COUNTER_MEMORY getCounterMemory() {
 		return counterMemory;
 	}
@@ -79,6 +80,7 @@ public class MemoryCounterImpl extends CounterImpl implements MemoryCounter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCounterMemory(COUNTER_MEMORY newCounterMemory) {
 		COUNTER_MEMORY oldCounterMemory = counterMemory;
 		counterMemory = newCounterMemory == null ? COUNTER_MEMORY_EDEFAULT : newCounterMemory;

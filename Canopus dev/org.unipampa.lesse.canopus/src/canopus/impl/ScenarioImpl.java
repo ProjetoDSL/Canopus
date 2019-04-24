@@ -103,6 +103,7 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UserProfile> getUsers() {
 		if (users == null) {
 			users = new EObjectContainmentEList<UserProfile>(UserProfile.class, this, CanopusPackage.SCENARIO__USERS);
@@ -115,6 +116,7 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Workload> getWorkloads() {
 		if (workloads == null) {
 			workloads = new EObjectContainmentEList<Workload>(Workload.class, this, CanopusPackage.SCENARIO__WORKLOADS);
@@ -127,6 +129,7 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Scripting> getScripting() {
 		if (scripting == null) {
 			scripting = new EObjectContainmentEList<Scripting>(Scripting.class, this, CanopusPackage.SCENARIO__SCRIPTING);
@@ -139,6 +142,7 @@ public class ScenarioImpl extends DiagramImpl implements Scenario {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UserProfileToScript> getUserProfileToScript() {
 		if (userProfileToScript == null) {
 			userProfileToScript = new EObjectContainmentEList<UserProfileToScript>(UserProfileToScript.class, this, CanopusPackage.SCENARIO__USER_PROFILE_TO_SCRIPT);

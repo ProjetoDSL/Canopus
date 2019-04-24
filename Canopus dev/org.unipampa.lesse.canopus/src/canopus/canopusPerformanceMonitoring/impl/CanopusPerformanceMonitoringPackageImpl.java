@@ -181,6 +181,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSUT() {
 		return sutEClass;
 	}
@@ -190,6 +191,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSUT_Hostname() {
 		return (EAttribute)sutEClass.getEStructuralFeatures().get(0);
 	}
@@ -199,6 +201,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSUT_Ip() {
 		return (EAttribute)sutEClass.getEStructuralFeatures().get(1);
 	}
@@ -208,6 +211,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSUT_Hardware() {
 		return (EAttribute)sutEClass.getEStructuralFeatures().get(2);
 	}
@@ -217,6 +221,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSUT_Sut() {
 		return (EReference)sutEClass.getEStructuralFeatures().get(3);
 	}
@@ -226,6 +231,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSUT_Metricmodel() {
 		return (EReference)sutEClass.getEStructuralFeatures().get(4);
 	}
@@ -235,6 +241,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSUT_Type() {
 		return (EAttribute)sutEClass.getEStructuralFeatures().get(5);
 	}
@@ -244,6 +251,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLoadGenerator() {
 		return loadGeneratorEClass;
 	}
@@ -253,6 +261,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLoadGenerator_Hostname() {
 		return (EAttribute)loadGeneratorEClass.getEStructuralFeatures().get(0);
 	}
@@ -262,6 +271,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLoadGenerator_Ip() {
 		return (EAttribute)loadGeneratorEClass.getEStructuralFeatures().get(1);
 	}
@@ -271,6 +281,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLoadGenerator_IsMonitor() {
 		return (EAttribute)loadGeneratorEClass.getEStructuralFeatures().get(2);
 	}
@@ -280,6 +291,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLoadGenerator_Sut() {
 		return (EReference)loadGeneratorEClass.getEStructuralFeatures().get(3);
 	}
@@ -289,6 +301,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLoadGenerator_Metricmodel() {
 		return (EReference)loadGeneratorEClass.getEStructuralFeatures().get(4);
 	}
@@ -298,6 +311,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLoadGenerator_Hardware() {
 		return (EAttribute)loadGeneratorEClass.getEStructuralFeatures().get(5);
 	}
@@ -307,6 +321,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLoadGenerator_Monitor() {
 		return (EReference)loadGeneratorEClass.getEStructuralFeatures().get(6);
 	}
@@ -316,6 +331,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMonitor() {
 		return monitorEClass;
 	}
@@ -325,6 +341,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMonitor_Hostname() {
 		return (EAttribute)monitorEClass.getEStructuralFeatures().get(0);
 	}
@@ -334,6 +351,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMonitor_Ip() {
 		return (EAttribute)monitorEClass.getEStructuralFeatures().get(1);
 	}
@@ -343,6 +361,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMonitor_Sut() {
 		return (EReference)monitorEClass.getEStructuralFeatures().get(2);
 	}
@@ -352,6 +371,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMonitor_Hardware() {
 		return (EAttribute)monitorEClass.getEStructuralFeatures().get(3);
 	}
@@ -361,6 +381,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMonitor_Description() {
 		return (EAttribute)monitorEClass.getEStructuralFeatures().get(4);
 	}
@@ -370,6 +391,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMetricModel() {
 		return metricModelEClass;
 	}
@@ -379,6 +401,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMetricModel_Name() {
 		return (EAttribute)metricModelEClass.getEStructuralFeatures().get(0);
 	}
@@ -388,6 +411,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Memory() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(1);
 	}
@@ -397,6 +421,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Transaction() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(2);
 	}
@@ -406,6 +431,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Disk() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(3);
 	}
@@ -415,6 +441,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Criteria() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(4);
 	}
@@ -424,6 +451,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Threshold() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(5);
 	}
@@ -433,6 +461,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Associationcountercriteriathreshold() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(6);
 	}
@@ -442,6 +471,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_DiskCounter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(7);
 	}
@@ -451,6 +481,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_TransactionCounter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(8);
 	}
@@ -460,6 +491,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_MemoryCounter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(9);
 	}
@@ -469,6 +501,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Counter() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(10);
 	}
@@ -478,6 +511,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMetricModel_Metric() {
 		return (EReference)metricModelEClass.getEStructuralFeatures().get(11);
 	}
@@ -487,6 +521,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSUT_TYPE() {
 		return suT_TYPEEEnum;
 	}
@@ -496,6 +531,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getHARDWARE() {
 		return hardwareEEnum;
 	}
@@ -505,6 +541,7 @@ public class CanopusPerformanceMonitoringPackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceMonitoringFactory getCanopusPerformanceMonitoringFactory() {
 		return (CanopusPerformanceMonitoringFactory)getEFactoryInstance();
 	}

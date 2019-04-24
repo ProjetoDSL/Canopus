@@ -167,6 +167,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUserProfile() {
 		return userProfileEClass;
 	}
@@ -176,6 +177,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUserProfile_Name() {
 		return (EAttribute)userProfileEClass.getEStructuralFeatures().get(0);
 	}
@@ -185,6 +187,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUserProfile_Description() {
 		return (EAttribute)userProfileEClass.getEStructuralFeatures().get(1);
 	}
@@ -194,6 +197,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUserProfile_Userprofiletoscript() {
 		return (EReference)userProfileEClass.getEStructuralFeatures().get(2);
 	}
@@ -203,6 +207,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUserProfile_Percentage() {
 		return (EAttribute)userProfileEClass.getEStructuralFeatures().get(3);
 	}
@@ -212,6 +217,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWorkload() {
 		return workloadEClass;
 	}
@@ -221,6 +227,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorkload_RampUpTimer() {
 		return (EReference)workloadEClass.getEStructuralFeatures().get(0);
 	}
@@ -230,6 +237,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorkload_RampDownUsers() {
 		return (EReference)workloadEClass.getEStructuralFeatures().get(1);
 	}
@@ -239,6 +247,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorkload_RampUpUsers() {
 		return (EReference)workloadEClass.getEStructuralFeatures().get(2);
 	}
@@ -248,6 +257,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWorkload_RampDownTimer() {
 		return (EReference)workloadEClass.getEStructuralFeatures().get(3);
 	}
@@ -257,6 +267,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWorkload_Name() {
 		return (EAttribute)workloadEClass.getEStructuralFeatures().get(4);
 	}
@@ -266,6 +277,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWorkload_Time() {
 		return (EAttribute)workloadEClass.getEStructuralFeatures().get(5);
 	}
@@ -275,6 +287,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWorkload_VirtualUsers() {
 		return (EAttribute)workloadEClass.getEStructuralFeatures().get(6);
 	}
@@ -284,6 +297,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getScripting() {
 		return scriptingEClass;
 	}
@@ -293,6 +307,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getScripting_Name() {
 		return (EAttribute)scriptingEClass.getEStructuralFeatures().get(0);
 	}
@@ -302,6 +317,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Initial() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(1);
 	}
@@ -311,6 +327,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Final() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(2);
 	}
@@ -320,6 +337,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Activities() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(3);
 	}
@@ -329,6 +347,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Saveparameters() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(4);
 	}
@@ -338,6 +357,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Datatables() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(5);
 	}
@@ -347,6 +367,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_ThinkTime() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(6);
 	}
@@ -356,6 +377,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Scripts() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(7);
 	}
@@ -365,6 +387,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Userprofiletoscript() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(8);
 	}
@@ -374,6 +397,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Paramenters() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(9);
 	}
@@ -383,6 +407,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_ActivityToActivity() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(10);
 	}
@@ -392,6 +417,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getScripting_Columns() {
 		return (EReference)scriptingEClass.getEStructuralFeatures().get(11);
 	}
@@ -401,6 +427,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getScripting_Description() {
 		return (EAttribute)scriptingEClass.getEStructuralFeatures().get(12);
 	}
@@ -410,6 +437,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUserProfileToScript() {
 		return userProfileToScriptEClass;
 	}
@@ -419,6 +447,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUserProfileToScript_TimePercentage() {
 		return (EAttribute)userProfileToScriptEClass.getEStructuralFeatures().get(0);
 	}
@@ -428,6 +457,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUserProfileToScript_Userprofile() {
 		return (EReference)userProfileToScriptEClass.getEStructuralFeatures().get(1);
 	}
@@ -437,6 +467,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getUserProfileToScript_Scripting() {
 		return (EReference)userProfileToScriptEClass.getEStructuralFeatures().get(2);
 	}
@@ -446,6 +477,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceScenarioFactory getCanopusPerformanceScenarioFactory() {
 		return (CanopusPerformanceScenarioFactory)getEFactoryInstance();
 	}
@@ -567,7 +599,7 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 		initEReference(getScripting_Datatables(), theCanopusPerformanceScriptingPackage.getDataTable(), null, "datatables", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_ThinkTime(), theCanopusPerformanceScriptingPackage.getThinkTime(), null, "thinkTime", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_Scripts(), this.getScripting(), null, "scripts", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getScripting_Userprofiletoscript(), this.getUserProfileToScript(), this.getUserProfileToScript_Scripting(), "userprofiletoscript", null, 0, 1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScripting_Userprofiletoscript(), this.getUserProfileToScript(), this.getUserProfileToScript_Scripting(), "userprofiletoscript", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_Paramenters(), theCanopusPerformanceScriptingPackage.getParameterHiddenObject(), null, "paramenters", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_ActivityToActivity(), theCanopusPerformanceScriptingPackage.getActivityToActivity(), null, "activityToActivity", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScripting_Columns(), theCanopusPerformanceScriptingPackage.getColumnsHiddenObject(), null, "columns", null, 0, -1, Scripting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -575,8 +607,8 @@ public class CanopusPerformanceScenarioPackageImpl extends EPackageImpl implemen
 
 		initEClass(userProfileToScriptEClass, UserProfileToScript.class, "UserProfileToScript", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUserProfileToScript_TimePercentage(), ecorePackage.getEInt(), "timePercentage", null, 0, 1, UserProfileToScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUserProfileToScript_Userprofile(), this.getUserProfile(), this.getUserProfile_Userprofiletoscript(), "userprofile", null, 0, 1, UserProfileToScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUserProfileToScript_Scripting(), this.getScripting(), this.getScripting_Userprofiletoscript(), "scripting", null, 1, 1, UserProfileToScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserProfileToScript_Userprofile(), this.getUserProfile(), this.getUserProfile_Userprofiletoscript(), "userprofile", null, 0, -1, UserProfileToScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserProfileToScript_Scripting(), this.getScripting(), this.getScripting_Userprofiletoscript(), "scripting", null, 1, -1, UserProfileToScript.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //CanopusPerformanceScenarioPackageImpl

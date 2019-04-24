@@ -212,6 +212,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -221,6 +222,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -233,6 +235,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Memory getMemory() {
 		return memory;
 	}
@@ -257,6 +260,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMemory(Memory newMemory) {
 		if (newMemory != memory) {
 			NotificationChain msgs = null;
@@ -276,6 +280,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transaction getTransaction() {
 		return transaction;
 	}
@@ -300,6 +305,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransaction(Transaction newTransaction) {
 		if (newTransaction != transaction) {
 			NotificationChain msgs = null;
@@ -319,6 +325,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Disk getDisk() {
 		return disk;
 	}
@@ -343,6 +350,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDisk(Disk newDisk) {
 		if (newDisk != disk) {
 			NotificationChain msgs = null;
@@ -362,6 +370,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Criteria> getCriteria() {
 		if (criteria == null) {
 			criteria = new EObjectContainmentEList<Criteria>(Criteria.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__CRITERIA);
@@ -374,6 +383,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Threshold> getThreshold() {
 		if (threshold == null) {
 			threshold = new EObjectContainmentEList<Threshold>(Threshold.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__THRESHOLD);
@@ -386,6 +396,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AssociationCounterCriteriaThreshold> getAssociationcountercriteriathreshold() {
 		if (associationcountercriteriathreshold == null) {
 			associationcountercriteriathreshold = new EObjectContainmentEList<AssociationCounterCriteriaThreshold>(AssociationCounterCriteriaThreshold.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__ASSOCIATIONCOUNTERCRITERIATHRESHOLD);
@@ -398,6 +409,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Disk_IO_Counter> getDiskCounter() {
 		if (diskCounter == null) {
 			diskCounter = new EObjectContainmentEList<Disk_IO_Counter>(Disk_IO_Counter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__DISK_COUNTER);
@@ -410,6 +422,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TransactionCounter> getTransactionCounter() {
 		if (transactionCounter == null) {
 			transactionCounter = new EObjectContainmentEList<TransactionCounter>(TransactionCounter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__TRANSACTION_COUNTER);
@@ -422,6 +435,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MemoryCounter> getMemoryCounter() {
 		if (memoryCounter == null) {
 			memoryCounter = new EObjectContainmentEList<MemoryCounter>(MemoryCounter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__MEMORY_COUNTER);
@@ -434,6 +448,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Counter> getCounter() {
 		if (counter == null) {
 			counter = new EObjectContainmentEList<Counter>(Counter.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__COUNTER);
@@ -446,6 +461,7 @@ public class MetricModelImpl extends MinimalEObjectImpl.Container implements Met
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Metric> getMetric() {
 		if (metric == null) {
 			metric = new EObjectContainmentEList<Metric>(Metric.class, this, CanopusPerformanceMonitoringPackage.METRIC_MODEL__METRIC);

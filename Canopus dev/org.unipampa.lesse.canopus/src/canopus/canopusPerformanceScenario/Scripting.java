@@ -204,7 +204,8 @@ public interface Scripting extends EObject {
 	EList<Scripting> getScripts();
 
 	/**
-	 * Returns the value of the '<em><b>Userprofiletoscript</b></em>' reference.
+	 * Returns the value of the '<em><b>Userprofiletoscript</b></em>' reference list.
+	 * The list contents are of type {@link canopus.canopusPerformanceScenario.UserProfileToScript}.
 	 * It is bidirectional and its opposite is '{@link canopus.canopusPerformanceScenario.UserProfileToScript#getScripting <em>Scripting</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -212,24 +213,13 @@ public interface Scripting extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Userprofiletoscript</em>' reference.
-	 * @see #setUserprofiletoscript(UserProfileToScript)
+	 * @return the value of the '<em>Userprofiletoscript</em>' reference list.
 	 * @see canopus.canopusPerformanceScenario.CanopusPerformanceScenarioPackage#getScripting_Userprofiletoscript()
 	 * @see canopus.canopusPerformanceScenario.UserProfileToScript#getScripting
 	 * @model opposite="scripting"
 	 * @generated
 	 */
-	UserProfileToScript getUserprofiletoscript();
-
-	/**
-	 * Sets the value of the '{@link canopus.canopusPerformanceScenario.Scripting#getUserprofiletoscript <em>Userprofiletoscript</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Userprofiletoscript</em>' reference.
-	 * @see #getUserprofiletoscript()
-	 * @generated
-	 */
-	void setUserprofiletoscript(UserProfileToScript value);
+	EList<UserProfileToScript> getUserprofiletoscript();
 
 	/**
 	 * Returns the value of the '<em><b>Paramenters</b></em>' containment reference list.

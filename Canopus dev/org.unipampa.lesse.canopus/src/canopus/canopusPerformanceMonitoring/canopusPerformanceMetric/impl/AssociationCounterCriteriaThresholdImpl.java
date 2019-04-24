@@ -102,6 +102,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ASSOCIATION_CRITERIA getAssociationCriteria() {
 		return associationCriteria;
 	}
@@ -111,6 +112,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociationCriteria(ASSOCIATION_CRITERIA newAssociationCriteria) {
 		ASSOCIATION_CRITERIA oldAssociationCriteria = associationCriteria;
 		associationCriteria = newAssociationCriteria == null ? ASSOCIATION_CRITERIA_EDEFAULT : newAssociationCriteria;
@@ -123,6 +125,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Threshold getThreshold() {
 		if (threshold != null && threshold.eIsProxy()) {
 			InternalEObject oldThreshold = (InternalEObject)threshold;
@@ -149,6 +152,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setThreshold(Threshold newThreshold) {
 		Threshold oldThreshold = threshold;
 		threshold = newThreshold;
@@ -161,6 +165,7 @@ public class AssociationCounterCriteriaThresholdImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Criteria> getCriteria() {
 		if (criteria == null) {
 			criteria = new EObjectResolvingEList<Criteria>(Criteria.class, this, CanopusPerformanceMetricPackage.ASSOCIATION_COUNTER_CRITERIA_THRESHOLD__CRITERIA);

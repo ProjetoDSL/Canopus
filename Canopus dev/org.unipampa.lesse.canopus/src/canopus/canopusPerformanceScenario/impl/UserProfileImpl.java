@@ -133,6 +133,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -142,6 +143,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -154,6 +156,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -163,6 +166,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -175,9 +179,10 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UserProfileToScript> getUserprofiletoscript() {
 		if (userprofiletoscript == null) {
-			userprofiletoscript = new EObjectWithInverseResolvingEList<UserProfileToScript>(UserProfileToScript.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE);
+			userprofiletoscript = new EObjectWithInverseResolvingEList.ManyInverse<UserProfileToScript>(UserProfileToScript.class, this, CanopusPerformanceScenarioPackage.USER_PROFILE__USERPROFILETOSCRIPT, CanopusPerformanceScenarioPackage.USER_PROFILE_TO_SCRIPT__USERPROFILE);
 		}
 		return userprofiletoscript;
 	}
@@ -187,6 +192,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPercentage() {
 		return percentage;
 	}
@@ -196,6 +202,7 @@ public class UserProfileImpl extends MinimalEObjectImpl.Container implements Use
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPercentage(String newPercentage) {
 		String oldPercentage = percentage;
 		percentage = newPercentage;

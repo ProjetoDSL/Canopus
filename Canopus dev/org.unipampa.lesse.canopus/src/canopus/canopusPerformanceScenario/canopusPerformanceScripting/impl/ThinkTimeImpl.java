@@ -104,6 +104,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -113,6 +114,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -125,6 +127,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTime() {
 		return time;
 	}
@@ -134,6 +137,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(String newTime) {
 		String oldTime = time;
 		time = newTime;
@@ -146,6 +150,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivity() {
 		if (activity != null && activity.eIsProxy()) {
 			InternalEObject oldActivity = (InternalEObject)activity;
@@ -172,6 +177,7 @@ public class ThinkTimeImpl extends MinimalEObjectImpl.Container implements Think
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivity(Activity newActivity) {
 		Activity oldActivity = activity;
 		activity = newActivity;

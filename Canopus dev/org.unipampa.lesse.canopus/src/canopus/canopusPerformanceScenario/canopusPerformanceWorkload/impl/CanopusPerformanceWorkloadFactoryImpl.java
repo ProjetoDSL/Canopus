@@ -70,6 +70,7 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampUpUsers createRampUpUsers() {
 		RampUpUsersImpl rampUpUsers = new RampUpUsersImpl();
 		return rampUpUsers;
@@ -80,6 +81,7 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampDownUsers createRampDownUsers() {
 		RampDownUsersImpl rampDownUsers = new RampDownUsersImpl();
 		return rampDownUsers;
@@ -90,6 +92,7 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampUpTimer createRampUpTimer() {
 		RampUpTimerImpl rampUpTimer = new RampUpTimerImpl();
 		return rampUpTimer;
@@ -100,6 +103,7 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RampDownTimer createRampDownTimer() {
 		RampDownTimerImpl rampDownTimer = new RampDownTimerImpl();
 		return rampDownTimer;
@@ -110,6 +114,7 @@ public class CanopusPerformanceWorkloadFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceWorkloadPackage getCanopusPerformanceWorkloadPackage() {
 		return (CanopusPerformanceWorkloadPackage)getEPackage();
 	}

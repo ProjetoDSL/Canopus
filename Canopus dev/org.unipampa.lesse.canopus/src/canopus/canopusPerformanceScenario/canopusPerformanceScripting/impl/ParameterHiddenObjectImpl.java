@@ -131,6 +131,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TYPEACTION getTypeAction() {
 		return typeAction;
 	}
@@ -140,6 +141,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeAction(TYPEACTION newTypeAction) {
 		TYPEACTION oldTypeAction = typeAction;
 		typeAction = newTypeAction == null ? TYPE_ACTION_EDEFAULT : newTypeAction;
@@ -152,6 +154,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getParameterName() {
 		return parameterName;
 	}
@@ -161,6 +164,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameterName(String newParameterName) {
 		String oldParameterName = parameterName;
 		parameterName = newParameterName;
@@ -173,6 +177,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStaticValue() {
 		return staticValue;
 	}
@@ -182,6 +187,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStaticValue(String newStaticValue) {
 		String oldStaticValue = staticValue;
 		staticValue = newStaticValue;
@@ -194,6 +200,7 @@ public class ParameterHiddenObjectImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ColumnsHiddenObject> getColumnshiddenobject() {
 		if (columnshiddenobject == null) {
 			columnshiddenobject = new EObjectResolvingEList<ColumnsHiddenObject>(ColumnsHiddenObject.class, this, CanopusPerformanceScriptingPackage.PARAMETER_HIDDEN_OBJECT__COLUMNSHIDDENOBJECT);

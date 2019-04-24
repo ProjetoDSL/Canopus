@@ -118,6 +118,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Memory createMemory() {
 		MemoryImpl memory = new MemoryImpl();
 		return memory;
@@ -128,6 +129,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Disk createDisk() {
 		DiskImpl disk = new DiskImpl();
 		return disk;
@@ -138,6 +140,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssociationCounterCriteriaThreshold createAssociationCounterCriteriaThreshold() {
 		AssociationCounterCriteriaThresholdImpl associationCounterCriteriaThreshold = new AssociationCounterCriteriaThresholdImpl();
 		return associationCounterCriteriaThreshold;
@@ -148,6 +151,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Disk_IO_Counter createDisk_IO_Counter() {
 		Disk_IO_CounterImpl disk_IO_Counter = new Disk_IO_CounterImpl();
 		return disk_IO_Counter;
@@ -158,6 +162,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Criteria createCriteria() {
 		CriteriaImpl criteria = new CriteriaImpl();
 		return criteria;
@@ -168,6 +173,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Threshold createThreshold() {
 		ThresholdImpl threshold = new ThresholdImpl();
 		return threshold;
@@ -178,6 +184,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MemoryCounter createMemoryCounter() {
 		MemoryCounterImpl memoryCounter = new MemoryCounterImpl();
 		return memoryCounter;
@@ -188,6 +195,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transaction createTransaction() {
 		TransactionImpl transaction = new TransactionImpl();
 		return transaction;
@@ -198,6 +206,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransactionCounter createTransactionCounter() {
 		TransactionCounterImpl transactionCounter = new TransactionCounterImpl();
 		return transactionCounter;
@@ -288,6 +297,7 @@ public class CanopusPerformanceMetricFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceMetricPackage getCanopusPerformanceMetricPackage() {
 		return (CanopusPerformanceMetricPackage)getEPackage();
 	}

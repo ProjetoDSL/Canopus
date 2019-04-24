@@ -83,6 +83,7 @@ public class InitialImpl extends MinimalEObjectImpl.Container implements Initial
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -92,6 +93,7 @@ public class InitialImpl extends MinimalEObjectImpl.Container implements Initial
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -104,6 +106,7 @@ public class InitialImpl extends MinimalEObjectImpl.Container implements Initial
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivity() {
 		if (activity != null && activity.eIsProxy()) {
 			InternalEObject oldActivity = (InternalEObject)activity;
@@ -130,6 +133,7 @@ public class InitialImpl extends MinimalEObjectImpl.Container implements Initial
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivity(Activity newActivity) {
 		Activity oldActivity = activity;
 		activity = newActivity;

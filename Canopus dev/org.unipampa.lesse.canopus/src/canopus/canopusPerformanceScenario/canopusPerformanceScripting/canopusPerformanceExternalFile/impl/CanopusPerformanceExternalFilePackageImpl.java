@@ -142,6 +142,7 @@ public class CanopusPerformanceExternalFilePackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExternalFile() {
 		return externalFileEClass;
 	}
@@ -151,6 +152,7 @@ public class CanopusPerformanceExternalFilePackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExternalFile_Name() {
 		return (EAttribute)externalFileEClass.getEStructuralFeatures().get(0);
 	}
@@ -160,6 +162,7 @@ public class CanopusPerformanceExternalFilePackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceExternalFileFactory getCanopusPerformanceExternalFileFactory() {
 		return (CanopusPerformanceExternalFileFactory)getEFactoryInstance();
 	}

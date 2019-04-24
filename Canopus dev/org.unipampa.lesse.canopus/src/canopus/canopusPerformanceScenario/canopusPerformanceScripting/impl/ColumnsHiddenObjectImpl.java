@@ -135,6 +135,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getReferendedParameter() {
 		return referendedParameter;
 	}
@@ -144,6 +145,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReferendedParameter(String newReferendedParameter) {
 		String oldReferendedParameter = referendedParameter;
 		referendedParameter = newReferendedParameter;
@@ -156,6 +158,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SELECT_NEXT_ROW getSelectnextrow() {
 		return selectnextrow;
 	}
@@ -165,6 +168,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelectnextrow(SELECT_NEXT_ROW newSelectnextrow) {
 		SELECT_NEXT_ROW oldSelectnextrow = selectnextrow;
 		selectnextrow = newSelectnextrow == null ? SELECTNEXTROW_EDEFAULT : newSelectnextrow;
@@ -177,6 +181,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UPDATED_VALUE_ON getUpdatedvalueon() {
 		return updatedvalueon;
 	}
@@ -186,6 +191,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpdatedvalueon(UPDATED_VALUE_ON newUpdatedvalueon) {
 		UPDATED_VALUE_ON oldUpdatedvalueon = updatedvalueon;
 		updatedvalueon = newUpdatedvalueon == null ? UPDATEDVALUEON_EDEFAULT : newUpdatedvalueon;
@@ -198,6 +204,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getParameterName() {
 		return parameterName;
 	}
@@ -207,6 +214,7 @@ public class ColumnsHiddenObjectImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameterName(String newParameterName) {
 		String oldParameterName = parameterName;
 		parameterName = newParameterName;

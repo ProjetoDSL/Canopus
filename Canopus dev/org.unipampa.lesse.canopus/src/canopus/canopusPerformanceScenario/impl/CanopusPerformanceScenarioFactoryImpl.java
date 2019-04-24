@@ -70,6 +70,7 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UserProfile createUserProfile() {
 		UserProfileImpl userProfile = new UserProfileImpl();
 		return userProfile;
@@ -80,6 +81,7 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Workload createWorkload() {
 		WorkloadImpl workload = new WorkloadImpl();
 		return workload;
@@ -90,6 +92,7 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Scripting createScripting() {
 		ScriptingImpl scripting = new ScriptingImpl();
 		return scripting;
@@ -100,6 +103,7 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UserProfileToScript createUserProfileToScript() {
 		UserProfileToScriptImpl userProfileToScript = new UserProfileToScriptImpl();
 		return userProfileToScript;
@@ -110,6 +114,7 @@ public class CanopusPerformanceScenarioFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CanopusPerformanceScenarioPackage getCanopusPerformanceScenarioPackage() {
 		return (CanopusPerformanceScenarioPackage)getEPackage();
 	}
