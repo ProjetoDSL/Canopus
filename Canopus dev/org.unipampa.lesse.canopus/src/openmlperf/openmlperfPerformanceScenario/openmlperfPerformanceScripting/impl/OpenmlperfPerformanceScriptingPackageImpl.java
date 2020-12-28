@@ -1,0 +1,896 @@
+/**
+ */
+package openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.impl;
+
+import openmlperf.OpenmlperfPackage;
+
+import openmlperf.impl.OpenmlperfPackageImpl;
+
+import openmlperf.openmlperfPerformanceMonitoring.OpenmlperfPerformanceMonitoringPackage;
+
+import openmlperf.openmlperfPerformanceMonitoring.impl.OpenmlperfPerformanceMonitoringPackageImpl;
+
+import openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.OpenmlperfPerformanceMetricPackage;
+
+import openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.impl.OpenmlperfPerformanceMetricPackageImpl;
+
+import openmlperf.openmlperfPerformanceScenario.OpenmlperfPerformanceScenarioPackage;
+
+import openmlperf.openmlperfPerformanceScenario.impl.OpenmlperfPerformanceScenarioPackageImpl;
+
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.Activity;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.ActivityToActivity;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.ColumnsObject;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.DataTable;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.Final;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.Initial;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.OpenmlperfPerformanceScriptingFactory;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.OpenmlperfPerformanceScriptingPackage;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.ParameterObject;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.SaveParameters;
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.ThinkTime;
+
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.OpenmlperfPerformanceExternalFilePackage;
+
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.impl.OpenmlperfPerformanceExternalFilePackageImpl;
+
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.OpenmlperfPerformanceWorkloadPackage;
+
+import openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.impl.OpenmlperfPerformanceWorkloadPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class OpenmlperfPerformanceScriptingPackageImpl extends EPackageImpl implements OpenmlperfPerformanceScriptingPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass initialEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass thinkTimeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass saveParametersEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterObjectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass columnsObjectEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activityToActivityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum typeactionEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum updateD_VALUE_ONEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum selecT_NEXT_ROWEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum methodEEnum = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.OpenmlperfPerformanceScriptingPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private OpenmlperfPerformanceScriptingPackageImpl() {
+		super(eNS_URI, OpenmlperfPerformanceScriptingFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link OpenmlperfPerformanceScriptingPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static OpenmlperfPerformanceScriptingPackage init() {
+		if (isInited) return (OpenmlperfPerformanceScriptingPackage)EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceScriptingPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredOpenmlperfPerformanceScriptingPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		OpenmlperfPerformanceScriptingPackageImpl theOpenmlperfPerformanceScriptingPackage = registeredOpenmlperfPerformanceScriptingPackage instanceof OpenmlperfPerformanceScriptingPackageImpl ? (OpenmlperfPerformanceScriptingPackageImpl)registeredOpenmlperfPerformanceScriptingPackage : new OpenmlperfPerformanceScriptingPackageImpl();
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPackage.eNS_URI);
+		OpenmlperfPackageImpl theOpenmlperfPackage = (OpenmlperfPackageImpl)(registeredPackage instanceof OpenmlperfPackageImpl ? registeredPackage : OpenmlperfPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceMonitoringPackage.eNS_URI);
+		OpenmlperfPerformanceMonitoringPackageImpl theOpenmlperfPerformanceMonitoringPackage = (OpenmlperfPerformanceMonitoringPackageImpl)(registeredPackage instanceof OpenmlperfPerformanceMonitoringPackageImpl ? registeredPackage : OpenmlperfPerformanceMonitoringPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceMetricPackage.eNS_URI);
+		OpenmlperfPerformanceMetricPackageImpl theOpenmlperfPerformanceMetricPackage = (OpenmlperfPerformanceMetricPackageImpl)(registeredPackage instanceof OpenmlperfPerformanceMetricPackageImpl ? registeredPackage : OpenmlperfPerformanceMetricPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceScenarioPackage.eNS_URI);
+		OpenmlperfPerformanceScenarioPackageImpl theOpenmlperfPerformanceScenarioPackage = (OpenmlperfPerformanceScenarioPackageImpl)(registeredPackage instanceof OpenmlperfPerformanceScenarioPackageImpl ? registeredPackage : OpenmlperfPerformanceScenarioPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceWorkloadPackage.eNS_URI);
+		OpenmlperfPerformanceWorkloadPackageImpl theOpenmlperfPerformanceWorkloadPackage = (OpenmlperfPerformanceWorkloadPackageImpl)(registeredPackage instanceof OpenmlperfPerformanceWorkloadPackageImpl ? registeredPackage : OpenmlperfPerformanceWorkloadPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceExternalFilePackage.eNS_URI);
+		OpenmlperfPerformanceExternalFilePackageImpl theOpenmlperfPerformanceExternalFilePackage = (OpenmlperfPerformanceExternalFilePackageImpl)(registeredPackage instanceof OpenmlperfPerformanceExternalFilePackageImpl ? registeredPackage : OpenmlperfPerformanceExternalFilePackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theOpenmlperfPerformanceScriptingPackage.createPackageContents();
+		theOpenmlperfPackage.createPackageContents();
+		theOpenmlperfPerformanceMonitoringPackage.createPackageContents();
+		theOpenmlperfPerformanceMetricPackage.createPackageContents();
+		theOpenmlperfPerformanceScenarioPackage.createPackageContents();
+		theOpenmlperfPerformanceWorkloadPackage.createPackageContents();
+		theOpenmlperfPerformanceExternalFilePackage.createPackageContents();
+
+		// Initialize created meta-data
+		theOpenmlperfPerformanceScriptingPackage.initializePackageContents();
+		theOpenmlperfPackage.initializePackageContents();
+		theOpenmlperfPerformanceMonitoringPackage.initializePackageContents();
+		theOpenmlperfPerformanceMetricPackage.initializePackageContents();
+		theOpenmlperfPerformanceScenarioPackage.initializePackageContents();
+		theOpenmlperfPerformanceWorkloadPackage.initializePackageContents();
+		theOpenmlperfPerformanceExternalFilePackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theOpenmlperfPerformanceScriptingPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(OpenmlperfPerformanceScriptingPackage.eNS_URI, theOpenmlperfPerformanceScriptingPackage);
+		return theOpenmlperfPerformanceScriptingPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInitial() {
+		return initialEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInitial_Name() {
+		return (EAttribute)initialEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInitial_Activity() {
+		return (EReference)initialEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFinal() {
+		return finalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFinal_Name() {
+		return (EAttribute)finalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivity() {
+		return activityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivity_Name() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivity_Action() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivity_Method() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivity_TypeAction() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivity_LoopInstances() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Parameterhiddenobject() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivity_Transaction() {
+		return (EAttribute)activityEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Final() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Thinktime() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Scripting() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Activitytoactivity() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Saveparameters() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Datatable() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivity_Columnshiddenobject() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getThinkTime() {
+		return thinkTimeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getThinkTime_Name() {
+		return (EAttribute)thinkTimeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getThinkTime_Time() {
+		return (EAttribute)thinkTimeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getThinkTime_Activity() {
+		return (EReference)thinkTimeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSaveParameters() {
+		return saveParametersEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSaveParameters_Name() {
+		return (EAttribute)saveParametersEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSaveParameters_Parameterbject() {
+		return (EReference)saveParametersEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataTable() {
+		return dataTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataTable_AttachedFile() {
+		return (EAttribute)dataTableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataTable_Delimeter() {
+		return (EAttribute)dataTableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDataTable_Activity() {
+		return (EReference)dataTableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParameterObject() {
+		return parameterObjectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameterObject_TypeAction() {
+		return (EAttribute)parameterObjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameterObject_ParameterName() {
+		return (EAttribute)parameterObjectEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameterObject_StaticValue() {
+		return (EAttribute)parameterObjectEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameterObject_Columnsobject() {
+		return (EReference)parameterObjectEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getColumnsObject() {
+		return columnsObjectEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getColumnsObject_ReferendedParameter() {
+		return (EAttribute)columnsObjectEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getColumnsObject_Selectnextrow() {
+		return (EAttribute)columnsObjectEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getColumnsObject_Updatedvalueon() {
+		return (EAttribute)columnsObjectEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getColumnsObject_ParameterName() {
+		return (EAttribute)columnsObjectEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getColumnsObject_Datatable() {
+		return (EReference)columnsObjectEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActivityToActivity() {
+		return activityToActivityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getActivityToActivity_TimePercentage() {
+		return (EAttribute)activityToActivityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivityToActivity_Activity() {
+		return (EReference)activityToActivityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActivityToActivity_Activies() {
+		return (EReference)activityToActivityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTYPEACTION() {
+		return typeactionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getUPDATED_VALUE_ON() {
+		return updateD_VALUE_ONEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getSELECT_NEXT_ROW() {
+		return selecT_NEXT_ROWEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMETHOD() {
+		return methodEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OpenmlperfPerformanceScriptingFactory getOpenmlperfPerformanceScriptingFactory() {
+		return (OpenmlperfPerformanceScriptingFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		initialEClass = createEClass(INITIAL);
+		createEAttribute(initialEClass, INITIAL__NAME);
+		createEReference(initialEClass, INITIAL__ACTIVITY);
+
+		finalEClass = createEClass(FINAL);
+		createEAttribute(finalEClass, FINAL__NAME);
+
+		activityEClass = createEClass(ACTIVITY);
+		createEAttribute(activityEClass, ACTIVITY__NAME);
+		createEAttribute(activityEClass, ACTIVITY__ACTION);
+		createEAttribute(activityEClass, ACTIVITY__METHOD);
+		createEAttribute(activityEClass, ACTIVITY__TYPE_ACTION);
+		createEAttribute(activityEClass, ACTIVITY__LOOP_INSTANCES);
+		createEReference(activityEClass, ACTIVITY__PARAMETERHIDDENOBJECT);
+		createEAttribute(activityEClass, ACTIVITY__TRANSACTION);
+		createEReference(activityEClass, ACTIVITY__FINAL);
+		createEReference(activityEClass, ACTIVITY__THINKTIME);
+		createEReference(activityEClass, ACTIVITY__SCRIPTING);
+		createEReference(activityEClass, ACTIVITY__ACTIVITYTOACTIVITY);
+		createEReference(activityEClass, ACTIVITY__SAVEPARAMETERS);
+		createEReference(activityEClass, ACTIVITY__DATATABLE);
+		createEReference(activityEClass, ACTIVITY__COLUMNSHIDDENOBJECT);
+
+		thinkTimeEClass = createEClass(THINK_TIME);
+		createEAttribute(thinkTimeEClass, THINK_TIME__NAME);
+		createEAttribute(thinkTimeEClass, THINK_TIME__TIME);
+		createEReference(thinkTimeEClass, THINK_TIME__ACTIVITY);
+
+		saveParametersEClass = createEClass(SAVE_PARAMETERS);
+		createEAttribute(saveParametersEClass, SAVE_PARAMETERS__NAME);
+		createEReference(saveParametersEClass, SAVE_PARAMETERS__PARAMETERBJECT);
+
+		dataTableEClass = createEClass(DATA_TABLE);
+		createEAttribute(dataTableEClass, DATA_TABLE__ATTACHED_FILE);
+		createEAttribute(dataTableEClass, DATA_TABLE__DELIMETER);
+		createEReference(dataTableEClass, DATA_TABLE__ACTIVITY);
+
+		parameterObjectEClass = createEClass(PARAMETER_OBJECT);
+		createEAttribute(parameterObjectEClass, PARAMETER_OBJECT__TYPE_ACTION);
+		createEAttribute(parameterObjectEClass, PARAMETER_OBJECT__PARAMETER_NAME);
+		createEAttribute(parameterObjectEClass, PARAMETER_OBJECT__STATIC_VALUE);
+		createEReference(parameterObjectEClass, PARAMETER_OBJECT__COLUMNSOBJECT);
+
+		columnsObjectEClass = createEClass(COLUMNS_OBJECT);
+		createEAttribute(columnsObjectEClass, COLUMNS_OBJECT__REFERENDED_PARAMETER);
+		createEAttribute(columnsObjectEClass, COLUMNS_OBJECT__SELECTNEXTROW);
+		createEAttribute(columnsObjectEClass, COLUMNS_OBJECT__UPDATEDVALUEON);
+		createEAttribute(columnsObjectEClass, COLUMNS_OBJECT__PARAMETER_NAME);
+		createEReference(columnsObjectEClass, COLUMNS_OBJECT__DATATABLE);
+
+		activityToActivityEClass = createEClass(ACTIVITY_TO_ACTIVITY);
+		createEAttribute(activityToActivityEClass, ACTIVITY_TO_ACTIVITY__TIME_PERCENTAGE);
+		createEReference(activityToActivityEClass, ACTIVITY_TO_ACTIVITY__ACTIVITY);
+		createEReference(activityToActivityEClass, ACTIVITY_TO_ACTIVITY__ACTIVIES);
+
+		// Create enums
+		typeactionEEnum = createEEnum(TYPEACTION);
+		updateD_VALUE_ONEEnum = createEEnum(UPDATED_VALUE_ON);
+		selecT_NEXT_ROWEEnum = createEEnum(SELECT_NEXT_ROW);
+		methodEEnum = createEEnum(METHOD);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		OpenmlperfPerformanceExternalFilePackage theOpenmlperfPerformanceExternalFilePackage = (OpenmlperfPerformanceExternalFilePackage)EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceExternalFilePackage.eNS_URI);
+		OpenmlperfPerformanceScenarioPackage theOpenmlperfPerformanceScenarioPackage = (OpenmlperfPerformanceScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(OpenmlperfPerformanceScenarioPackage.eNS_URI);
+
+		// Add subpackages
+		getESubpackages().add(theOpenmlperfPerformanceExternalFilePackage);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes, features, and operations; add parameters
+		initEClass(initialEClass, Initial.class, "Initial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInitial_Name(), ecorePackage.getEString(), "name", null, 0, 1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInitial_Activity(), this.getActivity(), null, "activity", null, 1, 1, Initial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finalEClass, Final.class, "Final", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFinal_Name(), ecorePackage.getEString(), "name", null, 0, 1, Final.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getActivity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Action(), ecorePackage.getEString(), "action", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Method(), this.getMETHOD(), "method", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_LoopInstances(), ecorePackage.getEInt(), "loopInstances", "1", 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Parameterhiddenobject(), this.getParameterObject(), null, "parameterhiddenobject", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getActivity_Transaction(), ecorePackage.getEBoolean(), "transaction", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Final(), this.getFinal(), null, "final", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Thinktime(), this.getThinkTime(), null, "thinktime", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Scripting(), theOpenmlperfPerformanceScenarioPackage.getScripting(), null, "scripting", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Activitytoactivity(), this.getActivityToActivity(), this.getActivityToActivity_Activity(), "activitytoactivity", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Saveparameters(), this.getSaveParameters(), null, "saveparameters", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Datatable(), this.getDataTable(), this.getDataTable_Activity(), "datatable", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Columnshiddenobject(), this.getColumnsObject(), null, "columnshiddenobject", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(thinkTimeEClass, ThinkTime.class, "ThinkTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getThinkTime_Name(), ecorePackage.getEString(), "name", null, 0, 1, ThinkTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getThinkTime_Time(), ecorePackage.getEString(), "time", null, 0, 1, ThinkTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getThinkTime_Activity(), this.getActivity(), null, "activity", null, 0, 1, ThinkTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(saveParametersEClass, SaveParameters.class, "SaveParameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSaveParameters_Name(), ecorePackage.getEString(), "name", null, 0, 1, SaveParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSaveParameters_Parameterbject(), this.getParameterObject(), null, "parameterbject", null, 0, 1, SaveParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dataTableEClass, DataTable.class, "DataTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataTable_AttachedFile(), ecorePackage.getEString(), "attachedFile", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataTable_Delimeter(), ecorePackage.getEString(), "delimeter", null, 0, 1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataTable_Activity(), this.getActivity(), this.getActivity_Datatable(), "activity", null, 0, -1, DataTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(parameterObjectEClass, ParameterObject.class, "ParameterObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParameterObject_TypeAction(), this.getTYPEACTION(), "typeAction", null, 0, 1, ParameterObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameterObject_ParameterName(), ecorePackage.getEString(), "parameterName", null, 0, 1, ParameterObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameterObject_StaticValue(), ecorePackage.getEString(), "staticValue", null, 0, 1, ParameterObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParameterObject_Columnsobject(), this.getColumnsObject(), null, "columnsobject", null, 0, -1, ParameterObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(columnsObjectEClass, ColumnsObject.class, "ColumnsObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getColumnsObject_ReferendedParameter(), ecorePackage.getEString(), "referendedParameter", null, 0, 1, ColumnsObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColumnsObject_Selectnextrow(), this.getSELECT_NEXT_ROW(), "selectnextrow", null, 0, 1, ColumnsObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColumnsObject_Updatedvalueon(), this.getUPDATED_VALUE_ON(), "updatedvalueon", null, 0, 1, ColumnsObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColumnsObject_ParameterName(), ecorePackage.getEString(), "parameterName", null, 0, 1, ColumnsObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getColumnsObject_Datatable(), this.getDataTable(), null, "datatable", null, 0, -1, ColumnsObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(activityToActivityEClass, ActivityToActivity.class, "ActivityToActivity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getActivityToActivity_TimePercentage(), ecorePackage.getEInt(), "timePercentage", "1", 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityToActivity_Activity(), this.getActivity(), this.getActivity_Activitytoactivity(), "activity", null, 1, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivityToActivity_Activies(), this.getActivity(), null, "activies", null, 0, 1, ActivityToActivity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.class, "TYPEACTION");
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.BODY);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.BUTTON);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.CHECKBOX);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.DROPDOWNLIST);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.INPUTFIELD);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.IMAGE);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.LINK);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.RADIOBUTTON);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.SAVEPARAMETER);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.SUBMITBUTTON);
+		addEEnumLiteral(typeactionEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.TYPEACTION.TEXTAREA);
+
+		initEEnum(updateD_VALUE_ONEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.UPDATED_VALUE_ON.class, "UPDATED_VALUE_ON");
+		addEEnumLiteral(updateD_VALUE_ONEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.UPDATED_VALUE_ON.EACH_INTERACTION);
+		addEEnumLiteral(updateD_VALUE_ONEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.UPDATED_VALUE_ON.EACH_OCCURENCE);
+		addEEnumLiteral(updateD_VALUE_ONEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.UPDATED_VALUE_ON.ONCE);
+
+		initEEnum(selecT_NEXT_ROWEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.SELECT_NEXT_ROW.class, "SELECT_NEXT_ROW");
+		addEEnumLiteral(selecT_NEXT_ROWEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.SELECT_NEXT_ROW.SEQUENTIAL);
+		addEEnumLiteral(selecT_NEXT_ROWEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.SELECT_NEXT_ROW.RANDOM);
+		addEEnumLiteral(selecT_NEXT_ROWEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.SELECT_NEXT_ROW.UNIQUE);
+		addEEnumLiteral(selecT_NEXT_ROWEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.SELECT_NEXT_ROW.SAME_AS_OTHER_PARAM);
+
+		initEEnum(methodEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.METHOD.class, "METHOD");
+		addEEnumLiteral(methodEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.METHOD.GET);
+		addEEnumLiteral(methodEEnum, openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.METHOD.POST);
+	}
+
+} //OpenmlperfPerformanceScriptingPackageImpl

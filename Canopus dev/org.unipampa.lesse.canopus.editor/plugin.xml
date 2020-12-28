@@ -7,198 +7,198 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.presentation.CanopusModelWizardID"
-            name="%_UI_CanopusModelWizard_label"
-            class="canopus.presentation.CanopusModelWizard"
+            id="openmlperf.presentation.OpenmlperfModelWizardID"
+            name="%_UI_OpenmlperfModelWizard_label"
+            class="openmlperf.presentation.OpenmlperfModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusModelFile.gif">
-         <description>%_UI_CanopusModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfModelFile.gif">
+         <description>%_UI_OpenmlperfModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.presentation.CanopusEditorID"
-            name="%_UI_CanopusEditor_label"
-            icon="icons/full/obj16/CanopusModelFile.gif"
-            extensions="canopus"
-            class="canopus.presentation.CanopusEditor"
-            contributorClass="canopus.presentation.CanopusActionBarContributor">
+            id="openmlperf.presentation.OpenmlperfEditorID"
+            name="%_UI_OpenmlperfEditor_label"
+            icon="icons/full/obj16/OpenmlperfModelFile.gif"
+            extensions="openmlperf"
+            class="openmlperf.presentation.OpenmlperfEditor"
+            contributorClass="openmlperf.presentation.OpenmlperfActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceMonitoring.presentation.CanopusPerformanceMonitoringModelWizardID"
-            name="%_UI_CanopusPerformanceMonitoringModelWizard_label"
-            class="canopus.canopusPerformanceMonitoring.presentation.CanopusPerformanceMonitoringModelWizard"
+            id="openmlperf.openmlperfPerformanceMonitoring.presentation.OpenmlperfPerformanceMonitoringModelWizardID"
+            name="%_UI_OpenmlperfPerformanceMonitoringModelWizard_label"
+            class="openmlperf.openmlperfPerformanceMonitoring.presentation.OpenmlperfPerformanceMonitoringModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusPerformanceMonitoringModelFile.gif">
-         <description>%_UI_CanopusPerformanceMonitoringModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfPerformanceMonitoringModelFile.gif">
+         <description>%_UI_OpenmlperfPerformanceMonitoringModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.canopusPerformanceMonitoring.presentation.CanopusPerformanceMonitoringEditorID"
-            name="%_UI_CanopusPerformanceMonitoringEditor_label"
-            icon="icons/full/obj16/CanopusPerformanceMonitoringModelFile.gif"
-            extensions="canopusperformancemonitoring"
-            class="canopus.canopusPerformanceMonitoring.presentation.CanopusPerformanceMonitoringEditor"
-            contributorClass="canopus.canopusPerformanceMonitoring.presentation.CanopusPerformanceMonitoringActionBarContributor">
+            id="openmlperf.openmlperfPerformanceMonitoring.presentation.OpenmlperfPerformanceMonitoringEditorID"
+            name="%_UI_OpenmlperfPerformanceMonitoringEditor_label"
+            icon="icons/full/obj16/OpenmlperfPerformanceMonitoringModelFile.gif"
+            extensions="openmlperfperformancemonitoring"
+            class="openmlperf.openmlperfPerformanceMonitoring.presentation.OpenmlperfPerformanceMonitoringEditor"
+            contributorClass="openmlperf.openmlperfPerformanceMonitoring.presentation.OpenmlperfPerformanceMonitoringActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.presentation.CanopusPerformanceMetricModelWizardID"
-            name="%_UI_CanopusPerformanceMetricModelWizard_label"
-            class="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.presentation.CanopusPerformanceMetricModelWizard"
+            id="openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.presentation.OpenmlperfPerformanceMetricModelWizardID"
+            name="%_UI_OpenmlperfPerformanceMetricModelWizard_label"
+            class="openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.presentation.OpenmlperfPerformanceMetricModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusPerformanceMetricModelFile.gif">
-         <description>%_UI_CanopusPerformanceMetricModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfPerformanceMetricModelFile.gif">
+         <description>%_UI_OpenmlperfPerformanceMetricModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.presentation.CanopusPerformanceMetricEditorID"
-            name="%_UI_CanopusPerformanceMetricEditor_label"
-            icon="icons/full/obj16/CanopusPerformanceMetricModelFile.gif"
-            extensions="canopusperformancemetric"
-            class="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.presentation.CanopusPerformanceMetricEditor"
-            contributorClass="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.presentation.CanopusPerformanceMetricActionBarContributor">
+            id="openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.presentation.OpenmlperfPerformanceMetricEditorID"
+            name="%_UI_OpenmlperfPerformanceMetricEditor_label"
+            icon="icons/full/obj16/OpenmlperfPerformanceMetricModelFile.gif"
+            extensions="openmlperfperformancemetric"
+            class="openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.presentation.OpenmlperfPerformanceMetricEditor"
+            contributorClass="openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.presentation.OpenmlperfPerformanceMetricActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceScenario.presentation.CanopusPerformanceScenarioModelWizardID"
-            name="%_UI_CanopusPerformanceScenarioModelWizard_label"
-            class="canopus.canopusPerformanceScenario.presentation.CanopusPerformanceScenarioModelWizard"
+            id="openmlperf.openmlperfPerformanceScenario.presentation.OpenmlperfPerformanceScenarioModelWizardID"
+            name="%_UI_OpenmlperfPerformanceScenarioModelWizard_label"
+            class="openmlperf.openmlperfPerformanceScenario.presentation.OpenmlperfPerformanceScenarioModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusPerformanceScenarioModelFile.gif">
-         <description>%_UI_CanopusPerformanceScenarioModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfPerformanceScenarioModelFile.gif">
+         <description>%_UI_OpenmlperfPerformanceScenarioModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.canopusPerformanceScenario.presentation.CanopusPerformanceScenarioEditorID"
-            name="%_UI_CanopusPerformanceScenarioEditor_label"
-            icon="icons/full/obj16/CanopusPerformanceScenarioModelFile.gif"
-            extensions="canopusperformancescenario"
-            class="canopus.canopusPerformanceScenario.presentation.CanopusPerformanceScenarioEditor"
-            contributorClass="canopus.canopusPerformanceScenario.presentation.CanopusPerformanceScenarioActionBarContributor">
+            id="openmlperf.openmlperfPerformanceScenario.presentation.OpenmlperfPerformanceScenarioEditorID"
+            name="%_UI_OpenmlperfPerformanceScenarioEditor_label"
+            icon="icons/full/obj16/OpenmlperfPerformanceScenarioModelFile.gif"
+            extensions="openmlperfperformancescenario"
+            class="openmlperf.openmlperfPerformanceScenario.presentation.OpenmlperfPerformanceScenarioEditor"
+            contributorClass="openmlperf.openmlperfPerformanceScenario.presentation.OpenmlperfPerformanceScenarioActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.presentation.CanopusPerformanceWorkloadModelWizardID"
-            name="%_UI_CanopusPerformanceWorkloadModelWizard_label"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.presentation.CanopusPerformanceWorkloadModelWizard"
+            id="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.presentation.OpenmlperfPerformanceWorkloadModelWizardID"
+            name="%_UI_OpenmlperfPerformanceWorkloadModelWizard_label"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.presentation.OpenmlperfPerformanceWorkloadModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusPerformanceWorkloadModelFile.gif">
-         <description>%_UI_CanopusPerformanceWorkloadModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfPerformanceWorkloadModelFile.gif">
+         <description>%_UI_OpenmlperfPerformanceWorkloadModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.presentation.CanopusPerformanceWorkloadEditorID"
-            name="%_UI_CanopusPerformanceWorkloadEditor_label"
-            icon="icons/full/obj16/CanopusPerformanceWorkloadModelFile.gif"
-            extensions="canopusperformanceworkload"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.presentation.CanopusPerformanceWorkloadEditor"
-            contributorClass="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.presentation.CanopusPerformanceWorkloadActionBarContributor">
+            id="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.presentation.OpenmlperfPerformanceWorkloadEditorID"
+            name="%_UI_OpenmlperfPerformanceWorkloadEditor_label"
+            icon="icons/full/obj16/OpenmlperfPerformanceWorkloadModelFile.gif"
+            extensions="openmlperfperformanceworkload"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.presentation.OpenmlperfPerformanceWorkloadEditor"
+            contributorClass="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.presentation.OpenmlperfPerformanceWorkloadActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingModelWizardID"
-            name="%_UI_CanopusPerformanceScriptingModelWizard_label"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingModelWizard"
+            id="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.presentation.OpenmlperfPerformanceScriptingModelWizardID"
+            name="%_UI_OpenmlperfPerformanceScriptingModelWizard_label"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.presentation.OpenmlperfPerformanceScriptingModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusPerformanceScriptingModelFile.gif">
-         <description>%_UI_CanopusPerformanceScriptingModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfPerformanceScriptingModelFile.gif">
+         <description>%_UI_OpenmlperfPerformanceScriptingModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingEditorID"
-            name="%_UI_CanopusPerformanceScriptingEditor_label"
-            icon="icons/full/obj16/CanopusPerformanceScriptingModelFile.gif"
-            extensions="canopusperformancescripting"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingEditor"
-            contributorClass="canopus.canopusPerformanceScenario.canopusPerformanceScripting.presentation.CanopusPerformanceScriptingActionBarContributor">
+            id="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.presentation.OpenmlperfPerformanceScriptingEditorID"
+            name="%_UI_OpenmlperfPerformanceScriptingEditor_label"
+            icon="icons/full/obj16/OpenmlperfPerformanceScriptingModelFile.gif"
+            extensions="openmlperfperformancescripting"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.presentation.OpenmlperfPerformanceScriptingEditor"
+            contributorClass="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.presentation.OpenmlperfPerformanceScriptingActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileModelWizardID"
-            name="%_UI_CanopusPerformanceExternalFileModelWizard_label"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileModelWizard"
+            id="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.presentation.OpenmlperfPerformanceExternalFileModelWizardID"
+            name="%_UI_OpenmlperfPerformanceExternalFileModelWizard_label"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.presentation.OpenmlperfPerformanceExternalFileModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CanopusPerformanceExternalFileModelFile.gif">
-         <description>%_UI_CanopusPerformanceExternalFileModelWizard_description</description>
+            icon="icons/full/obj16/OpenmlperfPerformanceExternalFileModelFile.gif">
+         <description>%_UI_OpenmlperfPerformanceExternalFileModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <editor
-            id="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileEditorID"
-            name="%_UI_CanopusPerformanceExternalFileEditor_label"
-            icon="icons/full/obj16/CanopusPerformanceExternalFileModelFile.gif"
-            extensions="canopusperformanceexternalfile"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileEditor"
-            contributorClass="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.presentation.CanopusPerformanceExternalFileActionBarContributor">
+            id="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.presentation.OpenmlperfPerformanceExternalFileEditorID"
+            name="%_UI_OpenmlperfPerformanceExternalFileEditor_label"
+            icon="icons/full/obj16/OpenmlperfPerformanceExternalFileModelFile.gif"
+            extensions="openmlperfperformanceexternalfile"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.presentation.OpenmlperfPerformanceExternalFileEditor"
+            contributorClass="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.presentation.OpenmlperfPerformanceExternalFileActionBarContributor">
       </editor>
    </extension>
 

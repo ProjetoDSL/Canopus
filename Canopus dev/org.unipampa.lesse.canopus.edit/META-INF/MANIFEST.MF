@@ -5,17 +5,17 @@ Bundle-SymbolicName: org.unipampa.lesse.canopus.edit;singleton:=true
 Automatic-Module-Name: org.unipampa.lesse.canopus.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: canopus.provider.CanopusEditPlugin$Implementation
+Bundle-Activator: openmlperf.provider.OpenmlperfEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.provider,
- canopus.canopusPerformanceMonitoring.provider,
- canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.provider,
- canopus.canopusPerformanceScenario.canopusPerformanceScripting.provider,
- canopus.canopusPerformanceScenario.canopusPerformanceWorkload.provider,
- canopus.canopusPerformanceScenario.provider,
- canopus.provider
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.provider,
+ openmlperf.openmlperfPerformanceMonitoring.provider,
+ openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.provider,
+ openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.provider,
+ openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.provider,
+ openmlperf.openmlperfPerformanceScenario.provider,
+ openmlperf.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.unipampa.lesse.canopus;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

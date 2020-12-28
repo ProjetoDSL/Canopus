@@ -7,14 +7,14 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.tests,
- canopus.canopusPerformanceMonitoring.tests,
- canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.tests,
- canopus.canopusPerformanceScenario.canopusPerformanceScripting.tests,
- canopus.canopusPerformanceScenario.canopusPerformanceWorkload.tests,
- canopus.canopusPerformanceScenario.tests,
- canopus.tests
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.tests,
+ openmlperf.openmlperfPerformanceMonitoring.tests,
+ openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.tests,
+ openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.tests,
+ openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.tests,
+ openmlperf.openmlperfPerformanceScenario.tests,
+ openmlperf.tests
 Require-Bundle: org.eclipse.core.runtime,
  org.unipampa.lesse.canopus;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

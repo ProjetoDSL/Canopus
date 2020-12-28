@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopus"
-            class="canopus.provider.CanopusItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperf"
+            class="openmlperf.provider.OpenmlperfItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,10 +20,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopusPerformanceMonitoring"
-            class="canopus.canopusPerformanceMonitoring.provider.CanopusPerformanceMonitoringItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperfPerformanceMetricMonitoring"
+            class="openmlperf.openmlperfPerformanceMonitoring.provider.OpenmlperfPerformanceMonitoringItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -33,10 +33,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopusPerformanceMetric"
-            class="canopus.canopusPerformanceMonitoring.canopusPerformanceMetric.provider.CanopusPerformanceMetricItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperfPerformanceMetric"
+            class="openmlperf.openmlperfPerformanceMonitoring.openmlperfPerformanceMetric.provider.OpenmlperfPerformanceMetricItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -46,10 +46,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopusPerformanceScenario"
-            class="canopus.canopusPerformanceScenario.provider.CanopusPerformanceScenarioItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperfPerformanceScenario"
+            class="openmlperf.openmlperfPerformanceScenario.provider.OpenmlperfPerformanceScenarioItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -59,10 +59,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceWorkload.provider.CanopusPerformanceWorkloadItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperfPerformanceWorkload"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceWorkload.provider.OpenmlperfPerformanceWorkloadItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -72,10 +72,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopusPerformanceScripting"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.provider.CanopusPerformanceScriptingItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperfPerformanceScripting"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.provider.OpenmlperfPerformanceScriptingItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -85,10 +85,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated canopus -->
+      <!-- @generated openmlperf -->
       <factory
-            uri="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
-            class="canopus.canopusPerformanceScenario.canopusPerformanceScripting.canopusPerformanceExternalFile.provider.CanopusPerformanceExternalFileItemProviderAdapterFactory"
+            uri="http://www.unipampa.lesse.org/openmlperfPerfoamnceExternalFile"
+            class="openmlperf.openmlperfPerformanceScenario.openmlperfPerformanceScripting.openmlperfPerformanceExternalFile.provider.OpenmlperfPerformanceExternalFileItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

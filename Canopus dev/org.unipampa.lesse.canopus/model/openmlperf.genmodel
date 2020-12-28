@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.unipampa.lesse.canopus/src" modelPluginID="org.unipampa.lesse.canopus"
+    modelName="Openmlperf" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>canopus.ecore</foreignModel>
+  <genPackages prefix="Openmlperf" disposableProviderFactory="true" ecorePackage="canopus.ecore#/">
+    <genClasses ecoreClass="canopus.ecore#//Monitoring">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/suts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/loadGenerators"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/monitors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Monitoring/metricModel"/>
+    </genClasses>
+    <genClasses ecoreClass="canopus.ecore#//Scenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/users"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/workloads"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/scripting"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//Scenario/userProfileToScript"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Scenario/baseURL"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="canopus.ecore#//Diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/projectLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/projectAuthor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//Diagram/description"/>
+    </genClasses>
+    <nestedGenPackages prefix="OpenmlperfPerformanceMonitoring" disposableProviderFactory="true"
+        ecorePackage="canopus.ecore#//openmlperfPerformanceMonitoring">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceMonitoring/SUT_TYPE">
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/SUT_TYPE/DESKTOPAPP"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/SUT_TYPE/DATABASE"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/SUT_TYPE/WEBAPP"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/SUT_TYPE/WEBSERVICE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceMonitoring/HARDWARE">
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/HARDWARE/PHYSICAL_MACHINE"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/HARDWARE/VIRTUAL_MACHINE"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/HARDWARE/CLOUD_SERVICE"/>
+      </genEnums>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/SUT">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/SUT/hostname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/SUT/ip"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/SUT/hardware"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/SUT/sut"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/SUT/metricmodel"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/SUT/type"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/hostname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/ip"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/isMonitor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/sut"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/metricmodel"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/hardware"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/LoadGenerator/monitor"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/Monitor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/Monitor/hostname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/Monitor/ip"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/Monitor/sut"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/Monitor/hardware"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/Monitor/description"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/memory"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/transaction"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/disk"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/criteria"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/threshold"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/associationcountercriteriathreshold"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/diskCounter"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/transactionCounter"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/memoryCounter"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/counter"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/MetricModel/metric"/>
+      </genClasses>
+      <nestedGenPackages prefix="OpenmlperfPerformanceMetric" disposableProviderFactory="true"
+          ecorePackage="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/ASSOCIATION_CRITERIA">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/ASSOCIATION_CRITERIA/BETWEEN"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/ASSOCIATION_CRITERIA/GREATER_THAN_OR_EQUAL_TO"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/ASSOCIATION_CRITERIA/LESS_THAN"/>
+        </genEnums>
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK/AVG_DISK_SECS_TRANSFER_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK/PERCENTAGE_IDLE_TIME_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK/DISK_TRANSFERS_SEC_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK/AVG_DISK_QUEUE_LENGTH_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK/SPLIT_IO_SEC_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK/FREE_MEGABYTES_COUNTER"/>
+        </genEnums>
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/AVALIABLE_MBYTES_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/PAGES_SEC_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/PAGE_READS_SEC_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/WORKING_SET_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/POOL_NONPAGE_BYTES_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/PAGED_POOL_BYTES_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/PAGED_POOL_FAILURES_COUNTER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY/CACHE_BYTES_COUNTER"/>
+        </genEnums>
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_TRANSACTION">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_TRANSACTION/TRANSACTION_RESPONSE_TIME"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_TRANSACTION/TRANSACTION_PER_SECOND_TPS"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_TRANSACTION/TRANSACTION_SUCCESS_RATE"/>
+        </genEnums>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Memory">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Memory/memoryCounter"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk/disk_io_counter"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/AssociationCounterCriteriaThreshold">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/AssociationCounterCriteriaThreshold/associationCriteria"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/AssociationCounterCriteriaThreshold/threshold"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/AssociationCounterCriteriaThreshold/criteria"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter/name"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter/associationcountercriteriathreshold"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk_IO_Counter">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk_IO_Counter/counterDisk"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Criteria">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Criteria/value"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Threshold">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Threshold/value"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/MemoryCounter">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/MemoryCounter/counterMemory"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Transaction">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Transaction/transactionCounter"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/TransactionCounter">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/TransactionCounter/counterTransaction"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Metric">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Metric/name"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="OpenmlperfPerformanceScenario" disposableProviderFactory="true"
+        ecorePackage="canopus.ecore#//openmlperfPerformanceScenario">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceScenario/TimeType">
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/TimeType/SECONDS"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/TimeType/MINUTES"/>
+        <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/TimeType/HOURS"/>
+      </genEnums>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/UserProfile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/UserProfile/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/UserProfile/description"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/UserProfile/userprofiletoscript"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/UserProfile/percentage"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/Workload">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Workload/rampUpTimer"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Workload/rampDownUsers"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Workload/rampUpUsers"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Workload/rampDownTimer"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/Workload/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/Workload/time"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/Workload/virtualUsers"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/Workload/timeType"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/Scripting">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/Scripting/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/initial"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/final"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/activities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/saveparameters"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/datatables"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/thinkTime"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/scripts"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/userprofiletoscript"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/paramenters"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/activityToActivity"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/Scripting/columns"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/Scripting/description"/>
+      </genClasses>
+      <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/UserProfileToScript">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/UserProfileToScript/timePercentage"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/UserProfileToScript/userprofile"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/UserProfileToScript/scripting"/>
+      </genClasses>
+      <nestedGenPackages prefix="OpenmlperfPerformanceWorkload" disposableProviderFactory="true"
+          ecorePackage="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/TimeTypeRamps">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/TimeTypeRamps/SECONDS"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/TimeTypeRamps/MINUTES"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/TimeTypeRamps/HOURS"/>
+        </genEnums>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpUsers">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpUsers/virtualUsers"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownUsers">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownUsers/virtualUsers"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpTimer">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpTimer/time"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpTimer/timeType"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownTimer">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownTimer/time"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownTimer/timeType"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="OpenmlperfPerformanceScripting" disposableProviderFactory="true"
+          ecorePackage="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/BODY"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/BUTTON"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/CHECKBOX"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/DROPDOWNLIST"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/INPUTFIELD"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/IMAGE"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/LINK"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/RADIOBUTTON"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/SAVEPARAMETER"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/SUBMITBUTTON"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION/TEXTAREA"/>
+        </genEnums>
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/UPDATED_VALUE_ON">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/UPDATED_VALUE_ON/EACH_INTERACTION"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/UPDATED_VALUE_ON/EACH_OCCURENCE"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/UPDATED_VALUE_ON/ONCE"/>
+        </genEnums>
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SELECT_NEXT_ROW">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SELECT_NEXT_ROW/SEQUENTIAL"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SELECT_NEXT_ROW/RANDOM"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SELECT_NEXT_ROW/UNIQUE"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SELECT_NEXT_ROW/SAME_AS_OTHER_PARAM"/>
+        </genEnums>
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/METHOD">
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/METHOD/GET"/>
+          <genEnumLiterals ecoreEnumLiteral="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/METHOD/POST"/>
+        </genEnums>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Initial">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Initial/name"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Initial/activity"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Final">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Final/name"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/name"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/action"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/method"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/typeAction"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/loopInstances"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/parameterhiddenobject"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/transaction"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/final"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/thinktime"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/scripting"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/activitytoactivity"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/saveparameters"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/datatable"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/columnshiddenobject"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ThinkTime">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ThinkTime/name"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ThinkTime/time"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ThinkTime/activity"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SaveParameters">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SaveParameters/name"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SaveParameters/parameterbject"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable/attachedFile"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable/delimeter"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable/activity"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject/typeAction"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject/parameterName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject/staticValue"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject/columnsobject"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject/referendedParameter"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject/selectnextrow"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject/updatedvalueon"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject/parameterName"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject/datatable"/>
+        </genClasses>
+        <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity/timePercentage"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity/activity"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity/activies"/>
+        </genClasses>
+        <nestedGenPackages prefix="OpenmlperfPerformanceExternalFile" disposableProviderFactory="true"
+            ecorePackage="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/openmlperfPerformanceExternalFile">
+          <genClasses ecoreClass="canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/openmlperfPerformanceExternalFile/ExternalFile">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute canopus.ecore#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/openmlperfPerformanceExternalFile/ExternalFile/name"/>
+          </genClasses>
+        </nestedGenPackages>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

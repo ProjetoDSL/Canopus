@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="canopus" nsURI="http://www.unipampa.lesse.org/canopus" nsPrefix="canopus">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="openmlperf" nsURI="http://www.unipampa.lesse.org/openmlperf"
+    nsPrefix="openmlperf">
   <eClassifiers xsi:type="ecore:EClass" name="Monitoring" eSuperTypes="#//Diagram">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="suts" upperBound="-1" eType="#//canopusPerformanceMonitoring/SUT"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="loadGenerators" eType="#//canopusPerformanceMonitoring/LoadGenerator"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="monitors" eType="#//canopusPerformanceMonitoring/Monitor"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="suts" lowerBound="1" upperBound="-1"
+        eType="#//openmlperfPerformanceMonitoring/SUT" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loadGenerators" lowerBound="1"
+        upperBound="-1" eType="#//openmlperfPerformanceMonitoring/LoadGenerator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="monitors" upperBound="-1"
+        eType="#//openmlperfPerformanceMonitoring/Monitor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metricModel" upperBound="-1"
-        eType="#//canopusPerformanceMonitoring/MetricModel" containment="true"/>
+        eType="#//openmlperfPerformanceMonitoring/MetricModel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Scenario" eSuperTypes="#//Diagram">
     <eStructuralFeatures xsi:type="ecore:EReference" name="users" upperBound="-1"
-        eType="#//canopusPerformanceScenario/UserProfile" containment="true"/>
+        eType="#//openmlperfPerformanceScenario/UserProfile" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="workloads" upperBound="3"
-        eType="#//canopusPerformanceScenario/Workload" containment="true"/>
+        eType="#//openmlperfPerformanceScenario/Workload" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" upperBound="-1"
-        eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
+        eType="#//openmlperfPerformanceScenario/Scripting" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="userProfileToScript" upperBound="-1"
-        eType="#//canopusPerformanceScenario/UserProfileToScript" containment="true"/>
+        eType="#//openmlperfPerformanceScenario/UserProfileToScript" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseURL" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -27,38 +29,38 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectAuthor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eSubpackages name="canopusPerformanceMonitoring" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMonitoring"
-      nsPrefix="canopusPerformanceMonitoring">
+  <eSubpackages name="openmlperfPerformanceMonitoring" nsURI="http://www.unipampa.lesse.org/openmlperfPerformanceMetricMonitoring"
+      nsPrefix="openmlperfPerformanceMonitoring">
     <eClassifiers xsi:type="ecore:EClass" name="SUT">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="sdsfhdfgdkfgdjgfdjkfgjkd&#xD;&#xA;"/>
+        <details key="documentation" value="&#xD;&#xA;"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/HARDWARE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//openmlperfPerformanceMonitoring/HARDWARE"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/SUT"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"
+          eType="#//openmlperfPerformanceMonitoring/SUT"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//openmlperfPerformanceMonitoring/MetricModel"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//canopusPerformanceMonitoring/SUT_TYPE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//openmlperfPerformanceMonitoring/SUT_TYPE"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LoadGenerator">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMonitor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/SUT"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//canopusPerformanceMonitoring/MetricModel"
+          eType="#//openmlperfPerformanceMonitoring/SUT"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="metricmodel" eType="#//openmlperfPerformanceMonitoring/MetricModel"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/HARDWARE"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="monitor" eType="#//canopusPerformanceMonitoring/Monitor"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//openmlperfPerformanceMonitoring/HARDWARE"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="monitor" eType="#//openmlperfPerformanceMonitoring/Monitor"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Monitor">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sut" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/SUT"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//canopusPerformanceMonitoring/HARDWARE"/>
+          eType="#//openmlperfPerformanceMonitoring/SUT"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="hardware" eType="#//openmlperfPerformanceMonitoring/HARDWARE"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           changeable="false" defaultValueLiteral="Machine responsible for monitoring the performance metrics of the SUT. This object is optional, since the Load Generator object, besides generating workload for virtual users, can also play the role of monitoring."
           unsettable="true"/>
@@ -76,53 +78,54 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MetricModel">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="memory" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Memory"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="memory" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Memory"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Transaction"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="transaction" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Transaction"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="disk" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="disk" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Criteria"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Threshold"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="associationcountercriteriathreshold"
-          upperBound="-1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/AssociationCounterCriteriaThreshold"
+          upperBound="-1" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/AssociationCounterCriteriaThreshold"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="diskCounter" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk_IO_Counter"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk_IO_Counter"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="transactionCounter" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/TransactionCounter"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/TransactionCounter"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="memoryCounter" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/MemoryCounter"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/MemoryCounter"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="counter" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="metric" upperBound="-1"
-          eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric"
+          eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Metric"
           containment="true"/>
     </eClassifiers>
-    <eSubpackages name="canopusPerformanceMetric" nsURI="http://www.unipampa.lesse.org/canopusPerformanceMetric"
-        nsPrefix="canopusPerformanceMetric">
-      <eClassifiers xsi:type="ecore:EClass" name="Memory" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
+    <eSubpackages name="openmlperfPerformanceMetric" nsURI="http://www.unipampa.lesse.org/openmlperfPerformanceMetric"
+        nsPrefix="openmlperfPerformanceMetric">
+      <eClassifiers xsi:type="ecore:EClass" name="Memory" eSuperTypes="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Metric">
         <eStructuralFeatures xsi:type="ecore:EReference" name="memoryCounter" upperBound="-1"
-            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/MemoryCounter"/>
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/MemoryCounter"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
+      <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Metric">
         <eStructuralFeatures xsi:type="ecore:EReference" name="disk_io_counter" upperBound="-1"
-            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Disk_IO_Counter"/>
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Disk_IO_Counter"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="AssociationCounterCriteriaThreshold">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationCriteria"
-            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/ASSOCIATION_CRITERIA"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Threshold"/>
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/ASSOCIATION_CRITERIA"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="threshold" upperBound="-1"
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Threshold"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="criteria" upperBound="-1"
-            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Criteria"/>
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Criteria"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="ASSOCIATION_CRITERIA">
         <eLiterals name="BETWEEN"/>
@@ -132,11 +135,11 @@
       <eClassifiers xsi:type="ecore:EClass" name="Counter" abstract="true">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="associationcountercriteriathreshold"
-            upperBound="-1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/AssociationCounterCriteriaThreshold"/>
+            upperBound="-1" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/AssociationCounterCriteriaThreshold"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Disk_IO_Counter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
+      <eClassifiers xsi:type="ecore:EClass" name="Disk_IO_Counter" eSuperTypes="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterDisk" lowerBound="1"
-            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_DISK"/>
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_DISK"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Criteria">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -152,9 +155,9 @@
         <eLiterals name="SPLIT_IO_SEC_COUNTER" value="4" literal="SPLIT IO SEC COUNTER"/>
         <eLiterals name="FREE_MEGABYTES_COUNTER" value="5" literal="FREE MEGABYTES COUNTER"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="MemoryCounter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
+      <eClassifiers xsi:type="ecore:EClass" name="MemoryCounter" eSuperTypes="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterMemory" lowerBound="1"
-            eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_MEMORY"/>
+            eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_MEMORY"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="COUNTER_MEMORY">
         <eLiterals name="AVALIABLE_MBYTES_COUNTER" literal="AVALIABLE MBYTES COUNTER"/>
@@ -166,13 +169,13 @@
         <eLiterals name="PAGED_POOL_FAILURES_COUNTER" value="6" literal="PAGED POOL FAILURES COUNTER"/>
         <eLiterals name="CACHE_BYTES_COUNTER" value="7" literal="CACHE BYTES COUNTER"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Transaction" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Metric">
+      <eClassifiers xsi:type="ecore:EClass" name="Transaction" eSuperTypes="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Metric">
         <eStructuralFeatures xsi:type="ecore:EReference" name="transactionCounter"
-            upperBound="-1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/TransactionCounter"/>
+            upperBound="-1" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/TransactionCounter"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="TransactionCounter" eSuperTypes="#//canopusPerformanceMonitoring/canopusPerformanceMetric/Counter">
+      <eClassifiers xsi:type="ecore:EClass" name="TransactionCounter" eSuperTypes="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/Counter">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterTransaction"
-            lowerBound="1" eType="#//canopusPerformanceMonitoring/canopusPerformanceMetric/COUNTER_TRANSACTION"/>
+            lowerBound="1" eType="#//openmlperfPerformanceMonitoring/openmlperfPerformanceMetric/COUNTER_TRANSACTION"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="COUNTER_TRANSACTION">
         <eLiterals name="TRANSACTION_RESPONSE_TIME" literal="TRANSACTION RESPONSE TIME"/>
@@ -184,78 +187,84 @@
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
-  <eSubpackages name="canopusPerformanceScenario" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScenario"
-      nsPrefix="canopusPerformanceScenario">
+  <eSubpackages name="openmlperfPerformanceScenario" nsURI="http://www.unipampa.lesse.org/openmlperfPerformanceScenario"
+      nsPrefix="openmlperfPerformanceScenario">
     <eClassifiers xsi:type="ecore:EClass" name="UserProfile">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userprofiletoscript"
-          upperBound="-1" eType="#//canopusPerformanceScenario/UserProfileToScript"
-          eOpposite="#//canopusPerformanceScenario/UserProfileToScript/userprofile"/>
+          upperBound="-1" eType="#//openmlperfPerformanceScenario/UserProfileToScript"
+          eOpposite="#//openmlperfPerformanceScenario/UserProfileToScript/userprofile"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Workload">
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpTimer" lowerBound="1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpTimer"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpTimer"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownUsers" lowerBound="1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownUsers"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownUsers"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampUpUsers" lowerBound="1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampUpUsers"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampUpUsers"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rampDownTimer" lowerBound="1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceWorkload/RampDownTimer"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/RampDownTimer"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeType" eType="#//openmlperfPerformanceScenario/TimeType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Scripting">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="initial" lowerBound="1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Initial"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Initial"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="final" lowerBound="1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Final"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Final"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="activities" lowerBound="1"
-          upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"
+          upperBound="-1" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="saveparameters" lowerBound="1"
-          upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/SaveParameters"
+          upperBound="-1" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SaveParameters"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="datatables" upperBound="-1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/DataTable"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="thinkTime" upperBound="-1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ThinkTime"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ThinkTime"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scripts" upperBound="-1"
-          eType="#//canopusPerformanceScenario/Scripting" containment="true"/>
+          eType="#//openmlperfPerformanceScenario/Scripting" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userprofiletoscript"
-          upperBound="-1" eType="#//canopusPerformanceScenario/UserProfileToScript"
-          eOpposite="#//canopusPerformanceScenario/UserProfileToScript/scripting"/>
+          upperBound="-1" eType="#//openmlperfPerformanceScenario/UserProfileToScript"
+          eOpposite="#//openmlperfPerformanceScenario/UserProfileToScript/scripting"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="paramenters" upperBound="-1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ParameterHiddenObject"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="activityToActivity" upperBound="-1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ActivityToActivity"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
-          eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"
+          eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject"
           containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UserProfileToScript">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="timePercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="userprofile" upperBound="-1"
-          eType="#//canopusPerformanceScenario/UserProfile" eOpposite="#//canopusPerformanceScenario/UserProfile/userprofiletoscript"/>
+          eType="#//openmlperfPerformanceScenario/UserProfile" eOpposite="#//openmlperfPerformanceScenario/UserProfile/userprofiletoscript"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" lowerBound="1"
-          upperBound="-1" eType="#//canopusPerformanceScenario/Scripting" eOpposite="#//canopusPerformanceScenario/Scripting/userprofiletoscript"/>
+          upperBound="-1" eType="#//openmlperfPerformanceScenario/Scripting" eOpposite="#//openmlperfPerformanceScenario/Scripting/userprofiletoscript"/>
     </eClassifiers>
-    <eSubpackages name="canopusPerformanceWorkload" nsURI="http://www.unipampa.lesse.org/canopusPerformanceWorkload"
-        nsPrefix="canopusPerformanceWorkload">
+    <eClassifiers xsi:type="ecore:EEnum" name="TimeType">
+      <eLiterals name="SECONDS"/>
+      <eLiterals name="MINUTES" value="1"/>
+      <eLiterals name="HOURS" value="2"/>
+    </eClassifiers>
+    <eSubpackages name="openmlperfPerformanceWorkload" nsURI="http://www.unipampa.lesse.org/openmlperfPerformanceWorkload"
+        nsPrefix="openmlperfPerformanceWorkload">
       <eClassifiers xsi:type="ecore:EClass" name="RampUpUsers">
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eClassifiers>
@@ -263,21 +272,28 @@
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="virtualUsers" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="RampUpTimer">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeType" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/TimeTypeRamps"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="RampDownTimer">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeType" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceWorkload/TimeTypeRamps"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="TimeTypeRamps">
+        <eLiterals name="SECONDS"/>
+        <eLiterals name="MINUTES" value="1"/>
+        <eLiterals name="HOURS" value="2"/>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="canopusPerformanceScripting" nsURI="http://www.unipampa.lesse.org/canopusPerformanceScripting"
-        nsPrefix="canopusPerformanceScripting">
+    <eSubpackages name="openmlperfPerformanceScripting" nsURI="http://www.unipampa.lesse.org/openmlperfPerformanceScripting"
+        nsPrefix="openmlperfPerformanceScripting">
       <eClassifiers xsi:type="ecore:EClass" name="Initial">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Determines the start of the interaction of a virtual user within a test script. Every script must have only one Initial object. The graphical notation for the Initial object is shown as a double circles."/>
         </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-            eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"/>
+            eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Final">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -295,20 +311,25 @@
             <details key="documentation" value="HTTP address of the SUT request."/>
           </eAnnotations>
         </eStructuralFeatures>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/METHOD"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/TYPEACTION"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/METHOD"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="loopInstances" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
             defaultValueLiteral="1"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="parameterhiddenobject"
-            upperBound="3" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ParameterHiddenObject"/>
+            upperBound="-1" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="transaction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="final" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Final"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="thinktime" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ThinkTime"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" eType="#//canopusPerformanceScenario/Scripting"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="final" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Final"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="thinktime" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ThinkTime"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="scripting" eType="#//openmlperfPerformanceScenario/Scripting"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="activitytoactivity"
-            upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ActivityToActivity"
-            eOpposite="#//canopusPerformanceScenario/canopusPerformanceScripting/ActivityToActivity/activity"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="saveparameters" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/SaveParameters"/>
+            upperBound="-1" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity"
+            eOpposite="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ActivityToActivity/activity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="saveparameters" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SaveParameters"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="datatable" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable"
+            eOpposite="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable/activity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="columnshiddenobject"
+            upperBound="-1" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject"
+            containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ThinkTime">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -316,15 +337,14 @@
         </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="activity" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activity" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="SaveParameters">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Supports that a parameter generated in runtime can be saved to be used in other activities of the same script flow."/>
         </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="parameterhiddenobject"
-            eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ParameterHiddenObject"
+        <eStructuralFeatures xsi:type="ecore:EReference" name="parameterbject" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ParameterObject"
             containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="DataTable">
@@ -333,21 +353,19 @@
         </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="attachedFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="delimeter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-            upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="columnshiddenobject"
-            upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"
-            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activity" upperBound="-1"
+            eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity"
+            eOpposite="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/datatable"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="ParameterHiddenObject">
+      <eClassifiers xsi:type="ecore:EClass" name="ParameterObject">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Determines the data that is consumed by the activities. Specified by a filename that must contain a data table, e.g. a .CSV file."/>
         </eAnnotations>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/TYPEACTION"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeAction" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/TYPEACTION"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="staticValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="columnshiddenobject"
-            upperBound="-1" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/ColumnsHiddenObject"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="columnsobject" upperBound="-1"
+            eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/ColumnsObject"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="TYPEACTION">
         <eLiterals name="BODY" literal="Body"/>
@@ -362,15 +380,18 @@
         <eLiterals name="SUBMITBUTTON" value="9" literal="Submit button"/>
         <eLiterals name="TEXTAREA" value="10" literal="Textarea"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="ColumnsHiddenObject">
+      <eClassifiers xsi:type="ecore:EClass" name="ColumnsObject">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Defines the strategy that each column from the test data will be randomized."/>
         </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="referendedParameter"
             eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectnextrow" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/SELECT_NEXT_ROW"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="updatedvalueon" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/UPDATED_VALUE_ON"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectnextrow" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/SELECT_NEXT_ROW"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="updatedvalueon" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/UPDATED_VALUE_ON"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="datatable" upperBound="-1"
+            eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/DataTable"
+            containment="true"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="UPDATED_VALUE_ON">
         <eLiterals name="EACH_INTERACTION"/>
@@ -387,16 +408,16 @@
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="timePercentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
             defaultValueLiteral="1"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
-            eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"
-            eOpposite="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity/activitytoactivity"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="activies" eType="#//canopusPerformanceScenario/canopusPerformanceScripting/Activity"/>
+            eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity"
+            eOpposite="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity/activitytoactivity"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="activies" eType="#//openmlperfPerformanceScenario/openmlperfPerformanceScripting/Activity"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="METHOD" instanceClassName="Method">
         <eLiterals name="GET" literal="GET"/>
         <eLiterals name="POST" value="1"/>
       </eClassifiers>
-      <eSubpackages name="canopusPerformanceExternalFile" nsURI="http://www.unipampa.lesse.org/canopusPerfoamnceExternalFile"
-          nsPrefix="canopusPerformanceExternalFile">
+      <eSubpackages name="openmlperfPerformanceExternalFile" nsURI="http://www.unipampa.lesse.org/openmlperfPerfoamnceExternalFile"
+          nsPrefix="openmlperfPerformanceExternalFile">
         <eClassifiers xsi:type="ecore:EClass" name="ExternalFile">
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         </eClassifiers>
